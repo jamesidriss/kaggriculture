@@ -96,6 +96,11 @@ LAND_BUFFER = 800
 MELON_SEED_MIN_CASH = 1500  # melon seed competes with the hand ladder
 
 # Planting windows: last day a planting can still be harvested AND sold.
+# Planting cut-offs.  A planting is only worth making if it can still be
+# harvested on time (it decays into a weed one day after `max_yield_day`), sold,
+# and its tile replanted before the season ends -- otherwise the seed money is
+# spent for nothing.  MELON needs the earliest cut-off of all: it takes 10 days
+# to a first harvest and 12 to peak.
 PLANT_LAST_DAY = {"WHEAT": 24, "CARROT": 25, "MELON": 16, "TOMATO": 20, "STRAWBERRY": 18}
 HARVEST_LAST_DAY = 28  # day 29 produce is dropped at end of day and never sold
 
