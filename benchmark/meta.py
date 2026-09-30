@@ -10,6 +10,7 @@ Usage:
   python benchmark/meta.py --roundrobin --games 4
 """
 import argparse
+import hashlib
 import importlib.util
 import json
 import math
@@ -48,6 +49,10 @@ def load(path):
             # rather than silently dropping it from the league.
             raise RuntimeError(f"{os.path.basename(path)} not self-contained: "
                                f"{repr(exc)[:160]}") from exc
+        # Tag each agent with its own file path and content digest so the
+        # self-play guard can detect two "different" names holding the same file.
+        mod.agent.__kag_src__ = os.path.basename(path)
+        mod.agent.__kag_sha__ = hashlib.sha256(open(path, "rb").read()).hexdigest()
         _cache[path] = mod.agent
     return _cache[path]
 
@@ -60,6 +65,16 @@ def meta_names():
 
 def play(agent_a, agent_b, seed, a_seat):
     """agent_a is the candidate; a_seat is its seat index."""
+    # Guard against the same artifact being compared with itself. A duplicate
+    # file produces a mirror match that always ties, which silently corrupts an
+    # aggregate win rate if it is mistaken for a real result.
+    sha_a = getattr(agent_a, "__kag_sha__", None)
+    sha_b = getattr(agent_b, "__kag_sha__", None)
+    if sha_a is not None and sha_a == sha_b:
+        raise RuntimeError(
+            f"SELF-PLAY GUARD: '{getattr(agent_a, '__kag_src__', '?')}' and "
+            f"'{getattr(agent_b, '__kag_src__', '?')}' have identical content "
+            f"(sha256 {sha_a[:16]}); the result would be a meaningless mirror match")
     a0 = agent_a if a_seat == 0 else agent_b
     a1 = agent_b if a_seat == 0 else agent_a
     env = make("kaggriculture", configuration={"seed": seed, "episodeSteps": 720})
@@ -189,8 +204,15 @@ def main():
         return
 
     opps = [args.opp] if args.opp else names
+    cand_sha = hashlib.sha256(open(os.path.abspath(args.cand), "rb").read()).hexdigest()
     allrows = []
     for o in opps:
+        opp_path = os.path.join(META_DIR, o + ".py")
+        if os.path.exists(opp_path) and \
+                hashlib.sha256(open(opp_path, "rb").read()).hexdigest() == cand_sha:
+            # Same bytes as the candidate: a mirror match, not evidence.
+            print(json.dumps({"label": f"vs {o}", "skipped": "identical to candidate"}))
+            continue
         try:
             r = head_to_head(args.cand, o, seeds)
         except Exception as exc:  # noqa: BLE001
@@ -204,6 +226,7 @@ def main():
     t = sum(r["T"] for r in allrows)
     lo, hi = wilson(w, g)
     overall = {"label": "OVERALL", "games": g, "W": w, "L": l, "T": t,
+               "opponents_scored": len(allrows),
                "win_rate": round(w / g, 4) if g else 0.0,
                "score_rate": round((w + 0.5 * t) / g, 4) if g else 0.0,
                "wilson95": [lo, hi],

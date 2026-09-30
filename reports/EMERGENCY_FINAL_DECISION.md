@@ -106,16 +106,21 @@ Recovery champion's record against every opponent tested:
 
 | opponent | games | W-L | win rate | Wilson 95% CI |
 |---|---|---|---|---|
-| multi_route_v43 | 16 (meta_final) | **16-0** | **100%** | [0.81, 1.00] |
-| barnyard_v7 | 16 (meta_final) | **16-0** | **100%** | [0.81, 1.00] |
-| v16_rc5 | 16 (meta_final) | **16-0** | **100%** | [0.81, 1.00] |
-| v38_feed | 16 (meta_final) | **16-0** | **100%** | [0.81, 1.00] |
-| shop_router | 16 (meta_final) | **16-0** | **100%** | [0.81, 1.00] |
-| **meta_final subtotal** | **80** | **80-0** | **100%** | [0.95, 1.00] |
-| v38_feed (as the underdog) | 12 (holdout) | 10-2 | 83.3% | — |
+| opponent | games | W-L | win rate | Wilson 95% CI | seat split |
+|---|---|---|---|---|---|
+| multi_route_v43 | 12 | **12-0** | **100%** | [0.76, 1.00] | 6 / 6 |
+| barnyard_v7 | 12 | **12-0** | **100%** | [0.76, 1.00] | 6 / 6 |
+| v16_rc5 | 12 | **12-0** | **100%** | [0.76, 1.00] | 6 / 6 |
+| v38_feed | 12 | **12-0** | **100%** | [0.76, 1.00] | 6 / 6 |
+| shop_router | 12 | **12-0** | **100%** | [0.76, 1.00] | 6 / 6 |
+| **meta_final subtotal** | **60** | **60-0** | **100%** | [0.94, 1.00] | 30 / 30 |
 
-Plus the holdout-stage results recorded earlier: 6-0 each vs barnyard_v7,
-v16_rc5 and shop_router, and 10-2 vs the v38_feed lineage.
+An earlier 8-seed pass on the same pool gave 80-0. The `farm_2945` entry is
+excluded because the candidate *is* farm_2945 — the harness now detects and skips
+identical-content self-matches rather than reporting a meaningless mirror result.
+
+Plus holdout-stage results recorded earlier: 6-0 each vs barnyard_v7, v16_rc5 and
+shop_router, and 10-2 in the v38 lineage.
 
 > **Correction (recorded deliberately).** An earlier run reported the champion
 > beating Multi-Route V43 29-3. That was **invalid**: a stray copy command had
@@ -124,9 +129,11 @@ v16_rc5 and shop_router, and 10-2 vs the v38_feed lineage.
 > (identical cash *and* identical final tile layout on seed 99991), which is not
 > a possible outcome between two different agents. After restoring the real
 > artifact (SHA256 `919fc1d6…`, confirmed by the author's own pinned assertion),
-> the corrected result on fresh `meta_final` seeds is **16-0**. The selection
-> conclusion is unchanged and in fact stronger. The invalid rows were deleted
-> from `experiments/public_meta_results.csv` rather than left in place.
+> the corrected result is **12-0** on `meta_final` and **16-0** on the earlier
+> 8-seed pass. The selection conclusion is unchanged and in fact stronger. The
+> invalid rows were deleted from `experiments/public_meta_results.csv` rather
+> than left in place, and `benchmark/meta.py` now carries a content-digest
+> **self-play guard** that raises on any identical-content matchup.
 
 Machine-readable: `experiments/public_meta_results.csv`.
 
@@ -154,11 +161,11 @@ remaining time on speculative improvement had no possible upside.
 
 ## 8. Final win-rate evidence
 
-`RECOVERY_CHAMPION_0` wins **80 of 80** games on the held-out `meta_final` seed
+`RECOVERY_CHAMPION_0` wins **60 of 60** games on the held-out `meta_final` seed
 pool against five distinct strong public agents (Multi-Route V43, Barnyard V7,
-V16-RC5, V38 Smarter Feed, Shop Router), with 8-8 seat splits on every matchup and
-a Wilson lower bound of 0.95. Every game used the official environment, paired
-seeds, and both seats.
+V16-RC5, V38 Smarter Feed, Shop Router), with a 30-30 seat split and a Wilson
+lower bound of 0.94. An earlier 8-seed pass on the same pool produced 80-0.
+Every game used the official environment, paired seeds, and both seats.
 
 ## 9. Final artifact
 
