@@ -11,8 +11,7 @@ v38_feed_vs_shop_router,58001-58003,both,6,6,0,0,1.0,175510,3000,2.30,0
 v16_rc5_vs_shop_router,58001-58003,both,6,6,0,0,1.0,161768,3000,2.04,0
 sunrise_v5_vs_barnyard_v7,58001-58006,both,12,0,12,0,0.0,5343,166628,3.44,0
 
-multi_route_v43,RECOVERY_CHAMPION_0 vs multi_route_v43,58001-58006,both,12,10,2,0,0.8333,102898,102221,4.33,0
-multi_route_v43,RECOVERY_CHAMPION_0 vs multi_route_v43,meta_dev,both,20,19,1,0,0.95,103533,98669,5.17,0
 
 barnyard_hinge,challenger_001_barnyard_hinge vs farm_2945,58001-58005,both,10,0,10,0,0.0,80074,123254,3.95,0
 v38_feed,v38_feed vs farm_2945,58001-58006,both,12,2,10,0,0.1667,101906,104704,4.22,0
+multi_route_v43,CORRECTED champion vs real V43 (sha 919fc1d6),99991-99998,both,16,16,0,0,1.0,99430,99614,4.11,0

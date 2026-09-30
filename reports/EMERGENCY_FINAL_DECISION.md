@@ -106,13 +106,27 @@ Recovery champion's record against every opponent tested:
 
 | opponent | games | W-L | win rate | Wilson 95% CI |
 |---|---|---|---|---|
-| multi_route_v43 | 20 (dev) | 19-1 | **95.0%** | [0.76, 0.99] |
-| multi_route_v43 | 12 (holdout) | 10-2 | **83.3%** | [0.55, 0.95] |
-| v38_feed | 12 (holdout) | 10-2 | **83.3%** | [0.05, 0.45] (as V38) |
-| barnyard_v7 | 6 | 6-0 | **100%** | [0.61, 1.00] |
-| v16_rc5 | 6 | 6-0 | **100%** | [0.61, 1.00] |
-| shop_router | 6 | 6-0 | **100%** | [0.61, 1.00] |
-| **vs multi_route_v43 combined** | **32** | **29-3** | **90.6%** | — |
+| multi_route_v43 | 16 (meta_final) | **16-0** | **100%** | [0.81, 1.00] |
+| barnyard_v7 | 16 (meta_final) | **16-0** | **100%** | [0.81, 1.00] |
+| v16_rc5 | 16 (meta_final) | **16-0** | **100%** | [0.81, 1.00] |
+| v38_feed | 16 (meta_final) | **16-0** | **100%** | [0.81, 1.00] |
+| shop_router | 16 (meta_final) | **16-0** | **100%** | [0.81, 1.00] |
+| **meta_final subtotal** | **80** | **80-0** | **100%** | [0.95, 1.00] |
+| v38_feed (as the underdog) | 12 (holdout) | 10-2 | 83.3% | — |
+
+Plus the holdout-stage results recorded earlier: 6-0 each vs barnyard_v7,
+v16_rc5 and shop_router, and 10-2 vs the v38_feed lineage.
+
+> **Correction (recorded deliberately).** An earlier run reported the champion
+> beating Multi-Route V43 29-3. That was **invalid**: a stray copy command had
+> overwritten `opponents/meta/multi_route_v43.py` with the champion itself, so
+> the agent was playing itself. It was caught by 16 consecutive exact ties
+> (identical cash *and* identical final tile layout on seed 99991), which is not
+> a possible outcome between two different agents. After restoring the real
+> artifact (SHA256 `919fc1d6…`, confirmed by the author's own pinned assertion),
+> the corrected result on fresh `meta_final` seeds is **16-0**. The selection
+> conclusion is unchanged and in fact stronger. The invalid rows were deleted
+> from `experiments/public_meta_results.csv` rather than left in place.
 
 Machine-readable: `experiments/public_meta_results.csv`.
 
@@ -128,7 +142,7 @@ verified licence and a clean exact-artifact validation.
 | challenger | hypothesis | result | decision |
 |---|---|---|---|
 | `challenger_001_barnyard_hinge` | Barnyard loses *only* because of its stale price model; patch the 3 scarcity curves | **0-10** after patch | **NO_GO** |
-| Multi-Route V43 (new parent candidate) | a newer agent exceeds the champion | 29-3 against it | champion confirmed |
+| Multi-Route V43 (new parent candidate) | a newer agent exceeds the champion | **0-16** against it on fresh seeds | champion confirmed |
 | `sunrise` derivatives | carry the old architecture forward | 0-12 | KILL |
 
 The hinge-patch result is the most informative negative of the session: the
@@ -140,9 +154,10 @@ remaining time on speculative improvement had no possible upside.
 
 ## 8. Final win-rate evidence
 
-`RECOVERY_CHAMPION_0` wins **52 of 56** games played against strong public
-agents (29-3 vs Multi-Route V43, 10-2 as V38's opponent, 6-0 each vs Barnyard,
-V16-RC5 and Shop Router). Every game used the official environment, paired
+`RECOVERY_CHAMPION_0` wins **80 of 80** games on the held-out `meta_final` seed
+pool against five distinct strong public agents (Multi-Route V43, Barnyard V7,
+V16-RC5, V38 Smarter Feed, Shop Router), with 8-8 seat splits on every matchup and
+a Wilson lower bound of 0.95. Every game used the official environment, paired
 seeds, and both seats.
 
 ## 9. Final artifact
