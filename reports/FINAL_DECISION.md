@@ -80,7 +80,21 @@ Earlier builds, same harness: vs `random` 12-0, vs `pass` 8-0, DEV vs `starter`
 
 Both seats tested on every seed; seeds paired across opponents.
 
-### Execution safety
+### Live Kaggle validation (episode 115923753, submission 56716646)
+
+Downloaded agent logs for the real validation episode:
+
+- **719 agent calls**, all completed.
+- **0 entries with stderr, 0 with stdout** — no tracebacks, no warnings, no
+  unexpected prints from the environment.
+- Call duration: median 0.0005 s, p95 0.0008 s, **max 0.0315 s** against a 1 s
+  `actTimeout`. Comfortably safe.
+- Submission status: `COMPLETE`.
+
+This is the deployment-fidelity check: the exact submitted artifact executed
+cleanly on Kaggle's side, not just in local simulation.
+
+### Local execution safety
 
 - **Runtime:** median 0.105 ms, p95 0.173 ms, p99 0.32 ms, **max 0.74 ms** per
   `agent()` call against a 1 s `actTimeout`. Total agent time 0.08 s of the
@@ -122,9 +136,9 @@ Both seats tested on every seed; seeds paired across opponents.
 |---|---|---|---|---|
 | 56716289 | sunrise-v1 | `fd4c370` | COMPLETE | 348.1 |
 | 56716337 | sunrise-v2 | `fd4c370` | COMPLETE | 322.0 |
-| 56716446 | sunrise-v3 | `f4f58a6` | COMPLETE | 506.8 |
+| 56716446 | sunrise-v3 | `f4f58a6` | COMPLETE | 400.0 |
 | 56716532 | sunrise-v4 | `d6f79ce` | COMPLETE | **600.0** |
-| **56716646** | **sunrise-v5 (FINAL)** | `8919b23` | PENDING | — |
+| **56716646** | **sunrise-v5 (FINAL)** | `8919b23` | **COMPLETE** | **600.0** |
 
 - Submissions before the final: v1, v2, v3, v4 — all completed without error.
 - **Final submission ID: 56716646** (`sunrise-v5`) = `champion_001`, commit

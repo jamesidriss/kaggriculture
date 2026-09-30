@@ -11,9 +11,13 @@ active slots are locked and no further changes can be made before the deadline.
 |---|---|---|---|---|---|---|---|
 | 56716289 | 18:52 | sunrise-v1 | `fd4c370` | COMPLETE | 348.1 | no | no — retired |
 | 56716337 | 18:54 | sunrise-v2 | `fd4c370` | COMPLETE | 322.0 | no | no — retired |
-| 56716446 | 19:00 | sunrise-v3 | `f4f58a6` | COMPLETE | 506.8 | no | no — retired by v5 |
+| 56716446 | 19:00 | sunrise-v3 | `f4f58a6` | COMPLETE | 400.0 | no | no — retired by v5 |
 | 56716532 | 19:06 | sunrise-v4 | `d6f79ce` | COMPLETE | **600.0** | **yes** | **yes** |
-| **56716646** | **19:12** | **sunrise-v5 (FINAL)** | `8919b23` | PENDING | — | **yes** | **yes** |
+| **56716646** | **19:12** | **sunrise-v5 (FINAL)** | `8919b23` | **COMPLETE** | **600.0** | **yes** | **yes** |
+
+Live validation for `sunrise-v5` (episode 115923753): **719 agent calls, 0 stderr,
+0 stdout, max call 0.0315 s** against a 1 s `actTimeout`. The exact submitted
+file executed cleanly on Kaggle's side.
 
 ## ACTIVE BOT SAFETY ANALYSIS (final submission)
 
@@ -41,6 +45,10 @@ SAFE?  YES
 
 - All submissions are the single-file `main.py` agent: no archive, no external
   dependency, no network access, no model download, no absolute paths.
+- The final source (`champions/champion_001/main.py`) is byte-identical to the
+  submitted `main.py` at commit `8919b23`.
+- `benchmark/read_logs.py` summarises a downloaded Kaggle agent log; use it to
+  verify any future submission the same way.
 - Validation ratings (322-600) are the Kaggle default for a completed validation
   episode and are **not** ladder performance. The leaderboard top is ~3053, so
   none of these numbers indicate real ladder strength; they only confirm the
