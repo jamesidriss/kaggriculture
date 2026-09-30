@@ -95,7 +95,7 @@ LAND_BUFFER = 800
 MELON_SEED_MIN_CASH = 1500  # melon seed competes with the hand ladder
 
 # Planting windows: last day a planting can still be harvested AND sold.
-PLANT_LAST_DAY = {"WHEAT": 24, "CARROT": 26, "MELON": 17, "TOMATO": 18, "STRAWBERRY": 15}
+PLANT_LAST_DAY = {"WHEAT": 24, "CARROT": 25, "MELON": 16, "TOMATO": 20, "STRAWBERRY": 18}
 HARVEST_LAST_DAY = 28  # day 29 produce is dropped at end of day and never sold
 
 
@@ -303,19 +303,18 @@ def _market_orders(obs, farm, private, day, shed_total, melon_on_board):
         money -= cost
         hands_today += 1
 
-    # --- 3. Seed top-up, deliberately frugal.  One planting round of WHEAT is
-    #     all we can physically work through, so buy one round and let the
-    #     remainder trickle in.  MELON is gated on cash because an $80 seed
-    #     competes directly with the hand budget.
+    # --- 3. Seed top-up.  Bought in bulk: seeds are consumed directly by PLANT and
+    #     never pass through the shed, so a big standing buffer costs nothing to
+    #     carry and guarantees every free tile always has something to plant.
+    #     MELON stays capped because an $80 seed is 8x a wheat seed.
     want = {}
     if day <= PLANT_LAST_DAY["WHEAT"]:
-        want["WHEAT"] = min(SEED_BATCH, unlocked_tiles // 2)
+        want["WHEAT"] = unlocked_tiles
     if day <= PLANT_LAST_DAY["CARROT"]:
-        want["CARROT"] = min(SEED_BATCH // 3, unlocked_tiles // 5)
+        want["CARROT"] = unlocked_tiles // 5
     if (day <= PLANT_LAST_DAY["MELON"]
-            and melon_on_board < _melon_quota(unlocked_tiles)
             and money > MELON_SEED_MIN_CASH):
-        want["MELON"] = min(3, _melon_quota(unlocked_tiles) - melon_on_board)
+        want["MELON"] = min(4, _melon_quota(unlocked_tiles))
 
     for crop, target in want.items():
         need = target - seeds.get(crop, 0)
@@ -410,10 +409,20 @@ def _build_tasks(farm, private, day, seeds, melon_on_board, unlocked_tiles):
                 tasks.append((P_WATER_BONUS, x, y, ["WATER"]))
                 continue
 
-        if (t.get("yield_units", 0) > 0 and age >= cd["first"]
-                and day <= HARVEST_LAST_DAY):
-            tasks.append((P_HARVEST, x, y, ["HARVEST"]))
-            continue
+        # Harvest rule.  For one-time crops the yield keeps climbing right up to
+        # `max_yield_day` because each bonus-window WATER adds a unit, so cutting
+        # at `first_yield_day` throws most of the crop away: WHEAT reaches 2 units
+        # at age 2 but 4 at age 4.  Wait for the yield to stop growing.
+        # Ongoing crops are different -- they fire on a fixed schedule, so take
+        # the product whenever it exists.
+        if t.get("yield_units", 0) > 0 and day <= HARVEST_LAST_DAY:
+            if cd["ongoing"]:
+                if age >= cd["first"]:
+                    tasks.append((P_HARVEST, x, y, ["HARVEST"]))
+                    continue
+            elif age >= cd["max"] or t.get("yield_units", 0) >= cd["maxy"]:
+                tasks.append((P_HARVEST, x, y, ["HARVEST"]))
+                continue
 
         if unwatered:
             tasks.append((P_WATER_NEXT, x, y, ["WATER"]))

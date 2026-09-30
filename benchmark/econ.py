@@ -52,6 +52,16 @@ for step in range(720):
     if step < 719:
         env.step([a, a1(env.steps[step][1].observation)])
 
+print("--- day / money / plants / weeds / shedtotal ---")
+for d in range(0, 30, 2):
+    o = env.steps[d * 24][0].observation
+    f = o.farms[0]
+    pl = sum(1 for r in f["tiles"] for t in r if isinstance(t, dict) and t.get("kind") == "PLANT")
+    wd = sum(1 for r in f["tiles"] for t in r if isinstance(t, dict) and t.get("kind") == "WEED")
+    em = sum(1 for r in f["tiles"] for t in r if t is None)
+    sd = sum(v for v in o.private["shed"].values())
+    print(f"  d{d:2d} ${round(f['money']):6d} plants{pl:3d} weeds{wd:3d} empty{em:3d} shed{sd:4d}")
+
 final = env.steps[-1]
 me = final[0].observation.farms[0]
 you = final[1].observation.farms[1]
