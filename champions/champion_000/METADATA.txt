@@ -1,0 +1,6 @@
+VERSION=champion_000
+GIT_COMMIT=d6f79ce6d364b80c7b538b16cf4aecac8d5b0a26
+SHA256=2700d073dac8e58de044b5aebe48b81d9825345a2b5509bb035f45858e610608
+CREATED_AT=2026-09-30T21:06Z
+PARENT=v1-bulk-seeds
+REASON=market-slot reservation for liquidation + floor liquidation
