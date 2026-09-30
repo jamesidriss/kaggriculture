@@ -1,0 +1,12 @@
+matchup,seed,seat,games,W,L,T,win_rate,median_cash_A,median_cash_B,max_runtime_s,errors
+farm_2945_vs_shop_router,58001-58003,both,6,6,0,0,1.0,179223,3000,2.47,0
+farm_2945_vs_v16_rc5,58001-58003,both,6,6,0,0,1.0,120568,77712,3.86,0
+farm_2945_vs_barnyard_v7,58001-58003,both,6,6,0,0,1.0,94049,127421,3.95,0
+farm_2945_vs_v38_feed,58001-58003,both,6,4,2,0,0.6667,118787,110256,4.29,0
+barnyard_v7_vs_shop_router,58001-58003,both,6,6,0,0,1.0,165328,3000,2.07,0
+barnyard_v7_vs_v16_rc5,58001-58003,both,6,0,6,0,0.0,51220,67196,3.36,0
+barnyard_v7_vs_v38_feed,58001-58003,both,6,0,6,0,0.0,68527,115084,3.72,0
+v38_feed_vs_v16_rc5,58001-58003,both,6,6,0,0,1.0,75370,109689,3.64,0
+v38_feed_vs_shop_router,58001-58003,both,6,6,0,0,1.0,175510,3000,2.30,0
+v16_rc5_vs_shop_router,58001-58003,both,6,6,0,0,1.0,161768,3000,2.04,0
+sunrise_v5_vs_barnyard_v7,58001-58006,both,12,0,12,0,0.0,5343,166628,3.44,0

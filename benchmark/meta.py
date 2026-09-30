@@ -40,7 +40,14 @@ def load(path):
     if path not in _cache:
         spec = importlib.util.spec_from_file_location("m_" + str(abs(hash(path))), path)
         mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
+        try:
+            spec.loader.exec_module(mod)
+        except Exception as exc:  # noqa: BLE001
+            # An agent that needs notebook-local assets is not self-contained and
+            # therefore not a legal submission artifact. Record why and skip it
+            # rather than silently dropping it from the league.
+            raise RuntimeError(f"{os.path.basename(path)} not self-contained: "
+                               f"{repr(exc)[:160]}") from exc
         _cache[path] = mod.agent
     return _cache[path]
 
@@ -162,12 +169,14 @@ def main():
                 rows = []
                 pa, pb = os.path.join(META_DIR, a + ".py"), os.path.join(META_DIR, b + ".py")
                 for s in seeds:
+                    # Both directions, and both seats for the first-named agent.
+                    # Passing seat=1 here is what actually moves `a` to seat 1;
+                    # swapping the arguments instead would pin both agents.
                     rows.append(play(load(pa), load(pb), s, 0))
-                    rows.append(play(load(pb), load(pa), s, 0))
+                    rows.append(play(load(pa), load(pb), s, 1))
                 r = summarise(rows, f"{a} vs {b}")
-                # recount from A's perspective
                 wa = sum(1 for x in rows if x.get("win"))
-                wb = len([x for x in rows if "error" not in x]) - wa
+                wb = sum(1 for x in rows if "error" not in x and x.get("loss"))
                 matrix[(a, b)] = (wa, wb)
                 print(json.dumps(r))
         rates = bradley_tery(matrix)
