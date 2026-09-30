@@ -72,6 +72,53 @@ def run_game(agent_path, opp_path, seed, cand_seat):
     }
 
 
+def run_game_vs_callable(agent_path, opp_fn, seed, cand_seat):
+    cand = load_agent(agent_path)
+    agent0 = cand if cand_seat == 0 else opp_fn
+    agent1 = opp_fn if cand_seat == 0 else cand
+    env = make("kaggriculture", configuration={"seed": seed, "episodeSteps": 720})
+    t0 = time.time()
+    try:
+        env.reset()
+        env.run([agent0, agent1])
+        final = env.steps[-1]
+        money = [int(final[i].observation.farms[i]["money"]) for i in range(2)]
+        statuses = [final[i].status for i in range(2)]
+    except Exception as exc:  # noqa: BLE001
+        return {"error": repr(exc)[:200], "seed": seed, "seat": cand_seat,
+                "runtime_s": time.time() - t0}
+    c, o = money[cand_seat], money[1 - cand_seat]
+    return {"seed": seed, "seat": cand_seat, "candidate_cash": c, "opponent_cash": o,
+            "margin": c - o, "win": c > o, "loss": c < o, "tie": c == o,
+            "status": statuses[cand_seat], "runtime_s": round(time.time() - t0, 2)}
+
+
+def _summarise(rows, label, candidate, opponent):
+    ok = [r for r in rows if "error" not in r]
+    errs = [r for r in rows if "error" in r]
+    n = len(ok)
+    return {
+        "label": label, "candidate": candidate, "opponent": opponent,
+        "games": n, "errors": len(errs),
+        "wins": sum(1 for r in ok if r["win"]),
+        "losses": sum(1 for r in ok if r["loss"]),
+        "ties": sum(1 for r in ok if r["tie"]),
+        "win_rate": round(sum(1 for r in ok if r["win"]) / n, 4) if n else 0.0,
+        "mean_cash": round(statistics.mean([r["candidate_cash"] for r in ok])) if ok else 0,
+        "mean_opp": round(statistics.mean([r["opponent_cash"] for r in ok])) if ok else 0,
+        "max_runtime_s": max([r["runtime_s"] for r in ok]) if ok else 0,
+        "error_samples": [e["error"] for e in errs[:3]],
+    }
+
+
+def evaluate_callable(cand_path, opp_fn, seeds, label=""):
+    rows = []
+    for s in seeds:
+        for seat in (0, 1):
+            rows.append(run_game_vs_callable(cand_path, opp_fn, s, seat))
+    return _summarise(rows, label, cand_path, getattr(opp_fn, "__name__", "callable"))
+
+
 def evaluate(cand_path, opp_path, seeds, label=""):
     rows = []
     for s in seeds:
@@ -118,6 +165,28 @@ def main():
     seeds = seeds[: max(1, args.games)]
 
     opp = args.opp
+    if opp == "league":
+        # Interleaved round-robin across every league family.
+        sys.path.insert(0, os.path.join(ROOT, "opponents"))
+        from league import LEAGUE
+        allrows = []
+        for name, fn in LEAGUE.items():
+            r = evaluate_callable(args.cand, fn, seeds[:2], label=f"{args.stage}:{name}")
+            allrows.append(r)
+            print(json.dumps(r))
+        n = sum(r["games"] for r in allrows)
+        w = sum(r["wins"] for r in allrows)
+        l = sum(r["losses"] for r in allrows)
+        t = sum(r["ties"] for r in allrows)
+        print(json.dumps({
+            "label": f"{args.stage}:LEAGUE", "games": n,
+            "wins": w, "losses": l, "ties": t,
+            "win_rate": round(w / n, 4) if n else 0,
+            "errors": sum(r["errors"] for r in allrows),
+            "max_runtime_s": max(r["max_runtime_s"] for r in allrows),
+        }, indent=2))
+        return
+
     opp_path = opp if opp in BUILTIN else opp
     res = evaluate(args.cand, opp_path, seeds, label=f"{args.stage}:{opp}")
     print(json.dumps(res, indent=2))
