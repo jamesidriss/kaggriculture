@@ -1,0 +1,6 @@
+VERSION=champion_001
+GIT_COMMIT=PENDING
+SHA256=97ede93268ce2deacc1010005c1d28775c777f3b83a670f25b6c3ff6a8ffd53d
+CREATED_AT=2026-09-30T21:12Z
+PARENT=champion_000
+REASON=melon quota rebalanced to land//5 (6% of land, not 50%); holdout mean cash vs starter 4757 -> 7520
