@@ -76,6 +76,7 @@ LAST_DAY = 29
 
 # Fraction of base price we refuse to sell below. Staples absorb gluts so this
 # never binds for them; for premiums it is the whole strategy.
+PRICE_FLOOR_C = 1  # official PRICE_FLOOR
 SELL_FLOOR = {
     "WHEAT": 0.40, "CARROT": 0.45, "TOMATO": 0.45, "STRAWBERRY": 0.50,
     "MELON": 0.42, "EGG": 0.40, "MILK": 0.55, "WOOL": 0.55,
@@ -150,6 +151,11 @@ def _sell_quantity(item, inventory, available):
     if item not in MARKET_PARAMS:
         return 0
     floor = SELL_FLOOR[item] * MARKET_PARAMS[item]["base"]
+    # Never sit on stock we have already priced at the $1 floor. Cash is the only
+    # thing that scores, and the town centre keeps draining 1 of every product per
+    # day, so the floor can recover -- but only if we keep selling into it.
+    if _price(item, inventory + available) <= PRICE_FLOOR_C:
+        return available
     if _price(item, inventory + available) >= floor:
         return available
     lo, hi = 0, available          # price(inv+lo) ok, price(inv+hi) too low
