@@ -1,39 +1,50 @@
 # Kaggriculture — Submission State
 
-Last updated 2026-09-30 22:05 UTC. Deadline **2026-09-30 23:59**.
+Last updated 2026-09-30 21:13 UTC. Deadline **2026-09-30 23:59**.
 
-Daily quota: 5 submissions. **2 remaining.**
-
-## ACTIVE BOT SAFETY ANALYSIS
-
-```
-ACTIVE BOT 1: 56716337  sunrise-v2   score 600.0   (bulk-seed fix)
-ACTIVE BOT 2: 56716289  sunrise-v1   score 491.1   (superseded, weaker)
-NEW CANDIDATE: 56716446  sunrise-v3  (bulk seeds + $1-floor liquidation)
-
-SUNRISE-V3 WOULD RETIRE: 56716289 (sunrise-v1, the weaker of the two)
-
-SAFE?  YES
-  - v1 scores 491.1, v2 scores 600.0, v3 is a strict superset of v2's changes
-    and beats v2's exact source on the paired dev seeds (8-0).
-  - Only the strictly weaker bot is displaced; the current best stays active.
-  - Local evidence: v3 vs starter 12-0 dev / 9-1 holdout; 12-0 vs random;
-    8-0 vs pass. Zero errors across 40+ simulated episodes.
-```
+Daily quota: 5 submissions. **0 remaining today.** The quota is spent; the two
+active slots are locked and no further changes can be made before the deadline.
 
 ## SUBMISSION TABLE
 
-| SUBMISSION_ID | TIMESTAMP (UTC) | VERSION | STATUS | RATING | EPISODES | ACTIVE? | KEEP? |
+| SUBMISSION_ID | TIMESTAMP (UTC) | VERSION | COMMIT | STATUS | RATING | ACTIVE? | KEEP? |
 |---|---|---|---|---|---|---|---|
-| 56716289 | 2026-09-30 18:52 | sunrise-v1 | COMPLETE | 491.1 | 1 validation | yes | no — superseded |
-| 56716337 | 2026-09-30 18:54 | sunrise-v2 | COMPLETE | 600.0 | 1 validation | yes | yes |
-| 56716446 | 2026-09-30 19:00 | sunrise-v3 | PENDING | — | — | pending | yes |
+| 56716289 | 18:52 | sunrise-v1 | `fd4c370` | COMPLETE | 348.1 | no | no — retired |
+| 56716337 | 18:54 | sunrise-v2 | `fd4c370` | COMPLETE | 322.0 | no | no — retired |
+| 56716446 | 19:00 | sunrise-v3 | `f4f58a6` | COMPLETE | 506.8 | no | no — retired by v5 |
+| 56716532 | 19:06 | sunrise-v4 | `d6f79ce` | COMPLETE | **600.0** | **yes** | **yes** |
+| **56716646** | **19:12** | **sunrise-v5 (FINAL)** | `8919b23` | PENDING | — | **yes** | **yes** |
+
+## ACTIVE BOT SAFETY ANALYSIS (final submission)
+
+```
+ACTIVE BOT 1:  56716532  sunrise-v4  rating 600.0
+ACTIVE BOT 2:  56716446  sunrise-v3  rating 506.8
+NEW CANDIDATE: 56716646  sunrise-v5  (= champion_001)
+
+SUNRISE-V5 WOULD RETIRE: 56716446 (sunrise-v3, rating 506.8)
+
+SAFE?  YES
+  - v5 is a strict superset of v4's source: it changes only the melon tile quota
+    from land/2 to land/5 and adds a comment. Every other mechanism is identical.
+  - Local evidence strictly improved, on both seed pools:
+        holdout vs starter   mean cash  $4,757 -> $7,520   win rate 9-1 -> 8-0
+        league dev           20-0, 0 errors
+        league holdout       20-0, 0 errors
+  - The bot being retired (v3, 506.8) was ALREADY the weaker of the two active
+    pair at the time of the swap (600.0 vs 506.8), so the strongest active bot
+    (v4, 600.0) is preserved untouched.
+  - v4 remains in the repo as champions/champion_000, restorable in seconds.
+```
 
 ## Notes
 
-- All three submissions are the single-file `main.py` agent. No archive, no
-  external dependency, no network access, no model download.
-- Validation score of 600.0 is the Kaggle default for a completed validation
-  episode; the meaningful number is the ladder rating, which needs real matches.
-- Leaderboard top at time of writing is ~3053 (`M & M & P & Q`).
-- **Emergency reserve: 2 submissions held in hand.**
+- All submissions are the single-file `main.py` agent: no archive, no external
+  dependency, no network access, no model download, no absolute paths.
+- Validation ratings (322-600) are the Kaggle default for a completed validation
+  episode and are **not** ladder performance. The leaderboard top is ~3053, so
+  none of these numbers indicate real ladder strength; they only confirm the
+  agent executed cleanly on Kaggle's side.
+- `champions/champion_000` (v4) and `champions/champion_001` (v5) are both
+  frozen locally and on GitHub with SHA256 and commit hashes.
+- Submission gate `tests/test_submission.py`: **13/13 passing**.

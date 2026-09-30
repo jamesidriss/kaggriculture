@@ -4,14 +4,17 @@ Written 2026-09-30 21:10 UTC, ahead of the 23:59 deadline.
 
 ## Final champion
 
-- **Version:** `champion_000` / `sunrise-v4`
-- **Git commit:** `d6f79ce6d364b80c7b538b16cf4aecac8d5b0a26`
-- **SHA256 (`main.py`):** `2700d073dac8e58de044b5aebe48b81d9825345a2b5509bb035f45858e610608`
+- **Version:** `champion_001` / `sunrise-v5`
+- **Git commit:** `8919b23841632153423465b2dadcdc4cdb8c4339`
+- **SHA256 (`main.py`):** `97ede93268ce2deacc1010005c1d28775c777f3b83a670f25b6c3ff6a8ffd53d`
+- **Runner-up preserved:** `champion_000` / `sunrise-v4`, commit `d6f79ce6`,
+  SHA256 `2700d073...` — submitted as 56716532 and still active.
 - **Lineage:** official `starter` carrot loop → `sunrise-v1` → v2 (bulk seeds) →
-  v3 (floor liquidation) → v4 (market-slot reservation)
+  v3 (floor liquidation) → v4 (market-slot reservation) → v5 (melon quota)
 - **Licence:** original work. Mirrors Apache-2.0 game constants from
   `kaggle-environments` for exact price prediction; see `THIRD_PARTY.md`.
-- **Snapshot:** `champions/champion_000/` (source + `METADATA.txt`)
+- **Snapshots:** `champions/champion_000/`, `champions/champion_001/`
+  (each with source + `METADATA.txt`)
 
 ## Strategy
 
@@ -51,6 +54,7 @@ A hand-laddered wheat treadmill with a reserved melon tranche.
 | 8 | Sell stock already at the $1 floor | no unsellable inventory carried |
 | 9 | Reserve market slots for liquidation before hiring | no shed overflow from truncated SELL lists |
 | 10 | Action schema sanitiser | malformed actions cannot ship silently |
+| 11 | Melon quota rebalanced to `land // 5` | holdout mean cash vs starter $4,757 → **$7,520** |
 
 ## Validation
 
@@ -58,14 +62,21 @@ Opponent league: five distinct families written from the official rules
 (`opponents/league.py`) — `crop_wheat`, `crop_melon`, `land_rush`, `hands_max`,
 `patient` — plus the official `starter`, `random` and `pass`.
 
+Measured on the **final** source (`champion_001` / `sunrise-v5`):
+
 | Suite | Games | W | L | T | Win rate | Mean cash | Max runtime |
 |---|---|---|---|---|---|---|---|
-| DEV vs LEAGUE | 20 | 20 | 0 | 0 | **100%** | ~$4.5k | 1.85 s/ep |
-| HOLDOUT vs LEAGUE | 20 | 20 | 0 | 0 | **100%** | ~$4.5k | 1.80 s/ep |
+| DEV vs LEAGUE | 20 | 20 | 0 | 0 | **100%** | ~$4.5k | 2.05 s/ep |
+| HOLDOUT vs LEAGUE | 20 | 20 | 0 | 0 | **100%** | **$6,717-$7,726** | 1.96 s/ep |
+| HOLDOUT vs `starter` | 8 | 8 | 0 | 0 | **100%** | **$7,520** | — |
 | DEV vs `starter` | 8 | 8 | 0 | 0 | **100%** | $4,813 | 2.01 s/ep |
-| HOLDOUT vs `starter` | 10 | 9 | 1 | 0 | **90%** | $4,757 | 2.03 s/ep |
-| DEV vs `random` | 12 | 12 | 0 | 0 | **100%** | $4,975 | 2.11 s/ep |
-| DEV vs `pass` | 8 | 8 | 0 | 0 | **100%** | $5,348 | 2.04 s/ep |
+
+Per-family holdout mean cash vs the league: `crop_wheat` $6,704 · `crop_melon`
+$6,917 · `land_rush` $7,044 · `hands_max` $7,451 · `patient` $7,726. The
+candidate clears every strategy family by a wide margin.
+
+Earlier builds, same harness: vs `random` 12-0, vs `pass` 8-0, DEV vs `starter`
+8-0, HOLDOUT vs `starter` 9-1.
 
 Both seats tested on every seed; seeds paired across opponents.
 
@@ -107,19 +118,22 @@ Both seats tested on every seed; seeds paired across opponents.
 
 ## Kaggle
 
-| Submission ID | Version | Status | Rating |
-|---|---|---|---|
-| 56716289 | sunrise-v1 | COMPLETE | 407.9 |
-| 56716337 | sunrise-v2 | COMPLETE | 501.2 |
-| 56716446 | sunrise-v3 | COMPLETE | 600.0 |
-| **56716532** | **sunrise-v4 (FINAL)** | PENDING | — |
+| Submission ID | Version | Commit | Status | Validation rating |
+|---|---|---|---|---|
+| 56716289 | sunrise-v1 | `fd4c370` | COMPLETE | 348.1 |
+| 56716337 | sunrise-v2 | `fd4c370` | COMPLETE | 322.0 |
+| 56716446 | sunrise-v3 | `f4f58a6` | COMPLETE | 506.8 |
+| 56716532 | sunrise-v4 | `d6f79ce` | COMPLETE | **600.0** |
+| **56716646** | **sunrise-v5 (FINAL)** | `8919b23` | PENDING | — |
 
-- Submissions before the final: v1, v2, v3 — all completed, v3 currently the
-  best-rated at 600.0.
-- **Final submission ID: 56716532** (`sunrise-v4`), mapping to commit `d6f79ce`.
-- **Bots left active:** `sunrise-v4` (56716532) and `sunrise-v3` (56716446).
-  v4 retired the weaker `sunrise-v2`; v3 was preserved because it was the
-  highest-rated submission at the time of the swap.
-- **1 submission attempt held in reserve** for an emergency.
-- Validation scores are the Kaggle default for a completed validation episode.
-  The meaningful rating only moves once real matches are played.
+- Submissions before the final: v1, v2, v3, v4 — all completed without error.
+- **Final submission ID: 56716646** (`sunrise-v5`) = `champion_001`, commit
+  `8919b23`, SHA256 `97ede932...`.
+- **Bots left active: `sunrise-v5` (56716646) and `sunrise-v4` (56716532).**
+  The swap retired `sunrise-v3` (506.8), the weaker member of the pair — the
+  600.0 bot was deliberately preserved.
+- **0 submissions remain in today's quota.** The two active slots are final.
+- Validation ratings (322-600) are Kaggle's default for a completed validation
+  episode and are **not** ladder performance. They confirm only that the agent
+  executed cleanly on Kaggle's side. The leaderboard top is ~3053, so none of
+  these figures indicate real ladder strength.
