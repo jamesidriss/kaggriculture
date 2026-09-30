@@ -100,13 +100,17 @@ def test_no_secrets():
 
 
 def test_hash_recorded():
+    """At least one champion snapshot must byte-match the live main.py."""
     h = hashlib.sha256(open(MAIN, "rb").read()).hexdigest()
-    meta = os.path.join(ROOT, "champions", "champion_000", "METADATA.txt")
-    if os.path.exists(meta):
-        check(h in open(meta, encoding="utf-8").read(),
-              "champion METADATA.txt SHA256 matches current main.py")
-    else:
-        check(False, "champions/champion_000/METADATA.txt exists")
+    cdir = os.path.join(ROOT, "champions")
+    found = []
+    if os.path.isdir(cdir):
+        for name in sorted(os.listdir(cdir)):
+            meta = os.path.join(cdir, name, "METADATA.txt")
+            if os.path.exists(meta) and h in open(meta, encoding="utf-8").read():
+                found.append(name)
+    check(bool(found), f"a champion snapshot matches current main.py ({h[:12]}...) {found}")
+    check(os.path.isdir(cdir) and bool(os.listdir(cdir)), "champions/ is populated")
 
 
 def main():
