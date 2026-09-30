@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Kaggle / credentials
+.kaggle/
+kaggle.json
+access_token
+access_token.txt
+*.token
+cookies.txt
+.env
+.env.*
+secrets/
+credentials/
+
+# Node / editors
+node_modules/
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Caches / generated
+.cache/
+tmp/
+temp/
+logs/raw/
+large_downloads/
+*.log
+
+# Replays / large reproducible artifacts
+replays/
+benchmark/artifacts/
+benchmark/results/raw/
+
+# OS temp
+*.bak
+*.swp
