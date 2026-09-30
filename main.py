@@ -298,9 +298,14 @@ def _market_orders(obs, farm, private, day, shed_total, melon_on_board):
     #     earn.  Target scales with LAND (one worker per ~5 tiles) and is capped
     #     by what a fixed share of the bank can safely cover.
     hand_target = min(HAND_CAP, max(3, (unlocked_tiles + 4) // 5))
+    # Workers must never crowd the market queue: HIRE, BUY_SEED and SELL are all
+    # capped at 10 orders per turn, and a truncated SELL list means produce sits
+    # in the shed for a day (or is lost to shed overflow). Reserve slots for the
+    # liquidation orders first, then fill the remainder with hires.
+    hand_slots = max(0, MAX_MARKET_ORDERS - 4)
     hand_budget = money * HAND_SPEND_FRAC
     spent = 0
-    while current_hands < hand_target and len(orders) < MAX_MARKET_ORDERS - 5:
+    while current_hands < hand_target and len(orders) < hand_slots:
         cost = _fib(hands_today)
         if spent + cost > hand_budget:
             break
