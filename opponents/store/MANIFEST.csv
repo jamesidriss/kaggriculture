@@ -1,0 +1,8 @@
+name,sha256,source,license,score,path,notes
+v16_rc5,f029fa0cb66a9eb509afbe44e3f59b800332d0419db91607183410e4089c4d19,https://www.kaggle.com/code/boatlee/v16-rc5-high-score-8c-4s-premium-market-lead,stated-in-source,unknown,opponents/store/f029fa0cb66a9eb5,8 cows / 4 sheep
+shop_router,d6d74997dc5b483db63d8e39cafa1afeec0f366824e75107e109123f111e866b,https://www.kaggle.com/code/yhay81/shop-router-0909,Apache-2.0,unknown,opponents/store/d6d74997dc5b483d,low-competence control
+farm_2945,bfee70e9daaebeae0737a880f1df8f1c60d0783c59af620136cc0d28ef482bc7,https://www.kaggle.com/code/thomastschinkel/the-2945-farm-96-vs-the-top-10-public-bots,Apache-2.0,2945,opponents/store/bfee70e9daaebeae,v9/3 public V39; %%writefile cell 5
+v38_feed,a2047ebd8ca5720221e1421529655d9c67a7b2fedb74e874c7d3c55a8970ac7e,https://www.kaggle.com/code/ahmedberatozer/kaggriculture-v38-smarter-feed-stronger-margins,stated-in-source,unknown,opponents/store/a2047ebd8ca57202,V38 smarter feed
+barnyard_v7,997e6bfc5234534e246e945bc61c87858ebf997ab85b0a5c9427dd4ed710f1b6,https://www.kaggle.com/code/romanrozen/strong-barnyard-economist,NONE-STATED,3034.8,opponents/store/997e6bfc5234534e,adaptive-preempt-3x2x1; stale pre-hinge price model
+multi_route_v43,919fc1d61050cd96f799979e49177ae3ac7bce98ec9835724238bea73f4a08ed,https://www.kaggle.com/code/flexonafft/kaggriculture-multi-route-farming-agent,Apache-2.0,unknown,opponents/store/919fc1d61050cd96,V43 exact SOURCE_BYTES; author-pinned sha verified
+tdr_native,23b0d0c93bcf3dfecaabfecd950ec4ab3b4c46000c0c481bddcf0a63ce019f02,https://www.kaggle.com/code/yhay81/three-day-shop-router,Apache-2.0,unknown,opponents/store/23b0d0c93bcf3dfe,native ctypes agent.so; LINUX/MAC ONLY (cannot run on Windows); hybrid_shopforge_3day_frontier_state_router_r5

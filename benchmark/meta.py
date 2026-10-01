@@ -166,12 +166,18 @@ def main():
     ap.add_argument("--games", type=int, default=8)
     ap.add_argument("--stage", default="meta_dev",
                     choices=["meta_dev", "meta_holdout", "meta_final"])
+    ap.add_argument("--seeds-file", default="",
+                    help="path to a newline-separated seed list; overrides --stage/--games")
     ap.add_argument("--roundrobin", action="store_true")
     ap.add_argument("--json", default="")
     args = ap.parse_args()
 
     seeds = {"meta_dev": META_DEV, "meta_holdout": META_HOLDOUT,
              "meta_final": META_FINAL}[args.stage][: max(1, args.games)]
+    if args.seeds_file:
+        with open(args.seeds_file, encoding="utf-8") as f:
+            seeds = [int(x.strip()) for x in f if x.strip().isdigit()]
+        args.stage = os.path.basename(args.seeds_file)
 
     names = meta_names()
     print(f"meta league ({len(names)}): {', '.join(names)}")
