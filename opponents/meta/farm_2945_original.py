@@ -1069,7 +1069,7 @@ def _shadow_terminal(obs,config):
 
 def agent(observation,configuration=None):
     try:
-        step=int(_step_of(observation));seat=int(observation['player'])
+        step=int(observation['step']);seat=int(observation['player'])
     except Exception:
         return _PRE_TERMINAL_AGENT(observation,configuration)
     previous=_TERMINAL_PREVIOUS.get(seat)
@@ -1409,7 +1409,7 @@ def _v219_worker(obs, state, actor, role):
 
 def agent(observation, configuration=None):
     action=_V219_PARENT(observation,configuration)
-    step=int(_step_of(observation));player=int(observation['player']);day=step//24
+    step=int(observation['step']);player=int(observation['player']);day=step//24
     state=_V219_STATES.get(player)
     if state is None or step<=state['last_step']:
         state={'last_step':step,'day':-1,'workers':{},'last_work':{},'seen_plants':set(),'lost':set(),
@@ -1484,7 +1484,7 @@ _V219_REPORT['errors']=0
 def agent(observation,configuration=None):
     try:
         action=_EXPERIMENT_PARENT(observation,configuration)
-        if APPLY_TIMING and int(_step_of(observation))>=144:action=_v224_sales_first(action)
+        if APPLY_TIMING and int(observation['step'])>=144:action=_v224_sales_first(action)
         return action
     except Exception:
         _V219_REPORT['errors']+=1
@@ -1514,7 +1514,7 @@ del agent
 def agent(observation,configuration=None):
     try:
         action=_ORDER_PARENT(observation,configuration)
-        if int(_step_of(observation))>=144:action=_v224_sales_first(action)
+        if int(observation["step"])>=144:action=_v224_sales_first(action)
         return action
     except Exception:
         _V219_REPORT["errors"]+=1
@@ -1634,7 +1634,7 @@ def _v231_controller(obs,action,state,cap):
     return result
 
 def agent(observation,configuration=None):
-    step=int(_step_of(observation));seat=int(observation['player'])
+    step=int(observation['step']);seat=int(observation['player'])
     state=_V231_STATES.get(seat)
     if state is None or step<=state['last']:
         state=_V231_STATES[seat]=_v231_new_state()
@@ -1722,14 +1722,14 @@ def _r36_reserve(obs,action):
     return action
 
 def agent(observation,configuration=None):
-    if int(_step_of(observation))==0:
+    if int(observation.get('step',0))==0:
         _R36_SALE_REPORT.update(sale_reserved_units=0,sale_reservations=0,sale_errors=0)
     action=_R36_SALE_PARENT(observation,configuration)
     try:
         if configuration is None or all(configuration.get(k,v)==v for k,v in
             [('boardSize',10),('turnsPerDay',24),('shedCapacity',100),('maxMarketOrdersPerTurn',10)]):
             action=_r36_reserve(observation,action)
-            if int(_step_of(observation))>=288:action=_v224_sales_first(action)
+            if int(observation['step'])>=288:action=_v224_sales_first(action)
     except Exception:
         _R36_SALE_REPORT['sale_errors']=_R36_SALE_REPORT.get('sale_errors',0)+1
     _R36_SALE_REPORT.update(_R36_SALE_PARENT.telemetry)
@@ -1887,7 +1887,7 @@ _R37_STATS = dict(quote_reordered_turns=0, three_turn_calls=0, nocturne_errors=0
 del agent
 
 def agent(observation, configuration=None):
-    player, step = int(observation['player']), int(_step_of(observation))
+    player, step = int(observation['player']), int(observation['step'])
     state = _R37_PLAYERS.get(player)
     if state is None or step <= state['step']:
         state = _R37_PLAYERS[player] = {'step': -1, 'streak': 0}
@@ -2071,7 +2071,7 @@ def _v234_rescue(obs,action,state):
 
 def agent(observation,configuration=None):
     action=_V233_PARENT(observation,configuration)
-    step=int(_step_of(observation));player=int(observation['player']);day=step//24
+    step=int(observation['step']);player=int(observation['player']);day=step//24
     state=_V233_STATES.get(player)
     if state is None or step<=state['last_step']:
         state={'last_step':step,'day':-1,'workers':{},'work':{},'credit':{'WOOL':0,'FERTILIZER':0}}
@@ -2283,7 +2283,7 @@ def _r51_input_control(obs,action,state):
 
 def agent(observation,configuration=None):
     try:
-        step=int(_step_of(observation));player=int(observation['player']);state=_R51_INPUT_STATES.get(player)
+        step=int(observation['step']);player=int(observation['player']);state=_R51_INPUT_STATES.get(player)
         if state is None or step<=state['step']:
             state=_R51_INPUT_STATES[player]={'step':-1}
             _R51_INPUT_REPORT.update(input_hire_requests=0,input_confirmed_hires=0,input_hire_errors=0,input_purchase_requests=0,
@@ -2357,7 +2357,7 @@ def _r51_close_warehouse(obs,action):
 def agent(observation,configuration=None):
     result=_R51_WAREHOUSE_PARENT(observation,configuration)
     try:
-        if int(_step_of(observation))==0:_R51_WAREHOUSE_REPORT.update(warehouse_changed_turns=0,warehouse_extra_sales=0,warehouse_projected_unresolved=0,warehouse_errors=0)
+        if int(observation['step'])==0:_R51_WAREHOUSE_REPORT.update(warehouse_changed_turns=0,warehouse_extra_sales=0,warehouse_projected_unresolved=0,warehouse_errors=0)
         if configuration is None or all(configuration.get(k,v)==v for k,v in [('boardSize',10),('turnsPerDay',24),('shedCapacity',100),('maxMarketOrdersPerTurn',10)]):result=_r51_close_warehouse(observation,result)
     except Exception:_R51_WAREHOUSE_REPORT['warehouse_errors']=_R51_WAREHOUSE_REPORT.get('warehouse_errors',0)+1
     _R51_WAREHOUSE_REPORT.update(getattr(_R51_WAREHOUSE_PARENT,'telemetry',{}));return result
@@ -2614,7 +2614,7 @@ def _r85_fertilizer(obs, action, state):
 def agent(observation, configuration=None):
     result=_R85_PARENT(observation,configuration)
     try:
-        step=int(_step_of(observation));player=int(observation['player'])
+        step=int(observation['step']);player=int(observation['player'])
         state=_R85_STATES.get(player)
         if state is None or step<=state['step']:
             state=_R85_STATES[player]={'step':-1}
@@ -2751,7 +2751,7 @@ def _r95_replenish(obs,action):
 def agent(observation,configuration=None):
     result=_R95_PARENT(observation,configuration)
     try:
-        if int(_step_of(observation))==0:
+        if int(observation['step'])==0:
             _R95_REPORT.update(replenishment_trim_turns=0,replenishment_trim_units=0,replenishment_errors=0)
         if configuration is not None and any(configuration.get(k,v)!=v for k,v in [('boardSize',10),('turnsPerDay',24),('shedCapacity',100),('maxMarketOrdersPerTurn',10)]):return result
         result=_r95_replenish(observation,result)
@@ -2881,7 +2881,7 @@ def _r97_supply(obs,action):
 def agent(observation,configuration=None):
     result=_R97_PARENT(observation,configuration)
     try:
-        player=int(observation['player']);step=int(_step_of(observation))
+        player=int(observation['player']);step=int(observation['step'])
         if player not in _R97_LAST or step<=_R97_LAST[player]:
             _R97_REPORT.update(supply_guard_changes=0,supply_grain_protected=0,supply_buy_units=0,supply_early_changes=0,supply_early_units=0,supply_prefund_changes=0,supply_prefund_units=0,supply_slot_declines=0,supply_capacity_declines=0,supply_budget_declines=0,supply_errors=0)
         _R97_LAST[player]=step
@@ -3012,7 +3012,7 @@ _V9_COURIER_PARENT = agent
 
 
 def agent(observation, configuration=None):
-    player, step = int(observation["player"]), int(_step_of(observation))
+    player, step = int(observation["player"]), int(observation["step"])
     st = _V9_COURIER.get(player)
     if st is None or step <= st["step"]:
         st = _V9_COURIER[player] = {"step": -1}
@@ -3124,7 +3124,7 @@ _V9_CARROT_PARENT = agent
 
 
 def agent(observation, configuration=None):
-    player, step = int(observation["player"]), int(_step_of(observation))
+    player, step = int(observation["player"]), int(observation["step"])
     st = _V9_CARROT.get(player)
     if st is None or step <= st["step"]:
         st = _V9_CARROT[player] = {"step": -1}
@@ -3228,7 +3228,7 @@ _V9_HERD_PARENT = agent
 
 
 def agent(observation, configuration=None):
-    player, step = int(observation["player"]), int(_step_of(observation))
+    player, step = int(observation["player"]), int(observation["step"])
     st = _V9_HERD.get(player)
     if st is None or step <= st["step"]:
         st = _V9_HERD[player] = {"step": -1}
@@ -3320,7 +3320,7 @@ _V9_FERT_PARENT = agent
 
 
 def agent(observation, configuration=None):
-    if int(_step_of(observation)) == 0:
+    if int(observation["step"]) == 0:
         _V9_FERT_REPORT.update(fert_applied=0, fert_errors=0)
     action = _V9_FERT_PARENT(observation, configuration)
     try:
@@ -3539,7 +3539,7 @@ _V92_P_PARENT = agent
 
 
 def agent(observation, configuration=None):
-    player, step = int(observation["player"]), int(_step_of(observation))
+    player, step = int(observation["player"]), int(observation["step"])
     st = _V92_P.get(player)
     if st is None or step <= st["step"]:
         st = _V92_P[player] = {"step": -1, "obs": {}}
@@ -3707,7 +3707,7 @@ _V92_Q_PARENT = agent
 
 
 def agent(observation, configuration=None):
-    player, step = int(observation["player"]), int(_step_of(observation))
+    player, step = int(observation["player"]), int(observation["step"])
     st = _V92_Q.get(player)
     if st is None or step <= st["step"]:
         st = _V92_Q[player] = _v92_q_new_state()
@@ -3845,7 +3845,7 @@ _V9_RACE_PARENT = agent
 
 
 def agent(observation, configuration=None):
-    player, step = int(observation["player"]), int(_step_of(observation))
+    player, step = int(observation["player"]), int(observation["step"])
     st = _V9_RACE.get(player)
     if st is None or step <= st["step"]:
         st = _V9_RACE[player] = {"step": -1, "lead": -V9_RACE_MARGIN, "prev": None}
@@ -3951,7 +3951,7 @@ Chassis._sell_lead = _v9_racepx_lead
 
 
 def agent(observation, configuration=None):
-    if int(_step_of(observation)) == 0:
+    if int(observation["step"]) == 0:
         _v9_racepx_report.update(racepx_skipped=0, racepx_sold=0, racepx_errors=0)
     try:
         return _V9_RACEPX_PARENT(observation, configuration)
@@ -4048,7 +4048,7 @@ _V9_RACEGATE_PARENT = agent
 
 
 def agent(observation, configuration=None):
-    if int(_step_of(observation)) == 0:
+    if int(observation["step"]) == 0:
         _v9_racegate_report.update(racegate_reserved_units=0, racegate_errors=0)
     try:
         return _V9_RACEGATE_PARENT(observation, configuration)
@@ -4105,7 +4105,7 @@ def _ct_apply(obs, action, st):
 
 
 def agent(observation, configuration=None):
-    player, step = int(observation["player"]), int(_step_of(observation))
+    player, step = int(observation["player"]), int(observation["step"])
     st = _CT.get(player)
     if st is None or step <= st["step"]:
         st = _CT[player] = {"step": -1}
@@ -4587,7 +4587,7 @@ del agent
 def agent(observation, configuration=None):
     action = _CA_PARENT(observation, configuration)
     try:
-        step = int(_step_of(observation))
+        step = int(observation["step"])
         seat = int(observation["player"])
         st = _CA_STATE.get(seat)
         if step == 0 or st is None or step <= st["step"]:
@@ -4789,7 +4789,7 @@ del agent
 def agent(observation, configuration=None):
     action = _OR2_PARENT(observation, configuration)
     try:
-        step = int(_step_of(observation))
+        step = int(observation["step"])
         seat = int(observation["player"])
         st = _OR2_STATE.get(seat)
         if step == 0 or st is None or step <= st.get("step", -1):
@@ -5028,7 +5028,7 @@ del agent
 def agent(observation, configuration=None):
     action = _CH_PARENT(observation, configuration)
     try:
-        step = int(_step_of(observation))
+        step = int(observation["step"])
         seat = int(observation["player"])
         st = _CH_STATE.get(seat)
         if step == 0 or st is None or step <= st["step"]:
@@ -5144,7 +5144,7 @@ del agent
 def agent(observation, configuration=None):
     action = _SR_PARENT(observation, configuration)
     try:
-        step = int(_step_of(observation))
+        step = int(observation["step"])
         if step == 0:
             for k in _SR_REPORT:
                 _SR_REPORT[k] = 0
@@ -5490,7 +5490,7 @@ def agent(observation, configuration=None):
     action = _HD2_PARENT(observation, configuration)
     try:
         seat = int(observation["player"])
-        step = int(_step_of(observation))
+        step = int(observation["step"])
         st = _HD2_STATE.get(seat)
         if st is None or step <= st["step"]:
             st = _HD2_STATE[seat] = {"step": -1, "inv": {}, "decided": False, "mode": None,
@@ -5630,7 +5630,7 @@ def agent(observation, configuration=None):
     action = _CS_PARENT(observation, configuration)
     try:
         seat = int(observation["player"])
-        step = int(_step_of(observation))
+        step = int(observation["step"])
         st = _CS_STATE.get(seat)
         if st is None or step <= st["step"]:
             st = _CS_STATE[seat] = {"step": -1, "decided": False, "mode": None, "plan": None,
