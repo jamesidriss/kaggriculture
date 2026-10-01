@@ -1,0 +1,28 @@
+version: postmortem_champion v1 (seat-safe The 2945 Farm v9/3)
+parent: public_champion_001 / The 2945 Farm v9/3 by thomastschinkel
+sha256: c936e5a71ba40e1700ca1ab3a3271132407446bbb8b7523ced2cf4450ed8463f
+bytes: 856428
+git_commit: (see git log; file added in commit below)
+license: Apache-2.0
+source_lineage:
+  https://www.kaggle.com/code/thomastschinkel/the-2945-farm-96-vs-the-top-10-public-bots
+  upstream attribution retained in-file: thomastschinkel, yhay81, destbreso,
+  aurax7, tetsutani, prvsiyan, Dmitrii Gluzdov, Ahmed Berat Ozer
+modification: SEAT-SAFE PATCH ONLY. 30 sites reading observation["step"] were
+  rewritten to the agent's own _step_of() accessor (day*24+hour, numerically
+  identical). Reason: the official observation schema does NOT declare "step";
+  the interpreter sets it only on player 0, so the verbatim artifact raises
+  KeyError at step 0 when assigned seat 1. Verified: seat-0 final cash is
+  byte-identical before and after the patch on 3 seeds; seat 1 goes from
+  immediate crash to normal play.
+meta_win_rate:
+  dev (ladder_real_dev.txt, 10 elite seeds): 100-0 vs 5 opponents, both seats
+  holdout (ladder_real_holdout.txt, 10 seeds): 100-0, both seats, 0 errors
+  final (ladder_real_final.txt, 10 seeds, untouched until final run): 100-0
+  combined: 300 games, 300 wins, 0 losses, 0 ties, 0 errors
+local_BT: beta 10.203 (highest in a 6-agent league; see reports/LOCAL_BRADLEY_TERRY.md)
+runtime: median 0.33 ms, p95 1.23 ms, p99 2.94 ms, max 28.9 ms per agent() call
+  against a 1000 ms actTimeout. No network, no file writes, no native deps.
+self_match_excluded: yes (digest-addressed store; identical-content matchups skipped)
+NOT_SUBMITTED: Kaggle API returns HTTP 400 "Submission not allowed: Submissions
+  have been disabled for this competition." No legal submission path exists.

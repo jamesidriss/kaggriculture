@@ -49,10 +49,14 @@ def load(path):
             # rather than silently dropping it from the league.
             raise RuntimeError(f"{os.path.basename(path)} not self-contained: "
                                f"{repr(exc)[:160]}") from exc
-        # Tag each agent with its own file path and content digest so the
-        # self-play guard can detect two "different" names holding the same file.
+        # Tag each agent with its own file path, raw digest, and a
+        # line-ending-normalised digest so the self-play guard also catches the
+        # same file copied with CRLF/LF differences (a real duplicate).
+        raw = open(path, "rb").read()
+        text = raw.decode("utf-8", errors="replace").replace("\r\n", "\n")
         mod.agent.__kag_src__ = os.path.basename(path)
-        mod.agent.__kag_sha__ = hashlib.sha256(open(path, "rb").read()).hexdigest()
+        mod.agent.__kag_sha__ = hashlib.sha256(raw).hexdigest()
+        mod.agent.__kag_sha_norm__ = hashlib.sha256(text.encode()).hexdigest()
         _cache[path] = mod.agent
     return _cache[path]
 
@@ -68,8 +72,8 @@ def play(agent_a, agent_b, seed, a_seat):
     # Guard against the same artifact being compared with itself. A duplicate
     # file produces a mirror match that always ties, which silently corrupts an
     # aggregate win rate if it is mistaken for a real result.
-    sha_a = getattr(agent_a, "__kag_sha__", None)
-    sha_b = getattr(agent_b, "__kag_sha__", None)
+    sha_a = getattr(agent_a, "__kag_sha_norm__", None) or getattr(agent_a, "__kag_sha__", None)
+    sha_b = getattr(agent_b, "__kag_sha_norm__", None) or getattr(agent_b, "__kag_sha__", None)
     if sha_a is not None and sha_a == sha_b:
         raise RuntimeError(
             f"SELF-PLAY GUARD: '{getattr(agent_a, '__kag_src__', '?')}' and "
@@ -210,15 +214,20 @@ def main():
         return
 
     opps = [args.opp] if args.opp else names
-    cand_sha = hashlib.sha256(open(os.path.abspath(args.cand), "rb").read()).hexdigest()
+    cand_raw = open(os.path.abspath(args.cand), "rb").read()
+    cand_norm = cand_raw.decode("utf-8", "replace").replace("\r\n", "\n")
     allrows = []
     for o in opps:
         opp_path = os.path.join(META_DIR, o + ".py")
-        if os.path.exists(opp_path) and \
-                hashlib.sha256(open(opp_path, "rb").read()).hexdigest() == cand_sha:
-            # Same bytes as the candidate: a mirror match, not evidence.
-            print(json.dumps({"label": f"vs {o}", "skipped": "identical to candidate"}))
-            continue
+        if os.path.exists(opp_path):
+            raw = open(opp_path, "rb").read()
+            same_raw = raw == cand_raw
+            same_norm = raw.decode("utf-8", "replace").replace("\r\n", "\n") == cand_norm
+            if same_raw or same_norm:
+                # Same bytes as the candidate (modulo line endings): a mirror
+                # match, not evidence. Skipping rather than scoring it.
+                print(json.dumps({"label": f"vs {o}", "skipped": "identical to candidate"}))
+                continue
         try:
             r = head_to_head(args.cand, o, seeds)
         except Exception as exc:  # noqa: BLE001
