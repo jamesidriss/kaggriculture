@@ -49,3 +49,7 @@ benchmark/results/raw/
 # OS temp
 *.bak
 *.swp
+data/replay_db/
+data/replays/
+*.parquet
+seeds/ladder_real_final.txt
