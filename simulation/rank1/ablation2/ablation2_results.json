@@ -1,0 +1,122 @@
+{
+  "generated_utc": "2026-10-02T18:44:01Z",
+  "moon_sha256": "178ae0f727641cf4b618ebb98ade7aa1a1bed7517281aab9849de82a59d8ed3a",
+  "c001_sha256": "a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8",
+  "seeds": 30,
+  "method": "intervention applied at the def site so the wrapper chain binds it; every variant must pass the playability probe before its score is used",
+  "results": [
+    {
+      "name": "control_null",
+      "hypothesis": "unmodified Moon; must reproduce the control score exactly",
+      "note": "unmodified control",
+      "sha256": "178ae0f727641cf4b618ebb98ade7aa1a1bed7517281aab9849de82a59d8ed3a",
+      "playable": true,
+      "probe": "zerosum",
+      "result": {
+        "games": 60,
+        "valid": 60,
+        "broken": 0,
+        "W": 52,
+        "L": 8,
+        "T": 0,
+        "bt_score": 0.8667,
+        "median_margin": 1259
+      }
+    },
+    {
+      "name": "opening_pass_through",
+      "hypothesis": "v9 OPENING market sequence. A pass-through returns the parent action unchanged, so the layer's own effect is removed without disabling the program.",
+      "note": "def site replaced, original kept as _A2_REAL__v9_opening",
+      "sha256": "cbd135e217bdb4cfa167ed234bb22774e279c24528891b47745afe0ce692f451",
+      "playable": true,
+      "probe": "zerosum",
+      "result": {
+        "games": 60,
+        "valid": 60,
+        "broken": 0,
+        "W": 0,
+        "L": 60,
+        "T": 0,
+        "bt_score": 0.0,
+        "median_margin": -14659
+      }
+    },
+    {
+      "name": "race_update_off",
+      "hypothesis": "RACE: records a rival's observed sale and computes how far ahead of it Moon's own planned sale sits.",
+      "note": "def site replaced, original kept as _A2_REAL__v9_race_update",
+      "sha256": "41564ec2d6f15f89d9c96c975930654b1eee4b7728d62f9dea153e71d7f2a8de",
+      "playable": true,
+      "probe": "zerosum",
+      "result": {
+        "games": 60,
+        "valid": 60,
+        "broken": 0,
+        "W": 52,
+        "L": 8,
+        "T": 0,
+        "bt_score": 0.8667,
+        "median_margin": 1259
+      }
+    },
+    {
+      "name": "racepx_gate_off",
+      "hypothesis": "RACEPX: converts a detected lead into an earlier sale.",
+      "error": "def site for _v9_racepx_gate not found"
+    },
+    {
+      "name": "courier_off",
+      "hypothesis": "COURIER layer",
+      "note": "def site replaced, original kept as _A2_REAL__v9_courier",
+      "sha256": "6f0841e0a14ce5d02841c48ed5fde011a796376119c3c6864b8d0c5ee73e6de5",
+      "playable": true,
+      "probe": "zerosum",
+      "result": {
+        "games": 60,
+        "valid": 60,
+        "broken": 0,
+        "W": 48,
+        "L": 12,
+        "T": 0,
+        "bt_score": 0.8,
+        "median_margin": 1258
+      }
+    },
+    {
+      "name": "carrot_off",
+      "hypothesis": "CARROT layer",
+      "note": "def site replaced, original kept as _A2_REAL__v9_carrot",
+      "sha256": "2b72cb2820f9bab23993b035f59d3c94e8e9ac4906bbfe7e89b4141facac4524",
+      "playable": true,
+      "probe": "zerosum",
+      "result": {
+        "games": 60,
+        "valid": 60,
+        "broken": 0,
+        "W": 52,
+        "L": 8,
+        "T": 0,
+        "bt_score": 0.8667,
+        "median_margin": 1259
+      }
+    },
+    {
+      "name": "herd_off",
+      "hypothesis": "HERD layer",
+      "note": "def site replaced, original kept as _A2_REAL__v9_herd",
+      "sha256": "fd63f4abf42af77d6ee0c3c8c134caa59dc6615d157148f33b85e7c7fcfd8940",
+      "playable": true,
+      "probe": "zerosum",
+      "result": {
+        "games": 60,
+        "valid": 60,
+        "broken": 0,
+        "W": 52,
+        "L": 8,
+        "T": 0,
+        "bt_score": 0.8667,
+        "median_margin": 1259
+      }
+    }
+  ]
+}
