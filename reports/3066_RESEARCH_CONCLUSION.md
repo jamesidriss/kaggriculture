@@ -204,10 +204,17 @@ playability probe; they are recorded as rejected rather than quietly kept.
 ## 12. How many candidates evaluated?
 
 **512 boolean configurations, enumerated exhaustively**, plus the champion at
-every stage. 4,104 matches, 86 minutes, **0 broken games**. A pre-declared
-three-stage progressive race (A: 512×4 worlds, B: 64×16 vs two opponents,
-C: 3×48) is defined in `policy/search/racing_search.py` with the stage sizes,
-sample counts, opponents and objective written down before any result existed.
+every stage.
+
+| stage | configurations | opponents | matches | minutes | broken |
+|---|---|---|---|---|---|
+| A | 512 + champion | v51, 4 worlds | 4,104 | 86.1 | **0** |
+| B | 64 survivors + champion | v51 + Farm, 16 worlds | 4,096 | 76.8 | **0** |
+
+A three-stage progressive race (A: 512×4, B: 64×16 vs two opponents, C: 3×48)
+is defined in `policy/search/racing_search.py` with stage sizes, sample counts,
+opponents and the objective written into the source **before any result
+existed**.
 
 ## 13. What search method?
 
@@ -218,39 +225,55 @@ add a failure mode to a programme that already has too many.
 
 Objective, declared in advance: `0.6 × mean_lineage_score + 0.4 ×
 worst_lineage_score` on lineage-balanced BT score rates, so nine variants of one
-lineage cannot outvote one independent opponent, and a collapse is visible rather
-than averaged away.
+lineage cannot outvote one independent opponent.
 
-Two sampling bugs from the previous generation were designed out:
-a lexicographic **prefix** of `itertools.product` (which left `hand_align`
-constant in all 64 sampled configurations and produced a uniform 0.0000 that
-looked like a result), and an explicit abort if any single gene is degenerate.
+**The robustness term was inert, and that is a design flaw worth recording.**
+v51 and the 2945 Farm are correctly tagged as the *same* lineage
+(`L-OZER-2945`), so at stages B and C the fit collapses to a single lineage and
+`worst_lineage_score` equals `mean_lineage_score`. The reported `n_lineages` is
+literally **1**. The term that exists to stop a one-lineage league from
+dominating fitness cannot function inside a one-lineage opponent set. Making it
+live requires the independent lineages to be in the search's opponent set, not
+merely in the evaluation pool — recorded as the concrete next change rather than
+patched here, because changing the opponent set mid-generation would invalidate
+the pre-declaration.
+
+Two sampling bugs from the previous generation were designed out: a
+lexicographic **prefix** of `itertools.product` (which left `hand_align` constant
+in all 64 sampled configurations and produced a uniform 0.0000 that looked like a
+result), and an explicit abort if any single gene is degenerate.
 
 ## 14. Best candidate?
 
-**No candidate beat C001.** At stage A the champion itself scores **0.8750** and
-ranks first, with many configurations tied at that ceiling.
+**None beat C001.** Stage B is the discriminating measurement, and there the
+champion leads by a wide margin:
+
+| rank | tag | robust | vs v51 | vs Farm |
+|---|---|---|---|---|
+| **0** | **C001_BASELINE** | **0.7656** | 24-4-4 → 0.8125 | 23-9-0 → 0.7188 |
+| 1 | 788b6a356582 | 0.5469 | 18-14-0 → 0.5625 | 17-15-0 → 0.5312 |
+| 2 | 94b7924d0da9 | 0.5469 | 18-14-0 → 0.5625 | 17-15-0 → 0.5312 |
+| 3 | a98c3b1f18f4 | 0.5156 | 16-16-0 → 0.5000 | 17-15-0 → 0.5312 |
+
+The champion is first at both stages.
 
 ## 15. Did it beat C001?
 
-**No.** At stage A the champion itself scores **0.8750** and ranks first, with
-many configurations tied at that ceiling.
+**No.** The best candidate trails C001 by **21.9 points** on the same worlds at
+stage B (0.5469 vs 0.7656). Because the comparison is paired on identical seeds,
+this is not a sample-size artefact: the candidates were measured against exactly
+the worlds the champion was measured against.
 
 ## 16. Did it beat Farm?
 
-**No — and stage A could not have detected it either way.**
+**No.** The best candidate scores 0.5312 against the Farm where C001 scores
+0.7188 on the same 16 worlds.
 
-The stage-A screen ran 8 matches per configuration against v51. On the first
-four dev worlds the tie rate is **zero**, whereas the full 992-game measurement
-gives 21.8% ties. The ceiling of 8 matches is 0.875 and a large number of
-configurations sit on it, so **the screen is saturated and carries no
-discrimination**.
-
-This is a methodological finding, not a result: at 8 games the score is maximised
-by *differing* from v51 — including by breaking tie-equality — rather than by
-being stronger. Stage B therefore re-ranks the 64 survivors against the
-discriminating opponents (v51 and the Farm, 32 matches each), which is where a
-real difference can appear.
+**Caveat on those absolute levels.** On the 16 dev worlds C001 beats the Farm
+71.9% of the time, against 55.1% over the full 1,000-world measurement. The dev
+pool's head is not representative of the Farm matchup. The *ranking* is still
+valid because it is paired; the *levels* are not, and no conclusion is drawn from
+them beyond the ordering.
 
 ## 17. Worst independent matchup?
 

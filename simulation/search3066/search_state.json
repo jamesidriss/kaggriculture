@@ -1,6 +1,7 @@
 {
   "stages_done": [
-    "stage_A"
+    "stage_A",
+    "stage_B"
   ],
   "results": {
     "stage_A": {
@@ -71,8 +72,8 @@
       "minutes": 86.1
     },
     "stage_B": {
-      "n_evaluated": 1,
-      "n_unique": 1,
+      "n_evaluated": 64,
+      "n_unique": 64,
       "worlds": 16,
       "opponents": [
         "v51",
@@ -85,9 +86,58 @@
           "mean_lineage": 0.765625,
           "worst_lineage_score": 0.765625,
           "broken": 0
+        },
+        {
+          "tag": "3815d86c5951",
+          "robust_score": 0.765625,
+          "mean_lineage": 0.765625,
+          "worst_lineage_score": 0.765625,
+          "broken": 0
+        },
+        {
+          "tag": "0d5cb6a5dbbe",
+          "robust_score": 0.765625,
+          "mean_lineage": 0.765625,
+          "worst_lineage_score": 0.765625,
+          "broken": 0
+        },
+        {
+          "tag": "6e85a2032b2e",
+          "robust_score": 0.765625,
+          "mean_lineage": 0.765625,
+          "worst_lineage_score": 0.765625,
+          "broken": 0
+        },
+        {
+          "tag": "bed1a8f5353a",
+          "robust_score": 0.765625,
+          "mean_lineage": 0.765625,
+          "worst_lineage_score": 0.765625,
+          "broken": 0
+        },
+        {
+          "tag": "c990d97c366d",
+          "robust_score": 0.765625,
+          "mean_lineage": 0.765625,
+          "worst_lineage_score": 0.765625,
+          "broken": 0
+        },
+        {
+          "tag": "3a26a244cfac",
+          "robust_score": 0.765625,
+          "mean_lineage": 0.765625,
+          "worst_lineage_score": 0.765625,
+          "broken": 0
+        },
+        {
+          "tag": "6154f85cf641",
+          "robust_score": 0.765625,
+          "mean_lineage": 0.765625,
+          "worst_lineage_score": 0.765625,
+          "broken": 0
         }
       ],
-      "minutes": 0.8
+      "minutes": 76.8
     }
   },
   "partial_A": {
@@ -17982,6 +18032,2882 @@
         "front_run": true
       },
       "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\65bc52b9e1b9.py"
+    }
+  ],
+  "partial_B": {
+    "C001_BASELINE": {
+      "tag": "C001_BASELINE",
+      "path": "C:\\Users\\James\\kaggriculture\\champions\\research\\C001_room_guard\\main.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 24,
+          "L": 4,
+          "T": 4,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.8125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.765625,
+      "mean_lineage": 0.765625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.765625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "788b6a356582": {
+      "tag": "788b6a356582",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\788b6a356582.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 18,
+          "L": 14,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.546875,
+      "mean_lineage": 0.546875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.546875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "94b7924d0da9": {
+      "tag": "94b7924d0da9",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\94b7924d0da9.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 18,
+          "L": 14,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.546875,
+      "mean_lineage": 0.546875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.546875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "a98c3b1f18f4": {
+      "tag": "a98c3b1f18f4",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\a98c3b1f18f4.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.515625,
+      "mean_lineage": 0.515625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.515625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "1e5ed654d3ba": {
+      "tag": "1e5ed654d3ba",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\1e5ed654d3ba.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 18,
+          "L": 14,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.546875,
+      "mean_lineage": 0.546875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.546875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "1d298246df35": {
+      "tag": "1d298246df35",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\1d298246df35.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.515625,
+      "mean_lineage": 0.515625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.515625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "933680793fbb": {
+      "tag": "933680793fbb",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\933680793fbb.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 18,
+          "L": 14,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.546875,
+      "mean_lineage": 0.546875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.546875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "17d40bc0b04a": {
+      "tag": "17d40bc0b04a",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\17d40bc0b04a.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 24,
+          "L": 6,
+          "T": 2,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.78125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.75,
+      "mean_lineage": 0.75,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.75,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "05e0fe223993": {
+      "tag": "05e0fe223993",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\05e0fe223993.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 24,
+          "L": 6,
+          "T": 2,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.78125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.75,
+      "mean_lineage": 0.75,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.75,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "3815d86c5951": {
+      "tag": "3815d86c5951",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\3815d86c5951.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 26,
+          "L": 6,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.8125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.765625,
+      "mean_lineage": 0.765625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.765625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "0d5cb6a5dbbe": {
+      "tag": "0d5cb6a5dbbe",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\0d5cb6a5dbbe.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 26,
+          "L": 6,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.8125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.765625,
+      "mean_lineage": 0.765625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.765625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "97c9fe6d8085": {
+      "tag": "97c9fe6d8085",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\97c9fe6d8085.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.671875,
+      "mean_lineage": 0.671875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.671875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "90541906c5c4": {
+      "tag": "90541906c5c4",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\90541906c5c4.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.640625,
+      "mean_lineage": 0.640625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.640625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "a96d5211a763": {
+      "tag": "a96d5211a763",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\a96d5211a763.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.671875,
+      "mean_lineage": 0.671875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.671875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "d09c9b799af8": {
+      "tag": "d09c9b799af8",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\d09c9b799af8.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.640625,
+      "mean_lineage": 0.640625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.640625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "c82efddcbad9": {
+      "tag": "c82efddcbad9",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\c82efddcbad9.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.671875,
+      "mean_lineage": 0.671875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.671875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "2d4e8391ea4c": {
+      "tag": "2d4e8391ea4c",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\2d4e8391ea4c.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.640625,
+      "mean_lineage": 0.640625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.640625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "c550e6a50521": {
+      "tag": "c550e6a50521",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\c550e6a50521.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.671875,
+      "mean_lineage": 0.671875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.671875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "858b1d342956": {
+      "tag": "858b1d342956",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\858b1d342956.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.640625,
+      "mean_lineage": 0.640625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.640625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "31f878eaf67e": {
+      "tag": "31f878eaf67e",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\31f878eaf67e.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.578125,
+      "mean_lineage": 0.578125,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.578125,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "0bb6fd107ac4": {
+      "tag": "0bb6fd107ac4",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\0bb6fd107ac4.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.578125,
+      "mean_lineage": 0.578125,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.578125,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "3bb2adca7b70": {
+      "tag": "3bb2adca7b70",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\3bb2adca7b70.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.578125,
+      "mean_lineage": 0.578125,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.578125,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "7d7ab8842164": {
+      "tag": "7d7ab8842164",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\7d7ab8842164.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.578125,
+      "mean_lineage": 0.578125,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.578125,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "6e85a2032b2e": {
+      "tag": "6e85a2032b2e",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\6e85a2032b2e.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 24,
+          "L": 4,
+          "T": 4,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.8125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.765625,
+      "mean_lineage": 0.765625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.765625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "bed1a8f5353a": {
+      "tag": "bed1a8f5353a",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\bed1a8f5353a.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 24,
+          "L": 4,
+          "T": 4,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.8125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.765625,
+      "mean_lineage": 0.765625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.765625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "c990d97c366d": {
+      "tag": "c990d97c366d",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\c990d97c366d.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 24,
+          "L": 4,
+          "T": 4,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.8125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.765625,
+      "mean_lineage": 0.765625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.765625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "3a26a244cfac": {
+      "tag": "3a26a244cfac",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\3a26a244cfac.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 26,
+          "L": 6,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.8125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.765625,
+      "mean_lineage": 0.765625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.765625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "6154f85cf641": {
+      "tag": "6154f85cf641",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\6154f85cf641.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 26,
+          "L": 6,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.8125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.765625,
+      "mean_lineage": 0.765625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.765625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "4cdfe35eb7ed": {
+      "tag": "4cdfe35eb7ed",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\4cdfe35eb7ed.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 26,
+          "L": 6,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.8125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.765625,
+      "mean_lineage": 0.765625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.765625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "dd5d977370da": {
+      "tag": "dd5d977370da",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\dd5d977370da.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 26,
+          "L": 6,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.8125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 23,
+          "L": 9,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.765625,
+      "mean_lineage": 0.765625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.765625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "c408c5832ce9": {
+      "tag": "c408c5832ce9",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\c408c5832ce9.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 24,
+          "L": 8,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.75,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.703125,
+      "mean_lineage": 0.703125,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.703125,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "b42a0d3aa06d": {
+      "tag": "b42a0d3aa06d",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\b42a0d3aa06d.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 24,
+          "L": 8,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.75,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.703125,
+      "mean_lineage": 0.703125,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.703125,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "ff07f05452fb": {
+      "tag": "ff07f05452fb",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\ff07f05452fb.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 24,
+          "L": 8,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.75,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.703125,
+      "mean_lineage": 0.703125,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.703125,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "531d86276a9d": {
+      "tag": "531d86276a9d",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\531d86276a9d.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 24,
+          "L": 8,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.75,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.703125,
+      "mean_lineage": 0.703125,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.703125,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "8ec77e5a920d": {
+      "tag": "8ec77e5a920d",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\8ec77e5a920d.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.671875,
+      "mean_lineage": 0.671875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.671875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "c8b076129f94": {
+      "tag": "c8b076129f94",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\c8b076129f94.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.671875,
+      "mean_lineage": 0.671875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.671875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "4db214114ba4": {
+      "tag": "4db214114ba4",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\4db214114ba4.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.671875,
+      "mean_lineage": 0.671875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.671875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "bd3e4413264a": {
+      "tag": "bd3e4413264a",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\bd3e4413264a.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.671875,
+      "mean_lineage": 0.671875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.671875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "f36c7ab3fdd3": {
+      "tag": "f36c7ab3fdd3",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\f36c7ab3fdd3.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.515625,
+      "mean_lineage": 0.515625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.515625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "6a0535ffd871": {
+      "tag": "6a0535ffd871",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\6a0535ffd871.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.515625,
+      "mean_lineage": 0.515625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.515625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "df708f1d2825": {
+      "tag": "df708f1d2825",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\df708f1d2825.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 15,
+          "L": 17,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.46875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.484375,
+      "mean_lineage": 0.484375,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.484375,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "cc4824f9e7ca": {
+      "tag": "cc4824f9e7ca",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\cc4824f9e7ca.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.515625,
+      "mean_lineage": 0.515625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.515625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "389c88d8de5c": {
+      "tag": "389c88d8de5c",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\389c88d8de5c.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 15,
+          "L": 17,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.46875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.484375,
+      "mean_lineage": 0.484375,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.484375,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "2251c14fd799": {
+      "tag": "2251c14fd799",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\2251c14fd799.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 17,
+          "L": 15,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.53125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.515625,
+      "mean_lineage": 0.515625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.515625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "3667602ce97d": {
+      "tag": "3667602ce97d",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\3667602ce97d.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 8,
+          "T": 2,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.703125,
+      "mean_lineage": 0.703125,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.703125,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "ac6fca353a3f": {
+      "tag": "ac6fca353a3f",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\ac6fca353a3f.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 8,
+          "T": 2,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.71875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.703125,
+      "mean_lineage": 0.703125,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.703125,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "c71791642dd3": {
+      "tag": "c71791642dd3",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\c71791642dd3.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 25,
+          "L": 7,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.78125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.734375,
+      "mean_lineage": 0.734375,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.734375,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "bac4119ee2a1": {
+      "tag": "bac4119ee2a1",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\bac4119ee2a1.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 25,
+          "L": 7,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.78125,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.734375,
+      "mean_lineage": 0.734375,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.734375,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "3a058af3f572": {
+      "tag": "3a058af3f572",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\3a058af3f572.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.640625,
+      "mean_lineage": 0.640625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.640625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "34a03ec3ff40": {
+      "tag": "34a03ec3ff40",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\34a03ec3ff40.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 18,
+          "L": 14,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.59375,
+      "mean_lineage": 0.59375,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.59375,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "06d80bc4d9e0": {
+      "tag": "06d80bc4d9e0",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\06d80bc4d9e0.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 21,
+          "L": 11,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.65625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.640625,
+      "mean_lineage": 0.640625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.640625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "68ea2257be5c": {
+      "tag": "68ea2257be5c",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\68ea2257be5c.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 18,
+          "L": 14,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.59375,
+      "mean_lineage": 0.59375,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.59375,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "60dec74fa1da": {
+      "tag": "60dec74fa1da",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\60dec74fa1da.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.625,
+      "mean_lineage": 0.625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "a4ede80e1279": {
+      "tag": "a4ede80e1279",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\a4ede80e1279.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 19,
+          "L": 13,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.59375,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.609375,
+      "mean_lineage": 0.609375,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.609375,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "245b3dabfd84": {
+      "tag": "245b3dabfd84",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\245b3dabfd84.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.625,
+      "mean_lineage": 0.625,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.625,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "e76e5a7a7ab6": {
+      "tag": "e76e5a7a7ab6",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\e76e5a7a7ab6.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 19,
+          "L": 13,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.59375,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 20,
+          "L": 12,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.625,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.609375,
+      "mean_lineage": 0.609375,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.609375,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "c58720c69add": {
+      "tag": "c58720c69add",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\c58720c69add.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 19,
+          "L": 13,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.59375,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.546875,
+      "mean_lineage": 0.546875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.546875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "06d4274cbe3f": {
+      "tag": "06d4274cbe3f",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\06d4274cbe3f.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 19,
+          "L": 13,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.59375,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.546875,
+      "mean_lineage": 0.546875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.546875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "ced49aabb182": {
+      "tag": "ced49aabb182",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\ced49aabb182.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 19,
+          "L": 13,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.59375,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.546875,
+      "mean_lineage": 0.546875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.546875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "816ef23ade5d": {
+      "tag": "816ef23ade5d",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\816ef23ade5d.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 19,
+          "L": 13,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.59375,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 16,
+          "L": 16,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.5,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.546875,
+      "mean_lineage": 0.546875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.546875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "cfc837612865": {
+      "tag": "cfc837612865",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\cfc837612865.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 6,
+          "T": 4,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.75,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.71875,
+      "mean_lineage": 0.71875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.71875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "7da51c603ec0": {
+      "tag": "7da51c603ec0",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\7da51c603ec0.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 6,
+          "T": 4,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.75,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.71875,
+      "mean_lineage": 0.71875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.71875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "01d742662407": {
+      "tag": "01d742662407",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\01d742662407.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 6,
+          "T": 4,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.75,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.71875,
+      "mean_lineage": 0.71875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.71875,
+      "n_lineages": 1,
+      "broken": 0
+    },
+    "65bc52b9e1b9": {
+      "tag": "65bc52b9e1b9",
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\65bc52b9e1b9.py",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": false,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "per_opponent": {
+        "v51": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 6,
+          "T": 4,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.75,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        },
+        "farm": {
+          "lineage_id": "L-OZER-2945",
+          "W": 22,
+          "L": 10,
+          "T": 0,
+          "games": 32,
+          "broken": 0,
+          "bt_score_rate": 0.6875,
+          "stderr": "comm\nturn_based_simultaneous_game\ntwixt\nultimate_tic_tac_toe\nultimate_tic_tac_toe_proxy\nxiangqi\ny\ny_proxy\nyacht\nzerosum\n"
+        }
+      },
+      "robust_score": 0.71875,
+      "mean_lineage": 0.71875,
+      "worst_lineage": "L-OZER-2945",
+      "worst_lineage_score": 0.71875,
+      "n_lineages": 1,
+      "broken": 0
+    }
+  },
+  "pool_B": [
+    {
+      "tag": "C001_BASELINE",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "path": "__C001__"
+    },
+    {
+      "tag": "3815d86c5951",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\3815d86c5951.py"
+    },
+    {
+      "tag": "0d5cb6a5dbbe",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\0d5cb6a5dbbe.py"
+    },
+    {
+      "tag": "6e85a2032b2e",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\6e85a2032b2e.py"
+    },
+    {
+      "tag": "bed1a8f5353a",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": false
+      },
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\bed1a8f5353a.py"
+    },
+    {
+      "tag": "c990d97c366d",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true,
+        "front_run": true
+      },
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\c990d97c366d.py"
+    },
+    {
+      "tag": "3a26a244cfac",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": false
+      },
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\3a26a244cfac.py"
+    },
+    {
+      "tag": "6154f85cf641",
+      "cfg": {
+        "hand_align": true,
+        "weed_repair": true,
+        "sell_lead": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false,
+        "front_run": true
+      },
+      "path": "C:\\Users\\James\\kaggriculture\\simulation\\search3066\\candidates\\6154f85cf641.py"
     }
   ]
 }

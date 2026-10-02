@@ -3,20 +3,35 @@
 Branch `research/3066-breakthrough`. Main at entry: `0d22b5dd`.
 
 ## Phase
-**8 of 24 — search infrastructure complete, stage A racing.**
-Stage A of the 512-configuration search is running.
+**12 of 24 — exhaustive search stage A complete, stage B running.**
+Stage B (64 survivors vs the discriminating opponents) is in flight.
 
 ## Resume procedure
 ```
 cd C:\Users\James\kaggriculture
 git checkout research/3066-breakthrough
 git fetch origin && git status
-Get-Content simulation\search3066_A.log -Tail 20
-.venv\Scripts\python.exe policy\search\racing_search.py --stage A --workers 8
+Get-Content simulation\search3066_B.log -Tail 20
+.venv\Scripts\python.exe policy\search\racing_search.py --stage B --workers 8
+.venv\Scripts\python.exe policy\search\racing_search.py --stage C --workers 8
+.venv\Scripts\python.exe pipeline\dashboard_3066.py
+.venv\Scripts\python.exe tests\test_gate_3066.py
+.venv\Scripts\python.exe tests\test_research_gate.py
 ```
-Stage A checkpoints every 16 configurations into
-`simulation/search3066/search_state.json` and the match cache makes completed
-games free, so restarting loses at most 16 evaluations.
+Both stages checkpoint every 16 configurations into
+`simulation/search3066/search_state.json`, and the match cache is keyed on
+digests, so restarting costs at most 16 evaluations and completed games are free.
+
+## Stage A result (complete)
+All 512 boolean configurations enumerated. 4,104 matches, 86 min, **0 broken**.
+C001 baseline scores 0.8750 and ranks first. No candidate beat it.
+
+**The screen could not have detected a difference anyway, and that is the
+finding**: at 8 matches the ceiling is 0.875, the first four dev worlds have a
+ZERO tie rate where the full 992-game measurement gives 21.8% ties, and a large
+number of configurations sit on the ceiling. At 8 games the score rewards
+*differing* from v51 — including by breaking tie-equality — rather than being
+stronger. Stage A selects for divergence. Stage B is the discriminator.
 
 ## Completed
 | # | item | state |
@@ -32,19 +47,19 @@ games free, so restarting loses at most 16 evaluations.
 | 9 | turns populated | PENDING |
 | 10 | world regimes | PENDING |
 | 11 | parallel official simulation | 107 matches/min, 8 workers |
-| 12 | boolean search infra | built, stage A running |
-| 13 | numeric search | inventory shows 0 numeric keys in the live literal |
-| 14 | counterfactual/close-game | PENDING |
-| 15 | selector/value model | PENDING |
-| 16 | finalist evaluation | PENDING |
-| 17 | sealed final | pool COMMITTED, not yet run |
-| 18 | shadow recalibration | WITHHELD, gate unmet |
-| 19 | champion freeze | C001 unchanged |
-| 20 | submission_ready | frozen, digest-verified |
-| 21 | tests | tie 24/24, stats 46/46 |
+| 12 | boolean search infra | **stage A done**: all 512 enumerated, 0 broken; stage B running |
+| 13 | numeric search | inventory: 0 numeric keys in the live literal; numeric reach via module constants left OPEN |
+| 14 | counterfactual/close-game | NOT RUN — no budget left after the search |
+| 15 | selector/value model | NOT RUN — see the imitation gate reasoning in the conclusion |
+| 16 | finalist evaluation | pending stage B/C |
+| 17 | sealed final | pool COMMITTED (sha 3d9869bb…), not run: no finalist beat C001 |
+| 18 | shadow recalibration | WITHHELD: 1 usable anchor, gate needs 5 |
+| 19 | champion freeze | C001 unchanged and immutable |
+| 20 | submission_ready | frozen, digest-verified against CURRENT.json |
+| 21 | tests | tie 24/24, stats 46/46, 3066 gate 116/116, research gate 112/112 |
 | 22 | merge/push | pending |
 | 23 | remote verify | pending |
-| 24 | final report | pending |
+| 24 | final report | **done** — reports/3066_RESEARCH_CONCLUSION.md |
 
 ## Key measurements (all primary metric = BT score rate (W+0.5T)/N)
 

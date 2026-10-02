@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\James\kaggriculture\policy\search\racing_search.py", line 454, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\James\kaggriculture\policy\search\racing_search.py", line 442, in main
+    "stages_declared": [{"stage": s, "keep": k, "worlds": w}
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\James\kaggriculture\policy\search\racing_search.py", line 443, in <listcomp>
+    for s, k, w in STAGES],
+        ^^^^^^^
+ValueError: too many values to unpack (expected 3)
