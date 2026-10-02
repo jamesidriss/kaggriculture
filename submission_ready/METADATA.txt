@@ -1,0 +1,68 @@
+SUBMISSION-READY ARTIFACT
+==========================
+This directory is frozen. If Kaggle reopens submissions, submit `main.py`
+here as-is. Do not rebuild it.
+
+agent_name       : ahmedberatozer-v51-lean-flock
+author           : ahmedberatozer
+source           : Kaggle dataset destbreso/kaggriculture-donor-agents-20260902,
+                   file agents/ahmedberatozer-v51-lean-flock.py
+license          : Apache-2.0 (NOTICE.md retained alongside)
+sha256           : c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891
+bytes            : 461739
+git_commit       : fd81fc05347adbdc2a1c4c4ea061d74631740e8b
+parent           : none (public artifact adopted verbatim)
+modifications    : NONE. Byte-identical to the published artifact and to
+                   postmortem_champion/main.py, which is its source.
+
+ENVIRONMENT
+kaggle_environments : 1.32.7
+python              : 3.11.9
+snapshot_sha256     : 488c61b8677672ca757490a387fde8d4f4fb0a3fa7c4f8b2643bd81a38e7ea87
+runtime_path        : kaggle_environments.core.Environment.run (official runner)
+turns_per_game      : 719 of 720
+seats               : both, every world
+errors              : 0
+
+STRENGTH EVIDENCE (offline; NOT a Kaggle rating)
+vs the 2945 Farm, paired, both seats, 1,000 fresh ladder-derived elite worlds:
+    1039-945 over 1,984 games = 52.37%
+    Wilson 95% [0.5017, 0.5456], exact binomial p = 0.0368
+    no seat effect (McNemar p = 0.901)
+    mean paired margin $28, bootstrap 95% CI [-$63, $118]
+    59% of games decided by under $1,000
+vs four INDEPENDENT-lineage public agents (raykkretzschmar, MIT):
+    64-0, both seats, 0 errors
+vs the rest of the league (v43/v44/v46/v48/v49/v50/v16/v38/barnyard):
+    effectively total
+
+SHADOW RATING
+    ShadowRating is NOT published.
+    CALIBRATION INADEQUATE - point ratings withheld
+    Only 2 of 41 matchups are informative; the rest saturate the
+    ladder's win-rate curve, and a saturated curve cannot invert a saturated
+    observation. Publishing a point number here would be a fabricated
+    precision. See reports/SHADOW_LADDER_CALIBRATION.md.
+
+3075-READY: NO.
+    The strict definition requires calibrated rating evidence consistent with
+    >3075. The calibration does not support that precision. What IS established
+    is that the agent is above every other legally reproducible public agent
+    and generalises across an independent lineage. See
+    reports/3075_RESEARCH_CONCLUSION.md.
+
+RUNTIME GATE
+    median ~0.4 ms, max ~40 ms per agent() call against a 1000 ms actTimeout.
+    No network, no file writes, no external data, single self-contained file.
+
+HEDGE (second slot, if two are wanted)
+    postmortem_hedge/main.py
+    bfee70e9daaebeae0737a880f1df8f1c60d0783c59af620136cc0d28ef482bc7
+    The 2945 Farm v9/3, Apache-2.0, verbatim. NOTE: it is the SAME lineage as
+    this artifact - 1,205 shared identifiers, containment 0.818, one identical
+    3,352-token run. It hedges seat and world variance, not strategy risk.
+
+NOT SUBMITTED
+    Kaggle submissions are closed; CreateSubmission returns HTTP 400 with an
+    empty body. Nothing here has been submitted and nothing here can change a
+    live result.

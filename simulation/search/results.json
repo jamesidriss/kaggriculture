@@ -1,0 +1,2183 @@
+{
+  "parent_sha256": "c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891",
+  "genes": [
+    "hand_align",
+    "weed_repair",
+    "sell_lead",
+    "front_run",
+    "budget_guard",
+    "room_guard",
+    "clamp_sells",
+    "dead_stock",
+    "terminal_liquidation"
+  ],
+  "baseline_flags": {
+    "hand_align": true,
+    "weed_repair": true,
+    "sell_lead": true,
+    "front_run": false,
+    "budget_guard": false,
+    "room_guard": false,
+    "clamp_sells": false,
+    "dead_stock": false,
+    "terminal_liquidation": false
+  },
+  "opponent": "farm_2945_original",
+  "smoke": [
+    {
+      "tag": "c8797da31f3_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83654,
+      "median_opp": 114123,
+      "margin": -30469,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "9ba35756ef44d9975381054a7693aa795548235360df5a061c46ebb6d208ab58",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cde66cf3e24_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83654,
+      "median_opp": 114123,
+      "margin": -30469,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "f9e3adee83cb7c01fe8a9f0ddcf476399433e7d04c52586c8042b8d974686575",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c4a2b966a90_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83614,
+      "median_opp": 114123,
+      "margin": -30509,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "ad28b582cf5f32b9a3d0ea4a6035832d61e926ad6dc2bd6dbd194390dc275760",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c2d6b2989ec_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83614,
+      "median_opp": 114123,
+      "margin": -30509,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "b4c17741e6811e31d442b917d1d1a941d0d8e872f21fc2ead0fa6d1d12e3f536",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "ce8d24219f7_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83634,
+      "median_opp": 108155,
+      "margin": -24521,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "8890906b5f6c15dce0592983019b51baa041224b36d160b7b6506e5d963dc955",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c082adc0b19_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83634,
+      "median_opp": 108155,
+      "margin": -24521,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "030ae7a1139d0134b53ae2767dbf3672cb196c35b3c5ce72741448314b1a0144",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cb38b047ea5_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83593,
+      "median_opp": 108222,
+      "margin": -24629,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "be2317dec470cbf10d4d1025d117a20bfd02801cc17685c1206a8d975544b42d",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c759d6eee17_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83593,
+      "median_opp": 108222,
+      "margin": -24629,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "1c4cab2e4d48322d6775adeb2a8df076f88e36848f68d53cc05494b70d18b1e4",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c6492b24d3b_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83654,
+      "median_opp": 114123,
+      "margin": -30469,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "142b0980fa03fc6f4649301ace5d0fa7968eea6a41616fd183f4323534378f19",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cec438fdca0_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83654,
+      "median_opp": 114123,
+      "margin": -30469,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "67184d076ef4aeab8e2237eac45b195bf9776af9f66487016d05c1e933a290e5",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c6c28520ef6_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83614,
+      "median_opp": 114123,
+      "margin": -30509,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "f0651e32842712815b7f7ff3cbeab0a4f6beda715936210725aa793452ef0731",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c66c3c2a876_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83614,
+      "median_opp": 114123,
+      "margin": -30509,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "b53847b883f81a2f7ea89452bd2cd2e05ad50068f01c0f9fed713dcb52b8d46a",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "ca15388e41d_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83634,
+      "median_opp": 108155,
+      "margin": -24521,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "9fcce18b849db3b0d81b28f6cb452ede7e9e389fc8e87d5b44b4330e4ef2bd8b",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cf10cd20de0_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83634,
+      "median_opp": 108155,
+      "margin": -24521,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "0175c45ab0af759cf45a3179ccbe50eeb4237392a27c71f9d9acf41912dfd527",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cca30bd42d7_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83593,
+      "median_opp": 108222,
+      "margin": -24629,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "b706423d86b253f123f5654f4b0943ca977cae00cf4f8f7d71ff3c700a635c94",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c8efe4076e6_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83593,
+      "median_opp": 108222,
+      "margin": -24629,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "b54fcd73d5ed62973203d04e2b86f808baa03e8f934ee5342928adeffb7c39ad",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cfa5ce7729d_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83594,
+      "median_opp": 114142,
+      "margin": -30548,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "f90ffb4a7fe14daadb513d1b9b1a9298c2b07d4c857ac868ee1924c3dad3453b",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c0804ae95ab_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83594,
+      "median_opp": 114142,
+      "margin": -30548,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "cc336e6d29374836438bc78ffac12e1e0f2f6d881db31822b059f1f9f695b8a7",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c7539445836_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83554,
+      "median_opp": 114142,
+      "margin": -30588,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "2f8155a90387ee3955cfbcc86e577a0f655eab80e0432afd3b6a1e3f0d4b9771",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c4d93293f2d_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83554,
+      "median_opp": 114142,
+      "margin": -30588,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "35c768d027e33f169a8d8a641bf5248b7aef937807c96b99c7f0027c48e58708",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cbf9f28cd55_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83574,
+      "median_opp": 108170,
+      "margin": -24596,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "082e0ca069f5af36943cdac476b97b895af40dc0ec4e1ddf56d0b99bcae24812",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c1c4d54bb31_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83574,
+      "median_opp": 108170,
+      "margin": -24596,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "05f748d11fd28e5dbca56357d43a0b45eb1426932e1b05920f97ee3ab14a82c2",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "ccb01c5ca63_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83533,
+      "median_opp": 108237,
+      "margin": -24704,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "1791df54ec54fe8b6827d4a50fb9c1a15d27f3cac353ee8315d2a61aec875fe7",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c69146e247b_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83533,
+      "median_opp": 108237,
+      "margin": -24704,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "48034130d232b19175caed85c8a25408634b583ba88769b9ad75c0222bb235be",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cbb09d36bbd_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83594,
+      "median_opp": 114142,
+      "margin": -30548,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "41fd98c831193346197ab2fe18c23e9d06bb1f5f261dde6e04d13b8898ec24be",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cfdd959df6e_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83594,
+      "median_opp": 114142,
+      "margin": -30548,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "b526c01dbc8bae9ae52ee3f90e334afba808ee57daa07ad89884958375a5446a",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c4db6c198e1_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83554,
+      "median_opp": 114142,
+      "margin": -30588,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "a9be2dde4be9b783db10e66e74dfc94942a706fe800a9aa5eae7c8f4ced183b6",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c336ddf5442_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83554,
+      "median_opp": 114142,
+      "margin": -30588,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "ad6cbc43406ccefae1d7ed881d193407a186a09964a93807d44e941f509c7f3e",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cfbc0ef99c9_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83574,
+      "median_opp": 108170,
+      "margin": -24596,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "03d129884b011722cf135f396321a60f077646e44a8b465e32b927b6e3bf6f06",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cdaafae46b3_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83574,
+      "median_opp": 108170,
+      "margin": -24596,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "a2b255091786b474d593fe4346ea8bb432e1f86d6ab7a158167f8ce8aa3d995e",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c6675d37ece_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83533,
+      "median_opp": 108237,
+      "margin": -24704,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "f5ff91fcde5255b8e14edb1030d6575a6fde4777ae62ecd191b47d8c3de07c96",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cc7c39f9f94_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83533,
+      "median_opp": 108237,
+      "margin": -24704,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "f45553ac171ab70c769559db5720bb1c335d56c177d8e9a2397ca12fd2aeac80",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c92611d02f0_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83860,
+      "median_opp": 114006,
+      "margin": -30146,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "89479f0dcc8e111c9aa2d163ce444c13c7fd33f7239c004194e377ed5217b896",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c9760ad7ae2_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83860,
+      "median_opp": 114006,
+      "margin": -30146,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "154008939f3ef5ac5d4b35a43edf8db4bef91c1e1c360a37389fddf67c1858f5",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c902034d556_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83820,
+      "median_opp": 114006,
+      "margin": -30186,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "ce6bff5baa92aae5c8b0c82e66ace3812a18e7c8d8f77019d59068dc2e248f1c",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c742920fcfb_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83820,
+      "median_opp": 114006,
+      "margin": -30186,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "7fe7b1e2b166b48cce91f2d6d93e601c959701e64c082439c09793aedc5fa823",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c1dbb056224_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83838,
+      "median_opp": 108125,
+      "margin": -24287,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "436de59042a58aa8ba9086bdb02ae8fd6c278c3691288c7b45a6eed7a24ed6c9",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c7c0fbec592_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83838,
+      "median_opp": 108125,
+      "margin": -24287,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "8bc2c71aa942994a243aaa74524e6c1fb2804a19b0470f58f742a222d9a887ac",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c6e473b151d_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83797,
+      "median_opp": 108192,
+      "margin": -24395,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "59da3a99e13e13e260f2e52598ce47a9961e9958a36ce78663a9caa8809ddbf3",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cde5c990420_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83797,
+      "median_opp": 108192,
+      "margin": -24395,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "52115793560ad011d4b7b046006164775c20d76d7487cadb026184b73ef94bb7",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c1958865702_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83860,
+      "median_opp": 114006,
+      "margin": -30146,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "bbc26d2eb1a4cbb5228cf08296c247933ce4a09544587a25efd71ce28e18dca4",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c32ddac34b8_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83860,
+      "median_opp": 114006,
+      "margin": -30146,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "10e43e9dc2ccba4d3113bbb727f24d05cb742b53d7484734beb277b9208c1b95",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "caa76c69256_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83820,
+      "median_opp": 114006,
+      "margin": -30186,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "82419435a6c0d559493131743d43ef3d8d52033bb0305bdfad7df4474fcc4cdf",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cc438b79e93_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83820,
+      "median_opp": 114006,
+      "margin": -30186,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "7cd6da2de550cd7ad71a4a9d2606f381c02c1c7e9a07abfd3a998a6dd14c5162",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c5839876b40_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83838,
+      "median_opp": 108125,
+      "margin": -24287,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "9f06ede50a01bfac27854d2a814d4621c4749096ec640f346a469b9a854e3382",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cdc3b9c0b1e_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83838,
+      "median_opp": 108125,
+      "margin": -24287,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "9ab9c9e4a9bf9a62d41b99db0a795868d72b3d4fc7fb4e1bd60aad22feb76abe",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "ca7fb5e774f_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83797,
+      "median_opp": 108192,
+      "margin": -24395,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "56205ccdf26622201a63b3b07cfe89271d87b652756baf946efd518cdc95f9ff",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c4d29186d3d_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83797,
+      "median_opp": 108192,
+      "margin": -24395,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": false,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "b32854b9bea066b1308a2eb1474c374899084299504525aba33832e4c3d6db15",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "ccd44c1ecef_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83800,
+      "median_opp": 114025,
+      "margin": -30225,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "45ca85aefa2b6bfc6536f21e48623bebc007c1bca9229dc3b0abbc7baaf8fdb4",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c00dde151b9_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83800,
+      "median_opp": 114025,
+      "margin": -30225,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "668ea1132beafb3717917c076b29e063e9608c294f308e44503923c70bf94544",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c163a47bf89_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83760,
+      "median_opp": 114025,
+      "margin": -30265,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "df6cd03193d562260ec78fc57d54f100a7e2be6e8e0030b3dff68ac79217c27f",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c3407c2c8fa_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83760,
+      "median_opp": 114025,
+      "margin": -30265,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "9bda3667b33e0dcaa85102167d0591abc0ff5f23851d038f9d621695ccfc40b4",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c68de502fdb_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83778,
+      "median_opp": 108140,
+      "margin": -24362,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "53c9cbb70640b461eed87fe5c35fca1d9ee2d31b2fe27f65616a8f9d28a2e3c7",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "caf7bfdb9d2_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83778,
+      "median_opp": 108140,
+      "margin": -24362,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "206310e18e9ad8c8d814f6962d22637fc569580c04e2e171cd65b44fafb2fa98",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c67603dd159_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83737,
+      "median_opp": 108207,
+      "margin": -24470,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "c971bba4d29334251842777240f2365daa89abfd803055200d52a4ec4bfa15d6",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cd6f7dd85be_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83737,
+      "median_opp": 108207,
+      "margin": -24470,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "b34457ae19dd4a403207bde19d19b62cb9d4caa8a8117b42fa5d53349a23c35a",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c3b27d863f4_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83800,
+      "median_opp": 114025,
+      "margin": -30225,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "655cd043d6de659812a1d15e9a0013b00f5e51d0ba76d21fca1d5dad61bb2d70",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cca3a3bb786_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83800,
+      "median_opp": 114025,
+      "margin": -30225,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "36c31938fff1cb889d5625f1f56b010a8aca900cb1c482c2ffcd92f74c8685e6",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cb86e659c84_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83760,
+      "median_opp": 114025,
+      "margin": -30265,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "ec9aa2c55d2f4ca71b830b3af1c9ce62610a158e83b4574d1c52eee8b286a555",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c65aaaebbf4_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83760,
+      "median_opp": 114025,
+      "margin": -30265,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "ad682c977ff14a3bfa49d59d7a003b61c7c7ca05346b038ebfec673fa369c216",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c657d30f38c_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83778,
+      "median_opp": 108140,
+      "margin": -24362,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "25d13b132532f0f4a22a66a0a652e4adaa9232053b2df58ec428ebd70972db25",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "c690052ec0c_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83778,
+      "median_opp": 108140,
+      "margin": -24362,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "8c04dd0ce929e8f4d8195aea7c620d6e00dc836a70150b1f56d450df86d88514",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "caf956954f9_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83737,
+      "median_opp": 108207,
+      "margin": -24470,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "b4917bc00242c0b819e41f5ab3fad7367d2c6a1a3c7d6c431bf66260b2b27396",
+      "stage": "smoke",
+      "verdict": "keep"
+    },
+    {
+      "tag": "cfff8783f5b_smoke",
+      "games": 16,
+      "invalid": 0,
+      "W": 0,
+      "L": 16,
+      "T": 0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "median_cash": 83737,
+      "median_opp": 108207,
+      "margin": -24470,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": true,
+        "budget_guard": true,
+        "room_guard": true,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "73f98cc52b754fd564d6fb181ef87a0a8baf49d5ff2f8c46d08e16fb3623edc6",
+      "stage": "smoke",
+      "verdict": "keep"
+    }
+  ],
+  "early": [
+    {
+      "tag": "e9ba35756ef",
+      "games": 64,
+      "invalid": 0,
+      "W": 4,
+      "L": 60,
+      "T": 0,
+      "win_rate": 0.0625,
+      "wilson": [
+        0.0246,
+        0.15
+      ],
+      "median_cash": 73077,
+      "median_opp": 107636,
+      "margin": -34559,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "9ba35756ef44d9975381054a7693aa795548235360df5a061c46ebb6d208ab58",
+      "stage": "early"
+    },
+    {
+      "tag": "ef9e3adee83",
+      "games": 64,
+      "invalid": 0,
+      "W": 4,
+      "L": 60,
+      "T": 0,
+      "win_rate": 0.0625,
+      "wilson": [
+        0.0246,
+        0.15
+      ],
+      "median_cash": 73077,
+      "median_opp": 107636,
+      "margin": -34559,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "f9e3adee83cb7c01fe8a9f0ddcf476399433e7d04c52586c8042b8d974686575",
+      "stage": "early"
+    },
+    {
+      "tag": "ead28b582cf",
+      "games": 64,
+      "invalid": 0,
+      "W": 4,
+      "L": 60,
+      "T": 0,
+      "win_rate": 0.0625,
+      "wilson": [
+        0.0246,
+        0.15
+      ],
+      "median_cash": 73078,
+      "median_opp": 107636,
+      "margin": -34558,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "ad28b582cf5f32b9a3d0ea4a6035832d61e926ad6dc2bd6dbd194390dc275760",
+      "stage": "early"
+    },
+    {
+      "tag": "eb4c17741e6",
+      "games": 64,
+      "invalid": 0,
+      "W": 4,
+      "L": 60,
+      "T": 0,
+      "win_rate": 0.0625,
+      "wilson": [
+        0.0246,
+        0.15
+      ],
+      "median_cash": 73078,
+      "median_opp": 107636,
+      "margin": -34558,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": false,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "b4c17741e6811e31d442b917d1d1a941d0d8e872f21fc2ead0fa6d1d12e3f536",
+      "stage": "early"
+    },
+    {
+      "tag": "e8890906b5f",
+      "games": 64,
+      "invalid": 0,
+      "W": 4,
+      "L": 60,
+      "T": 0,
+      "win_rate": 0.0625,
+      "wilson": [
+        0.0246,
+        0.15
+      ],
+      "median_cash": 73270,
+      "median_opp": 106714,
+      "margin": -33444,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": false
+      },
+      "sha256": "8890906b5f6c15dce0592983019b51baa041224b36d160b7b6506e5d963dc955",
+      "stage": "early"
+    },
+    {
+      "tag": "e030ae7a113",
+      "games": 64,
+      "invalid": 0,
+      "W": 4,
+      "L": 60,
+      "T": 0,
+      "win_rate": 0.0625,
+      "wilson": [
+        0.0246,
+        0.15
+      ],
+      "median_cash": 73270,
+      "median_opp": 106714,
+      "margin": -33444,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": false,
+        "terminal_liquidation": true
+      },
+      "sha256": "030ae7a1139d0134b53ae2767dbf3672cb196c35b3c5ce72741448314b1a0144",
+      "stage": "early"
+    },
+    {
+      "tag": "ebe2317dec4",
+      "games": 64,
+      "invalid": 0,
+      "W": 4,
+      "L": 60,
+      "T": 0,
+      "win_rate": 0.0625,
+      "wilson": [
+        0.0246,
+        0.15
+      ],
+      "median_cash": 73271,
+      "median_opp": 106763,
+      "margin": -33492,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": false
+      },
+      "sha256": "be2317dec470cbf10d4d1025d117a20bfd02801cc17685c1206a8d975544b42d",
+      "stage": "early"
+    },
+    {
+      "tag": "e1c4cab2e4d",
+      "games": 64,
+      "invalid": 0,
+      "W": 4,
+      "L": 60,
+      "T": 0,
+      "win_rate": 0.0625,
+      "wilson": [
+        0.0246,
+        0.15
+      ],
+      "median_cash": 73271,
+      "median_opp": 106763,
+      "margin": -33492,
+      "flags": {
+        "hand_align": false,
+        "weed_repair": false,
+        "sell_lead": false,
+        "front_run": false,
+        "budget_guard": false,
+        "room_guard": false,
+        "clamp_sells": true,
+        "dead_stock": true,
+        "terminal_liquidation": true
+      },
+      "sha256": "1c4cab2e4d48322d6775adeb2a8df076f88e36848f68d53cc05494b70d18b1e4",
+      "stage": "early"
+    }
+  ],
+  "created": "2026-10-02T08:03:30Z"
+}

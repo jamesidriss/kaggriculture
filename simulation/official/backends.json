@@ -1,0 +1,14 @@
+{
+  "backends": [
+    {
+      "backend": "official-python",
+      "commit": null,
+      "detail": "reference implementation; determinism self-tested",
+      "license": "Apache-2.0",
+      "source": "kaggle_environments (installed)",
+      "verified": true,
+      "version": "1.32.7"
+    }
+  ],
+  "note": "no fast backend registered"
+}

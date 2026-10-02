@@ -63,3 +63,8 @@ data_lake/_tmp/
 data_lake/parquet/
 !data_lake/manifests/
 simulation/rust/target/
+
+# Per-candidate run directories from the search are transient and are being
+# written while git runs; staging them deadlocks on the file lock.
+simulation/search/runs/
+
