@@ -73,3 +73,6 @@ simulation/search/runs/
 # parent + settings literal, which run_search.py records in results.json.
 simulation/search/*.py
 simulation/search/decisive/
+
+# Preserved originals from the tie migration. Never aggregated as results.
+*.pre_tie_fix.csv

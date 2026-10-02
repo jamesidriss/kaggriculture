@@ -1,0 +1,152 @@
+{
+  "C001 vs v51  (decisive leg 1)": {
+    "games": 992,
+    "valid": 992,
+    "broken": 0,
+    "W": 638,
+    "L": 138,
+    "T": 216,
+    "bt_score_rate": 0.752016,
+    "bt_score_lo95_seed_bootstrap": 0.721774,
+    "bt_score_hi95_seed_bootstrap": 0.78125,
+    "n_seeds": 496,
+    "decided_win_rate": 0.822165,
+    "decided_wilson_lo": 0.793694,
+    "decided_wilson_hi": 0.847462,
+    "tie_rate": 0.217742,
+    "mean_margin": 48.3,
+    "median_margin": 4,
+    "seat_wins": {
+      "0": [
+        320,
+        68
+      ],
+      "1": [
+        318,
+        70
+      ]
+    },
+    "runtime_max_ms": 185.398,
+    "runtime_median_ms": 14.888
+  },
+  "C001 vs v51  (promotion leg B)": {
+    "games": 992,
+    "valid": 992,
+    "broken": 0,
+    "W": 657,
+    "L": 155,
+    "T": 180,
+    "bt_score_rate": 0.753024,
+    "bt_score_lo95_seed_bootstrap": 0.721774,
+    "bt_score_hi95_seed_bootstrap": 0.783266,
+    "n_seeds": 496,
+    "decided_win_rate": 0.809113,
+    "decided_wilson_lo": 0.780651,
+    "decided_wilson_hi": 0.834664,
+    "tie_rate": 0.181452,
+    "mean_margin": 46.9,
+    "median_margin": 5,
+    "seat_wins": {
+      "0": [
+        326,
+        80
+      ],
+      "1": [
+        331,
+        75
+      ]
+    },
+    "runtime_max_ms": 170.033,
+    "runtime_median_ms": 15.195
+  },
+  "C001 vs 2945 Farm  (decisive leg 2)": {
+    "games": 992,
+    "valid": 992,
+    "broken": 0,
+    "W": 537,
+    "L": 453,
+    "T": 2,
+    "bt_score_rate": 0.542339,
+    "bt_score_lo95_seed_bootstrap": 0.498992,
+    "bt_score_hi95_seed_bootstrap": 0.585685,
+    "n_seeds": 496,
+    "decided_win_rate": 0.542424,
+    "decided_wilson_lo": 0.511286,
+    "decided_wilson_hi": 0.573234,
+    "tie_rate": 0.002016,
+    "mean_margin": 33.7,
+    "median_margin": 120,
+    "seat_wins": {
+      "0": [
+        269,
+        226
+      ],
+      "1": [
+        268,
+        227
+      ]
+    },
+    "runtime_max_ms": 167.794,
+    "runtime_median_ms": 29.84
+  },
+  "C001 vs 2945 Farm  (promotion leg B)": {
+    "games": 992,
+    "valid": 992,
+    "broken": 0,
+    "W": 537,
+    "L": 453,
+    "T": 2,
+    "bt_score_rate": 0.542339,
+    "bt_score_lo95_seed_bootstrap": 0.498992,
+    "bt_score_hi95_seed_bootstrap": 0.585685,
+    "n_seeds": 496,
+    "decided_win_rate": 0.542424,
+    "decided_wilson_lo": 0.511286,
+    "decided_wilson_hi": 0.573234,
+    "tie_rate": 0.002016,
+    "mean_margin": 33.7,
+    "median_margin": 120,
+    "seat_wins": {
+      "0": [
+        269,
+        226
+      ],
+      "1": [
+        268,
+        227
+      ]
+    },
+    "runtime_max_ms": 193.38,
+    "runtime_median_ms": 29.907
+  },
+  "v51 vs 2945 Farm  (decisive leg 3)": {
+    "games": 992,
+    "valid": 992,
+    "broken": 0,
+    "W": 506,
+    "L": 486,
+    "T": 0,
+    "bt_score_rate": 0.510081,
+    "bt_score_lo95_seed_bootstrap": 0.466734,
+    "bt_score_hi95_seed_bootstrap": 0.553427,
+    "n_seeds": 496,
+    "decided_win_rate": 0.510081,
+    "decided_wilson_lo": 0.478994,
+    "decided_wilson_hi": 0.54109,
+    "tie_rate": 0.0,
+    "mean_margin": -26.9,
+    "median_margin": 29,
+    "seat_wins": {
+      "0": [
+        254,
+        242
+      ],
+      "1": [
+        252,
+        244
+      ]
+    },
+    "runtime_max_ms": 173.6,
+    "runtime_median_ms": 29.981
+  }
+}
