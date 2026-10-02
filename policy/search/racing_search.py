@@ -101,12 +101,30 @@ OPPONENTS = [
      "L-R88"),
 ]
 
-# Declared before the run.
+# Declared before the run, and sized from a MEASURED throughput rather than a
+# hoped-for one.
+#
+# Measured: 2,000 matches in 18.6 minutes on 8 workers = 107 matches/min. There
+# is no verified fast backend, so the official engine is the budget.
+#
+# Each stage declares its own opponents, because a 512-configuration screen at
+# 8 matches each cannot afford four opponents and does not need them:
+#
+#   A  vs v51 only. v51 is the discriminating probe for "did this flag break the
+#      agent": the previous generation measured an 81% score rate for a single
+#      flag flip, so damage shows up here loudly and immediately. At 8 matches
+#      this stage CANNOT resolve a 2-point effect and is not asked to; it exists
+#      to eliminate configurations that are broken or catastrophic.
+#   B  vs both v51 and Farm, at 32 matches each. This is where configurations
+#      start to separate on the top-meta matchup.
+#   C  finalists only, at 96 matches per opponent, enough for the seed-level
+#      bootstrap to say something.
+#
+# Stage sizes and sample counts are fixed here BEFORE any result exists.
 STAGES = [
-    ("A", 512, 4),      # configurations kept, worlds per configuration
-    ("B", 128, 16),
-    ("C", 32, 64),
-    ("D", 8, 256),
+    {"stage": "A", "keep": 64, "worlds": 4, "opponents": ["v51"]},
+    {"stage": "B", "keep": 8, "worlds": 16, "opponents": ["v51", "farm"]},
+    {"stage": "C", "keep": 3, "worlds": 48, "opponents": ["v51", "farm"]},
 ]
 ROBUST_WEIGHT_MEAN = 0.6
 ROBUST_WEIGHT_WORST = 0.4
@@ -190,8 +208,13 @@ def tag_of(cfg):
     return hashlib.sha256(repr(sorted(cfg.items())).encode()).hexdigest()[:12]
 
 
-def run_matchups(path, label, worlds, stage, workers=8):
-    """Play every opponent on the first `worlds` dev seeds. Cached by digest."""
+def run_matchups(path, label, worlds, stage, workers=8, opps=None):
+    """Play the stage's opponents on the first `worlds` dev seeds.
+
+    Cached by (environment, digest pair, seed, seat), so re-running a stage after
+    an interruption is nearly free.
+    """
+    opps = opps or OPPONENTS
     seeds = [int(x) for x in open(SEEDS, encoding="utf-8") if x.strip().isdigit()]
     seeds = seeds[:worlds]
     sf = os.path.join(WORK, f"seeds_{worlds}.txt")
@@ -199,7 +222,7 @@ def run_matchups(path, label, worlds, stage, workers=8):
     with open(sf, "w", encoding="utf-8", newline="\n") as fh:
         fh.write("\n".join(str(s) for s in seeds) + "\n")
     res = {}
-    for opp_name, opp_path, lineage in OPPONENTS:
+    for opp_name, opp_path, lineage in opps:
         if not os.path.exists(opp_path):
             continue
         tag = f"{label}__{opp_name}__{stage}"
@@ -279,8 +302,11 @@ def main():
           f"(W+0.5T)/N")
     print(f"  opponents         : "
           f"{', '.join(n for n, _, _ in OPPONENTS)}")
-    print(f"  declared schedule : " +
-          ", ".join(f"{s}:{k}x{w}w" for s, k, w in STAGES))
+    print(f"  declared schedule :")
+    for s in STAGES:
+        print(f"      {s['stage']}: keep {s['keep']:>3}, "
+              f"{s['worlds']:>3} worlds ({s['worlds']*2:>4} games) vs "
+              f"{', '.join(s['opponents'])}")
     print(f"  C001 is evaluated at every stage on the same seeds\n")
 
     st = load_state()
@@ -289,7 +315,9 @@ def main():
     # numbers are compared against.
     base_cfg = settings_of(C001)[3]
 
-    for stage, keep, worlds in STAGES:
+    for spec in STAGES:
+        stage, keep, worlds = spec["stage"], spec["keep"], spec["worlds"]
+        opps = [o for o in OPPONENTS if o[0] in spec["opponents"]]
         if args.stage and stage != args.stage:
             continue
         key = f"stage_{stage}"
@@ -302,11 +330,9 @@ def main():
             pool = [("C001_BASELINE", C001, base_cfg)] + \
                    [(tag_of(c), None, c) for c in combos]
         else:
-            # Stages B..D consume the pool the previous stage retained. The
-            # champion rides along at every stage as `__C001__`, which is
-            # preserved by `nxt` slicing only if it ranks inside `keep`; to
-            # guarantee the reference is always present, it is re-added
-            # unconditionally here.
+            # Stages B..C consume the pool the previous stage retained. The
+            # champion rides along at every stage and is re-added
+            # unconditionally, so a stage always has a same-world reference.
             prev = st.get(f"pool_{stage}") or []
             pool = [("C001_BASELINE", C001, base_cfg)]
             seen_tags = {"C001_BASELINE"}
@@ -318,23 +344,44 @@ def main():
                              os.path.join(CAND_DIR, entry["tag"] + ".py"),
                              entry["cfg"]))
 
-        print(f"\n--- stage {stage}: {len(pool)} configurations x {worlds} "
-              f"worlds ({worlds*2} games each)")
+        n_matchups = len(pool) * len(opps)
+        print(f"\n--- stage {stage}: {len(pool)} configurations x "
+              f"{len(opps)} opponents x {worlds} worlds "
+              f"= {n_matchups*worlds*2:,} matches", flush=True)
         results = []
+        # Resume support: a configuration already scored in an interrupted pass
+        # is not recomputed. The match cache already makes the games free, but
+        # rebuilding and re-summarising 500 artifacts is not, and a search that
+        # loses everything to an interruption is not resumable in any meaningful
+        # sense.
+        partial = st.get(f"partial_{stage}") or {}
         for i, (tag, path, cfg) in enumerate(pool):
+            if tag in partial:
+                results.append(partial[tag])
+                continue
             if path is None:
                 path = os.path.join(CAND_DIR, tag + ".py")
                 build(cfg, path)
-            res = run_matchups(path, tag, worlds, stage, args.workers)
+            res = run_matchups(path, tag, worlds, stage, args.workers, opps)
             if not res:
                 continue
             sc = score(res)
-            results.append({"tag": tag, "path": path, "cfg": cfg,
-                            "per_opponent": res, **sc})
+            rec = {"tag": tag, "path": path, "cfg": cfg,
+                   "per_opponent": res, **sc}
+            results.append(rec)
+            partial[tag] = rec
             if (i + 1) % 16 == 0 or i + 1 == len(pool):
-                print(f"    {i+1}/{len(pool)}  "
-                      f"{(time.time()-t0)/60:.1f} min  "
-                      f"best so far {max(r['robust_score'] for r in results):.4f}")
+                # Checkpoint every 16 configurations so an interruption costs
+                # at most 16 evaluations.
+                st[f"partial_{stage}"] = partial
+                save_state(st)
+                el = (time.time() - t0) / 60
+                done = (i + 1) * len(opps) * worlds * 2
+                print(f"    {i+1}/{len(pool)}  {el:.1f} min  "
+                      f"{done:,} matches  best "
+                      f"{max(r['robust_score'] for r in results):.4f}",
+                      flush=True)
+        st[f"partial_{stage}"] = partial
         results.sort(key=lambda r: -r["robust_score"])
 
         # A candidate that is functionally identical to another is a no-op and
@@ -351,7 +398,7 @@ def main():
         nxt = deduped[:keep]
         st.setdefault("results", {})[key] = {
             "n_evaluated": len(results), "n_unique": len(deduped),
-            "worlds": worlds,
+            "worlds": worlds, "opponents": [o[0] for o in opps],
             "best": [{k: r[k] for k in ("tag", "robust_score", "mean_lineage",
                                         "worst_lineage_score", "broken")}
                      for r in deduped[:8]],

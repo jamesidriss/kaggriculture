@@ -75,14 +75,69 @@ def num(x, default=0):
 
 
 def record(seeds, out_csv):
-    """Replay a set of seeds with state captured at every step."""
+    """Replay a set of seeds with state captured at every step.
+
+    Field paths below were read off the ACTUAL observation rather than guessed.
+    The first version guessed them and produced 16 rows of zeros while reporting
+    no error, which is the worst combination: it looked like a result and was
+    nothing of the kind. The verified schema is:
+
+        observation.day / .hour / .step / .player
+        observation.farms[i]           -> .farmer [x,y], .hands, .hires_today,
+                                          .money, .tiles (list of tile LISTS),
+                                          .unlocked_quadrants
+        observation.tiles[i][j]        -> .kind, .crop, .planted_day,
+                                          .watered_today, .consecutive_unwatered,
+                                          .yield_units, .fertilized_until_day
+        observation.private.shed       -> per-product stock INCLUDING animals
+                                          (SHEEP, COW, GOOSE)
+        observation.private.seeds      -> seed stock
+        observation.private.inventories-> per-hand inventory
+        observation.market.inventory   -> SHARED market stock, all 9 products
+        observation.market.prices      -> SHARED prices
+        observation.town.unlocked_shops
+    """
     import tournament as T
     from kaggle_environments import make
     from agent_loader import load_agent
-    from stats import Counter
+    # `Counter` is the invocation/action counter defined in tournament.py, not a
+    # statistics helper. Importing it from `stats` shadows the module name and
+    # looks plausible in review.
+    Counter = T.Counter
 
-    rows = []
-    episodes = []
+    PRODUCTS = ("WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON",
+                "EGG", "MILK", "WOOL", "FERTILIZER")
+    CROPS = ("WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON")
+
+    def tally_crops(tiles):
+        """Count planted tiles.
+
+        Unoccupied land is represented by None, not by an empty dict, so a
+        naive `.get` chain raises on an ordinary early-game board. Both are
+        handled: the slot is counted (it is land the agent could use) and the
+        crop tallies only what is actually planted.
+        """
+        c = dict.fromkeys(CROPS, 0)
+        watered = yield_units = n_slots = 0
+        for quad in tiles or []:
+            if not isinstance(quad, (list, tuple)):
+                continue
+            for t in quad:
+                n_slots += 1
+                if not isinstance(t, dict):
+                    # Unoccupied land arrives as None, "", or a placeholder
+                    # string depending on the step and on whether the Struct was
+                    # converted. Only a dict carries a crop.
+                    continue
+                crop = t.get("crop")
+                if crop in c:
+                    c[crop] += 1
+                if t.get("watered_today"):
+                    watered += 1
+                yield_units += num(t.get("yield_units"))
+        return c, watered, yield_units, n_slots
+
+    rows, episodes = [], []
     t0 = time.time()
     for n, seed in enumerate(seeds):
         try:
@@ -91,71 +146,83 @@ def record(seeds, out_csv):
             env = make("kaggriculture",
                        configuration={"seed": int(seed), "episodeSteps": 720})
             env.reset()
-            seats = [ca, ob] if (n % 2 == 0) else [ob, ca]
-            cand_seat = 0 if (n % 2 == 0) else 1
+            cand_seat = 0 if n % 2 == 0 else 1
+            seats = [ca, ob] if cand_seat == 0 else [ob, ca]
             env.run(seats)
         except Exception as exc:  # noqa: BLE001
-            print(f"  seed {seed}: episode failed ({type(exc).__name__})")
+            print(f"  seed {seed}: episode failed ({type(exc).__name__}: {exc})")
             continue
         ep = int(seed)
-        first = True
         for step_no, st in enumerate(env.steps):
-            if st[0].status not in ("DONE", "RUNNING") and st[0].status:
-                continue
-            for player in (0, 1):
-                o = struct(st[player].observation) or {}
-                farms = o.get("farms") or []
+            obs0 = struct(st[0].observation) or {}
+            obs1 = struct(st[1].observation) or {}
+            # The market is SHARED and must agree between seats. Recorded once,
+            # on the player-0 row, and asserted equal by the quality gate.
+            mkt = obs0.get("market") or {}
+            inv = mkt.get("inventory") or {}
+            prices = mkt.get("prices") or {}
+            towns = (obs0.get("town") or {})
+            shops = towns.get("unlocked_shops") or []
+            shop_names = ([s if isinstance(s, str) else (s or {}).get("name", "?")
+                           for s in shops] if isinstance(shops, list) else [str(shops)])
+            mkt_total = sum(num(inv.get(p)) for p in PRODUCTS)
+            for player, obs in ((0, obs0), (1, obs1)):
+                farms = obs.get("farms") or []
                 mine = farms[player] if player < len(farms) else {}
-                town = struct(st[player].observation.get("town") or {}) or {}
-                market = struct(st[player].observation.get("market") or {}) or {}
-                inv = market.get("inventory") or market.get("stock") or []
-                prices = market.get("prices") or {}
-                shops = town.get("shops") or []
+                priv = obs.get("private") or {}
+                shed = priv.get("shed") or {}
+                crops, watered, yunits, n_tiles = tally_crops(mine.get("tiles"))
+                fr = mine.get("farmer") or [0, 0]
                 acts = st[player].action or {}
-                rows.append({
+                row = {
                     "episode_id": ep, "step": step_no, "player": player,
-                    "agent_sha": "", "source": "own_match_C001_vs_Farm",
-                    "day": num(o.get("day")), "hour": num(o.get("hour")),
-                    "money": num(mine.get("money") if isinstance(mine, dict)
-                                 else o.get("money")),
-                    "land_count": len(mine.get("land") or []) if isinstance(mine, dict) else 0,
-                    "hands_count": len(mine.get("hands") or []) if isinstance(mine, dict) else 0,
-                    "farmer_x": num((mine.get("farmer") or {}).get("x")
-                                     if isinstance(mine, dict)
-                                     and isinstance(mine.get("farmer"), dict) else 0),
-                    "farmer_y": num((mine.get("farmer") or {}).get("y")
-                                     if isinstance(mine, dict)
-                                     and isinstance(mine.get("farmer"), dict) else 0),
-                    "n_sheep": num((mine.get("animals") or {}).get("sheep")
-                                   if isinstance(mine, dict) else 0),
-                    "n_cow": num((mine.get("animals") or {}).get("cow")
-                                 if isinstance(mine, dict) else 0),
-                    "n_goose": num((mine.get("animals") or {}).get("goose")
-                                   if isinstance(mine, dict) else 0),
-                    "market_inv_total": sum(num(i) for i in inv) if isinstance(inv, list) else 0,
-                    "market_prices_json": json.dumps(prices)[:400],
-                    "shops_json": json.dumps([s if isinstance(s, str)
-                                              else (s or {}).get("name", "?")
-                                              for s in shops])[:300],
+                    "source": "own_match_C001_vs_Farm",
+                    "day": num(obs.get("day")), "hour": num(obs.get("hour")),
+                    "money": num(mine.get("money")),
+                    "n_tile_slots": n_tiles,
+                    "hands_count": len(mine.get("hands") or []),
+                    "hires_today": num(mine.get("hires_today")),
+                    "unlocked_quadrants": len(mine.get("unlocked_quadrants") or []),
+                    "farmer_x": num(fr[0] if len(fr) > 0 else 0),
+                    "farmer_y": num(fr[1] if len(fr) > 1 else 0),
+                    "tiles_watered": watered,
+                    "tiles_yield_units": yunits,
+                    "n_sheep": num(shed.get("SHEEP")),
+                    "n_cow": num(shed.get("COW")),
+                    "n_goose": num(shed.get("GOOSE")),
+                    "shed_total": sum(num(shed.get(p)) for p in PRODUCTS),
+                    "crop_wheat": crops["WHEAT"], "crop_carrot": crops["CARROT"],
+                    "crop_tomato": crops["TOMATO"],
+                    "crop_strawberry": crops["STRAWBERRY"],
+                    "crop_melon": crops["MELON"],
+                    "market_inv_total": mkt_total,
+                    "market_wheat": num(inv.get("WHEAT")),
+                    "market_wool": num(inv.get("WOOL")),
+                    "market_milk": num(inv.get("MILK")),
+                    "market_strawberry": num(inv.get("STRAWBERRY")),
+                    "price_wheat": num(prices.get("WHEAT")),
+                    "price_wool": num(prices.get("WOOL")),
+                    "price_milk": num(prices.get("MILK")),
+                    "price_strawberry": num(prices.get("STRAWBERRY")),
+                    "shops_json": json.dumps(shop_names)[:200],
                     "farmer_action": json.dumps(acts.get("farmer"))[:120],
                     "market_orders_json": json.dumps(acts.get("market"))[:300],
                     "hands_actions_json": json.dumps(acts.get("hands"))[:300],
-                    "is_first_step": 1 if first else 0,
-                })
-            f = env.steps[-1]
-            cc = struct(f[cand_seat].observation)
-            oc = struct(f[1 - cand_seat].observation)
-            episodes.append({
-                "episode_id": ep, "seed": int(seed), "cand_seat": cand_seat,
-                "cand_cash": num((cc.get("farms") or [{}])[cand_seat].get("money")
-                                 if cand_seat < len(cc.get("farms") or []) else 0),
-                "opp_cash": num((oc.get("farms") or [{}])[0].get("money")
-                                if 0 < len(oc.get("farms") or []) else 0),
-            })
-            first = False
-            if step_no % 60 == 0:
-                print(f"  seed {seed}: step {step_no}/{len(env.steps)} "
-                      f"({time.time()-t0:.0f}s)", flush=True)
+                }
+                rows.append(row)
+        last = env.steps[-1]
+        lo = struct(last[cand_seat].observation) or {}
+        lo_farms = lo.get("farms") or []
+        lo_money = num(lo_farms[cand_seat].get("money")) if cand_seat < len(lo_farms) else 0
+        op_seat = 1 - cand_seat
+        oo = struct(last[op_seat].observation) or {}
+        oo_farms = oo.get("farms") or []
+        op_money = num(oo_farms[op_seat].get("money")) if op_seat < len(oo_farms) else 0
+        episodes.append({"episode_id": ep, "seed": int(seed),
+                         "cand_seat": cand_seat, "cand_cash": lo_money,
+                         "opp_cash": op_money})
+        print(f"  seed {seed}: {len(rows)} rows so far "
+              f"({time.time()-t0:.0f}s)", flush=True)
     fields = list(rows[0].keys()) if rows else []
     os.makedirs(os.path.dirname(out_csv), exist_ok=True)
     with open(out_csv, "w", encoding="utf-8", newline="") as fh:
@@ -290,12 +357,18 @@ def cluster(descriptors, k=4):
         groups.setdefault(assign[i], []).append(d["episode_id"])
     prof = []
     for c in sorted(groups):
-        pts = [z[i] for i in range(len(z)) if assign[i] == c]
+        idxs = [i for i in range(len(z)) if assign[i] == c]
+        pts = [z[i] for i in idxs]
+        raw = [xs[i] for i in idxs]
+        # Raw means, NOT the z-scores. An earlier version labelled the
+        # standardised coordinates as `mean_final_day`, which printed 0.0 and
+        # looked like an engine that never advanced the day.
         prof.append({"regime": c, "n_worlds": len(groups[c]),
                      "centroid_scaled": [round(v, 3) for v in cents[c]],
-                     "mean_final_day": round(sum(p[0] for p in pts) / len(pts), 1),
-                     "mean_n_shops": round(sum(p[1] for p in pts) / len(pts), 2),
-                     "mean_min_market": round(sum(p[2] for p in pts) / len(pts), 1)})
+                     "mean_final_day": round(sum(r[0] for r in raw) / len(raw), 1),
+                     "mean_n_shops": round(sum(r[1] for r in raw) / len(raw), 2),
+                     "mean_min_market_inventory":
+                         round(sum(r[2] for r in raw) / len(raw), 1)})
     return prof, {d["episode_id"]: assign[i] for i, d in enumerate(descriptors)}
 
 
@@ -322,7 +395,12 @@ def main():
 
     by_ep = {}
     for r in csv.DictReader(open(OUT_CSV, encoding="utf-8")):
-        for k in ("day", "hour", "money", "market_inv_total", "step"):
+        # `player` must be converted too. Leaving it a string made the
+        # `r["player"] == 0` filter below match nothing, so every world reported
+        # a minimum market inventory of 0 -- a plausible-looking number that was
+        # an artefact of a type mismatch.
+        for k in ("day", "hour", "money", "market_inv_total", "step",
+                  "player", "n_tile_slots", "n_sheep", "n_cow", "n_goose"):
             r[k] = int(r[k] or 0)
         by_ep.setdefault(r["episode_id"], []).append(r)
     print(f"  {len(by_ep)} episodes, "
@@ -330,7 +408,6 @@ def main():
 
     # Quality checks, run before any clustering.
     bad_dup = 0
-    seen = set()
     for ep, rs in by_ep.items():
         c = {}
         for r in rs:
@@ -341,10 +418,42 @@ def main():
     over = sum(1 for rs in by_ep.values() for r in rs if r["step"] > 720)
     neg = sum(1 for rs in by_ep.values() for r in rs if r["money"] < 0)
     both = all(len({r["player"] for r in rs}) == 2 for rs in by_ep.values())
-    print(f"  duplicate (step,player): {bad_dup}")
-    print(f"  steps over 720          : {over}")
-    print(f"  negative money          : {neg}")
-    print(f"  every episode has 2 players: {both}")
+    # The market is shared. Any disagreement between the two seats at the same
+    # (episode, step) means the recorder, not the game, is wrong.
+    mkt_mismatch = 0
+    for ep, rs in by_ep.items():
+        per_step = {}
+        for r in rs:
+            per_step.setdefault(r["step"], {})[r["player"]] = r["market_inv_total"]
+        for step, d in per_step.items():
+            if 0 in d and 1 in d and d[0] != d[1]:
+                mkt_mismatch += 1
+    # A field that is silently constant across a WHOLE episode is a recorder
+    # failure. The sample must span the episode: an earlier version took the
+    # first 20 rows, which is the opening of the game, where money, day, tile
+    # count and every crop count are legitimately constant. That check reported
+    # eight broken fields on data that was entirely correct.
+    const_fields = []
+    for ep, rs in by_ep.items():
+        stride = max(1, len(rs) // 40)
+        span = rs[::stride]
+        for k in span[0]:
+            if k in ("player", "source", "shops_json", "farmer_action",
+                     "market_orders_json", "hands_actions_json"):
+                continue
+            if len({r.get(k) for r in span}) == 1:
+                if k not in const_fields:
+                    const_fields.append(k)
+    print(f"  duplicate (step,player)   : {bad_dup}")
+    print(f"  steps over 720            : {over}")
+    print(f"  negative money            : {neg}")
+    print(f"  two players every episode : {both}")
+    print(f"  shared-market mismatches  : {mkt_mismatch}")
+    print(f"  constant numeric fields   : {len(const_fields)}"
+          + (f"  {const_fields[:8]}" if const_fields else "  (good)"))
+    if const_fields:
+        print("    ^ a constant field means the extractor is reading the wrong "
+              "path, not that the value is invariant")
 
     descs = [world_descriptor(rs) for rs in by_ep.values()]
     prof, assign = cluster(descs, k=4)
@@ -353,7 +462,7 @@ def main():
         print(f"    regime {p['regime']}: {p['n_worlds']:>3} worlds  "
               f"final_day {p['mean_final_day']:>5.1f}  "
               f"shops {p['mean_n_shops']:>5.2f}  "
-              f"min_market {p['mean_min_market']:>8.1f}")
+              f"min_market {p['mean_min_market_inventory']:>9.1f}")
 
     with open(OUT_REG, "w", encoding="utf-8", newline="\n") as fh:
         json.dump({
@@ -363,7 +472,9 @@ def main():
             "turn_rows": sum(len(v) for v in by_ep.values()),
             "episodes": len(by_ep),
             "quality": {"duplicate_step_player": bad_dup, "steps_over_720": over,
-                        "negative_money": neg, "both_players_every_episode": both},
+                        "negative_money": neg, "both_players_every_episode": both,
+                        "shared_market_mismatches": mkt_mismatch,
+                        "constant_numeric_fields": const_fields},
             "feature_policy": {
                 "known_at_decision_time": ["known_first_shops",
                                            "known_n_first_shops"],
