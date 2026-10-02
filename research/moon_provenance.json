@@ -1,0 +1,171 @@
+{
+  "generated_utc": "2026-10-02T18:24:31Z",
+  "licence_audit": {
+    "moon_parent": {
+      "artifact": "moon_parent",
+      "sha256": "178ae0f727641cf4b618ebb98ade7aa1a1bed7517281aab9849de82a59d8ed3a",
+      "bytes": 1046403,
+      "source_dataset": "kaggle datasets kksky9k/kaggriculture-r88-rivals",
+      "dataset_licence_files": [],
+      "apache_body_in_file": true,
+      "attributed_authors": [
+        "thomastschinkel",
+        "yhay81",
+        "destbreso",
+        "aurax7",
+        "tetsutani",
+        "prvsiyan"
+      ],
+      "modified_by": "prvsiyan/Codex on 2026-09-22",
+      "header_claims": {
+        "derived_from_2945_farm_v9_3": "submission v9/3",
+        "derived_from_queue_compact": "queue_compact",
+        "modified_by": "# MODIFIED by prvsiyan/Codex on 2026-09-22",
+        "for_local_discovery_only": "LOCAL DISCOVERY ONLY",
+        "not_an_official_score_claim": "not an official Kaggle score claim",
+        "unproven": "unproven",
+        "apache_body_present": "Apache License"
+      },
+      "missing_parent_works": [
+        "queue_compact.py"
+      ],
+      "blockers_to_reuse": [
+        "the immediate parent Work (queue_compact.py) is NOT distributed, so the Apache-2.0 derivation chain is incomplete and the licence grant cannot be traced to the root Work",
+        "the artifact's own header marks it 'FOR LOCAL DISCOVERY ONLY', which is a statement about intended use, not a licence grant",
+        "the header explicitly disclaims any official Kaggle score claim, so it was never presented as a submitted artifact",
+        "the distributing dataset declares no LICENSE or NOTICE file of its own; an Apache body inside one file is not a dataset-level grant"
+      ],
+      "licence_verdict": "UNKNOWN",
+      "permitted_use": "analytical opponent and adversarial benchmark only; NOT a submission candidate, NOT to be transcribed into any artifact we submit"
+    },
+    "moon_q13_mg": {
+      "artifact": "moon_q13_mg",
+      "sha256": "d987c83ae779e5de7e4888a0ab6af52ed20af2903d4755f5b148800c2d5f06f5",
+      "bytes": 1048339,
+      "source_dataset": "kaggle datasets kksky9k/kaggriculture-r88-rivals",
+      "dataset_licence_files": [],
+      "apache_body_in_file": true,
+      "attributed_authors": [
+        "thomastschinkel",
+        "yhay81",
+        "destbreso",
+        "aurax7",
+        "tetsutani",
+        "prvsiyan"
+      ],
+      "modified_by": "prvsiyan/Codex on 2026-09-22",
+      "header_claims": {
+        "derived_from_2945_farm_v9_3": "submission v9/3",
+        "derived_from_queue_compact": "queue_compact",
+        "modified_by": "# MODIFIED by prvsiyan/Codex on 2026-09-22",
+        "for_local_discovery_only": "LOCAL DISCOVERY ONLY",
+        "not_an_official_score_claim": "not an official Kaggle score claim",
+        "unproven": "unproven",
+        "apache_body_present": "Apache License"
+      },
+      "missing_parent_works": [
+        "queue_compact.py"
+      ],
+      "blockers_to_reuse": [
+        "the immediate parent Work (queue_compact.py) is NOT distributed, so the Apache-2.0 derivation chain is incomplete and the licence grant cannot be traced to the root Work",
+        "the artifact's own header marks it 'FOR LOCAL DISCOVERY ONLY', which is a statement about intended use, not a licence grant",
+        "the header explicitly disclaims any official Kaggle score claim, so it was never presented as a submitted artifact",
+        "the distributing dataset declares no LICENSE or NOTICE file of its own; an Apache body inside one file is not a dataset-level grant"
+      ],
+      "licence_verdict": "UNKNOWN",
+      "permitted_use": "analytical opponent and adversarial benchmark only; NOT a submission candidate, NOT to be transcribed into any artifact we submit"
+    }
+  },
+  "lineage": {
+    "moon_parent": {
+      "claims_v9_3_base": true,
+      "claims_v39_public": true,
+      "names_thomastschinkel": true,
+      "names_ahmed_ozer": true,
+      "n_identifiers": 234
+    },
+    "moon_q13_mg": {
+      "claims_v9_3_base": true,
+      "claims_v39_public": true,
+      "names_thomastschinkel": true,
+      "names_ahmed_ozer": true,
+      "n_identifiers": 237
+    },
+    "C001": {
+      "claims_v9_3_base": false,
+      "claims_v39_public": false,
+      "names_thomastschinkel": true,
+      "names_ahmed_ozer": true,
+      "n_identifiers": 213
+    },
+    "v51": {
+      "claims_v9_3_base": false,
+      "claims_v39_public": false,
+      "names_thomastschinkel": true,
+      "names_ahmed_ozer": true,
+      "n_identifiers": 213
+    },
+    "farm_2945": {
+      "claims_v9_3_base": true,
+      "claims_v39_public": true,
+      "names_thomastschinkel": true,
+      "names_ahmed_ozer": true,
+      "n_identifiers": 183
+    }
+  },
+  "payoff": {
+    "moon_parent": {
+      "C001": {
+        "W": 221,
+        "L": 19,
+        "T": 0,
+        "N": 240,
+        "broken": 0,
+        "bt_score": 0.9208
+      },
+      "v51": {
+        "W": 226,
+        "L": 14,
+        "T": 0,
+        "N": 240,
+        "broken": 0,
+        "bt_score": 0.9417
+      },
+      "farm_2945": {
+        "W": 236,
+        "L": 4,
+        "T": 0,
+        "N": 240,
+        "broken": 0,
+        "bt_score": 0.9833
+      }
+    },
+    "moon_q13_mg": {
+      "C001": {
+        "W": 221,
+        "L": 19,
+        "T": 0,
+        "N": 240,
+        "broken": 0,
+        "bt_score": 0.9208
+      },
+      "v51": {
+        "W": 228,
+        "L": 12,
+        "T": 0,
+        "N": 240,
+        "broken": 0,
+        "bt_score": 0.95
+      },
+      "farm_2945": {
+        "W": 236,
+        "L": 4,
+        "T": 0,
+        "N": 240,
+        "broken": 0,
+        "bt_score": 0.9833
+      }
+    }
+  },
+  "seeds": 120
+}

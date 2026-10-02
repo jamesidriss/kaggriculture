@@ -152,7 +152,8 @@ from observed behaviour. Submission gating was never circumvented.
 
 ---
 
-## 7. Final-pass additions (branch inal/meta-resolution)
+## 7. Final-pass additions (branch 
+inal/meta-resolution)
 
 ### Postmortem HEDGE
 
@@ -181,7 +182,8 @@ Linux checkout reproduces. Two store keys changed as a result:
 | agent | old (CRLF) digest | canonical (LF) digest |
 |---|---|---|
 | v43 recovering-lost-harvests | 919fc1d61050cd96… | 3abe0ca715ba1864… |
-| v44 same-turn-sale-race | 797d9bca309d481e… | e370bd8a9d0f377… |
+| v44 same-turn-sale-race | 797d9bca309d481e… | 
+e370bd8a9d0f377… |
 
 enchmark/normalize_artifacts.py --check is a release gate that compares every
 tracked artifact against its Git blob, and enchmark/build_catalog.py
@@ -197,5 +199,61 @@ haideptry/the-shepherds-ledger, hanifnoerrofiq/pioneers-of-kaggle-town,
 wzhengbiao/kaggriculture-hybu-submit, yasutakababa/kaggriculture-late-purchase-v16-submit,
 sunyuxiang136/kaggriculture-opening-stock-v8. None yielded a legally reusable,
 self-contained, licensed agent artifact. Where a licence could not be
-determined, no licence is asserted. See 
-eports/RETRACTIONS.md.
+determined, no licence is asserted. See
+reports/RETRACTIONS.md.
+
+
+---
+
+## RANK1 generation additions
+
+### moon_parent, moon_q13_mg — Kaggle dataset kksky9k/kaggriculture-r88-rivals
+
+**Verdict: LICENCE UNKNOWN. ANALYTICAL OPPONENT ONLY. NOT A SUBMISSION CANDIDATE.**
+
+An Apache-2.0 licence body appears inside each file. **A licence body is not a
+grant.** Four independent blockers, each sufficient on its own:
+
+1. **The derivation chain is broken.** The header states
+   *"Derived from queue_compact.py"*, and that file is **not distributed**.
+   An Apache-2.6 derivative chain must be traceable to a root Work.
+2. The header states the artifact is *"unproven and is not an official Kaggle
+   score claim"* — it was never presented as a submitted artifact.
+3. The header marks it *"FOR LOCAL DISCOVERY ONLY"* — a statement about intended
+   use, not a licence.
+4. **The distributing dataset declares no LICENSE or NOTICE file of its own.**
+
+Permitted use: adversarial benchmark and analysis. **No Moon source may be
+transcribed into any artifact this project submits.** Any mechanism used is
+reimplemented from scratch against the public action interface, and its parameters
+are swept rather than copied.
+
+Attribution as declared in the artifact: thomastschinkel, yhay81, destbreso,
+aurax7, tetsutani, prvsiyan, Dmitrii Gluzdov.
+
+**Correction to our own catalog:** Moon was previously labelled an *independent
+lineage*. That is **wrong**. Its header derives it from *Kaggriculture submission
+v9/3, public V39* — the same root as our Farm hedge — and identifier Jaccard
+against C001 is **0.7192**, higher than the Farm's own 0.6098.
+
+### kaggriculture-simulation - external Rust simulator (NOT a submission dependency)
+
+| field | value |
+|---|---|
+| repository | github.com/debmalyaroy/kaggriculture-simulation |
+| commit | 953ac86c462ba1dbdcb897f6020fd7bdacf27720 |
+| licence | Apache-2.0, LICENSE + NOTICE present |
+
+Upstream, unchanged: a Rust port of the Kaggriculture environment pinned to
+kaggle-environments release **1.32.7**. Its declared pin for
+envs/kaggriculture/kaggriculture.py is
+c8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e, and our own
+installed 1.32.7 file hashes **identically**, as does kaggriculture.json
+(82c89c1a2315b93f39775d8e025471a01b738647c9772658368ee6b1b6f4867).
+
+**Research use: NO_GO — parity is NOT verified.** The two engines disagree on
+market purchase settlement. See 
+eports/RUST_PARITY.md for the minimal
+reproducer. The divergence is **unresolved** and is deliberately **not**
+attributed to the upstream engine, because our own tape encoder is an
+unvalidated part of the harness. kaggle-environments itself is not redistributed.

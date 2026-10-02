@@ -1,0 +1,5264 @@
+{
+  "verdict": "NO_GO -- neither sampling convention reproduces the other",
+  "tally": {
+    "first": 25,
+    "last": 0,
+    "neither": 75,
+    "error": 0
+  },
+  "trajectories": 100,
+  "seconds": 59.3,
+  "banks_agree": 100,
+  "detail": [
+    {
+      "kind": "legal",
+      "seed": 300000,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          57,
+          68
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          3,
+          14
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          65,
+          104
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300001,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          17,
+          13
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9984,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          5,
+          126
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9990,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          14,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300002,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          34,
+          1
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9980,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          25,
+          6
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9990,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          5,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9959,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300003,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          12,
+          23
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9965,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300004,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          18,
+          240
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          6,
+          8
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          9,
+          60
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9994,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300005,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          253,
+          21
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9968,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          39,
+          96
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          14,
+          6
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9967,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300006,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          25,
+          132
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9977,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          3,
+          7
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9994,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          15,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9997,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300007,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          6,
+          16
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9971,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          1,
+          13
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9988,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          19,
+          9
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9958,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300008,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          7,
+          1
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9975,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          11
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9975,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          10,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9988,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300009,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          150,
+          15
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9970,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          15,
+          122
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9995,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          4,
+          10
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9973,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300010,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          267,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9965,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          35,
+          11
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9985,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          4,
+          15
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9964,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300011,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          146,
+          470
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          143,
+          25
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9994,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          30,
+          32
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9993,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300012,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          18,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9993,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          39,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          5,
+          3
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9960,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300013,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          0,
+          94
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9991,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          3
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          0,
+          968
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300014,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          146,
+          191
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          3,
+          48
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          2,
+          32
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9992,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300015,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          57,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          3,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          57,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300016,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          2,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9969,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          26,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9991,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          11,
+          5
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9997,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300017,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          6,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9972,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          2,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9971,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          280,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9996,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300018,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          167,
+          4
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9982,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          113,
+          76
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          6,
+          1
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9995,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300019,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          12,
+          5
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9995,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300020,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          5,
+          1
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9991,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          150,
+          23
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          4,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9997,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300021,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          7,
+          193
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9981,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          82,
+          50
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          167,
+          112
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300022,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          53,
+          2
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9962,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          19,
+          258
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          3,
+          4
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9989,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300023,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          3,
+          4
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9995,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          10,
+          4
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9997,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          57,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "legal",
+      "seed": 300024,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9967,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          3,
+          21
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9995,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          31,
+          68
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9984,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300000,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          157,
+          212
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9985,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          61,
+          69
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          112,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300001,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          16,
+          23
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9987,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          4,
+          19
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9987,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          21,
+          146
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9983,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300002,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          3
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9979,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          7
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9989,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          9,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9947,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300003,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          7
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9986,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          5,
+          363
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          12,
+          16
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9963,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300004,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          46,
+          4
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9975,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          66,
+          52
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          2,
+          60
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9993,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300005,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          256,
+          25
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9965,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          360,
+          192
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          33,
+          64
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9930,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300006,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          10,
+          271
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9920,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          10,
+          157
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          12,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9954,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300007,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          6,
+          46
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9962,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          31,
+          13
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9994,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          0,
+          11
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9988,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300008,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          7,
+          24
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9972,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          151
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9980,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          7,
+          57
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9981,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300009,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          143,
+          58
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9951,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          110,
+          240
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          9,
+          11
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9971,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300010,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          77,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9965,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          23,
+          24
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9985,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          4,
+          5
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9963,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300011,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          69,
+          794
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          15,
+          6
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9988,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          30,
+          32
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9993,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300012,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          186,
+          8
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9989,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          43,
+          264
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          20,
+          27
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9981,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300013,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          0,
+          188
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          136
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          0,
+          1349
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9991,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300014,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          180,
+          114
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          37,
+          26
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          8,
+          32
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9991,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300015,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          26,
+          157
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9987,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300016,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          7,
+          72
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9982,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          5,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9988,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          12,
+          6
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9963,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300017,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          4,
+          246
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9985,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          3
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9990,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          280,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9996,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300018,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          286,
+          2
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9996,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          253,
+          80
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          12,
+          26
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9987,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300019,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          46,
+          146
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          13,
+          58
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          12,
+          14
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9997,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300020,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          26,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9984,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          145,
+          240
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          4,
+          246
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9997,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300021,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          3,
+          193
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9979,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          1,
+          160
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9978,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          103,
+          167
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9979,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300022,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          0,
+          29
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9963,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          197
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          4,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9979,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300023,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          0,
+          24
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          4
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          0,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "empty_pos",
+      "seed": 300024,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          4,
+          3
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9966,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          22,
+          112
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9995,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          37,
+          289
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9996,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300000,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          7,
+          81
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9998,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          1,
+          48
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          84,
+          158
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9993,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300001,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          1,
+          16
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9990,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          4
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9989,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          6,
+          68
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9989,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300002,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          233
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9994,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          226
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          284,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9997,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300003,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          46,
+          146
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          13,
+          3
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          10,
+          19
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9987,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300004,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          180
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          39
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          9,
+          52
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9984,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300005,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          268
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          235
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          14,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300006,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          157,
+          20
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9998,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          69,
+          14
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          15,
+          24
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9997,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300007,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          193,
+          37
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          49,
+          5
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          67,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300008,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          2,
+          7
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9971,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          4,
+          85
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9994,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          156,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9992,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300009,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          224,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          212,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          19,
+          5
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300010,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          2,
+          266
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          20
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9991,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          6,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9989,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300011,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          15,
+          169
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300012,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          0,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9996,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          26,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          3,
+          68
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9992,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300013,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          80,
+          67
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          26,
+          13
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          212,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300014,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          12
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          57,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9996,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300015,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          5
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9990,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          249
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          118,
+          9
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9997,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300016,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          5,
+          59
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9993,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          1,
+          55
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9992,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          80,
+          66
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9992,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300017,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          12,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          0,
+          0
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          12,
+          57
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300018,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          4,
+          14
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9995,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          4,
+          14
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          12,
+          67
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300019,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          15,
+          28
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9998,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          9,
+          8
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          16,
+          59
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9997,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300020,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          97,
+          1
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9998,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          9,
+          7
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          205,
+          54
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300021,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          288,
+          146
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          56,
+          11
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9995,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          57,
+          293
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300022,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          97,
+          240
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          77,
+          2
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9990,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          0,
+          57
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300023,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          1,
+          17
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9995,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          1,
+          11
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9997,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          58,
+          11
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "chaos",
+      "seed": 300024,
+      "verdict": "neither",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true,
+      "first_bad_day": 1,
+      "py_first": {
+        "day": 1,
+        "step": 24,
+        "money": [
+          183,
+          14
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      },
+      "py_last": {
+        "day": 1,
+        "step": 47,
+        "money": [
+          150,
+          2
+        ],
+        "inventory": {
+          "CARROT": 9998,
+          "EGG": 9998,
+          "FERTILIZER": 10000,
+          "MELON": 9998,
+          "MILK": 9998,
+          "STRAWBERRY": 9998,
+          "TOMATO": 9998,
+          "WHEAT": 9998,
+          "WOOL": 9998
+        }
+      },
+      "rust": {
+        "step": 24,
+        "day": 1,
+        "money": [
+          115,
+          57
+        ],
+        "inventory": {
+          "CARROT": 9999,
+          "EGG": 9999,
+          "FERTILIZER": 10000,
+          "MELON": 9999,
+          "MILK": 9999,
+          "STRAWBERRY": 9999,
+          "TOMATO": 9999,
+          "WHEAT": 9999,
+          "WOOL": 9999
+        }
+      }
+    },
+    {
+      "kind": "noop",
+      "seed": 300000,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300001,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300002,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300003,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300004,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300005,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300006,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300007,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300008,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300009,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300010,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300011,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300012,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300013,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300014,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300015,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300016,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300017,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300018,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300019,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300020,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300021,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300022,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300023,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    },
+    {
+      "kind": "noop",
+      "seed": 300024,
+      "verdict": "first",
+      "days_common": 29,
+      "days_python": 30,
+      "days_rust": 29,
+      "banks_agree": true
+    }
+  ]
+}

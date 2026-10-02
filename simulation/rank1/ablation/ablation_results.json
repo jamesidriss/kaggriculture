@@ -1,0 +1,105 @@
+{
+  "generated_utc": "2026-10-02T18:37:20Z",
+  "moon_sha256": "178ae0f727641cf4b618ebb98ade7aa1a1bed7517281aab9849de82a59d8ed3a",
+  "c001_sha256": "a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8",
+  "seeds": 40,
+  "method": "source-level shim appended to a COPY; the original artifact is never modified",
+  "results": [
+    {
+      "name": "control_null",
+      "path": "simulation/rank1/ablation/moon_control_null.py",
+      "sha256": "178ae0f727641cf4b618ebb98ade7aa1a1bed7517281aab9849de82a59d8ed3a",
+      "bytes": 1046399,
+      "source_sha256_unchanged": true,
+      "diff_lines": 0,
+      "diff_preview": "",
+      "hypothesis": "a no-op that must cost Moon nothing; if it costs anything the harness is measuring something other than the layer",
+      "result": {
+        "games": 80,
+        "valid": 80,
+        "broken": 0,
+        "W": 72,
+        "L": 8,
+        "T": 0,
+        "bt_score": 0.9,
+        "raw_row": [
+          "  tie rate   : 0.0000",
+          "  throughput : 67.8 matches/min (8 workers, 1.2 min)",
+          "  wrote      : experiments\\rank1\\ablation\\control_null.csv"
+        ]
+      }
+    },
+    {
+      "name": "disable_v9_opening",
+      "path": "simulation/rank1/ablation/moon_disable_v9_opening.py",
+      "sha256": "ff6d8bc109bac1fc113a104c269d1074e9f855e679707490b2c06c1bb87a9908",
+      "bytes": 1047260,
+      "source_sha256_unchanged": true,
+      "diff_lines": 21,
+      "diff_preview": "--- moon_parent.py\n+++ moon_parent+disable_v9_opening.py\n@@ -7333,0 +7334,21 @@\n+\n+\n+# ======================================================================\n+# RANK1 ABLATION: disable_v9_opening\n+# Appended shim on a COPY. The original artifact is unmodified.\n+# Every shim counts its own invocations in _ABL_COUNT so the\n+# harness can prove the intervention actually fired. An ablation\n+# that never ran is reported as NOT EXERCISED, not as a null.\n+# ======================================================================\n+_ABL_COUNT = {}\n+_ABL_COUNT['opening'] = _ABL_COUNT.get('opening', 0) + 1\n+_V9_OPENING_REAL = _v9_opening\n+def _v9_opening(obs, action, _real=_V9_OPENING_REAL):\n+    _ABL_COUNT['opening'] = _ABL_COUNT.get('opening', 0) + 1\n+    return action\n+\n+_ABL_SEAL_NAMED = True\n+\n+# ======================================================================\n+# ABLATION ENDS\n+# ======================================================================\n",
+      "hypothesis": "the v9 opening market sequence, which overrides the first two turns' market orders with a fixed tape (V9_OPENING_TAPE)",
+      "result": {
+        "games": 80,
+        "valid": 80,
+        "broken": 0,
+        "W": 0,
+        "L": 80,
+        "T": 0,
+        "bt_score": 0.0,
+        "raw_row": [
+          "  tie rate   : 0.0000",
+          "  throughput : 69.1 matches/min (8 workers, 1.2 min)",
+          "  wrote      : experiments\\rank1\\ablation\\disable_v9_opening.csv"
+        ]
+      }
+    },
+    {
+      "name": "disable_RACE_update",
+      "path": "simulation/rank1/ablation/moon_disable_RACE_update.py",
+      "sha256": "fca2c0d9ae86f34597b247a98f70a93aeafc9a875adef22176b60018414e9644",
+      "bytes": 1047257,
+      "source_sha256_unchanged": true,
+      "diff_lines": 21,
+      "diff_preview": "--- moon_parent.py\n+++ moon_parent+disable_RACE_update.py\n@@ -7333,0 +7334,21 @@\n+\n+\n+# ======================================================================\n+# RANK1 ABLATION: disable_RACE_update\n+# Appended shim on a COPY. The original artifact is unmodified.\n+# Every shim counts its own invocations in _ABL_COUNT so the\n+# harness can prove the intervention actually fired. An ablation\n+# that never ran is reported as NOT EXERCISED, not as a null.\n+# ======================================================================\n+_ABL_COUNT = {}\n+_ABL_COUNT['race'] = _ABL_COUNT.get('race', 0) + 1\n+_V9_RACE_UPDATE_REAL = _v9_race_update\n+def _v9_race_update(obs, st, _real=_V9_RACE_UPDATE_REAL):\n+    _ABL_COUNT['race'] = _ABL_COUNT.get('race', 0) + 1\n+    return st\n+\n+_ABL_SEAL_NAMED = True\n+\n+# ======================================================================\n+# ABLATION ENDS\n+# ======================================================================\n",
+      "hypothesis": "RACE records a rival's observed sale and computes how far ahead of it Moon's own planned sale sits. If Moon's dominance comes from reacting to an opponent's sale, disabling the update should collapse it toward C001.",
+      "result": {
+        "games": 80,
+        "valid": 80,
+        "broken": 0,
+        "W": 72,
+        "L": 8,
+        "T": 0,
+        "bt_score": 0.9,
+        "raw_row": [
+          "  tie rate   : 0.0000",
+          "  throughput : 67.0 matches/min (8 workers, 1.2 min)",
+          "  wrote      : experiments\\rank1\\ablation\\disable_RACE_update.csv"
+        ]
+      }
+    },
+    {
+      "name": "disable_planned_sells",
+      "path": "simulation/rank1/ablation/moon_disable_planned_sells.py",
+      "sha256": "e2adff567cded468402f0d1d6b573533cea041abc74b8afbb7cadcb30aa5f416",
+      "bytes": 1047215,
+      "source_sha256_unchanged": true,
+      "diff_lines": 20,
+      "diff_preview": "--- moon_parent.py\n+++ moon_parent+disable_planned_sells.py\n@@ -7333,0 +7334,20 @@\n+\n+\n+# ======================================================================\n+# RANK1 ABLATION: disable_planned_sells\n+# Appended shim on a COPY. The original artifact is unmodified.\n+# Every shim counts its own invocations in _ABL_COUNT so the\n+# harness can prove the intervention actually fired. An ablation\n+# that never ran is reported as NOT EXERCISED, not as a null.\n+# ======================================================================\n+_ABL_COUNT = {}\n+_ABL_COUNT['planned'] = _ABL_COUNT.get('planned', 0) + 1\n+def _v9_planned_sells(tape, item, step):\n+    _ABL_COUNT['planned'] = _ABL_COUNT.get('planned', 0) + 1\n+    return []\n+\n+_ABL_SEAL_NAMED = True\n+\n+# ======================================================================\n+# ABLATION ENDS\n+# ======================================================================\n",
+      "hypothesis": "_v9_planned_sells is the tape search RACE depends on. Disabling it starves RACE of the data it acts on, so this should behave like disable_RACE_update if the mechanism is real.",
+      "result": {
+        "games": 80,
+        "valid": 80,
+        "broken": 0,
+        "W": 72,
+        "L": 8,
+        "T": 0,
+        "bt_score": 0.9,
+        "raw_row": [
+          "  tie rate   : 0.0000",
+          "  throughput : 67.3 matches/min (8 workers, 1.2 min)",
+          "  wrote      : experiments\\rank1\\ablation\\disable_planned_sells.csv"
+        ]
+      }
+    }
+  ]
+}
