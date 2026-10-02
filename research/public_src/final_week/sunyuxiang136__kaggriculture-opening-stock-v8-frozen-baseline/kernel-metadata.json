@@ -1,0 +1,19 @@
+{
+  "id": "sunyuxiang136/kaggriculture-opening-stock-v8-frozen-baseline",
+  "id_no": 135624091,
+  "title": "Kaggriculture Opening Stock V8 Frozen Baseline",
+  "code_file": "kaggriculture-opening-stock-v8-frozen-baseline.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:dafd4ce5668bbf1ad422e4c109e0f18c9623c3a7c7f48b0235f13142755c40b9",
+  "machine_shape": "None"
+}

@@ -1,0 +1,45 @@
+Opening Stock V8 — frozen public source release, 24 September 2026
+SPDX-License-Identifier: Apache-2.0
+
+This distribution preserves the complete historical V8 main.py byte for byte.
+Source SHA256:
+d760ace37153218546ef8219db4de5ea93f69e70c48b573cc37ee000f3e0228d
+
+Primary upstream public notebook:
+https://www.kaggle.com/code/tetsutani/demand-preserving-turn-sale-timing
+Author account: tetsutani.
+Original source snapshot SHA256:
+827ddf2997fa442e80baadebc4cc91ffaeedec1ff333c1fa7d872b0f1d448181
+Public-only embedded parent SHA256:
+4a0dc99bbd066930faeb60bcde08ca27ddfc73e54bd04b603ca6b643746b280c
+
+The parent includes public route, market, and execution work attributed in its
+own retained notices to thomastschinkel, yhay81 (Yusuke Hayashi), destbreso,
+aurax7, tetsutani, prvsiyan, Dmitrii Gluzdov, Ahmed Berat Ozer, lucifer19,
+and the Kaggle / kaggle-environments contributors, among others. This list
+is a guide; it does not replace or narrow the original notices in the source.
+
+The inherited source includes deterministic game-semantics excerpts from
+kaggle-environments and the attributed bounded terminal rescue planner.
+Project: https://github.com/Kaggle/kaggle-environments
+License: Apache License, Version 2.0. The complete license is included in
+LICENSE.txt; all inherited license and attribution text is retained inside
+main.py and the exact decoded readable source files.
+
+Prior normalization of the embedded parent removed two unused os aliases,
+disabled the optional V92_SELL_LIB environment/file lookup using its default
+empty library, and removed an unreachable Mixed/configuration-seed opening
+branch while retaining HybridOpening. These changes already existed in V8.
+
+Local V8 integration and additions, published by sunyuxiang136:
+an observed-state market/execution controller; frozen supervised and fitted-Q
+market models; deferred-sale deadlines; payroll and physical execution guards;
+temporary mature-wheat retention under a visible low quote; reconciliation of
+native sale feedback; and independent cached action copies. The selected guard
+mode is meta_complete. Existing inherited mechanisms keep their original
+attributions; the publisher does not claim authorship of the upstream policy.
+
+The 24 September 2026 public packaging adds documentation, exact readable
+source extraction, integrity hashes, and explicit license/notice files. It
+does not change the historical V8 strategy, its parameters, model, or runtime
+behavior. These local additions and packaging are distributed under Apache-2.0.

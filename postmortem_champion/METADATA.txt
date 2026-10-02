@@ -1,28 +1,48 @@
-version: postmortem_champion v1 (seat-safe The 2945 Farm v9/3)
-parent: public_champion_001 / The 2945 Farm v9/3 by thomastschinkel
-sha256: c936e5a71ba40e1700ca1ab3a3271132407446bbb8b7523ced2cf4450ed8463f
-bytes: 856428
-git_commit: (see git log; file added in commit below)
+role: postmortem_primary
+name: ahmedberatozer-v51-lean-flock
+author: ahmedberatozer
+source: Kaggle dataset destbreso/kaggriculture-donor-agents-20260902, file agents/ahmedberatozer-v51-lean-flock.py
 license: Apache-2.0
-source_lineage:
-  https://www.kaggle.com/code/thomastschinkel/the-2945-farm-96-vs-the-top-10-public-bots
-  upstream attribution retained in-file: thomastschinkel, yhay81, destbreso,
-  aurax7, tetsutani, prvsiyan, Dmitrii Gluzdov, Ahmed Berat Ozer
-modification: SEAT-SAFE PATCH ONLY. 30 sites reading observation["step"] were
-  rewritten to the agent's own _step_of() accessor (day*24+hour, numerically
-  identical). Reason: the official observation schema does NOT declare "step";
-  the interpreter sets it only on player 0, so the verbatim artifact raises
-  KeyError at step 0 when assigned seat 1. Verified: seat-0 final cash is
-  byte-identical before and after the patch on 3 seeds; seat 1 goes from
-  immediate crash to normal play.
-meta_win_rate:
-  dev (ladder_real_dev.txt, 10 elite seeds): 100-0 vs 5 opponents, both seats
-  holdout (ladder_real_holdout.txt, 10 seeds): 100-0, both seats, 0 errors
-  final (ladder_real_final.txt, 10 seeds, untouched until final run): 100-0
-  combined: 300 games, 300 wins, 0 losses, 0 ties, 0 errors
-local_BT: beta 10.203 (highest in a 6-agent league; see reports/LOCAL_BRADLEY_TERRY.md)
-runtime: median 0.33 ms, p95 1.23 ms, p99 2.94 ms, max 28.9 ms per agent() call
-  against a 1000 ms actTimeout. No network, no file writes, no native deps.
-self_match_excluded: yes (digest-addressed store; identical-content matchups skipped)
-NOT_SUBMITTED: Kaggle API returns HTTP 400 "Submission not allowed: Submissions
-  have been disabled for this competition." No legal submission path exists.
+sha256: c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891
+bytes: 461739
+git_commit_at_freeze: c02c867e5e1ac1c3fbb793d330df968a54382306
+agent_signature: agent(observation, configuration)
+environment_version: kaggle-environments 1.32.7
+runtime_path: kaggle_environments.core.Environment.run  (official runner)
+seats: both, every world
+turns_per_game: 719 of 720
+errors: 0
+
+DIRECT TOP MATCHUP (paired, both seats, real ladder-derived worlds)
+  vs farm_2945_original : 1039-945-0 over 1984 paired games  win rate 0.5237  Wilson 95% [0.5017, 0.5456]  exact binomial p=0.0368  seat effect McNemar p=0.901
+
+AGGREGATE RESULT
+  v51 beats the league; see reports/TOP_META_TABLE.md and
+  reports/V51_VS_FARM.md for the full paired evidence.
+
+AGENT IN A LEAGUE WITH (median final cash, 5 games vs starter)
+  median $182,861
+
+RUNTIME
+  median ~0.4 ms, max 40.2 ms per agent() call against a 1000 ms actTimeout.
+  Artifact gate: 2,880 calls, 0 schema violations, no stdout, no stderr.
+
+MODIFICATIONS
+  NONE. Byte-identical to the published public artifact. The file is a copy of
+  the registered digest in opponents/meta/MANIFEST.csv; no line was edited.
+
+NOT_SUBMITTED
+  Kaggle submissions are closed. Verified: POST
+  competitions.CompetitionApiService/CreateSubmission returns HTTP 400 with an
+  empty body and the submission list is unchanged. No repository change can
+  affect the competition result. This artifact is an offline reference, not an
+  official winner.
+
+LINEAGE NOTE
+  SHARED ANCESTRY with the hedge. v51 and the 2945 Farm are the same lineage, not two:
+  - 1,205 shared unique identifiers, containment 0.82
+  - a single contiguous identical run of 3,352 tokens
+  - identical nine-author credit list in both headers
+  Measured by benchmark/lineage_check.py. v51's own
+  header credits thomastschinkel and the rest, i.e. v51
+  descends from the 2945 Farm.

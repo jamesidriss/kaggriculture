@@ -1,0 +1,39 @@
+{
+  "kaggle_environments_version": "1.32.7",
+  "official_evidence": {
+    "Agent.act_arg_truncation": "args = [structify(observation), structify(self.configuration)]\n\n        if hasattr(self.agent, \"__code__\") and hasattr(self.agent.__code__, \"co_argcount\"):\n            args = args[: self.agent.__code__.co_argcount]\n\n        # Start the timer.\n\n        if self.debug:\n            # Adding a debugging branch here, since t",
+    "build_agent_callable_branch": "# Already callable.\n    if callable(raw):\n        return raw, False\n\n    # Not a string, s",
+    "kaggle_environments_file": "C:\\Users\\James\\kaggriculture\\.venv\\Lib\\site-packages\\kaggle_environments\\agent.py"
+  },
+  "empirical": [
+    {
+      "label": "genuine_one_arg",
+      "co_argcount": 1,
+      "invoked_times": 29,
+      "seat0_status": "DONE",
+      "seat1_status": "DONE",
+      "errors": [],
+      "worked": true
+    },
+    {
+      "label": "one_arg",
+      "co_argcount": 2,
+      "invoked_times": 29,
+      "seat0_status": "DONE",
+      "seat1_status": "DONE",
+      "errors": [],
+      "worked": true
+    },
+    {
+      "label": "two_arg",
+      "co_argcount": 2,
+      "invoked_times": 29,
+      "seat0_status": "DONE",
+      "seat1_status": "DONE",
+      "errors": [],
+      "worked": true
+    }
+  ],
+  "both_arities_supported": true,
+  "corrected_claim": "Kaggle truncates the call to the callable's co_argcount, so agent(obs) and agent(obs, configuration) are BOTH valid. The historical harness bug was that our own loader/benchmark path invoked the agent directly with two positional arguments instead of letting the official runner dispatch it."
+}

@@ -133,6 +133,36 @@ the time the real meta was understood the quota was gone. Final scores: 348.1,
 **The first submission of any kind is a placeholder. The quota is the scarce
 resource, not the code.**
 
+## 10b. NEW THIS PASS: publishing a statistic that did not match the number beside it
+
+**Cost: a wrong headline conclusion in two consecutive reports.**
+
+76/144 was printed next to [0.3925, 0.5534]. That interval is correct — for
+**68**/144. Nothing in the repository validated the pairing. The lesson is not
+about Wilson specifically: it is that a rate and its interval must be derived
+from **one** set of counts, in one function, or they will eventually disagree.
+enchmark/stats.py::win_interval now does exactly that, is cross-checked
+against a second independently written formulation, and is gated by
+enchmark/stats_selftest.py (51/51).
+
+Two related numeric defects surfaced in the same place: inom_two_sided and
+mcnemar_exact overflowed a float for n > 1023, which is exactly the range
+where they matter. Both now work in log space.
+
+## 10c. NEW THIS PASS: a content-addressed repository that was lying about its digests
+
+**Cost: every recorded SHA256 in the project disagreed with the file on disk.**
+
+core.autocrlf=true on Windows made Git check every agent artifact out with
+CRLF, while every published digest described the LF blob. Worse, two
+digest-addressed store directories (919fc1d6…, 797d9bca…) no longer
+addressed their own contents once the working tree was normalised.
+
+The lesson: **a VCS must never rewrite a file whose digest is its identity.**
+.gitattributes now marks every artifact directory -text, and
+enchmark/normalize_artifacts.py --check is a release gate that compares each
+tracked artifact against its Git blob.
+
 ## 11. Not testing both seats systematically
 
 Seat 1 went untested until the final audit, which is how the false crash belief

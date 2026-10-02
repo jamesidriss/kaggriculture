@@ -37,7 +37,10 @@ class Agent:
         return f"<Agent {self.name} {self.short} {'ok' if self.league_eligible else 'INELIGIBLE'}>"
 
     def read(self):
-        return open(self.path, "rb").read()
+        path = self.path
+        if os.path.isdir(path):
+            path = os.path.join(path, "main.py")
+        return open(path, "rb").read()
 
     def normalised_digest(self):
         """Digest that ignores line-ending differences.
@@ -53,15 +56,21 @@ class Agent:
     def verify(self):
         """Recompute the digest from disk. Returns a list of problems."""
         p = []
-        if not os.path.exists(self.path):
+        path = self.path
+        # A registry path may name either the artifact file or the
+        # digest-addressed directory that contains it.
+        if os.path.isdir(path):
+            path = os.path.join(path, "main.py")
+        if not os.path.exists(path):
             return [f"{self.name}: file missing at {self.path}"]
-        raw = open(self.path, "rb").read()
+        raw = open(path, "rb").read()
         got = hashlib.sha256(raw).hexdigest()
         if got != self.sha256:
             p.append(f"{self.name}: digest drift, recorded {self.sha256[:12]} "
                      f"but file is {got[:12]}")
         if len(raw) != self.size:
-            p.append(f"{self.name}: size drift, recorded {self.size} got {len(raw)}")
+            p.append(f"{self.name}: size drift, recorded {self.size} "
+                     f"got {len(raw)}")
         return p
 
 

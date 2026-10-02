@@ -1,0 +1,22 @@
+* text=auto eol=lf
+
+# Agent artifacts are content-addressed: their SHA256 is their identity and is
+# recorded in opponents/meta/MANIFEST.csv, reports/ARTIFACT_INVENTORY.md and
+# the postmortem METADATA files. Git must never rewrite their bytes, because a
+# CRLF checkout changes the digest of every single one of them.
+#
+# This was a live defect: with core.autocrlf=true on Windows, every agent file
+# in the working tree was CRLF while every recorded digest described the LF blob,
+# so `sha256sum main.py` disagreed with the manifest for the whole project.
+opponents/**    -text
+champions/**    -text
+challengers/**  -text
+postmortem_champion_000/** -text
+postmortem_champion/**     -text
+postmortem_hedge/**        -text
+counterfactuals/**         -text
+research/public_src/**     -text
+data/donor_agents/**       -text
+
+*.parquet binary
+*.json    -text
