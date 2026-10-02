@@ -88,3 +88,63 @@ copies inside `kaggle-environments` 1.32.7.
 `benchmark/*.py`, `opponents/league.py` (the regression league), and all
 reports. The sunrise series is retained for the record but is **not** competitive
 and has been superseded; see `reports/SUNRISE_AUTOPSY.md`.
+---
+
+## Audit-era additions (branch `audit/kaggle-runtime-parity`, merged to main)
+
+### 2. ahmedberatozer v43 / v44 / v46 / v48 / v49 / v50 / v51 â€” `postmortem_champion_000`
+
+- **Author:** ahmedberatozer
+- **Source:** Kaggle dataset `destbreso/kaggriculture-donor-agents-20260902`,
+  files `agents/ahmedberatozer-v{43,44,46,48,49,50,51}-*.py`
+- **Licence:** **Apache-2.0**, declared per agent in the dataset's
+  `donors.csv` provenance table
+- **Extraction method:** `kaggle datasets download ... --unzip`. Files were
+  copied byte-for-byte; no notebook code was executed and no agent was modified.
+- **Reference champion:** `ahmedberatozer-v51-lean-flock`,
+  SHA256 `c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891`,
+  stored verbatim at `postmortem_champion_000/main.py`.
+- **Modifications:** **none.**
+- **Notices:** retained under Apache-2.0. The dataset README states the pack
+  contains community agents "exactly as published by their authors, with
+  provenance, license".
+
+> **Apache-2.0 attribution notice, retained as required:**
+> Copyright (c) ahmedberatozer and the Kaggriculture community contributors whose
+> agents are redistributed in `destbreso/kaggriculture-donor-agents-20260902`.
+> Licensed under the Apache License, Version 2.0. Each artifact retains its own
+> header notices unmodified.
+
+### 3. Agents analysed but NOT eligible for competitive use
+
+| agent | author | licence | why not eligible |
+|---|---|---|---|
+| barnyard_v7 | romanrozen | **none stated** | `UNKNOWN_LICENSE` â€” no licence declared, so redistribution and competitive use are not permitted. Retained for forensic analysis only, in `opponents/unlicensed/`. |
+| shop_router | yhay81 | Apache-2.0 | `NOT_SELF_CONTAINED` â€” raises `FileNotFoundError` for `actions.json` on turn 1; that file is not in the public notebook. Not a legal single-file submission artifact. |
+| thomas_2944 | statma | unknown | `NOT_SELF_CONTAINED` â€” `RuntimeError` at import; requires `\kaggle\input`. |
+| three-day shop router (native) | yhay81 | Apache-2.0 | `PLATFORM` â€” `agent.so` is Linux/macOS only (`WinError 193` on this host). Digest verified against the author's published manifest; unevaluable, so not used. |
+
+### 4. Attribution correction
+
+The artifact previously recorded in this file as "Multi-Route V43" and
+attributed to *flexonafft* is **byte-identical**
+(SHA256 `919fc1d61050cd96f799979e49177ae3ac7bce98ec9835724238bea73f4a08ed`) to
+`ahmedberatozer-v43-recovering-lost-harvests`. It is ahmedberatozer's v43. The
+earlier attribution to a different author was wrong and is corrected here; the
+donor-pack provenance is authoritative. The digest-addressed store merged the
+duplicate automatically rather than counting one agent twice.
+
+### 5. Data sources
+
+| dataset | use |
+|---|---|
+| `xishengfeng/kaggriculture-replay-db` | 88,281 public episodes; the source of the real ladder seeds in `seeds/REAL_*.txt`. Index audited: 0 duplicate episode ids, 24,548 games with both players rated >= 2900. |
+| `destbreso/kaggriculture-donor-agents-20260902` | 121 community agents with per-agent provenance; 7 of them are in the competitive league. |
+
+### 6. No private material
+
+At no point were private sources, leaked code, competitor credentials, or
+non-public notebooks used. Behavioural analysis of **public** replays was
+performed and is reported in `reports/`, but no agent source was reconstructed
+from observed behaviour. Submission gating was never circumvented.
+
