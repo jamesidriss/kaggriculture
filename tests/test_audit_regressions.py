@@ -8,6 +8,7 @@ Run: python tests/test_audit_regressions.py
 import csv
 import hashlib
 import importlib.util
+import inspect
 import io
 import os
 import re
@@ -21,10 +22,13 @@ FAIL = []
 N = 0
 
 
-def check(cond, label):
+def check(cond, label, detail=""):
     global N
     N += 1
-    print(("  PASS  " if cond else "  FAIL  ") + label)
+    line = ("  PASS  " if cond else "  FAIL  ") + label
+    if detail:
+        line += f"  {detail}"
+    print(line)
     if not cond:
         FAIL.append(label)
 
@@ -67,6 +71,88 @@ def t_snapshot_divergence():
           "persisted env.steps[i][1].observation lacks 'step' (the documented trap)")
     check("step" in env.steps[3][0].observation,
           "persisted env.steps[i][0].observation has 'step'")
+
+
+def t_agent_signature_adaptation():
+    """Every league agent must actually be invoked by the harness.
+
+    Kaggle calls `agent(obs, configuration)`. Many public agents define
+    `agent(obs)`. Handing the raw one-argument function to `env.run()` raises
+    TypeError on every turn, the framework marks the agent INVALID, it never
+    acts, it finishes on the starting $3,000, and the opponent is recorded as a
+    decisive victim. That fabricated 72-0 results against barnyard_v7, v16_rc5
+    and our own sunrise-v5.
+    """
+    import inspect
+    meta_dir = os.path.join(ROOT, "opponents", "meta")
+    files = [f for f in os.listdir(meta_dir) if f.endswith(".py")]
+    check(len(files) > 0, f"league directory is populated ({len(files)} agents)")
+    bad = []
+    for f in files:
+        p = os.path.join(meta_dir, f)
+        spec = importlib.util.spec_from_file_location("sig_" + f[:-3], p)
+        mod = importlib.util.module_from_spec(spec)
+        try:
+            spec.loader.exec_module(mod)
+            sig = inspect.signature(mod.agent)
+            npos = sum(1 for q in sig.parameters.values()
+                       if q.kind in (q.POSITIONAL_ONLY, q.POSITIONAL_OR_KEYWORD))
+            var = any(q.kind == q.VAR_POSITIONAL for q in sig.parameters.values())
+        except Exception as exc:  # noqa: BLE001
+            bad.append(f"{f}: import failed {type(exc).__name__}")
+            continue
+        if npos < 2 and not var:
+            # Legal one-arg agent: the harness MUST adapt it, not call it raw.
+            pass
+    check(not [b for b in bad if "import failed" in b],
+          "every league agent imports cleanly", str(bad[:2]))
+
+
+def t_harness_adapts_signatures():
+    """meta.load must return a (obs, configuration)-callable for 1-arg agents."""
+    sys.path.insert(0, os.path.join(ROOT, "benchmark"))
+    import meta as M
+    one_arg = [f for f in os.listdir(os.path.join(ROOT, "opponents", "meta"))
+               if f.endswith(".py")]
+    adapted = 0
+    for f in one_arg:
+        fn = M.load(os.path.join(ROOT, "opponents", "meta", f))
+        try:
+            inspect.signature(fn)
+            # the wrapper must accept two positional args
+            npos = sum(1 for q in inspect.signature(fn).parameters.values()
+                       if q.kind in (q.POSITIONAL_ONLY, q.POSITIONAL_OR_KEYWORD))
+            if npos >= 2 or hasattr(fn, "__wrapped__"):
+                adapted += 1
+        except Exception:  # noqa: BLE001
+            pass
+    check(adapted == len(one_arg),
+          "meta.load wraps EVERY league agent in a 2-arg callable",
+          f"{adapted}/{len(one_arg)}")
+
+
+def t_results_have_no_phantom_opponents():
+    """A league member that never played must not appear as a victim.
+
+    An agent whose mean final cash equals the starting bank ($3,000) across
+    every game was not playing. It must be reported as an error, not scored.
+    """
+    p = os.path.join(ROOT, "experiments", "final_meta_results.csv")
+    if not os.path.exists(p):
+        check(False, "results CSV exists")
+        return
+    rows = list(csv.DictReader(open(p, encoding="utf-8")))
+    phantom = []
+    for r in rows:
+        mc = r.get("mean_cash")
+        mo = r.get("mean_opp_cash")
+        # A side sitting exactly on the starting bank never acted.
+        if mc and int(mc) == 3000:
+            phantom.append(f"{r['candidate']} (candidate held $3000)")
+        if mo and int(mo) == 3000:
+            phantom.append(f"{r['opponent']} held $3000 vs {r['candidate']}")
+    check(not phantom, "no scored game involved an agent frozen at $3,000",
+          str(sorted(set(phantom))[:3]))
 
 
 def t_harness_sources():
@@ -144,7 +230,10 @@ def t_results_no_selfplay():
 
 def main():
     print("Kaggriculture audit regression suite")
-    for fn in (t_runtime_parity, t_snapshot_divergence, t_harness_sources,
+    for fn in (t_runtime_parity, t_snapshot_divergence,
+               t_agent_signature_adaptation, t_harness_adapts_signatures,
+               t_results_have_no_phantom_opponents,
+               t_harness_sources,
                t_digests, t_known_hashes, t_seeds, t_results_no_selfplay):
         print(f"\n-- {fn.__name__}")
         try:

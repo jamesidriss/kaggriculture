@@ -17,13 +17,10 @@ BUCKETS = [(0, 3000, "0-3000 (passive/broken)"),
 
 
 def wilson(w, n, z=1.96):
-    if not n:
-        return (0.0, 0.0)
-    p = w / n
-    d = 1 + z * z / n
-    c = p + z * z / (2 * n)
-    s = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
-    return (round((c - s) / d, 3), round((c + s) / d, 3))
+    """Rounded to 3dp for this report; canonical definition in stats.py."""
+    from stats import wilson as _w
+    lo, hi = _w(w, n, z)
+    return (round(lo, 3), round(hi, 3))
 
 
 def main(path="data/final_evaluation_episodes.csv"):

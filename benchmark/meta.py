@@ -37,8 +37,24 @@ _cache = {}
 
 
 def load(path):
+    """Load an agent and return a callable with a uniform (obs, configuration)
+    signature, plus provenance tags.
+
+    The signature adaptation is not cosmetic. Kaggle invokes agents as
+    `agent(obs, configuration)`, but a large share of public agents define
+    `def agent(obs)`. Handing the raw one-argument function to `env.run()`
+    raises TypeError on every single turn; the framework marks the agent
+    INVALID, it never acts, it finishes on the starting $3,000, and the
+    opponent is recorded as a 72-0 victim. That is a fabricated result, and it
+    is exactly what happened to barnyard_v7, v16_rc5 and our own sunrise-v5
+    before this was found.
+
+    Every wrapper also counts its invocations and traps exceptions, so a
+    non-playing agent is reported as an error instead of as a win.
+    """
     path = os.path.abspath(path)
     if path not in _cache:
+        import inspect
         spec = importlib.util.spec_from_file_location("m_" + str(abs(hash(path))), path)
         mod = importlib.util.module_from_spec(spec)
         try:
@@ -49,16 +65,52 @@ def load(path):
             # rather than silently dropping it from the league.
             raise RuntimeError(f"{os.path.basename(path)} not self-contained: "
                                f"{repr(exc)[:160]}") from exc
-        # Tag each agent with its own file path, raw digest, and a
-        # line-ending-normalised digest so the self-play guard also catches the
-        # same file copied with CRLF/LF differences (a real duplicate).
+        if not hasattr(mod, "agent"):
+            raise RuntimeError(f"{os.path.basename(path)} defines no agent()")
+
+        fn = mod.agent
+        try:
+            sig = inspect.signature(fn)
+            npos = sum(1 for p in sig.parameters.values()
+                       if p.kind in (p.POSITIONAL_ONLY, p.POSITIONAL_OR_KEYWORD))
+            has_var = any(p.kind == p.VAR_POSITIONAL
+                          for p in sig.parameters.values())
+        except (TypeError, ValueError):
+            npos, has_var = 2, True
+        two_arg = has_var or npos >= 2
+
         raw = open(path, "rb").read()
         text = raw.decode("utf-8", errors="replace").replace("\r\n", "\n")
-        mod.agent.__kag_src__ = os.path.basename(path)
-        mod.agent.__kag_sha__ = hashlib.sha256(raw).hexdigest()
-        mod.agent.__kag_sha_norm__ = hashlib.sha256(text.encode()).hexdigest()
-        _cache[path] = mod.agent
+
+        def wrapper(obs, configuration=None, _fn=fn, _two=two_arg,
+                    _src=os.path.basename(path)):
+            st = _stats.setdefault(_src, {"calls": 0, "errors": []})
+            st["calls"] += 1
+            try:
+                return _fn(obs, configuration) if _two else _fn(obs)
+            except Exception as exc:  # noqa: BLE001
+                if len(st["errors"]) < 3:
+                    st["errors"].append(f"turn {st['calls']}: "
+                                        f"{type(exc).__name__}: {exc}")
+                raise
+
+        # Tag the wrapper so the self-play guard still sees identity.
+        wrapper.__kag_src__ = os.path.basename(path)
+        wrapper.__kag_sha__ = hashlib.sha256(raw).hexdigest()
+        wrapper.__kag_sha_norm__ = hashlib.sha256(text.encode()).hexdigest()
+        wrapper.__kag_two_arg__ = two_arg
+        _cache[path] = wrapper
     return _cache[path]
+
+
+# Per-process record of how often each agent was actually invoked and what it
+# raised. A candidate or opponent with calls == 0 never played, and any agent
+# with recorded errors played only partially: both invalidate the game.
+_stats = {}
+
+
+def reset_stats():
+    _stats.clear()
 
 
 def meta_names():
@@ -100,13 +152,13 @@ def play(agent_a, agent_b, seed, a_seat):
 
 
 def wilson(w, n, z=1.96):
-    if n == 0:
-        return (0.0, 0.0)
-    p = w / n
-    d = 1 + z * z / n
-    c = p + z * z / (2 * n)
-    s = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
-    return (round((c - s) / d, 4), round((c + s) / d, 4))
+    """Single definition now lives in benchmark/stats.py.
+
+    The copy that was here returned (0.0, 0.0) for n == 0 -- a zero-width
+    interval, i.e. a claim of certainty about an unmeasured quantity.
+    """
+    from stats import wilson as _w
+    return _w(w, n, z)
 
 
 def summarise(rows, label):
@@ -142,10 +194,28 @@ def summarise(rows, label):
 def head_to_head(cand_path, opp_name, seeds):
     opp_path = os.path.join(META_DIR, opp_name + ".py")
     rows = []
+    cand_src = os.path.basename(cand_path)
+    opp_src = opp_name + ".py"
     for s in seeds:
         for seat in (0, 1):
-            rows.append(play(load(cand_path), load(opp_path), s, seat))
-    return summarise(rows, f"vs {opp_name}")
+            reset_stats()
+            r = play(load(cand_path), load(opp_path), s, seat)
+            # A game in which an agent was never invoked, or in which an agent
+            # raised, is not a result. The framework marks a failing agent
+            # INVALID and it simply sits at the starting bank, which reads as a
+            # decisive 72-0 loss. Both agents must have actually played.
+            for src in (cand_src, opp_src):
+                st = _stats.get(src, {"calls": 0, "errors": []})
+                if st["calls"] == 0 and "error" not in r:
+                    r["error"] = (f"{src} was never invoked (0 turns) -- the "
+                                  f"result would be a fabrication")
+                elif st["errors"] and "error" not in r:
+                    r["error"] = f"{src} raised: {st['errors'][0][:140]}"
+            rows.append(r)
+    out = summarise(rows, f"vs {opp_name}")
+    out["candidate_turns"] = _stats.get(cand_src, {}).get("calls", 0)
+    out["opponent_turns"] = _stats.get(opp_src, {}).get("calls", 0)
+    return out
 
 
 def bradley_tery(results):
@@ -163,6 +233,16 @@ def bradley_tery(results):
     return rates
 
 
+def _env_version():
+    """Record the exact runtime that produced a result."""
+    try:
+        from importlib.metadata import version
+        return f"kaggle-environments {version('kaggle-environments')}, python " \
+               f"{sys.version.split()[0]}"
+    except Exception:  # noqa: BLE001
+        return "unknown"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cand", default="main.py")
@@ -174,6 +254,9 @@ def main():
                     help="path to a newline-separated seed list; overrides --stage/--games")
     ap.add_argument("--roundrobin", action="store_true")
     ap.add_argument("--json", default="")
+    ap.add_argument("--label", default="",
+                    help="name for this candidate in the result file; defaults "
+                         "to its repo-relative path (basename alone collides)")
     args = ap.parse_args()
 
     seeds = {"meta_dev": META_DEV, "meta_holdout": META_HOLDOUT,
@@ -248,8 +331,46 @@ def main():
                "errors": sum(r.get("errors", 0) for r in allrows)}
     print(json.dumps(overall, indent=2))
     if args.json:
-        json.dump({"per_opponent": allrows, "overall": overall},
-                  open(args.json, "w"), indent=2)
+        # Self-describing envelope. A result file that does not name its
+        # candidate, its seed pool and the exact bytes that produced it cannot
+        # be audited later, and downstream analysis has to guess the candidate
+        # (which previously mislabelled the whole Bradley-Terry model).
+        import hashlib
+
+        def _dig(p):
+            try:
+                return hashlib.sha256(open(p, "rb").read()).hexdigest()
+            except OSError:
+                return None
+
+        # os.path.basename is ambiguous: every champion lives in its own
+        # directory as `main.py`, so two different agents would share a label
+        # and a results file could not be told apart. Prefer an explicit
+        # --label, else the path relative to the repo root.
+        label = args.label or args.cand.replace("\\", "/")
+        root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        try:
+            rel = os.path.relpath(os.path.abspath(args.cand), root).replace("\\", "/")
+            if not rel.startswith(".."):
+                label = label if args.label else rel
+        except ValueError:
+            pass
+
+        envelope = {
+            "candidate": label,
+            "candidate_path": args.cand.replace("\\", "/"),
+            "candidate_sha256": _dig(args.cand),
+            "seed_pool": args.stage,
+            "seed_file": args.seeds_file,
+            "seeds": seeds,
+            "n_seeds": len(seeds),
+            "seats": "both",
+            "delivery_path": "kaggle_environments.core.Environment.run",
+            "env_version": _env_version(),
+            "per_opponent": allrows,
+            "overall": overall,
+        }
+        json.dump(envelope, open(args.json, "w"), indent=2)
 
 
 if __name__ == "__main__":
