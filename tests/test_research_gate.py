@@ -225,11 +225,19 @@ def t_submission_ready():
     meta_p = os.path.join(d, "METADATA.txt")
     if os.path.exists(meta_p):
         meta = open(meta_p, encoding="utf-8").read()
+        # The readiness target moved from 3075 to 3066 when the official final
+        # leaderboard showed the current rank 1 sits at 3069.5. The gate checks
+        # whichever target the metadata actually declares, so it cannot pass by
+        # checking a string that is no longer there.
+        target = "3066-READY" if "3066-READY" in meta else "3075-READY"
         for k in ("agent_name", "sha256", "git_commit", "license",
-                  "3075-READY", "NOT SUBMITTED", "SHADOW RATING"):
+                  target, "NOT SUBMITTED", "SHADOW RATING"):
             check(k in meta, f"METADATA records {k!r}")
-        check("NOT YET 3075-READY" in meta or "3075-READY: NO" in meta,
-              "METADATA does not claim 3075-readiness")
+        check(bool(f"{target}: NO" in meta or f"NOT YET {target}" in meta),
+              f"METADATA does not claim {target}",
+              f"{target} declared NO")
+        check(bool(("BT score" in meta) or ("bt_score" in meta)),
+              "METADATA carries the BT score metric as primary")
     if champ_id:
         snap = os.path.join(ROOT, "champions", "research", champ_id, "main.py")
         check(os.path.exists(snap), f"immutable snapshot {champ_id} exists")

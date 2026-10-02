@@ -116,8 +116,20 @@ Three sources, all quantified:
 1. **Calibration.** 2 informative observations of 41. No point rating is
    published. The one thing that *can* be stated as a **bound**: an 80.91% win
    rate over the previous champion sits far past the top of the fitted curve,
-   which saturates at 0.995 for a 200+ point gap. So the new champion is **at
-   least 275 ladder points** above the old one. A bound, not a point estimate.
+   which saturates at 0.995 for a 200+ point gap. **RETRACTED** — see
+   `reports/RETRACTIONS.md` R8. A curve that is flat over its observed range has
+   no resolution there, so an observation past the top of the table is consistent
+   with ANY gap above the last bin. "At least 275" was a statement about where the
+   DATA STOPS, not about the agents.
+
+   **Correct position: NO RELIABLE ABSOLUTE SHADOW RATING, and no lower bound on
+   the gap is available.** The champion is very far above the previous one on the
+   ladder's own scale; how far is not measurable from these data.
+
+   (Also superseded: the "80.91% win rate" figures in this document predate the
+   tie-aware metric. The primary metric is now the BT score rate
+   `(W + 0.5T)/N`, and the canonical figures live in
+   `reports/3066_RESEARCH_CONCLUSION.md`. See RETRACTIONS R10 and R11.)
 
 2. **Effect size on the top matchup.** +3.23 points, measured on 992 paired
    worlds with Wilson [0.5113, 0.5732] and p = 0.0083. The interval's lower

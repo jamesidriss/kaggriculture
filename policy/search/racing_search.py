@@ -330,10 +330,14 @@ def main():
             pool = [("C001_BASELINE", C001, base_cfg)] + \
                    [(tag_of(c), None, c) for c in combos]
         else:
-            # Stages B..C consume the pool the previous stage retained. The
-            # champion rides along at every stage and is re-added
-            # unconditionally, so a stage always has a same-world reference.
-            prev = st.get(f"pool_{stage}") or []
+            # Stages B..C consume the pool the PREVIOUS stage retained. Looking
+            # up `pool_<this stage>` finds nothing on first run, which silently
+            # reduces the stage to the champion alone -- it "completed" with one
+            # configuration and reported that as a result.
+            idx = [s["stage"] for s in STAGES].index(stage)
+            prev_key = f"pool_{STAGES[idx - 1]['stage']}"
+            prev = st.get(prev_key) or []
+            print(f"  consuming {prev_key}: {len(prev)} retained configurations")
             pool = [("C001_BASELINE", C001, base_cfg)]
             seen_tags = {"C001_BASELINE"}
             for entry in prev:
