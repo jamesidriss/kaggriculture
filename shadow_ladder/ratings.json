@@ -17,6 +17,20 @@
       "gap": 0.0
     },
     {
+      "a": "challenger",
+      "b": "farm_2945_original",
+      "games": 1086.0,
+      "win_rate": 0.5534,
+      "wilson": [
+        0.5237,
+        0.5827
+      ],
+      "censored": false,
+      "gap_lo": 0.0,
+      "gap_hi": 0.6891128725378451,
+      "gap": 0.0
+    },
+    {
       "a": "ahmedberatozer-v51-lean-flock",
       "b": "v16_rc5",
       "games": 856.0,
@@ -28,6 +42,20 @@
       "censored": true,
       "gap": null,
       "bound": "A at least MAX_GAP above B"
+    },
+    {
+      "a": "challenger",
+      "b": "ahmedberatozer-v51-lean-flock",
+      "games": 812.0,
+      "win_rate": 0.8091,
+      "wilson": [
+        0.7807,
+        0.8347
+      ],
+      "censored": false,
+      "gap_lo": 41.31589619458482,
+      "gap_hi": 56.038767144200584,
+      "gap": 48.32038695767358
     },
     {
       "a": "farm_2945_original",
@@ -68,6 +96,58 @@
       "gap_lo": 91.1121469722502,
       "gap_hi": 122.06014262553535,
       "gap": 108.99325521304493
+    },
+    {
+      "a": "rayk_broker_bea",
+      "b": "challenger",
+      "games": 192.0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.0196
+      ],
+      "censored": true,
+      "gap": null,
+      "bound": "B at least MAX_GAP above A"
+    },
+    {
+      "a": "rayk_closer_cleo",
+      "b": "challenger",
+      "games": 192.0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.0196
+      ],
+      "censored": true,
+      "gap": null,
+      "bound": "B at least MAX_GAP above A"
+    },
+    {
+      "a": "challenger",
+      "b": "rayk_ledger_lena",
+      "games": 192.0,
+      "win_rate": 1.0,
+      "wilson": [
+        0.9804,
+        1.0
+      ],
+      "censored": true,
+      "gap": null,
+      "bound": "A at least MAX_GAP above B"
+    },
+    {
+      "a": "rayk_slotter_silas",
+      "b": "challenger",
+      "games": 192.0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.0196
+      ],
+      "censored": true,
+      "gap": null,
+      "bound": "B at least MAX_GAP above A"
     },
     {
       "a": "ahmedberatozer-v43-recovering-lost-harvests",
@@ -536,11 +616,63 @@
       "censored": true,
       "gap": null,
       "bound": "B at least MAX_GAP above A"
+    },
+    {
+      "a": "rayk_broker_bea",
+      "b": "ahmedberatozer-v51-lean-flock",
+      "games": 16.0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "censored": true,
+      "gap": null,
+      "bound": "B at least MAX_GAP above A"
+    },
+    {
+      "a": "rayk_closer_cleo",
+      "b": "ahmedberatozer-v51-lean-flock",
+      "games": 16.0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "censored": true,
+      "gap": null,
+      "bound": "B at least MAX_GAP above A"
+    },
+    {
+      "a": "rayk_ledger_lena",
+      "b": "ahmedberatozer-v51-lean-flock",
+      "games": 16.0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "censored": true,
+      "gap": null,
+      "bound": "B at least MAX_GAP above A"
+    },
+    {
+      "a": "rayk_slotter_silas",
+      "b": "ahmedberatozer-v51-lean-flock",
+      "games": 16.0,
+      "win_rate": 0.0,
+      "wilson": [
+        0.0,
+        0.1936
+      ],
+      "censored": true,
+      "gap": null,
+      "bound": "B at least MAX_GAP above A"
     }
   ],
-  "informative_observations": 2,
-  "total_observations": 41,
-  "informative_fraction": 0.0488,
+  "informative_observations": 4,
+  "total_observations": 51,
+  "informative_fraction": 0.0784,
   "calibration_adequate": false,
   "anchor": {
     "agent": "sunrise_v5",
@@ -556,7 +688,12 @@
     "ahmedberatozer-v50-early-yarn-commit": 0.0,
     "ahmedberatozer-v51-lean-flock": -0.0,
     "barnyard_v7": -275.0,
+    "challenger": 0.0,
     "farm_2945_original": 0.0,
+    "rayk_broker_bea": -275.0,
+    "rayk_closer_cleo": -275.0,
+    "rayk_ledger_lena": -275.0,
+    "rayk_slotter_silas": -275.0,
     "sunrise_v5": -275.0,
     "v16_rc5": -275.0,
     "v38_feed": 0.0
@@ -570,7 +707,12 @@
     "ahmedberatozer-v50-early-yarn-commit": 275.0,
     "ahmedberatozer-v51-lean-flock": -91.1,
     "barnyard_v7": 0.0,
+    "challenger": -41.3,
     "farm_2945_original": -0.0,
+    "rayk_broker_bea": 0.0,
+    "rayk_closer_cleo": 0.0,
+    "rayk_ledger_lena": 0.0,
+    "rayk_slotter_silas": 0.0,
     "sunrise_v5": 0.0,
     "v16_rc5": 0.0,
     "v38_feed": 0.0

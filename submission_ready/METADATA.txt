@@ -11,7 +11,7 @@ source           : Kaggle dataset destbreso/kaggriculture-donor-agents-20260902,
 license          : Apache-2.0 (NOTICE.md retained alongside)
 sha256           : a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8
 bytes            : 461738
-git_commit       : 57a9ad605424b0d9959579244cd96ca3348cd3d0
+git_commit       : dcb31dbb529ac3ea9686982e8eb15b4f96d1f0ba
 modifications    : EXACTLY ONE, and mechanically verified: the live
                    `_SETTINGS` flag `room_guard` flipped False -> True.
                    Every other byte of the file is identical to the parent.
@@ -46,7 +46,7 @@ INERT WORLDS                    216 of
 SHADOW RATING
     ShadowRating is NOT published.
     CALIBRATION INADEQUATE - point ratings withheld
-    Only 2 of 41 matchups are informative; the rest saturate the
+    Only 4 of 51 matchups are informative; the rest saturate the
     ladder's win-rate curve, and a saturated curve cannot invert a saturated
     observation. What CAN be stated as a BOUND, not a point: an 80.91% win
     rate over the previous champion is far past the top of the fitted curve,
