@@ -71,11 +71,25 @@ def fetch_pages():
                 continue
             parts = ln.split()
             if len(parts) >= 4 and parts[0].isdigit() and len(parts[0]) > 4:
+                # Parse from the right: the score is the last token, the
+                # submission timestamp is the two tokens before it (date and
+                # time are separate fields in this table), and everything in
+                # between is the team name.
+                #
+                # The first version sliced positionally as parts[1:-2], which
+                # assumed a one-field date. The real table has two, so every
+                # team name absorbed its date and every submission_date field
+                # contained the score. Parsing from the right is not tidier, it
+                # is the only version that survives a team name containing
+                # spaces, an ampersand or a digit.
                 try:
-                    rows.append({"team_id": int(parts[0]),
-                                 "team_name": " ".join(parts[1:-2]),
-                                 "submission_date": " ".join(parts[-2:]),
-                                 "score": float(parts[-1])})
+                    score = float(parts[-1])
+                    date = " ".join(parts[-3:-1])
+                    name = " ".join(parts[1:-3]).strip()
+                    if not name:
+                        continue
+                    rows.append({"team_id": int(parts[0]), "team_name": name,
+                                 "submission_date": date, "score": score})
                 except ValueError:
                     continue
         print(f"  page: +{len(rows)} rows cumulative, "

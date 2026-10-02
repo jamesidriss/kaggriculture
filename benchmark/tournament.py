@@ -138,6 +138,13 @@ def play(cand_path, opp_path, seed, cand_seat, env_name="kaggriculture",
     cc = int(f[cand_seat].observation.farms[cand_seat]["money"])
     oc = int(f[1 - cand_seat].observation.farms[1 - cand_seat]["money"])
     return {
+        # `seed` and `seat` are echoed so a row is self-describing. The parallel
+        # runner's cache key is (env, a_sha, b_sha, seed, seat), and it can only
+        # write a cache entry for a row that knows which match it came from.
+        # Inferring them from job order would be unsafe under unordered
+        # completion, which is exactly how a parallel runner silently corrupts
+        # a dataset.
+        "seed": int(seed), "seat": int(cand_seat),
         "candidate_cash": cc, "opponent_cash": oc,
         "win": int(cc > oc), "loss": int(cc < oc), "tie": int(cc == oc),
         "candidate_status": f[cand_seat].status,
