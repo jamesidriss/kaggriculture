@@ -1,0 +1,84 @@
+{
+  "generation": "3066-breakthrough",
+  "created_utc": "2026-10-02T13:10:40Z",
+  "source_pool": "seeds/REAL_scale.txt (real ladder-derived elite seeds, 1,000 fresh, verified 24,548 elite games, 0 duplicate episode ids)",
+  "offset_in_source": 500,
+  "splits": {
+    "GEN3066_dev": {
+      "count": 500,
+      "sha256": "32a2f070cd73c2ac7fed45f5cca5e28d45ec43cb53d1dfa99d17431fc0859053",
+      "purpose": "candidate generation and search; tuned on freely; no result here is claimed as generalisation",
+      "source": "spent_head",
+      "file": "seeds/GEN3066_dev.txt",
+      "disjoint_from": {
+        "GEN3066_holdout": {
+          "overlap_seeds": 0,
+          "disjoint": true
+        },
+        "GEN3066_sealed": {
+          "overlap_seeds": 0,
+          "disjoint": true
+        }
+      }
+    },
+    "GEN3066_holdout": {
+      "count": 130,
+      "sha256": "5b05d4f05f5b052662ca5b3170a7861982b31a9f6bed217802dd8d195e5a87e9",
+      "purpose": "finalist selection; viewed once per finalist, never tuned on",
+      "source": "fresh_tail",
+      "file": "seeds/GEN3066_holdout.txt",
+      "disjoint_from": {
+        "GEN3066_sealed": {
+          "overlap_seeds": 0,
+          "disjoint": true
+        }
+      }
+    },
+    "GEN3066_sealed": {
+      "count": 130,
+      "sha256": "3d9869bb785540976c80eb51a1aa6c4ad3ea0bcc6423f1a78bcd49781f67cef0",
+      "purpose": "run ONCE for the single finalist; never tuned on",
+      "source": "fresh_tail",
+      "file": "seeds/GEN3066_sealed.txt"
+    }
+  },
+  "previous_generation_pools": {
+    "ladder_real_dev": {
+      "count": 10,
+      "sha256": "31293f175bd3fe0c5d6c33d7543bff60c89f89942aea3ac8575c583833c981cc"
+    },
+    "ladder_real_final": {
+      "count": 10,
+      "sha256": "82a653baab1ac7f488032b13a1372128d048e3f60200f16ff389717cd80f9fd6"
+    },
+    "ladder_real_holdout": {
+      "count": 10,
+      "sha256": "989f5b0fe053d6921473fde891206f9a47f8b49cc7eabf3a5e969b27f256fe50"
+    },
+    "REAL_dev": {
+      "count": 12,
+      "sha256": "18d93f4da6615eaef7f4d193b2ea5d29df06af41dc9fef8b535cdcc226251207"
+    },
+    "REAL_final": {
+      "count": 12,
+      "sha256": "361d2ed8240f1228cbf4f6214d90be197f0689fe2c71656cfe6f702fc1137869"
+    },
+    "REAL_holdout": {
+      "count": 12,
+      "sha256": "5112eb279ae7ec7e9dfaeba16b610f0c227da1d939ba787e57f7e48f88f548c7"
+    },
+    "meta_dev": {
+      "count": 16,
+      "sha256": "84b578648a7b9d1152a7ac9b1d8ce1a5962b695efa31d958503930d2f911c4e6"
+    },
+    "meta_final": {
+      "count": 8,
+      "sha256": "3a76485a120dc4dad6824cbf2d4bebef8407877c1e5d5b6a137249811a91e8ca"
+    },
+    "meta_holdout": {
+      "count": 8,
+      "sha256": "5fdefbbc425ecfe3fe9f9a93dd25c975d8badcc1996491ed186609796dd7e0b9"
+    }
+  },
+  "overlap_with_previous_generation_pools": 0
+}
