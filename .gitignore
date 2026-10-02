@@ -68,3 +68,8 @@ simulation/rust/target/
 # written while git runs; staging them deadlocks on the file lock.
 simulation/search/runs/
 
+
+# Search-derived candidate artifacts: ~460KB each and reproducible from
+# parent + settings literal, which run_search.py records in results.json.
+simulation/search/*.py
+simulation/search/decisive/
