@@ -8,7 +8,18 @@
       "source": "kaggle_environments (installed)",
       "verified": true,
       "version": "1.32.7"
+    },
+    {
+      "backend": "kaggriculture-simulation-rust",
+      "commit": "953ac86c462ba1dbdcb897f6020fd7bdacf27720",
+      "detail": "NO_GO. Parity NOT established. Final banks agree 100/100 while intermediate state diverges 75/100; market purchase settlement diverges at every step tested (Rust does not charge). Unresolved whether the fault is upstream or in this project's hand-written tape encoder; not attributed. Upstream throughput claims were NOT benchmarked locally because the parity gate failed first.",
+      "kaggle_env_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+      "kaggle_env_version": "1.32.7",
+      "license": "Apache-2.0",
+      "source": "github.com/debmalyaroy/kaggriculture-simulation",
+      "verified": false,
+      "version": "0.1.0"
     }
   ],
-  "note": "no fast backend registered"
+  "note": "no fast backend is VERIFIED. The Rust backend is registered for provenance only and must not be used for any research conclusion. See reports/RUST_PARITY.md."
 }

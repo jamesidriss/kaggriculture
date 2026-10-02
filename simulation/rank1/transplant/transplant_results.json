@@ -1,0 +1,318 @@
+{
+  "generated_utc": "2026-10-02T18:58:19Z",
+  "c001_sha256": "a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8",
+  "seeds": 24,
+  "gates": {
+    "moon": 0.45,
+    "farm": 0.52
+  },
+  "legality": "implementation written from scratch against the public action interface; no third-party source transcribed; Moon is licence UNKNOWN",
+  "grid": [
+    {
+      "q": 20,
+      "s": 15,
+      "product": "WHEAT",
+      "last_step": 0
+    },
+    {
+      "q": 20,
+      "s": 20,
+      "product": "WHEAT",
+      "last_step": 0
+    },
+    {
+      "q": 30,
+      "s": 20,
+      "product": "WHEAT",
+      "last_step": 0
+    },
+    {
+      "q": 13,
+      "s": 13,
+      "product": "WHEAT",
+      "last_step": 0
+    },
+    {
+      "q": 30,
+      "s": 30,
+      "product": "WHEAT",
+      "last_step": 0
+    },
+    {
+      "q": 40,
+      "s": 30,
+      "product": "WHEAT",
+      "last_step": 0
+    },
+    {
+      "q": 20,
+      "s": 15,
+      "product": "WHEAT",
+      "last_step": 1
+    },
+    {
+      "q": 20,
+      "s": 15,
+      "product": "MILK",
+      "last_step": 0
+    }
+  ],
+  "results": [
+    {
+      "config": {
+        "q": 20,
+        "s": 15,
+        "product": "WHEAT",
+        "last_step": 0
+      },
+      "name": "q20_s15_WHEAT_L0",
+      "sha256": "ee25fe87b63d77b43441657b640d2ff05049f469098a22b85a772a1fb5a5e4d8",
+      "playable": true,
+      "probe": "zerosum",
+      "vs_moon": {
+        "games": 48,
+        "broken": 0,
+        "W": 0,
+        "L": 48,
+        "T": 0,
+        "N": 48,
+        "bt": 0.0,
+        "median_margin": -2945
+      },
+      "vs_farm": {
+        "games": 48,
+        "broken": 0,
+        "W": 0,
+        "L": 48,
+        "T": 0,
+        "N": 48,
+        "bt": 0.0,
+        "median_margin": -1526
+      }
+    },
+    {
+      "config": {
+        "q": 20,
+        "s": 20,
+        "product": "WHEAT",
+        "last_step": 0
+      },
+      "name": "q20_s20_WHEAT_L0",
+      "sha256": "aef027cf2eaf8cfa4c723fd6c498ceef4a47b6695ff5620aa503847ed1df934b",
+      "playable": true,
+      "probe": "zerosum",
+      "vs_moon": {
+        "games": 48,
+        "broken": 0,
+        "W": 6,
+        "L": 42,
+        "T": 0,
+        "N": 48,
+        "bt": 0.125,
+        "median_margin": -1161
+      },
+      "vs_farm": {
+        "games": 48,
+        "broken": 0,
+        "W": 26,
+        "L": 22,
+        "T": 0,
+        "N": 48,
+        "bt": 0.5417,
+        "median_margin": 134
+      }
+    },
+    {
+      "config": {
+        "q": 30,
+        "s": 20,
+        "product": "WHEAT",
+        "last_step": 0
+      },
+      "name": "q30_s20_WHEAT_L0",
+      "sha256": "a299255f0f1bb58ac555800bb6cc7f1da90fc2d9c93c6dd444afbc235f952f12",
+      "playable": true,
+      "probe": "zerosum",
+      "vs_moon": {
+        "games": 48,
+        "broken": 0,
+        "W": 0,
+        "L": 48,
+        "T": 0,
+        "N": 48,
+        "bt": 0.0,
+        "median_margin": -5180
+      },
+      "vs_farm": {
+        "games": 48,
+        "broken": 0,
+        "W": 0,
+        "L": 48,
+        "T": 0,
+        "N": 48,
+        "bt": 0.0,
+        "median_margin": -3969
+      }
+    },
+    {
+      "config": {
+        "q": 13,
+        "s": 13,
+        "product": "WHEAT",
+        "last_step": 0
+      },
+      "name": "q13_s13_WHEAT_L0",
+      "sha256": "7dd28eb905eedb7355b1f80b2b19141c3bd72f710e47ff2a85463154115d213d",
+      "playable": true,
+      "probe": "zerosum",
+      "vs_moon": {
+        "games": 48,
+        "broken": 0,
+        "W": 6,
+        "L": 42,
+        "T": 0,
+        "N": 48,
+        "bt": 0.125,
+        "median_margin": -1142
+      },
+      "vs_farm": {
+        "games": 48,
+        "broken": 0,
+        "W": 28,
+        "L": 20,
+        "T": 0,
+        "N": 48,
+        "bt": 0.5833,
+        "median_margin": 158
+      }
+    },
+    {
+      "config": {
+        "q": 30,
+        "s": 30,
+        "product": "WHEAT",
+        "last_step": 0
+      },
+      "name": "q30_s30_WHEAT_L0",
+      "sha256": "c111b82770a8788df0cb6f096f01ce9729e999629fd023948f7b60d482313786",
+      "playable": true,
+      "probe": "zerosum",
+      "vs_moon": {
+        "games": 48,
+        "broken": 0,
+        "W": 6,
+        "L": 42,
+        "T": 0,
+        "N": 48,
+        "bt": 0.125,
+        "median_margin": -1193
+      },
+      "vs_farm": {
+        "games": 48,
+        "broken": 0,
+        "W": 26,
+        "L": 22,
+        "T": 0,
+        "N": 48,
+        "bt": 0.5417,
+        "median_margin": 107
+      }
+    },
+    {
+      "config": {
+        "q": 40,
+        "s": 30,
+        "product": "WHEAT",
+        "last_step": 0
+      },
+      "name": "q40_s30_WHEAT_L0",
+      "sha256": "84794f3210925c5a2e14902e2b4b2564588c434435fc7477d0eb2813ae341c5b",
+      "playable": true,
+      "probe": "zerosum",
+      "vs_moon": {
+        "games": 48,
+        "broken": 0,
+        "W": 0,
+        "L": 48,
+        "T": 0,
+        "N": 48,
+        "bt": 0.0,
+        "median_margin": -5660
+      },
+      "vs_farm": {
+        "games": 48,
+        "broken": 0,
+        "W": 2,
+        "L": 46,
+        "T": 0,
+        "N": 48,
+        "bt": 0.0417,
+        "median_margin": -4389
+      }
+    },
+    {
+      "config": {
+        "q": 20,
+        "s": 15,
+        "product": "WHEAT",
+        "last_step": 1
+      },
+      "name": "q20_s15_WHEAT_L1",
+      "sha256": "44952367bc48133c7ed310fe0a667a3c30633bd5dc8ed1097967fe09dd224931",
+      "playable": true,
+      "probe": "zerosum",
+      "vs_moon": {
+        "games": 48,
+        "broken": 0,
+        "W": 0,
+        "L": 48,
+        "T": 0,
+        "N": 48,
+        "bt": 0.0,
+        "median_margin": -5086
+      },
+      "vs_farm": {
+        "games": 48,
+        "broken": 0,
+        "W": 0,
+        "L": 48,
+        "T": 0,
+        "N": 48,
+        "bt": 0.0,
+        "median_margin": -3754
+      }
+    },
+    {
+      "config": {
+        "q": 20,
+        "s": 15,
+        "product": "MILK",
+        "last_step": 0
+      },
+      "name": "q20_s15_MILK_L0",
+      "sha256": "001c5cd8568ae47327fd088c08f2a155df0e61ca54f3171c721dfcaaf2b90311",
+      "playable": true,
+      "probe": "zerosum",
+      "vs_moon": {
+        "games": 48,
+        "broken": 0,
+        "W": 6,
+        "L": 42,
+        "T": 0,
+        "N": 48,
+        "bt": 0.125,
+        "median_margin": -1168
+      },
+      "vs_farm": {
+        "games": 48,
+        "broken": 0,
+        "W": 26,
+        "L": 22,
+        "T": 0,
+        "N": 48,
+        "bt": 0.5417,
+        "median_margin": 131
+      }
+    }
+  ]
+}
