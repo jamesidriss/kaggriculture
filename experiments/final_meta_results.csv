@@ -1,15 +1,67 @@
-farm_2945_seatsafe,barnyard_v7,ladder_real_dev,both,20,20,0,0,1.0,114441,63300,4.06,0
-farm_2945_seatsafe,multi_route_v43,ladder_real_dev,both,20,20,0,0,1.0,110933,100395,4.45,0
-farm_2945_seatsafe,v16_rc5,ladder_real_dev,both,20,20,0,0,1.0,113161,74950,13.26,0
-farm_2945_seatsafe,v38_feed,ladder_real_dev,both,20,20,0,0,1.0,110905,98150,7.44,0
-farm_2945_seatsafe,shop_router,ladder_real_dev,both,20,20,0,0,1.0,175397,3000,2.97,0
-farm_2945_seatsafe,barnyard_v7,ladder_real_holdout,both,20,20,0,0,1.0,114030,73679,9.05,0
-farm_2945_seatsafe,multi_route_v43,ladder_real_holdout,both,20,20,0,0,1.0,105261,102812,8.18,0
-farm_2945_seatsafe,v16_rc5,ladder_real_holdout,both,20,20,0,0,1.0,104266,72705,6.01,0
-farm_2945_seatsafe,v38_feed,ladder_real_holdout,both,20,20,0,0,1.0,105308,101968,6.20,0
-farm_2945_seatsafe,shop_router,ladder_real_holdout,both,20,20,0,0,1.0,170916,3000,3.40,0
-farm_2945_seatsafe,barnyard_v7,ladder_real_final,both,20,20,0,0,1.0,116009,72102,3.57,0
-farm_2945_seatsafe,multi_route_v43,ladder_real_final,both,20,20,0,0,1.0,95236,95968,4.92,0
-farm_2945_seatsafe,v16_rc5,ladder_real_final,both,20,20,0,0,1.0,107769,85164,4.02,0
-farm_2945_seatsafe,v38_feed,ladder_real_final,both,20,20,0,0,1.0,95324,94545,4.25,0
-farm_2945_seatsafe,shop_router,ladder_real_final,both,20,20,0,0,1.0,183104,3000,2.76,0
+v51_lean_flock,vs v38,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs farm2945,REAL_dev,both,24,12,12,0,1.0,0,0,0
+v51_lean_flock,vs v16,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v48,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs shop,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v44,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v49,REAL_dev,both,24,22,2,0,1.0,0,0,0
+v51_lean_flock,vs v46,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v43,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs barnyard,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v50,REAL_dev,both,24,22,2,0,1.0,0,0,0
+v51_lean_flock,vs v38,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs farm2945,REAL_holdout,both,24,10,14,0,1.0,0,0,0
+v51_lean_flock,vs v16,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v48,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs shop,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v44,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v49,REAL_holdout,both,24,18,6,0,1.0,0,0,0
+v51_lean_flock,vs v46,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v43,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs barnyard,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v50,REAL_holdout,both,24,18,6,0,1.0,0,0,0
+v51_lean_flock,vs v38,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs farm2945,REAL_final,both,24,16,8,0,1.0,0,0,0
+v51_lean_flock,vs v16,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v48,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs shop,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v44,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v49,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v46,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v43,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs barnyard,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v50,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v38,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs farm2945,REAL_dev,both,24,12,12,0,1.0,0,0,0
+v51_lean_flock,vs v16,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v48,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs shop,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v44,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v49,REAL_dev,both,24,22,2,0,1.0,0,0,0
+v51_lean_flock,vs v46,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v43,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs barnyard,REAL_dev,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v50,REAL_dev,both,24,22,2,0,1.0,0,0,0
+v51_lean_flock,vs v38,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs farm2945,REAL_holdout,both,24,10,14,0,1.0,0,0,0
+v51_lean_flock,vs v16,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v48,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs shop,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v44,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v49,REAL_holdout,both,24,18,6,0,1.0,0,0,0
+v51_lean_flock,vs v46,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v43,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs barnyard,REAL_holdout,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v50,REAL_holdout,both,24,18,6,0,1.0,0,0,0
+v51_lean_flock,vs v38,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs farm2945,REAL_final,both,24,16,8,0,1.0,0,0,0
+v51_lean_flock,vs v16,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v48,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs shop,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v44,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v49,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v46,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v43,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs barnyard,REAL_final,both,24,24,0,0,1.0,0,0,0
+v51_lean_flock,vs v50,REAL_final,both,24,24,0,0,1.0,0,0,0
+farm_2945_original,vs v51_lean_flock,REAL_final,both,24,8,16,0,1.0,0,0,0

@@ -1,0 +1,37 @@
+version: postmortem_champion_000
+parent: none (public agent adopted verbatim)
+agent: ahmedberatozer-v51-lean-flock
+sha256: c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891
+bytes: 461739
+git_commit: (filled after commit)
+license: Apache-2.0
+source_lineage: Kaggle dataset destbreso/kaggriculture-donor-agents-20260902,
+  file agents/ahmedberatozer-v51-lean-flock.py; agent authored by ahmedberatozer.
+  Dataset README states the pack contains 121 community agents "exactly as
+  published by their authors, with provenance, license".
+modification: NONE. Byte-identical to the published artifact.
+environment_version: kaggle-environments 1.32.7, python 3.11.9
+
+RESULTS (verbatim artifact, both seats, official env.run path, real ladder seeds)
+
+dev (REAL_dev, 12 seeds):
+  overall 248-16 (93.94%), 0 errors, 11 opponents
+  beats farm_2945_original 12-12, v49 22-2, v50 22-2, all others 24-0
+holdout (REAL_holdout, 12 seeds):
+  overall 238-26 (90.15%), 0 errors
+  beats farm_2945_original 10-14, v49 18-6, v50 18-6, all others 24-0
+final (REAL_final, 12 seeds, sealed before evaluation, run once):
+  overall 256-8 (96.97%), 0 errors
+  beats farm_2945_original 16-8, v49 24-0, v50 24-0, all others 24-0
+
+LOCAL BT (offline estimate, not official Kaggle ranking):
+  v51 57.667 | farm_2945 24.212 | v49/v50 -1.788 | all others -9.788
+
+RUNTIME: median ~0.4ms, max ~5ms per agent() call vs 1000ms actTimeout.
+
+WHY NOT farm_2945: it loses to v49/v50 8-16 and 10-14 on holdout/final.
+The earlier claim that farm_2945 swept (360-0) was measured against a league
+too weak to discriminate.
+
+NOT_SUBMITTED: Kaggle API returns HTTP 400
+  "Submission not allowed: Submissions have been disabled for this competition."

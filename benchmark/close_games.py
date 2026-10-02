@@ -55,12 +55,18 @@ def play(agent0, agent1, seed):
     env = make("kaggriculture", configuration={"seed": seed, "episodeSteps": 720})
     env.reset()
     t0, t1 = [], []
-    for st in range(719):
-        o = env.steps[st][0].observation
-        t0.append(count(o, 0))
-        t1.append(count(o, 1))
-        env.step([agent0(env.steps[st][0].observation),
-                  agent1(env.steps[st][1].observation)])
+
+    def wrap(idx, agent, sink):
+        """Capture the observation the framework DELIVERS, not the persisted
+        snapshot. env.steps[i][1].observation omits shared fields (e.g. `step`),
+        which manufactured a false 'seat 1 has no step' failure earlier."""
+        def _a(obs, configuration=None):
+            if len(sink) < 719:
+                sink.append(count(obs, idx))
+            return agent(obs, configuration)
+        return _a
+
+    env.run([wrap(0, agent0, t0), wrap(1, agent1, t1)])
     f = env.steps[-1]
     cash = [int(f[i].observation.farms[i]["money"]) for i in range(2)]
     return cash, t0, t1
