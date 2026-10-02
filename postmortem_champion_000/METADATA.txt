@@ -1,0 +1,63 @@
+version: postmortem_champion_000
+parent: none (public agent adopted verbatim)
+agent: ahmedberatozer-v51-lean-flock
+sha256: c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891
+bytes: 461739
+agent_signature: def agent(observation, configuration)   # 2-argument
+git_commit: see `git log -1 --format=%H -- postmortem_champion_000/main.py`
+license: Apache-2.0
+author: ahmedberatozer
+source_lineage: Kaggle dataset destbreso/kaggriculture-donor-agents-20260902,
+  file agents/ahmedberatozer-v51-lean-flock.py. Dataset README states the pack
+  contains 121 community agents "exactly as published by their authors, with
+  provenance, license".
+modification: NONE. Byte-identical to the published artifact.
+environment_version: kaggle-environments 1.32.7, python 3.11.9
+delivery_path: kaggle_environments.core.Environment.run  (official runner)
+seats: both, every seed
+verified_turns_per_game: 719 (of 720)
+errors: 0
+
+RESULTS -- real ladder seeds, 12 per pool, both seats, official runner
+
+  dev      (REAL_dev, 12 seeds)      224-16   (93.33%)
+  holdout  (REAL_holdout, 12 seeds)  214-26   (89.17%)
+  final    (REAL_final, 12 seeds)    232-8    (96.67%)   sealed before
+                                                            evaluation, run once
+  aggregate over 10 opponents        670-50   (93.06%)
+                                    Wilson 95% [0.9096, 0.9469]
+
+HEAD-TO-HEADS (Wilson 95%)
+
+  vs farm_2945_original   76-68 of 144   52.78%   [0.3925, 0.5534]  NOT SEPARABLE FROM 50%
+  vs v49 / v50            64-8  of  72   88.89%   [0.7958, 0.9494]  decisive
+  vs v43 / v44 / v46 / v48 / barnyard_v7 / v16_rc5 / v38_feed
+                          72-0  of  72  100.00%   [0.9493, 1.0000]  decisive
+
+HONEST STATEMENT OF STRENGTH
+  v51 and farm_2945 are STATISTICALLY TIED. The direct 144-game comparison is
+  a coin flip by any standard test. v51 is preferred as PRIMARY on indirect
+  evidence only: higher aggregate against the same league (93.06% vs 82.78%,
+  non-overlapping intervals) and a decisive 64-8 over v49/v50 where farm_2945
+  ties them 38-34. This is NOT a measured superiority over farm_2945.
+  No Bradley-Terry ranking is reportable for this league: four agents lose every
+  game to every opponent they meet, so their maximum likelihood is unbounded
+  below. See reports/LOCAL_BRADLEY_TERRY_PARITY_SAFE.md.
+
+RUNTIME
+  median ~0.4 ms, p95 ~1.0 ms, max 33.1 ms per agent() call against a
+  1000 ms actTimeout. 2,880 calls in the artifact gate, 0 schema violations,
+  no stdout, no stderr, no network, no local path dependency.
+
+ARTIFACT GATE
+  python benchmark/validate_artifact.py --path postmortem_champion_000/main.py
+  all checks pass: parses, no network/torch/pickle/absolute-path/file-write,
+  no local module imports, agent callable, 2880 calls with 0 schema violations,
+  all episodes DONE, both seats, silent.
+
+NOT_SUBMITTED
+  Kaggle submissions are closed. Verified once at audit time:
+  POST competitions.CompetitionApiService/CreateSubmission -> HTTP 400 with an
+  empty body, and the submission list is unchanged (five submissions, all dated
+  2026-09-30). The live bots remain sunrise-v5 (252.6) and sunrise-v4 (138.5).
+  No repository change can affect the competition result.

@@ -1,0 +1,9 @@
+{
+  "env_name": "kaggriculture",
+  "episode_steps": 720,
+  "seed_dir": "../../seeds",
+  "manifests": [
+    "../../opponents/meta/MANIFEST.csv"
+  ],
+  "note": "Paths are resolved relative to this file. Identity is the content digest recorded in the manifest; the harness recomputes it from disk and refuses to run if anything drifted."
+}

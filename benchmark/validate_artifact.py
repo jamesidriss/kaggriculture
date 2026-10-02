@@ -105,39 +105,55 @@ def main():
     from kaggle_environments.envs.kaggriculture import kaggriculture as KG
     times, bad_schema, statuses, cash = [], [], [], []
     stdout_buf, stderr_buf = io.StringIO(), io.StringIO()
+
+    def wrap(seat):
+        """Validate the action the agent returns, on the observation the
+        framework ACTUALLY delivers.
+
+        The previous version of this file drove `env.step()` manually and fed
+        the agent `env.steps[st][seat].observation`. Those stored snapshots are
+        NOT the delivered observations: the framework copies shared fields
+        (including `step`) into the runtime observation it hands the agent, but
+        the persisted per-seat snapshot for seat 1 omits them. That divergence
+        produced a false "seat 1 has no step" finding.
+        """
+        def _agent(obs, configuration=None):
+            import time
+            t0 = time.perf_counter()
+            with contextlib.redirect_stdout(stdout_buf), \
+                    contextlib.redirect_stderr(stderr_buf):
+                a = mod.agent(obs)
+            times.append((time.perf_counter() - t0) * 1000)
+            st = obs.get("step")
+            if not isinstance(a, dict):
+                bad_schema.append(f"seat{seat} step{st}: not a dict")
+                return {"farmer": ["PASS"], "hands": [], "market": []}
+            fa = a.get("farmer")
+            if not (isinstance(fa, list) and fa and fa[0] in VALID_UNIT):
+                bad_schema.append(f"seat{seat} step{st}: farmer={fa!r}")
+            hs = a.get("hands")
+            if not isinstance(hs, list) or any(
+                    not (isinstance(h, list) and h and h[0] in VALID_UNIT)
+                    for h in hs):
+                bad_schema.append(f"seat{seat} step{st}: hands malformed")
+            if len(a.get("market") or []) > 10:
+                bad_schema.append(f"seat{seat} step{st}: >10 market orders")
+            for o2 in (a.get("market") or []):
+                # An empty market list is valid (no orders this turn).
+                if o2 == []:
+                    continue
+                if not (isinstance(o2, list) and o2 and o2[0] in VALID_MKT):
+                    bad_schema.append(f"seat{seat} step{st}: mkt={o2!r}")
+            return a
+        return _agent
+
     for sd in seeds:
         for seat in (0, 1):
             env = make("kaggriculture", configuration={"seed": sd, "episodeSteps": 720})
             env.reset()
-            for st in range(720):
-                o = env.steps[st][0].observation
-                import time
-                t0 = time.perf_counter()
-                with contextlib.redirect_stdout(stdout_buf), \
-                        contextlib.redirect_stderr(stderr_buf):
-                    a = mod.agent(o)
-                times.append((time.perf_counter() - t0) * 1000)
-                if not isinstance(a, dict):
-                    bad_schema.append(f"seed{sd} step{st}: not a dict")
-                else:
-                    fa = a.get("farmer")
-                    if not (isinstance(fa, list) and fa and fa[0] in VALID_UNIT):
-                        bad_schema.append(f"seed{sd} step{st}: farmer={fa!r}")
-                    hs = a.get("hands")
-                    if not isinstance(hs, list) or any(
-                            not (isinstance(h, list) and h and h[0] in VALID_UNIT)
-                            for h in hs):
-                        bad_schema.append(f"seed{sd} step{st}: hands malformed")
-                    if len(a.get("market") or []) > 10:
-                        bad_schema.append(f"seed{sd} step{st}: >10 market orders")
-                    for o2 in (a.get("market") or []):
-                        # An empty market list is valid (no orders this turn).
-                        if o2 == []:
-                            continue
-                        if not (isinstance(o2, list) and o2 and o2[0] in VALID_MKT):
-                            bad_schema.append(f"seed{sd} step{st}: mkt={o2!r}")
-                if st < 719:
-                    env.step([a, KG.starter_agent(env.steps[st][1].observation)])
+            agent0 = wrap(0) if seat == 0 else KG.starter_agent
+            agent1 = KG.starter_agent if seat == 0 else wrap(1)
+            env.run([agent0, agent1])
             f = env.steps[-1]
             cash.append(int(f[seat].observation.farms[seat]["money"]))
             statuses += [f[0].status, f[1].status]

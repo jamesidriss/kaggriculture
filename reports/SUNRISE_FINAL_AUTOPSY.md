@@ -1,107 +1,141 @@
-# SUNRISE FINAL AUTOPSY
+# SUNRISE FINAL AUTOPSY — corrected
 
-Measured on real ladder episodes (14 games, 2026-10-01) and on elite ladder
-seeds (from the public 88,281-episode replay DB). Every number below is from a
-run, not an estimate.
+All numbers re-measured this session on the **corrected** harness. The previous
+version of this report is void: `sunrise-v5` defines `agent(obs)` with one
+argument, so under the old harness it was never actually played and every
+sunrise number in it — including the 792-game record — was a measurement of an
+inert agent. See `reports/HARNESS_SIGNATURE_AUDIT.md`.
 
-## 1. Ladder reality
+The failure is real. It is worse than previously reported.
 
-| bot | rating | sampled games | W-L | 50%-win point (opponent final cash) |
+## 1. Ladder reality (uncontested)
+
+14 real ladder episodes downloaded from Kaggle; seats verified 40-vs-0 by
+action-matching our exact submitted bytes. Full rows in
+`data/final_evaluation_episodes.csv`.
+
+| bot | ladder rating | games | W-L | opponent cash at which it starts losing |
 |---|---|---|---|---|
-| sunrise-v5 | 250.0 | 7 | 4-3 | **~$8-10k** |
-| sunrise-v4 | 153.0 | 7 | 3-4 | **below passive** |
+| sunrise-v1 | **348.1** | — | — | best of our five, and still 2,700 points off the lead |
+| sunrise-v2 | 322.0 | — | — | |
+| sunrise-v3 | 316.8 | — | — | |
+| sunrise-v5 | 252.6 | 7 | 4-3 | ~$8-10k |
+| sunrise-v4 | 138.5 | 7 | 3-4 | below a passive opponent |
 
-sunrise-v4 lost three games to opponents that finished at exactly $3,000 (never
-played), including two total collapses ($82 and $220 final cash).
-sunrise-v5 beat opponents up to ~$6.9k and lost every game above $10k.
+sunrise-v4 lost three games to opponents that finished at exactly $3,000 —
+players who never acted — including two total collapses ($82 and $220 final
+bank). sunrise-v5 beat opponents up to ~$6.9k and lost every game above $10k.
 
-Reference: the elite meta agents reproduce at **$95k-183k** median on the same
-seeds. There is no overlap between our ceiling and their floor — this is a
-10-30× economic gap, not a tuning gap.
+The five submissions and their scores are live on the competition page; the
+ratings above are the official `publicScore` values read at audit time.
 
-## 2. Action economy — the root cause
+## 2. Corrected local record
 
-| metric | farm_2945 | multi_route_v43 | barnyard_v7 | **sunrise-v5** |
-|---|---|---|---|---|
-| total field actions | 29,976 | 29,955 | 29,488 | **35,953** |
-| production | 10.1% | 10.0% | 7.7% | **6.2%** |
-| maintenance | 31.8% | 31.9% | 26.7% | **13.2%** |
-| movement | 38.2% | 38.4% | 39.9% | **63.0%** |
-| logistics | 4.5% | 4.5% | 2.9% | **0.0%** |
-| PASS | 15.4% | 15.1% | 22.8% | 17.6% |
-| **productive / total** | **41.9%** | **41.9%** | 34.4% | **19.4%** |
-| **cash per field action** | **$5.58** | **$5.53** | **$5.48** | **$0.19** |
-| market orders (SELL) | 1,691 | 3,686 | 2,944 | **513** |
-| BUY_LAND | 8 | 16 | 32 | 30 |
-| hands (mean/max) | 8.6 / 12 | 8.6 / 12 | 9.5 / 14 | 10.4 / 15 |
+Real ladder seeds, 12 per pool, both seats, official `Environment.run`,
+719 turns per game, 0 errors:
 
-sunrise spends **29% of its actions moving** (63.0% vs 38.2%) and earns
-**$0.19 per field action against $5.58** — a 29× productivity deficit. It also
-issued only 513 SELL orders where farm_2945 issued 1,691 on the same land:
-sunrise harvested product it never converted, which is worth exactly zero.
+| pool | record |
+|---|---|
+| REAL_dev | 0-264 |
+| REAL_holdout | 0-264 |
+| REAL_final (sealed) | 0-264 |
+| **total** | **0-792, 0.00%, Wilson 95% [0.0000, 0.0048]** |
 
-Root cause in our own code: `MAX_TRAVEL = 4` with greedy nearest-task assignment.
-A worker that cannot reach a ripe tile within 4 Manhattan steps re-plans to a
-different task every turn and walks in circles. farm_2945 keeps a
-**zone/tape-based route** and services tasks in a fixed order.
+It did not win a single game against any of ten distinct public agents, from
+either seat, on any real ladder world. The previous claim of 72 wins came
+entirely from the three agents that were also not playing.
 
-## 3. Portfolio
+## 3. Action economy — the root cause, re-measured
 
-farm_2945's realised revenue on seed 335464115 (full 30 days, both players):
+`benchmark/action_economy.py`, 4 paired games each against `starter`, both
+seats, after the signature fix. Every number below is from this run.
 
-```
-WOOL        $96,684      STRAWBERRY  $55,267
-MILK        $38,150      FERTILIZER  $24,872
-MELON       $18,832      WHEAT        $14,278
-CARROT       $3,982      EGG            $865
-TOMATO         $457
-```
+| metric | **sunrise-v5** | **v51 (champion)** | farm_2945 | barnyard_v7 | v16_rc5 |
+|---|---|---|---|---|---|
+| median cash | **$6,901** | $168,805 | $167,118 | $161,628 | $158,425 |
+| cash vs `starter` (1 game) | **$6,280** | $182,861 | $182,343 | $167,711 | $138,247 |
+| total field actions | **35,953** | 29,955 | 29,976 | 29,488 | 29,564 |
+| production | **6.2%** | 10.1% | 10.1% | 7.7% | 8.4% |
+| maintenance | **13.2%** | 31.8% | 31.8% | 26.7% | 36.6% |
+| movement | **63.0%** | 38.4% | 38.2% | 39.9% | 38.6% |
+| logistics | **0.0%** | 4.5% | 4.5% | 2.9% | 2.9% |
+| PASS | **17.6%** | 15.1% | 15.4% | 22.8% | 13.5% |
+| **productive / total** | **19.4%** | **41.9%** | 41.9% | 34.4% | **45.0%** |
+| **cash per field action** | **$0.19** | **$5.64** | $5.58 | $5.48 | $5.36 |
+| SELL orders | **855** | 1,450 | 3,382 | 2,208 | 3,272 |
+| BUY_SEED orders | **5,245** | 779 | 1,558 | 396 | 1,120 |
+| BUY_PRODUCT orders | **0** | 268 | 502 | **1,980** | 1,584 |
+| HIRE orders | **6,730** | 1,064 | 2,130 | 3,156 | 4,224 |
+| total market orders | **12,880** | 3,618 | 7,684 | 7,860 | **10,328** |
+| hands mean / max | **10.4 / 15** | 8.6 / 12 | 8.6 / 12 | 9.5 / 14 | 9.1 / 14 |
+| production share, days 24-29 | **3%** | 13% | 13% | 10% | 11% |
 
-Its farm ends the season as **17 sheep + 6 cows** on pastures, a strawberry belt
-(wheat 25 → strawberry 33 mid-season → carrot 20 at the end), 4 quadrants, 12
-hands, and rotates crops into the cheapest lane as shop demand shifts.
+### What the numbers say
 
-**Our "animals are a trap" conclusion was wrong.** We had computed that MILK
-floors at ~75 units season-total and WOOL at ~59 from the *price curve alone*.
-Forensics show WOOL earned **$96,684** — the top revenue line. The error was
-treating the theoretical price-curve ceiling as a revenue cap while ignoring that
-a large farm produces far more than the trough, and that fertiliser resale
-($24,872) is pure margin on by-product. Sheep pay back in ~7.5 days and then
-compound daily.
+1. **A 29.7× productivity deficit.** $0.19 per field action against the
+   champion's $5.64. This single ratio is the result. sunrise issues 35,953
+   field actions and converts them into $6,901; the champion issues 29,955 —
+   **17% fewer** — and converts them into $168,805, a **24.5× larger** bank.
 
-## 4. Second bug: the artifact we would have submitted was seat-broken
+2. **63.0% of all actions are movement**, against 38.4%. Greedy nearest-task
+   assignment with a small travel horizon means workers re-target every turn and
+   walk. It spends 11,501 more actions moving than the champion and gets less
+   for them.
 
-`farm_2945` reads `observation["step"]` at 30 sites. The schema never declares
-`step` and the interpreter sets it only for player 0, so the verbatim public
-agent **raises `KeyError` at step 0 in seat 1** — on Kaggle too. Patched to
-`_step_of()` (day×24+hour, identical), seat 0 is byte-identical and seat 1 works.
+3. **Maintenance is half the champion's** (13.2% vs 31.8%). This is not an
+   efficiency win. It is under-maintenance: crops and animals need daily tending,
+   and skipping it suppresses the harvest. v16_rc5 maintains 36.6% and converts
+   45.0% of its actions productively.
 
-This is the failure mode our harness never tested: every previous evaluation of
-this agent used it in seat 0 only, where `step` happens to exist.
+4. **Zero logistics.** It never moves goods to the shed as a first-class task,
+   against 4.5% for both top agents.
 
-## 5. Structural failures, in order of cost
+5. **It over-buys and under-sells.** 5,245 BUY_SEED orders to the champion's
+   779, and 6,730 HIRE orders to 1,064, reaching 15 hands against 12 — with
+   *lower* output. Meanwhile it issues only 855 SELL orders against the
+   champion's 1,450 and farm_2945's 3,382, and **zero** BUY_PRODUCT orders.
+   Harvested product that is never converted to cash scores nothing.
 
-1. **No livestock economics.** Sheep/wool is the single largest revenue line in
-   the winning agent; sunrise never built an animal. Cost: ~10× final cash.
-2. **Movement-dominated action profile.** 63% of actions moving, $0.19/field
-   action. The routing policy, not the crop policy, was the binding constraint.
-3. **Harvested but never sold.** 513 SELL orders vs 1,691. Unsold inventory
-   scores zero.
-4. **Static portfolio.** farm_2945 rotates crops into the cheapest lane as shop
-   demand shifts; sunrise fixed one mix for the season.
-5. **Self-play contamination risk.** An earlier 29-3 result was invalid (league
-   file overwritten by the champion). Fixed with a digest-addressed store and
-   invariant tests.
+6. **The endgame collapses.** Production share over days 24-29 is **3%** against
+   the champion's 13%, with 40% of the same window still spent moving.
 
-## 6. What would have been needed
+## 4. Portfolio
 
-Order by measured value:
+sunrise is wheat-and-melon only, by construction (`_crop_pref` in `main.py`),
+and never builds an animal.
 
-1. Move to a tape/zone routing policy (fixes the 63% movement share).
-2. Add sheep/pasture economy with correct daily feed maintenance.
-3. Convert product to cash every turn (sell discipline).
-4. Rotate crops against observed shop demand.
-5. Test both seats on every artifact before trusting any result.
+The strongest public agents run livestock. The realised revenue on a full
+30-day seed (farm_2945 trace, both players) is **WOOL $96,684 · STRAWBERRY
+$55,267 · MILK $38,150 · FERTILIZER $24,872 · MELON $18,832 · WHEAT $14,278**,
+and the farm ends the season as 17 sheep + 6 cows behind a strawberry belt.
 
-All five are already present in the postmortem champion, which is why it scores
-$95k-183k where sunrise scores $5k-9k.
+**The earlier "animals are a trap" conclusion was wrong.** It was derived from
+the price curve alone, treating a price ceiling as a revenue cap, and it ignored
+by-product fertiliser ($24,872), shop demand, and the fact that a large farm
+produces far more than the trough. The largest single revenue line in a winning
+strategy is wool.
+
+## 5. Structural failures, ranked by measured cost
+
+1. **No livestock economy** — forfeits the largest revenue line outright.
+2. **Movement-dominated action profile** — 63% vs 38%; this is what produces the
+   $0.19 figure.
+3. **Under-maintenance** — 13.2% vs 31.8%; suppresses harvest yield.
+4. **Harvested but not sold** — 855 SELL orders; zero BUY_PRODUCT.
+5. **Over-hiring and over-sowing** — 6,730 hires and 5,245 seed buys to
+   6.2% production.
+6. **No logistics** — 0.0%.
+7. **Endgame collapse** — 3% production share over the final week.
+
+## 6. What was needed, in order
+
+1. **Tape/zone routing instead of greedy nearest-task.** Kills the 63%.
+2. **A sheep/pasture economy** with correct daily feed maintenance.
+3. **Convert product to cash every turn** — sell, and buy product when cheap.
+4. **Cap the hand ladder**; stop rebuilding labour 6× more than necessary.
+5. **Test both seats and verify the agent actually plays**, on every artifact,
+   every time.
+
+All five are present in the reference champion, which is why it finishes at
+$168,805 where sunrise finishes at $6,901 — and why the gap is 24.5× rather
+than the 1.2× the old harness suggested.
