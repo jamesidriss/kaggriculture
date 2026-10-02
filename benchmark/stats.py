@@ -172,9 +172,11 @@ def bt_identifiability(pairs, teams=None):
       zero_loss     - teams with 0 losses (MLE = +inf)
       disconnected  - True if the comparison graph is not strongly connected
       isolated      - teams absent from `pairs`
-      cycle_inconsistent - gradient norm still large after fitting
+      complete_separation - pairs that are 100-0, which are themselves
+                    sufficient to make the extreme betas diverge
 
-    A BT ranking must NOT be published unless ok is True.
+    A BT ranking must NOT be published unless ok is True. Use
+    `bradley_tery_regularized` and label the result REGULARIZED BT.
     """
     if teams is None:
         teams = sorted({t for p in pairs for t in p})
@@ -188,6 +190,8 @@ def bt_identifiability(pairs, teams=None):
     zero_win = [t for t in teams if w[t] == 0 and (w[t] + l[t]) > 0]
     zero_loss = [t for t in teams if l[t] == 0 and (w[t] + l[t]) > 0]
     isolated = [t for t in teams if not adj[t]]
+    sep = [f"{a} vs {b} {wa}-{wb}" for (a, b), (wa, wb) in pairs.items()
+           if wa + wb > 0 and (wa == 0 or wb == 0)]
     # strong connectivity via BFS from an arbitrary node
     seen, stack = set(), [teams[0]] if teams else []
     while stack:
@@ -201,9 +205,61 @@ def bt_identifiability(pairs, teams=None):
         "ok": not (zero_win or zero_loss or isolated or disconnected),
         "zero_win": zero_win, "zero_loss": zero_loss,
         "isolated": isolated, "disconnected": disconnected,
+        "complete_separation": sep,
         "strong_component_size": len(seen),
         "teams": len(teams),
     }
+
+
+def bradley_tery_regularized(pairs, prior_sd=1.0, iters=20000, tol=1e-10):
+    """MAP Bradley-Terry with a Normal(0, prior_sd) prior on the betas.
+
+    REQUIRED whenever the plain MLE is unbounded, and any result from this
+    function must be published as **REGULARIZED BT**, never as plain MLE. The
+    prior is what makes a finite optimum exist when an agent wins or loses
+    every game: the log-posterior has a unique finite maximum because the
+    Gaussian prior penalises large |beta|.
+
+    The penalty shrinks all betas toward 0 by a data-dependent amount, so
+    absolute values are NOT comparable with an MLE fit and the spread is
+    compressed. Only the ordering, and the pairwise implied probabilities, are
+    meaningful. This is why the observed head-to-heads remain the primary
+    evidence.
+    """
+    teams = sorted({t for p in pairs for t in p})
+    if not teams:
+        return {}
+    beta = {t: 0.0 for t in teams}
+    lam = 1.0 / (prior_sd * prior_sd)
+    for _ in range(iters):
+        g = {t: -lam * beta[t] for t in teams}
+        for (a, b), (wa, wb) in pairs.items():
+            n = wa + wb
+            if n == 0:
+                continue
+            for t, o, win in ((a, b, wa), (b, a, wb)):
+                g[t] += win - n / (1.0 + math.exp(-(beta[t] - beta[o])))
+        step = 1.0
+        moved = False
+        cur = _bt_loglik(pairs, beta) - 0.5 * lam * sum(v * v for v in beta.values())
+        for _ls in range(50):
+            cand = {t: beta[t] + step * g[t] for t in teams}
+            sh = sum(cand.values()) / len(cand)
+            cand = {k: v - sh for k, v in cand.items()}
+            newL = (_bt_loglik(pairs, cand)
+                    - 0.5 * lam * sum(v * v for v in cand.values()))
+            if newL > cur + 1e-15:
+                delta = max(abs(cand[t] - beta[t]) for t in teams)
+                beta = cand
+                moved = True
+                if delta < tol:
+                    break
+                break
+            step /= 2.0
+        if not moved or delta < tol:
+            break
+    sh = sum(beta.values()) / len(beta)
+    return {k: v - sh for k, v in beta.items()}
 
 
 def bradley_tery(pairs, iters=20000, tol=1e-10, require_finite=True):
