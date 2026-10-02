@@ -67,15 +67,21 @@ def build(flags, tunables, path):
     assert hashlib.sha256(src.encode()).hexdigest() == PARENT_SHA, \
         "parent digest drift: refusing to derive candidates from it"
     lit = settings_literal(flags, tunables)
-    # Replace the live settings dict. `DEFAULT_SETTINGS` is NOT the live
-    # configuration: the agent is constructed with `**_SETTINGS`, which
-    # overrides it. Editing DEFAULT_SETTINGS is a silent no-op.
-    out, n = src.replace("_SETTINGS=", f"_SETTINGS_SEARCH={lit} + dict(_SETTINGS", 0) \
-        if False else (src, 0)
+    # Replace the LIVE settings dict. `DEFAULT_SETTINGS` is not what runs: the
+    # agent is constructed with `**_SETTINGS`, which overrides it, so editing
+    # DEFAULT_SETTINGS produces a byte-different file with byte-identical
+    # behaviour -- a silent no-op. Exactly one occurrence must be replaced, or
+    # the edit is not the edit we think it is.
     marker = "_SETTINGS={"
+    if src.count(marker) != 1:
+        raise SystemExit(
+            f"refusing to edit: expected exactly one live {marker!r}, "
+            f"found {src.count(marker)}")
     i = src.index(marker)
     j = src.index("}", i)
     out = src[:i] + f"_SETTINGS={lit}" + src[j + 1:]
+    if out.count(marker) != 1:
+        raise SystemExit("refusing to edit: replacement did not yield one dict")
     with open(path, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(out)
     return hashlib.sha256(out.encode()).hexdigest()
