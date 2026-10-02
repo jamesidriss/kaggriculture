@@ -1,0 +1,27 @@
+{
+  "inserted_now": 16,
+  "lineages": [
+    {
+      "agents": 12,
+      "eligible": 9,
+      "lineage_id": "L-OZER-2945"
+    },
+    {
+      "agents": 2,
+      "eligible": 0,
+      "lineage_id": "L-SUNRISE"
+    },
+    {
+      "agents": 1,
+      "eligible": 0,
+      "lineage_id": "L-ROMANROZEN"
+    },
+    {
+      "agents": 1,
+      "eligible": 1,
+      "lineage_id": "L-BOATLEE"
+    }
+  ],
+  "unique_agents": 16,
+  "written_utc": "2026-10-02 07:23:10.907722"
+}

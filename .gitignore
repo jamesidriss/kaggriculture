@@ -53,3 +53,13 @@ data/replay_db/
 data/replays/
 *.parquet
 seeds/ladder_real_final.txt
+
+# --- 3075 research programme: data lake ---
+# The lake is reproducible from public sources plus the committed manifests,
+# so the bulk stays out of Git. Manifests and schemas are deliberately kept.
+data_lake/lake.duckdb
+data_lake/lake.duckdb.wal
+data_lake/_tmp/
+data_lake/parquet/
+!data_lake/manifests/
+simulation/rust/target/

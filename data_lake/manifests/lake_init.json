@@ -1,0 +1,190 @@
+{
+  "root": "data_lake",
+  "tables": {
+    "agents": {
+      "columns": [
+        "agent_sha",
+        "canonical_name",
+        "author",
+        "lineage_id",
+        "source_url",
+        "license",
+        "historical_public_score",
+        "publication_date",
+        "environment_version",
+        "playable",
+        "runtime_safe",
+        "league_eligible",
+        "lineage_confidence",
+        "lineage_method",
+        "notes",
+        "first_seen_utc"
+      ],
+      "duckdb_rows": 0,
+      "parquet_files": 0
+    },
+    "champion_history": {
+      "columns": [
+        "champion_id",
+        "agent_sha",
+        "agent_name",
+        "parent_sha",
+        "promoted_utc",
+        "shadow_rating",
+        "top_meta_record",
+        "lineage_record",
+        "sealed_result",
+        "git_commit"
+      ],
+      "duckdb_rows": 0,
+      "parquet_files": 0
+    },
+    "counterfactuals": {
+      "columns": [
+        "cf_id",
+        "episode_id",
+        "step",
+        "player",
+        "agent_sha",
+        "macro_action",
+        "branch_seed",
+        "final_cash",
+        "baseline_cash",
+        "delta_cash",
+        "outcome",
+        "opponent_sha",
+        "seed",
+        "created_utc"
+      ],
+      "duckdb_rows": 0,
+      "parquet_files": 0
+    },
+    "episodes": {
+      "columns": [
+        "episode_id",
+        "seed",
+        "create_time",
+        "era_id",
+        "environment_version",
+        "agent_0_sha",
+        "agent_1_sha",
+        "pre_rating_0",
+        "pre_rating_1",
+        "post_rating_0",
+        "post_rating_1",
+        "rating_semantics",
+        "score_0",
+        "score_1",
+        "cash_0",
+        "cash_1",
+        "winner",
+        "reward_0",
+        "reward_1",
+        "source_dataset",
+        "replay_available",
+        "stock_config",
+        "ingested_utc"
+      ],
+      "duckdb_rows": 0,
+      "parquet_files": 0
+    },
+    "experiments": {
+      "columns": [
+        "experiment_id",
+        "created_utc",
+        "parent_sha",
+        "candidate_sha",
+        "hypothesis",
+        "seed_split",
+        "opponent_population",
+        "games",
+        "wins",
+        "losses",
+        "ties",
+        "win_rate",
+        "wilson_lo",
+        "wilson_hi",
+        "runtime_max_ms",
+        "decision",
+        "notes"
+      ],
+      "duckdb_rows": 0,
+      "parquet_files": 0
+    },
+    "matches": {
+      "columns": [
+        "experiment_id",
+        "run_id",
+        "environment_version",
+        "candidate_sha",
+        "candidate_name",
+        "opponent_sha",
+        "opponent_name",
+        "seed",
+        "seat",
+        "candidate_cash",
+        "opponent_cash",
+        "win",
+        "loss",
+        "tie",
+        "candidate_status",
+        "opponent_status",
+        "candidate_calls",
+        "opponent_calls",
+        "valid",
+        "invalid_reason"
+      ],
+      "duckdb_rows": 0,
+      "parquet_files": 0
+    },
+    "ratings": {
+      "columns": [
+        "agent_sha",
+        "agent_name",
+        "shadow_rating",
+        "lo95",
+        "hi95",
+        "games",
+        "opponents",
+        "lineage_coverage",
+        "seat_balance",
+        "regime_coverage",
+        "method",
+        "computed_utc"
+      ],
+      "duckdb_rows": 0,
+      "parquet_files": 0
+    },
+    "turns": {
+      "columns": [
+        "episode_id",
+        "step",
+        "player",
+        "agent_sha",
+        "day",
+        "hour",
+        "money",
+        "land_count",
+        "hands_count",
+        "n_sheep",
+        "n_cow",
+        "n_goose",
+        "n_structures",
+        "crop_wheat",
+        "crop_carrot",
+        "crop_tomato",
+        "crop_strawberry",
+        "crop_melon",
+        "shed_total",
+        "inv_total",
+        "market_inv_total",
+        "farmer_x",
+        "farmer_y",
+        "actions_json"
+      ],
+      "duckdb_rows": 0,
+      "parquet_files": 0
+    }
+  },
+  "written_utc": "2026-10-02 07:22:58.889025"
+}
