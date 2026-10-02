@@ -176,3 +176,28 @@ correct path. Their outputs are re-derived where they support a claim.
 - Two Kaggle replay files were examined earlier: player-1 stored observations
   lack `step`, consistent with path C above and therefore **not** evidence
   about runtime delivery.
+
+## A SECOND harness defect, found later in the same audit
+
+This report establishes that the observation *contents* reached both seats. It
+did not catch that some agents were never asked to act at all, because the
+harness handed Kaggle the agent's raw function.
+
+Kaggle's runner invokes `agent(observation, configuration)`. Three league
+members — `barnyard_v7`, `v16_rc5` and **our own `sunrise-v5`** — define
+`def agent(obs)`. The `TypeError` is absorbed by the framework, the agent is
+marked `INVALID`, it never acts, and it finishes on the starting $3,000.
+
+So "both seats receive a correct observation" was true and still not sufficient:
+three seats were receiving a correct observation that a broken agent was
+ignoring.
+
+The rule that follows: **parity of the observation is not parity of the
+harness.** Both the delivered *contents* and the *call convention* have to be
+right, and the only proof of the second is an agent that demonstrably acts.
+`benchmark/agent_loader.py::probe_playable` now asserts 719 turns and a final
+bank above the starting value for every league member before any number from it
+is used.
+
+Full detail, including which published conclusions it invalidated, in
+`reports/HARNESS_SIGNATURE_AUDIT.md`.

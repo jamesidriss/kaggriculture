@@ -9,6 +9,7 @@ Usage:
 """
 import argparse
 import importlib.util
+import os
 import statistics
 from collections import Counter, defaultdict
 
@@ -26,10 +27,35 @@ MARKET = Counter()
 
 
 def load(p):
+    """Load an agent, adapting the call signature.
+
+    Same defect as benchmark/meta.py had: Kaggle calls
+    `agent(obs, configuration)`, many public agents define `agent(obs)`, and the
+    raw function then raises TypeError on every turn, leaving the agent inert at
+    the starting $3,000. A forensics run that measures an inert agent reports a
+    confident, entirely fictional action economy. See
+    reports/HARNESS_SIGNATURE_AUDIT.md.
+    """
+    import inspect
     s = importlib.util.spec_from_file_location("a_" + str(abs(hash(p))), p)
     m = importlib.util.module_from_spec(s)
     s.loader.exec_module(m)
-    return m.agent
+    fn = m.agent
+    try:
+        sig = inspect.signature(fn)
+        npos = sum(1 for q in sig.parameters.values()
+                   if q.kind in (q.POSITIONAL_ONLY, q.POSITIONAL_OR_KEYWORD))
+        var = any(q.kind == q.VAR_POSITIONAL for q in sig.parameters.values())
+    except (TypeError, ValueError):
+        npos, var = 2, True
+    two = var or npos >= 2
+
+    def wrapper(obs, configuration=None, _fn=fn, _two=two):
+        return _fn(obs, configuration) if _two else _fn(obs)
+
+    wrapper.__kag_src__ = os.path.basename(p)
+    wrapper.__kag_two_arg__ = two
+    return wrapper
 
 
 def instrument():

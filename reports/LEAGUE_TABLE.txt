@@ -1,0 +1,433 @@
+﻿.venv\Scripts\python.exe : OpenSpiel exception: Unknown game 'universal_poker'. Available games are:
+Au caractère Ligne:1 : 34
++ ... griculture; .venv\Scripts\python.exe benchmark\league_table.py 2>&1 | ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (OpenSpiel excep...able games are::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2048
+add_noise
+amazons
+amazons_proxy
+ant_foraging_arena
+antichess
+backgammon
+backgammon_proxy
+banqi
+bargaining
+bargaining_proxy
+battleship
+blackjack
+blotto
+breakthrough
+breakthrough_proxy
+bridge
+bridge_arena
+bridge_uncontested_bidding
+cached_tree
+capture_the_flag
+capture_the_flag_proxy
+catch
+chat_game
+checkers
+checkers_proxy
+chess
+chinese_checkers
+cliff_walking
+clobber
+clobber_proxy
+coin_game
+coin_game_arena
+coin_game_proxy
+colored_trails
+connect_four
+connect_four_proxy
+coop_box_pushing
+coop_to_1p
+coordinated_mp
+crazy_eights
+crazyhouse
+cribbage
+crossword
+cursor_go
+dark_chess
+dark_hex
+dark_hex_ir
+dark_hex_proxy
+deep_sea
+dots_and_boxes
+dots_and_boxes_proxy
+dou_dizhu
+efg_game
+einstein_wurfelt_nicht
+euchre
+first_sealed_auction
+gin_rummy
+gin_rummy_proxy
+go
+go_fish
+go_fish_proxy
+go_proxy
+gomoku
+goofspiel
+havannah
+havannah_proxy
+hearts
+hex
+hive
+hive_proxy
+kriegspiel
+kuhn_poker
+laser_tag
+latent_ttt
+leduc_poker
+lewis_signaling
+liars_dice
+liars_dice_ir
+lines_of_action
+lines_of_action_proxy
+maedn
+mancala
+mancala_proxy
+markov_soccer
+markov_soccer_proxy
+matching_pennies_3p
+matrix_bos
+matrix_brps
+matrix_cd
+matrix_coordination
+matrix_mp
+matrix_pd
+matrix_rps
+matrix_rpsw
+matrix_sh
+matrix_shapleys_game
+mfg_crowd_modelling
+mfg_crowd_modelling_2d
+mfg_dynamic_routing
+mfg_garnet
+misere
+mnk
+morpion_solitaire
+negotiation
+negotiation_proxy
+nfg_game
+nim
+nine_mens_morris
+nine_mens_morris_proxy
+normal_form_extensive_game
+oh_hell
+oshi_zumo
+oshi_zumo_proxy
+othello
+othello_proxy
+oware
+pathfinding
+pentago
+phantom_go
+phantom_ttt
+phantom_ttt_ir
+pig
+python_ant_foraging
+python_ant_foraging_proxy
+python_block_dominoes
+python_dynamic_routing
+python_hangman
+python_iterated_prisoners_dilemma
+python_kuhn_poker
+python_liars_poker
+python_pokerkit_wrapper
+python_pokerkit_wrapper_acpc_style
+python_repeated_pokerkit
+python_team_dominoes
+python_tic_tac_toe
+quoridor
+rbc
+repeated_game
+repeated_leduc_poker
+restricted_nash_response
+sheriff
+shogi
+shogi_proxy
+skat
+snake
+snake_proxy
+social_deduction
+solitaire
+spades
+start_at
+stones_and_gems
+tarok
+tic_tac_toe
+tiny_bridge_2p
+tiny_bridge_4p
+tiny_hanabi
+trade_comm
+turn_based_simultaneous_game
+twixt
+ultimate_tic_tac_toe
+ultimate_tic_tac_toe_proxy
+xiangqi
+y
+y_proxy
+yacht
+zerosum
+OpenSpiel exception: Unknown game 'repeated_poker'. Available games are:
+2048
+add_noise
+amazons
+amazons_proxy
+ant_foraging_arena
+antichess
+backgammon
+backgammon_proxy
+banqi
+bargaining
+bargaining_proxy
+battleship
+blackjack
+blotto
+breakthrough
+breakthrough_proxy
+bridge
+bridge_arena
+bridge_uncontested_bidding
+cached_tree
+capture_the_flag
+capture_the_flag_proxy
+catch
+chat_game
+checkers
+checkers_proxy
+chess
+chinese_checkers
+cliff_walking
+clobber
+clobber_proxy
+coin_game
+coin_game_arena
+coin_game_proxy
+colored_trails
+connect_four
+connect_four_proxy
+coop_box_pushing
+coop_to_1p
+coordinated_mp
+crazy_eights
+crazyhouse
+cribbage
+crossword
+cursor_go
+dark_chess
+dark_hex
+dark_hex_ir
+dark_hex_proxy
+deep_sea
+dots_and_boxes
+dots_and_boxes_proxy
+dou_dizhu
+efg_game
+einstein_wurfelt_nicht
+euchre
+first_sealed_auction
+gin_rummy
+gin_rummy_proxy
+go
+go_fish
+go_fish_proxy
+go_proxy
+gomoku
+goofspiel
+havannah
+havannah_proxy
+hearts
+hex
+hive
+hive_proxy
+kriegspiel
+kuhn_poker
+laser_tag
+latent_ttt
+leduc_poker
+lewis_signaling
+liars_dice
+liars_dice_ir
+lines_of_action
+lines_of_action_proxy
+maedn
+mancala
+mancala_proxy
+markov_soccer
+markov_soccer_proxy
+matching_pennies_3p
+matrix_bos
+matrix_brps
+matrix_cd
+matrix_coordination
+matrix_mp
+matrix_pd
+matrix_rps
+matrix_rpsw
+matrix_sh
+matrix_shapleys_game
+mfg_crowd_modelling
+mfg_crowd_modelling_2d
+mfg_dynamic_routing
+mfg_garnet
+misere
+mnk
+morpion_solitaire
+negotiation
+negotiation_proxy
+nfg_game
+nim
+nine_mens_morris
+nine_mens_morris_proxy
+normal_form_extensive_game
+oh_hell
+oshi_zumo
+oshi_zumo_proxy
+othello
+othello_proxy
+oware
+pathfinding
+pentago
+phantom_go
+phantom_ttt
+phantom_ttt_ir
+pig
+python_ant_foraging
+python_ant_foraging_proxy
+python_block_dominoes
+python_dynamic_routing
+python_hangman
+python_iterated_prisoners_dilemma
+python_kuhn_poker
+python_liars_poker
+python_pokerkit_wrapper
+python_pokerkit_wrapper_acpc_style
+python_repeated_pokerkit
+python_team_dominoes
+python_tic_tac_toe
+quoridor
+rbc
+repeated_game
+repeated_leduc_poker
+restricted_nash_response
+sheriff
+shogi
+shogi_proxy
+skat
+snake
+snake_proxy
+social_deduction
+solitaire
+spades
+start_at
+stones_and_gems
+tarok
+tic_tac_toe
+tiny_bridge_2p
+tiny_bridge_4p
+tiny_hanabi
+trade_comm
+turn_based_simultaneous_game
+twixt
+ultimate_tic_tac_toe
+ultimate_tic_tac_toe_proxy
+xiangqi
+y
+y_proxy
+yacht
+zerosum
+==============================================================================
+OVERALL RECORD  (real ladder seeds, both seats, official env.run)
+==============================================================================
+agent                                              W-L-T  games    win%           Wilson 95%  err
+v51                                             670-50-0    720  0.9306     [0.9096, 0.9469]    0
+farm                                           596-124-0    720  0.8278     [0.7985, 0.8536]    0
+sunrise                                          0-792-0    792  0.0000     [0.0000, 0.0048]    0
+
+==============================================================================
+PER POOL
+==============================================================================
+  agent                                              dev         final       holdout
+  v51                                           224-16-0       232-8-0      214-26-0
+  farm                                          194-46-0      192-48-0      210-30-0
+  sunrise                                        0-264-0       0-264-0       0-264-0
+
+==============================================================================
+RESOLVED HEAD-TO-HEADS  (each paired game counted once)
+==============================================================================
+A                                        B                                              W-L    n    win%           Wilson 95%
+farm                                     v16_rc5                                   72.0-0.0   72  1.0000     [0.9493, 1.0000]
+farm                                     v38_feed                                  72.0-0.0   72  1.0000     [0.9493, 1.0000]
+ahmedberatozer-v43-recovering-lost-harve sunrise                                   72.0-0.0   72  1.0000     [0.9493, 1.0000]
+ahmedberatozer-v44-winning-the-same-turn sunrise                                   72.0-0.0   72  1.0000     [0.9493, 1.0000]
+ahmedberatozer-v46-first-turn-microstruc sunrise                                   72.0-0.0   72  1.0000     [0.9493, 1.0000]
+ahmedberatozer-v48-clear-the-queue       sunrise                                   72.0-0.0   72  1.0000     [0.9493, 1.0000]
+ahmedberatozer-v49-funded-sale-timing    sunrise                                   72.0-0.0   72  1.0000     [0.9493, 1.0000]
+ahmedberatozer-v50-early-yarn-commit     sunrise                                   72.0-0.0   72  1.0000     [0.9493, 1.0000]
+barnyard_v7                              sunrise                                   72.0-0.0   72  1.0000     [0.9493, 1.0000]
+farm                                     sunrise                                   72.0-0.0   72  1.0000     [0.9493, 1.0000]
+ahmedberatozer-v49-funded-sale-timing    farm                                     38.0-34.0   72  0.5278     [0.4140, 0.6387]  <- NOT SEPARABLE FROM 50%
+ahmedberatozer-v50-early-yarn-commit     farm                                     38.0-34.0   72  0.5278     [0.4140, 0.6387]  <- NOT SEPARABLE FROM 50%
+farm                                     v51                                      68.0-76.0  144  0.4722     [0.3925, 0.5534]  <- NOT SEPARABLE FROM 50%
+ahmedberatozer-v49-funded-sale-timing    v51                                       8.0-64.0   72  0.1111     [0.0574, 0.2042]
+ahmedberatozer-v50-early-yarn-commit     v51                                       8.0-64.0   72  0.1111     [0.0574, 0.2042]
+ahmedberatozer-v46-first-turn-microstruc farm                                      4.0-68.0   72  0.0556     [0.0218, 0.1343]
+ahmedberatozer-v48-clear-the-queue       farm                                      4.0-68.0   72  0.0556     [0.0218, 0.1343]
+ahmedberatozer-v44-winning-the-same-turn farm                                      2.0-70.0   72  0.0278     [0.0077, 0.0957]
+ahmedberatozer-v43-recovering-lost-harve farm                                      0.0-72.0   72  0.0000     [0.0000, 0.0507]
+barnyard_v7                              farm                                      0.0-72.0   72  0.0000     [0.0000, 0.0507]
+sunrise                                  v51                                       0.0-72.0   72  0.0000     [0.0000, 0.0507]
+sunrise                                  v16_rc5                                   0.0-72.0   72  0.0000     [0.0000, 0.0507]
+sunrise                                  v38_feed                                  0.0-72.0   72  0.0000     [0.0000, 0.0507]
+ahmedberatozer-v43-recovering-lost-harve v51                                       0.0-72.0   72  0.0000     [0.0000, 0.0507]
+ahmedberatozer-v44-winning-the-same-turn v51                                       0.0-72.0   72  0.0000     [0.0000, 0.0507]
+ahmedberatozer-v46-first-turn-microstruc v51                                       0.0-72.0   72  0.0000     [0.0000, 0.0507]
+ahmedberatozer-v48-clear-the-queue       v51                                       0.0-72.0   72  0.0000     [0.0000, 0.0507]
+barnyard_v7                              v51                                       0.0-72.0   72  0.0000     [0.0000, 0.0507]
+v16_rc5                                  v51                                       0.0-72.0   72  0.0000     [0.0000, 0.0507]
+v38_feed                                 v51                                       0.0-72.0   72  0.0000     [0.0000, 0.0507]
+
+==============================================================================
+LOCAL BRADLEY-TERRY  (offline estimate, NOT an official Kaggle rating)
+==============================================================================
+  NO BRADLEY-TERRY RANKING IS REPORTABLE FOR THIS LEAGUE.
+
+  Reason: Bradley-Terry did not reach a maximum likelihood (gradient norm 5.52e-02). The pairwise results are not reproducible by any set of strengths -- typically a non-transitive or over-determined record. Report the observed head-to-heads and their intervals instead of a fitted ranking.
+
+  Unbounded likelihood, specifically: these agents lose
+  EVERY game to EVERY opponent they were measured against,
+  so their maximum-likelihood strength is -infinity and the
+  model has no finite solution:
+    ahmedberatozer-v43-recovering-lost-harvests  record 0.0-144.0 over 144.0 games (0 wins)
+    barnyard_v7                                  record 0.0-144.0 over 144.0 games (0 wins)
+    v16_rc5                                      record 0.0-144.0 over 144.0 games (0 wins)
+    v38_feed                                     record 0.0-144.0 over 144.0 games (0 wins)
+
+  The league is a TWO-TIER star: two hubs (v51 and
+  farm_2945) are each played against every other agent, and the
+  bottom tier never plays anyone except the hubs. A single
+  scalar rating cannot rank a tier that is uniformly dominated,
+  and any beta printed for it would be an artifact of where the
+  iteration was stopped.
+
+  USE INSTEAD: the observed head-to-head table above with its
+  Wilson intervals. That is the measurement. The beta is a
+  compression of it, and here the compression loses the only
+  thing that matters -- which matchups are actually separated
+  from 50% and which are coin flips.
+
+==============================================================================
+WHAT IS ACTUALLY SEPARABLE
+==============================================================================
+  v51                                      93.06%  Wilson [0.910, 0.947]  -> stronger than the field
+  farm                                     82.78%  Wilson [0.798, 0.854]  -> stronger than the field
+  sunrise                                   0.00%  Wilson [0.000, 0.005]  -> weaker than the field
+
+  Matchups NOT statistically separated from 50% at 95%:
+    ahmedberatozer-v49-funded-sale-timing vs farm: 38.0-34.0 of 72, Wilson [0.414, 0.639]
+    ahmedberatozer-v50-early-yarn-commit vs farm: 38.0-34.0 of 72, Wilson [0.414, 0.639]
+    farm vs v51: 68.0-76.0 of 144, Wilson [0.392, 0.553]

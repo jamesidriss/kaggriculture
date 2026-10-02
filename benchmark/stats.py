@@ -1,24 +1,16 @@
-"""Shared statistics for the Kaggriculture evaluation harness.
+"""Statistics for the Kaggriculture benchmark scripts.
 
-`wilson` previously had two independent copies (benchmark/meta.py and
-benchmark/real_strength.py). Two copies of a statistical primitive is how two
-reports end up quoting slightly different intervals for the same record. One
-definition, imported everywhere.
+Thin re-export of `simcomp.stats` so that there is exactly ONE implementation of
+`wilson` and `bradley_tery` in the repository. Two copies of a statistical
+primitive is how two reports end up quoting different intervals for the same
+record; an earlier version of this file also returned a nonsensical (0.0, 0.0)
+for n == 0, i.e. a zero-width interval claiming certainty about nothing.
 """
-import math
+import os
+import sys
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-def wilson(w, n, z=1.96):
-    """Wilson score interval for a binomial proportion.
+from simcomp.stats import wilson, bradley_tery, p_win  # noqa: F401,E402
 
-    Correct where the normal approximation is not: at 0/24 or 24/24 the
-    Wald interval collapses to zero width, which would let an undefeated record
-    be reported as a proven 100%. Returns (lo, hi).
-    """
-    if n == 0:
-        return (0.0, 1.0)
-    p = w / n
-    d = 1 + z * z / n
-    c = p + z * z / (2 * n)
-    h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
-    return (max(0.0, (c - h) / d), min(1.0, (c + h) / d))
+__all__ = ["wilson", "bradley_tery", "p_win"]

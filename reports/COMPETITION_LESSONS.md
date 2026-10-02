@@ -1,130 +1,178 @@
 # COMPETITION LESSONS — what actually cost us the run
 
-Ordered by measured cost, not by how embarrassing they were.
+Ordered by measured cost, not by how embarrassing they were. Items 1-3 are new
+and are the expensive ones.
 
-## 1. Optimising against a league that could not discriminate
+## 1. A harness bug that fabricated results about three agents
 
-**Cost: the entire result.** Sunrise scored 100% against our homemade league
-(`opponents/league.py`) and finished at **241.5** on the real ladder.
+**Cost: a wrong headline finding, a wrong champion justification, and a wrong
+postmortem — all published.**
 
-When the league was replaced with 11 genuine public agents, the agent we had
-declared champion (The 2945 Farm) went from an apparent 360-0 to **216-48** — and
-lost to three opponents it had never been tested against.
+Kaggle calls `agent(obs, configuration)`. `barnyard_v7`, `v16_rc5` and **our
+own `sunrise-v5`** define `def agent(obs)`. Passing the raw function to
+`env.run()` raises `TypeError` on every turn, the framework marks the agent
+`INVALID`, it never acts, it finishes on the starting $3,000, and the opponent
+is recorded as a decisive 72-0 winner.
 
-The lesson is not "test against more opponents". It is that **a sweep is a
-measurement failure, not a result**. Every time an agent won everything, the
-correct response was to ask whether the league could lose, not to celebrate.
+So we reported:
 
-## 2. Declaring a winner before the league existed
+- Barnyard V7 "collapsing" — it was never playing;
+- v16_rc5 as a 0-72 pushover — it actually reaches $138,247 against `starter`;
+- sunrise-v5 with 72 wins and a 8.3% win rate — it had **0 wins in 792 games**
+  once it was really running, and it had never been running at all.
 
-The previous session wrote "RECOVERY_CHAMPION_0 selected by evidence" and a
-300-0 record while the league contained five weak agents and one unlicensed
-artifact. Selection was declared against opponents chosen by the same person
-who wrote the agent.
+Full detail in `reports/HARNESS_SIGNATURE_AUDIT.md`.
 
-## 3. A harness bug that manufactured a false conclusion
+**Why no guard caught it.** A non-player is the easiest possible opponent, so
+the record looked *too good*. `errors: 0` — the framework had already absorbed
+the exception. The self-play guard did not fire (content differed). The Wilson
+interval cheerfully reported `[0.862, 1.000]` for 24-0 against a corpse. The
+`mean_opp: 3000` field was in the JSON the whole time and nobody read it.
 
-**Cost: a wrong headline finding and an unnecessary patch.**
+**Lesson: a green result is not a validated result. Assert on side effects —
+invocations, exceptions, final bank — not on the absence of an error code.**
 
-The claim "The 2945 Farm crashes in seat 1" was produced by feeding agents from
-`env.steps[i][seat].observation`. The framework copies shared fields into the
-observation it *delivers* but not into the snapshot it *persists*, so seat-1
-snapshots lack `step` and produced a `KeyError` that cannot occur on Kaggle.
+## 2. A harness bug that invented a product defect
 
-The artifact was correct. We patched it anyway, shipped the patch as the
-champion, and wrote the retraction nowhere. This is now proven and retracted in
-`reports/KAGGLE_RUNTIME_PARITY.md`, and `tests/test_audit_regressions.py` fails
-if any gating script feeds agents from snapshots again.
+**Cost: a patched artifact shipped as the champion, plus a false headline.**
 
-**Lesson: a harness bug and a product bug look identical from the inside.
-Prove which one you have before you patch the product.**
+We concluded "The 2945 Farm crashes in seat 1 because `observation['step']`
+only exists for player 0." It runs in both seats, unmodified. The probes that
+"proved" it were reading `env.steps[i][seat].observation` — the **persisted**
+snapshot, which omits shared fields for seat 1 — instead of the observation
+Kaggle actually **delivers**, which includes them. Proven and retracted in
+`reports/KAGGLE_RUNTIME_PARITY.md`.
 
-## 4. Treating a theoretical price table as a causal claim
+We then shipped the "fix" as the reference champion and wrote the retraction
+nowhere.
+
+**Lesson: a harness bug and a product bug look identical from the inside. Prove
+which layer is broken before you patch the artifact.** Two separate harness bugs
+in one audit, both producing confident false conclusions, both invisible to
+every existing guard.
+
+## 3. Publishing a fitted ranking from an unconverged model
+
+**Cost: a report whose central table was meaningless.**
+
+We published Bradley-Terry betas of `17.758 / 5.424 / -2.576 / -9.788` and an
+ordering built on them. The fit never converged — the league is a two-tier star
+in which four agents lose every game to every opponent they meet, so their
+maximum-likelihood strength is **−∞** and no finite optimum exists. The
+identical value `-9.788` printed for six different agents was the visible
+symptom, and it was written off as "the bottom of the scale is degenerate"
+rather than "this number is an artifact of where the loop stopped".
+
+**Lesson: if your model will not converge, the answer is that the model does not
+apply. Do not print the last iterate.** Model code must raise, and it must be
+tested against data generated from known parameters.
+
+## 4. Optimising against a league that could not discriminate
+
+**Cost: the previous champion selection.** When the league was five weak agents,
+farm_2945 recorded 360-0 and was declared champion. Against ten real public
+agents it is 596-124 (82.78%) and **ties** the eventual winner.
+
+**A sweep is a measurement failure, not a result.** The correct response to an
+undefeated record is to ask whether the league can lose.
+
+## 5. A theoretical price table presented as a causal claim
 
 **Cost: a wrong postmortem.** We computed that Barnyard's pre-`hinge` model
-mismeasures scarce carrot by 210× and concluded that explained its decline.
+mismeasures scarce carrot by 210× and concluded that explained its decline. The
+counterfactual was never run. When it was: the patched agent finished at
+**$74,991 — identical to the dollar, across all 24 games.**
 
-The counterfactual was never run. When it was: patching the price model moved
-the record by **zero games** (0-10 before, 0-10 after). Barnyard's
-cash-per-field-action is $5.48 against the champion's $5.64 — it is not
-inefficient, it is marginally behind on production share and PASS rate.
+The reason is better than the correction: the agent reads live prices from
+`observation.market.prices`, and the table we patched is a **fallback for a
+field the environment always supplies**. It is unreachable code.
 
 **Lesson: a mechanism that explains a number is not evidence it explains an
-outcome. Run the intervention.**
+outcome. Run the intervention — and when it moves nothing, find out *why*
+nothing.**
 
-## 5. Deriving strategy from the price function alone
+## 6. Deriving strategy from the price function alone
 
-**Cost: abandoning a profitable strategy on false grounds.** We concluded
-"animals are a trap" from MILK flooring at ~75 units and WOOL at ~59. The
-winning agent's largest single revenue line is **WOOL**, and it runs a
-17-sheep/6-cow pasture block.
+**Cost: abandoning a profitable strategy on false grounds.** "Animals are a
+trap" came from MILK flooring at ~75 and WOOL at ~59. The winning strategy's
+**largest single revenue line is WOOL** ($96,684), behind 17 sheep and 6 cows.
 
-**Lesson: isolated base-price arithmetic does not model a season. Realised
-revenue includes by-products, shop demand, scale and timing.**
+A price-curve ceiling is not a revenue cap. By-product fertiliser ($24,872),
+shop demand, scale and timing all sit outside the base price.
 
-## 6. Confusing cash with outcome
+## 7. Confusing cash with outcome
 
-The champion frequently ends games with *lower* cash than the agent it beats.
-Every matchup here was decided by margin as small as **$506**, and 60% of
-farm_2945-vs-v50 games were decided by under $1,000. Optimising margin would have
-optimised the wrong thing.
+The champion often ends games with *lower* cash than the agent it beats. The
+v51-vs-farm_2945 margin is often a few hundred dollars on ~$100,000 banks.
+Optimising margin would have optimised the wrong thing, and at this margin size
+the sign of the difference is not even statistically resolved.
 
-## 7. Synthesising seeds and calling them ladder worlds
+## 8. Synthesising seeds and calling them ladder worlds
 
-**Cost: unmeasurable overfitting risk.** Early evaluation used locally chosen
-seeds. Real ladder seeds only arrived in the final session, from an 88,281-row
-public replay index, with the split sealed and committed before evaluation.
+Early evaluation used locally chosen seeds, so overfitting risk was
+unmeasurable. Real ladder seeds arrived only in the final session, from an
+88,281-row public replay index, split by SHA256 of the seed and committed before
+evaluation. Even then the index stops at 2026-09-25 and misses the last five
+days of ladder play.
 
-## 8. The self-play contamination
+## 9. Accidental self-play
 
-An opponent file was overwritten by the champion, producing a fake 29-3 that
-looked like a result. Caught only because identical cash *and* identical tile
-layouts repeated — an impossible outcome between two different agents.
+An opponent file was overwritten by the champion, producing a fake 29-3. Caught
+only because identical cash *and* identical tile layouts repeated — impossible
+between two different agents. Fixed structurally: digest-addressed store,
+manifest verification, a guard that raises rather than skips, and a derived
+league directory (`benchmark/sync_league.py`) so no human copies an agent into a
+league path.
 
-Fixed structurally: digest-addressed store, manifest verification, a
-content-digest guard that raises rather than skips, and a derived league
-directory (`benchmark/sync_league.py`) so no human copies an agent into a league
-path.
+## 10. Consuming the submission quota before meta validation
 
-## 9. Consuming the submission quota before meta validation
+Five submissions went out against agents benchmarked only versus `starter`. By
+the time the real meta was understood the quota was gone. Final scores: 348.1,
+322.0, 316.8, 252.6, 138.5.
 
-Five submissions went to agents benchmarked only against `starter`. By the time
-the real meta was understood, the quota was gone. The active bots score 241.5 and
-158.4.
+**The first submission of any kind is a placeholder. The quota is the scarce
+resource, not the code.**
 
-**Lesson: the first submission of any kind is a placeholder. The quota is the
-scarce resource, not the code.**
+## 11. Not testing both seats systematically
 
-## 10. Not testing both seats systematically
-
-Seat 1 was untested until the final audit, which is how the false crash
-belief survived. Every evaluation since runs both seats, and a regression test
-now asserts it.
+Seat 1 went untested until the final audit, which is how the false crash belief
+survived two sessions. Both seats are now mandatory and asserted.
 
 ---
 
 ## The reusable loop
 
 ```
-CURRENT ENVIRONMENT (probe the runtime, don't read the schema)
+PROBE THE RUNTIME      real env.run(), never the schema, never a snapshot
   ↓
-PUBLIC META       (digest-addressed, licence-checked, 11+ agents)
+ADAPT THE CALL         inspect agent's arity; wrap to (obs, configuration)
   ↓
-REAL LADDER WORLDS (sealed dev/holdout/final, committed before use)
+VERIFY IT PLAYS        719 turns, cash != 3000, zero exceptions
   ↓
-PAIRED BOTH-SEAT  (env.run only; never persisted snapshots)
+PUBLIC META            digest-addressed, licence-gated, lineage-diverse
   ↓
-INVARIANT GATE    (self-play, digests, licences, snapshot-feeding)
+SEALED REAL WORLDS     dev/holdout/final committed before evaluation
   ↓
-ARTIFACT GATE     (exact bytes, full 720 turns, both seats)
+PAIRED BOTH-SEAT      official env.run only
   ↓
-SEQUENTIAL TESTING (stop at 20 paired games when the effect is overwhelming)
+INVARIANT GATE         self-play, digests, licences, phantom opponents
+  ↓
+ARTIFACT GATE          exact bytes, 720 turns, both seats, silent
+  ↓
+MEASURE WITH INTERVALS Wilson on everything; report ties as ties
+  ↓
+SEQUENTIAL             stop at 20 paired games when the effect is overwhelming
 ```
 
-The two rules that would have changed this run:
+The four rules that would have changed this run:
 
 1. **A sweep means the league is broken.** Stop and fix the league.
 2. **Never patch the product to fix a symptom you have not localised.** Prove
    which layer is wrong first.
+3. **Assert on side effects, not error codes.** An agent that raises inside
+   `env.run()` produces a perfectly green result.
+4. **A model that will not converge has told you the model does not apply.**
+   Do not print the last iterate.
 
-Both are now enforced by tests, not by discipline.
+All four are now enforced by code — `simcomp/` and
+`tests/test_audit_regressions.py` (26/26) — rather than by discipline.
