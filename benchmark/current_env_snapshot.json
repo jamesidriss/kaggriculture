@@ -1,0 +1,96 @@
+{
+  "kaggle_environments_version": "1.32.7",
+  "env_config_defaults": {
+    "episodeSteps": 720,
+    "actTimeout": 1,
+    "boardSize": {
+      "description": "Width and height (in tiles) of each player's square farm. Advanced game expects 10 (four 5x5 quadrants).",
+      "type": "integer",
+      "default": 10,
+      "minimum": 4
+    },
+    "startingMoney": {
+      "description": "Money each player starts with.",
+      "type": "integer",
+      "default": 3000,
+      "minimum": 0
+    },
+    "maxMarketOrdersPerTurn": {
+      "description": "Maximum number of market orders processed per player per turn. Extra orders beyond this limit are silently dropped.",
+      "type": "integer",
+      "default": 10,
+      "minimum": 1
+    },
+    "turnsPerDay": {
+      "description": "Number of turns that make up one in-game day.",
+      "type": "integer",
+      "default": 24,
+      "minimum": 1
+    },
+    "shedCapacity": {
+      "description": "Maximum number of non-seed items the shed can hold (overflow at end-of-day drop is discarded).",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1
+    },
+    "weedSpawnChance": {
+      "description": "Per-tile probability of a weed spawning on an empty unlocked tile during the end-of-day refresh.",
+      "type": "number",
+      "default": 0.005,
+      "minimum": 0
+    },
+    "townShopUnlockInterval": {
+      "description": "Days between successive town shop unlocks. First shop unlocks on day equal to this value. Shops are drawn with replacement, so the same shop can unlock more than once; unlocking stops after 8 instances.",
+      "type": "integer",
+      "default": 3,
+      "minimum": 1
+    },
+    "townShopSellInterval": {
+      "description": "Number of turns between successive consumption ticks by every unlocked town shop instance. Each instance pulls one of each of its products per tick (single-product shops pull 2x), so a duplicated shop consumes once per copy. Total demand grows monotonically as more shops are unlocked.",
+      "type": "integer",
+      "default": 4,
+      "minimum": 1
+    },
+    "townCenterSellInterval": {
+      "description": "Number of turns between successive consumption ticks by the town center (one of every non-fertilizer product per tick). At the default of 24 with turnsPerDay 24, the town center buys once per day at a flat rate for the whole season.",
+      "type": "integer",
+      "default": 24,
+      "minimum": 1
+    },
+    "seed": {
+      "description": "Optional input seed for deterministic episode generation. The interpreter clears this from configuration after reading and stores the resolved seed on env.info['seed'] so it stays out of agent observations but is still recorded in the replay.",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "default": null
+    },
+    "farmHandCostMult": {
+      "description": "Multiplier applied to the Fibonacci hire-cost sequence (1, 1, 2, 3, 5, 8, 13, ...). The n-th hire of the day costs this value times fib(n).",
+      "type": "integer",
+      "default": 1,
+      "minimum": 0
+    },
+    "marketParams": {
+      "description": "Per-resource market price-curve overrides. Sparse: keyed by product name; each entry may set any subset of {base, I0, T, below_func, below_target, above_func, above_target}. Missing keys (and missing products) inherit from MARKET_PARAMS defaults in kaggriculture.py. Functions: linear, sq, sqrt, log, log10, hinge. amp is derived as target * base / f(T). The hinge function is flat-ish below T and spikes above it, and unlike the others it is scaled by T so that f(T) = 1.",
+      "type": "object",
+      "default": {}
+    }
+  },
+  "module_constants": {
+    "ANIMALS": "{'GOOSE': {'cost': 300, 'structure': 'COOP', 'first_yield_day': 4, 'interval': 1, 'max_held': 4, 'product': 'EGG'}, 'COW': {'cost': 400, 'structure': 'PASTURE', 'first_yield_day': 8, 'interval': 2, 'max_held': 6, 'product': 'MILK'}, 'SHEEP': {'cost': 500, 'structure': 'PASTURE', 'first_yield_day': 6, 'interval': 3, 'max_held': 6, 'product': 'WOOL'}}",
+    "CROPS": "{'WHEAT': {'seed': 10, 'first_yield_day': 2, 'max_yield_day': 4, 'interval': 0, 'max_yield': 6, 'ongoing': False}, 'CARROT': {'seed': 20, 'first_yield_day': 2, 'max_yield_day': 3, 'interval': 0, 'max_yield': 4, 'ongoing': False}, 'TOMATO': {'seed': 50, 'first_yield_day': 8, 'max_yield_day': 8, 'interval': 1, 'max_yield': 4, 'ongoing': True}, 'STRAWBERRY': {'seed': 100, 'first_yield_day': 10, 'max_",
+    "FARMER_MOVES": "{'NORTH': (0, -1), 'SOUTH': (0, 1), 'EAST': (1, 0), 'WEST': (-1, 0)}",
+    "FARM_HAND_COST_MULT": 1,
+    "HINGE_GAIN": 8.0,
+    "LAND_ORDER": "['NE', 'SW', 'SE']",
+    "LAND_PRICES": "[1000, 2000, 4000]",
+    "MARKET_I0": 10000,
+    "MARKET_PARAMS": "{'WHEAT': {'base': 25, 'I0': 10000, 'T': 400, 'below_func': 'sqrt', 'below_target': 0.8, 'above_func': 'log', 'above_target': 0.2}, 'CARROT': {'base': 35, 'I0': 10000, 'T': 450, 'below_func': 'hinge', 'below_target': 1.0, 'above_func': 'sqrt', 'above_target': 0.7}, 'TOMATO': {'base': 60, 'I0': 10000, 'T': 200, 'below_func': 'hinge', 'below_target': 0.4, 'above_func': 'sqrt', 'above_target': 0.6}, ",
+    "MAX_SHOP_INSTANCES": 8,
+    "PRICE_FLOOR": 1,
+    "PRODUCTS": "['WHEAT', 'CARROT', 'TOMATO', 'STRAWBERRY', 'MELON', 'EGG', 'MILK', 'WOOL', 'FERTILIZER']",
+    "SHOPS": "{'BAKERY': ['EGG', 'WHEAT'], 'PIZZA_SHOP': ['MILK', 'TOMATO', 'WHEAT'], 'BRUNCH_SPOT': ['EGG', 'WHEAT', 'STRAWBERRY'], 'YARN_STORE': ['WOOL'], 'ICE_CREAM_SHOP': ['STRAWBERRY', 'MILK', 'WHEAT'], 'PET_CAFE': ['CARROT'], 'SMOOTHIE_SHOP': ['STRAWBERRY', 'MILK'], 'FARMERS_MARKET': ['WHEAT', 'CARROT', 'TOMATO', 'STRAWBERRY']}",
+    "TOWN_CENTER_PRODUCTS": "['WHEAT', 'CARROT', 'TOMATO', 'STRAWBERRY', 'MELON', 'EGG', 'MILK', 'WOOL']"
+  }
+}

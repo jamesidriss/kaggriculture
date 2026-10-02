@@ -1,10 +1,10 @@
-role: postmortem_primary
-name: ahmedberatozer-v51-lean-flock
-author: ahmedberatozer
-source: Kaggle dataset destbreso/kaggriculture-donor-agents-20260902, file agents/ahmedberatozer-v51-lean-flock.py
+role: postmortem_hedge
+name: farm_2945_original
+author: thomastschinkel
+source: kaggle.com/code/thomastschinkel/the-2945-farm-96-vs-the-top-10-public-bots
 license: Apache-2.0
-sha256: c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891
-bytes: 461739
+sha256: bfee70e9daaebeae0737a880f1df8f1c60d0783c59af620136cc0d28ef482bc7
+bytes: 856428
 git_commit_at_freeze: c02c867e5e1ac1c3fbb793d330df968a54382306
 agent_signature: agent(observation, configuration)
 environment_version: kaggle-environments 1.32.7
@@ -17,15 +17,15 @@ DIRECT TOP MATCHUP (paired, both seats, real ladder-derived worlds)
   vs farm_2945_original : 1039-945-0 over 1984 paired games  win rate 0.5237  Wilson 95% [0.5017, 0.5456]  exact binomial p=0.0368  seat effect McNemar p=0.901
 
 AGGREGATE RESULT
-  v51 beats the league; see reports/TOP_META_TABLE.md and
-  reports/V51_VS_FARM.md for the full paired evidence.
+  596-124 over 720 league games (82.78%, Wilson 95%
+  [0.7985, 0.8536]). Second, and the only agent within
+  noise of the PRIMARY.
 
 AGENT IN A LEAGUE WITH (median final cash, 5 games vs starter)
-  median $182,861
+  median $182,343
 
 RUNTIME
   median ~0.4 ms, max 40.2 ms per agent() call against a 1000 ms actTimeout.
-  Artifact gate: 2,880 calls, 0 schema violations, no stdout, no stderr.
 
 MODIFICATIONS
   NONE. Byte-identical to the published public artifact. The file is a copy of
@@ -39,10 +39,10 @@ NOT_SUBMITTED
   official winner.
 
 LINEAGE NOTE
-  SHARED ANCESTRY with the hedge. v51 and the 2945 Farm are the same lineage, not two:
-  - 1,205 shared unique identifiers, containment 0.82
-  - a single contiguous identical run of 3,352 tokens
-  - identical nine-author credit list in both headers
-  Measured by benchmark/lineage_check.py. v51's own
-  header credits thomastschinkel and the rest, i.e. v51
-  descends from the 2945 Farm.
+  NOT a diversifying hedge. Same lineage as the PRIMARY (see above).
+  It hedges seat and world variance, not strategy risk. The only
+  genuinely distinct-lineage public agent we could obtain and legally
+  redistribute is v16_rc5 (boatlee), and it is far weaker: 0-232 to both
+  top agents, median $82k against their $116k. A genuinely diverse
+  hedge does not exist in the legally reusable public set. That is the
+  honest position and it is a stated limitation, not an oversight.

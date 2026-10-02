@@ -1,214 +1,149 @@
-# HARNESS SIGNATURE AUDIT — the second harness bug, and the worst of the run
+# HARNESS SIGNATURE AUDIT — corrected
 
-This is the most damaging finding of the audit. It invalidated results that had
-already been written up, including a headline postmortem.
+**The v1 conclusion published here was wrong about Kaggle and has been
+retracted. See `reports/RETRACTIONS.md` R1 for the full correction. This file is
+the corrected version and the correction is kept, not buried.**
 
-## The bug
+## The claim that was retracted
 
-Kaggle invokes an agent as:
+> "Kaggle invokes agents as `agent(obs, configuration)`. Many public agents
+> define `def agent(obs)`, so passing the raw function raises `TypeError` on
+> every turn, the agent is marked `INVALID`, it never acts, and it finishes on
+> the starting $3,000."
 
-```python
-agent(observation, configuration)
-```
+The Kaggle half of that is **false**.
 
-A large share of public Kaggriculture agents define the one-argument form:
+## What the official runtime actually does
 
-```python
-def agent(obs):
-    ...
-```
-
-`benchmark/meta.py` passed the raw module attribute straight to `env.run()`:
+`kaggle_environments/agent.py`, `Agent.act` (kaggle-environments 1.32.7):
 
 ```python
-spec.loader.exec_module(mod)
-_cache[path] = mod.agent          # raw, unadapted
+args = [structify(observation), structify(self.configuration)]
+
+if hasattr(self.agent, "__code__") and hasattr(self.agent.__code__, "co_argcount"):
+    args = args[: self.agent.__code__.co_argcount]
 ...
-env.run([a0, a1])                 # Kaggle calls it with TWO positional args
+action = self.agent(*args)
 ```
 
-For a one-argument agent that is a `TypeError` on **every single turn**:
-
-```
-TypeError: agent() takes 1 positional argument but 2 were given
-```
-
-Kaggle catches the exception, marks the agent `INVALID`, and the game continues
-with that seat inert. The agent never acts. It ends the 720-turn season on the
-starting bank: **exactly $3,000, every game.**
-
-## Why it was invisible
-
-A non-playing agent is the *easiest possible opponent*. It loses 100% of games
-with a huge cash margin. The harness dutifully recorded:
-
-```
-{"label": "vs barnyard_v7", "games": 24, "errors": 0, "W": 24, "L": 0}
-```
-
-- `errors: 0` — because no exception propagated out of `env.run()`; the
-  framework had already absorbed it.
-- `W: 24` — the candidate beat a seat that never moved.
-- The `mean_opp: 3000` field was present in the JSON and nobody read it.
-
-The self-play guard did not fire (the content differed), the digest guard did
-not fire (the content differed), the Wilson interval dutifully reported
-`[0.862, 1.000]` for a 24-0 against a corpse, and the invariant suite passed.
-
-## Who was actually never playing
-
-| agent | signature | real strength | recorded as |
-|---|---|---|---|
-| `barnyard_v7` | `agent(obs)` | ~$74k final cash, plays 719 turns | 0-72 victim, "score inversion" |
-| `v16_rc5` | `agent(obs)` | **$138,247** vs `starter` | 0-72 victim |
-| `main.py` = **sunrise-v5** | `agent(obs)` | our own submission | 0-264 per pool |
-| 9 other league agents | `agent(obs, config)` | fine | fine |
-
-Detection, in one line per agent:
-
-```
-v16_rc5                     two_arg=False
-barnyard_v7                 two_arg=False
-shop_router                 two_arg=True
-ahmedberatozer-v51-lean-flock  two_arg=True
-```
-
-`main.py`, `champions/champion_000/main.py` (sunrise-v4) and
-`champions/champion_001/main.py` (sunrise-v5) are all one-argument.
-
-**Our own submitted agents were never evaluated.** Every sunrise number in the
-pre-existing reports — the 72-792 record, and the 792-game aggregate — was a
-measurement of a non-player.
-
-## The fix
-
-`benchmark/meta.py::load` now introspects the signature and returns a uniform
-wrapper:
+and `build_agent` passes a callable through untouched:
 
 ```python
-sig = inspect.signature(fn)
-npos = sum(1 for p in sig.parameters.values()
-           if p.kind in (p.POSITIONAL_ONLY, p.POSITIONAL_OR_KEYWORD))
-has_var = any(p.kind == p.VAR_POSITIONAL for p in sig.parameters.values())
-two_arg = has_var or npos >= 2
-
-def wrapper(obs, configuration=None, _fn=fn, _two=two_arg, _src=...):
-    st = _stats.setdefault(_src, {"calls": 0, "errors": []})
-    st["calls"] += 1
-    try:
-        return _fn(obs, configuration) if _two else _fn(obs)
-    except Exception as exc:
-        st["errors"].append(f"turn {st['calls']}: {type(exc).__name__}: {exc}")
-        raise
+# Already callable.
+if callable(raw):
+    return raw, False
 ```
 
-and `head_to_head` refuses to score a game in which either side did not
-actually play:
+So the argument list is truncated to the callable's own positional arity.
+**Both `agent(obs)` and `agent(obs, configuration)` are valid**, and an
+agent object with `__call__` is passed through as well.
 
-```python
-if st["calls"] == 0 and "error" not in r:
-    r["error"] = f"{src} was never invoked (0 turns) -- the result would be a fabrication"
-elif st["errors"] and "error" not in r:
-    r["error"] = f"{src} raised: {st['errors'][0][:140]}"
-```
+Machine-readable snapshot: `benchmark/kaggle_call_convention.json`.
 
-Every result row now carries `candidate_turns` and `opponent_turns`, so a
-non-player is visible in the data rather than inferred. All 720 recorded games
-show 719/719.
+## Proof by execution
 
-The same bug existed in the new `simcomp` framework and was caught by its own
-self-test within minutes of being written — which is the argument for having
-the guard at all.
+`benchmark/call_convention.py` runs a real `env.run([raw_callable, starter])`:
 
-## What the guard then caught
-
-`shop_router` (yhay81) raises on its first turn:
-
-```
-FileNotFoundError: [Errno 2] No such file or directory:
-  'opponents\meta\actions.json'
-```
-
-It needs a data file that is not present in the public notebook. It is **not a
-self-contained artifact** and therefore not a legal single-file submission. It
-had also been sitting at $3,000 and being recorded as a 72-0 victim. It is
-withheld to `opponents/unlicensed/` and the reason is recorded in
-`opponents/meta/MANIFEST.csv`.
-
-## Corrected records
-
-All re-run on the corrected harness: real ladder seeds, 12 per pool, both seats,
-official `Environment.run`, 0 errors.
-
-| agent | W-L-T | games | win% | Wilson 95% |
+| agent | `co_argcount` | invoked | seat status | worked |
 |---|---|---|---|---|
-| `ahmedberatozer-v51-lean-flock` | **670-50-0** | 720 | 93.06% | [0.9096, 0.9469] |
-| `farm_2945_original` | 596-124-0 | 720 | 82.78% | [0.7985, 0.8536] |
-| `sunrise` (v5) | **0-792-0** | 792 | 0.00% | [0.0000, 0.0048] |
+| `def agent(obs)` | 1 | 29 | DONE | yes |
+| `def agent(obs, configuration=None)` | 2 | 29 | DONE | yes |
+| `def agent(obs, configuration)` | 2 | 29 | DONE | yes |
 
-Per pool:
+## The real root cause
 
-| agent | dev | holdout | final (sealed) |
+**Our own diagnostic scripts invoked agents directly**, bypassing the
+framework's dispatcher:
+
+```python
+# wrong, and this is what produced the TypeError
+action = agent_fn(obs, configuration)
+```
+
+Files that did this: `benchmark/close_games.py`, `benchmark/endgame.py`,
+`benchmark/forensic.py`, and the first cut of `simcomp/league.py`. They are
+diagnostics; none of them decides a competitive result.
+
+The competitive harness `benchmark/meta.py` passed the **raw callable** to
+`env.run`, which is the correct path, and was therefore never affected.
+
+## Verification that no competitive number was wrong
+
+`benchmark/isolate_signature_bug.py` runs four matchups three ways — raw
+callable into `env.run`, a 2-argument wrapper into `env.run`, and direct
+invocation — and separately replays the **pre-fix** `benchmark/meta.py` from
+commit `c8fb403`:
+
+| matchup, seed 62857979 | old `meta.py` (raw) | current (adapter) | |
 |---|---|---|---|
-| v51 | 224-16 | 214-26 | 232-8 |
-| farm_2945 | 194-46 | 210-30 | 192-48 |
-| sunrise-v5 | 0-264 | 0-264 | 0-264 |
+| sunrise vs v16_rc5 | 6400 vs 112314 | 6400 vs 112314 | identical |
+| v51 vs v16_rc5 | 93336 vs 69182 | 93336 vs 69182 | identical |
+| v51 vs barnyard_v7 | 113694 vs 78471 | 113694 vs 78471 | identical |
+| v51 vs farm_2945 | 85013 vs 84461 | 85013 vs 84461 | identical |
 
-Head-to-heads that survive correction, with intervals:
+All three invocation paths agree. The "silent agent failure" class of bug is
+real and worth guarding against, but it did not affect the competitive results
+of this project.
 
-| matchup | record | n | win% | Wilson 95% | verdict |
-|---|---|---|---|---|---|
-| v51 vs farm_2945 | 76-68 | 144 | 52.78% | [0.3925, 0.5534] | **not separable from 50%** |
-| v49 vs farm_2945 | 38-34 | 72 | 52.78% | [0.4140, 0.6387] | not separable from 50% |
-| v50 vs farm_2945 | 38-34 | 72 | 52.78% | [0.4140, 0.6387] | not separable from 50% |
-| v51 vs v49/v50 | 64-8 | 72 | 88.89% | [0.7958, 0.9494] | decisive |
-| v51 vs v43/v44/v46/v48 | 72-0 | 72 | 100% | [0.9493, 1.0000] | decisive |
-| v51 vs barnyard_v7 | 72-0 | 72 | 100% | [0.9493, 1.0000] | decisive |
-| v51 vs v16_rc5 | 72-0 | 72 | 100% | [0.9493, 1.0000] | decisive |
-| anyone vs sunrise | 792-0 | 792 | 100% | [0.0000, 0.0048] | decisive |
+## Which agent actually was inert
 
-## Conclusions that changed
+One: **`shop_router`** (yhay81). It is **not self-contained** —
 
-**Sunrise's failure is real and worse than reported.** 0 for 792, Wilson upper
-bound 0.48%. It is not merely weak; it never beat any of ten distinct public
-agents in either seat on any real ladder world.
+```
+FileNotFoundError: [Errno 2] No such file or directory: '...actions.json'
+```
 
-**The Barnyard score inversion is real, but its explanation was void.**
-Barnyard genuinely loses 0-72 to v51 and 0-72 to farm_2945 while scoring ~$74k.
-But the previous report's causal test — patch the stale `hinge` price table,
-re-run, observe no change — was executed while Barnyard was not playing. It has
-been redone; see `reports/BARNYARD_INVERSION.md`.
+— on its first turn, and that data file is not present in the public notebook.
+It is withheld to `opponents/unlicensed/` and recorded as `NOT_SELF_CONTAINED`
+in the manifest. Before the playability probe existed it sat at $3,000 and was
+scored as a 24-0 victim, which is the failure mode the probe now prevents.
 
-**`v16_rc5` is a genuine agent, not a corpse.** It reaches $138,247 against
-`starter` and ~$81k against the top agents. It loses, but it is a real opponent
-and its 0-72 is informative.
+## The canonical loader
 
-**`v51` over `farm_2945` is NOT established.** 76-68 over 144 paired games,
-Wilson [0.3925, 0.5534]. v51 is the better pick on aggregate (93.06% vs 82.78%
-and a decisive 64-8 over v49/v50 where farm is 38-34), but the head-to-head is
-a coin flip and must not be reported as a win.
+`benchmark/agent_loader.py` is the single loader. It:
 
-## Regression coverage
+- adapts the signature so diagnostics can call uniformly **without diverging
+  from the official runner**;
+- never alters strategy — the action is forwarded unchanged;
+- preserves `__wrapped__`, `__kag_path__`, `__kag_sha__` and the source name;
+- is used by `benchmark/tournament.py`, `benchmark/round_robin.py`,
+  `benchmark/forensics_final.py` and `benchmark/agent_loader.py --probe-all`.
 
-`tests/test_audit_regressions.py` — 26/26 pass, including three new checks:
+## The playability probe
 
-- every league agent imports and is wrapped in a 2-arg callable (`11/11`)
-- no scored game has a side frozen at $3,000
-- `meta.py`, `validate_artifact.py`, `close_games.py` never feed agents from
-  persisted snapshots
+`benchmark/agent_loader.py --probe-all` must pass before an agent may enter a
+league. It deliberately does **not** use "final cash > 3000" as the test,
+because an agent can legitimately lose money. The evidence is behavioural:
 
-## The lesson
+| criterion | why |
+|---|---|
+| module imports, `agent` is callable | catches a broken artifact |
+| invoked ~719 times per episode | catches a non-playing seat |
+| seat status `DONE` (never INVALID/ERROR/TIMEOUT) | catches framework rejection |
+| a non-trivial action trace, not 719 `PASS` | catches an idle agent |
+| market orders issued > 0 | catches an agent that never enters the economy |
+| works from **both** seats | catches seat-dependent code |
+| final cash changes over the episode | catches a frozen farm |
 
-Two separate harness bugs in one audit, both producing confident false
-conclusions, both invisible to every existing guard:
+Current result: **11/11 league agents playable**, e.g.
 
-| bug | false conclusion | why no guard caught it |
-|---|---|---|
-| feeding agents `env.steps[i][1].observation` | "the agent crashes in seat 1" | the `KeyError` looked like a product bug |
-| passing a 1-arg `agent` to `env.run` | "the opponent is 0-72" | the exception was absorbed by the framework |
+```
+v51                       two_arg=True   turns=719  active=357  mkt=905  $182,861
+barnyard_v7               two_arg=False  turns=719  active=319  mkt=635  $167,711
+v16_rc5                   two_arg=False  turns=719  active=436  mkt=626  $138,247
+```
 
-Both were found by **asking what the harness actually did** rather than what it
-reported. The durable protections are: drive agents through the environment's
-own entry point, adapt the call signature, and assert on the *side effects*
-(invocations, exceptions, final bank) rather than on the absence of an error
-code.
+Note `two_arg=False` is fine and is now understood: it only means the agent
+declares one parameter, which Kaggle handles by truncation.
+
+## Why this matters beyond one report
+
+The generalisable lesson is not "one-arg agents are special". It is:
+
+> A harness bug and a product bug look identical from the inside, and both
+> look like a *result*. The only defence is to assert on the side effects the
+> agent produces — invocations, exceptions, status, action trace, final bank —
+> rather than on the absence of an error code.
+
+That is now enforced by `benchmark/agent_loader.py --probe-all` and by
+`tests/test_audit_regressions.py`.
