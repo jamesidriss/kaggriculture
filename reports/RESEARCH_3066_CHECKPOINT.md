@@ -3,8 +3,8 @@
 Branch `research/3066-breakthrough`. Main at entry: `0d22b5dd`.
 
 ## Phase
-**12 of 24 — exhaustive search stage A complete, stage B running.**
-Stage B (64 survivors vs the discriminating opponents) is in flight.
+**22 of 24 — search complete, all gates green, ready to merge.**
+Stage A (all 512) and stage B (64 survivors) both complete. No candidate beat C001.
 
 ## Resume procedure
 ```
