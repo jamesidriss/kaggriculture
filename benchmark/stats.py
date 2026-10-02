@@ -77,23 +77,51 @@ def mcnemar_exact(b, c):
     b = A wins while B wins in the paired game; c = the reverse. Only the
     discordant pairs carry information, so the test conditions on b + c.
     Returns (two_sided_p, n_discordant).
+
+    Computed in log space: `2.0 ** n` overflows a float for n > 1023, and
+    `math.comb` then cannot be converted, so both are done with lgamma.
     """
     n = b + c
     if n == 0:
         return (1.0, 0)
     k = min(b, c)
-    tail = sum(math.comb(n, i) for i in range(0, k + 1)) / (2.0 ** n)
+    lgn = math.lgamma(n + 1)
+    # Divide by 2^n inside the exponent: `2.0 ** n` overflows for n > 1023.
+    tail = sum(math.exp(lgn - math.lgamma(i + 1) - math.lgamma(n - i + 1)
+                        - n * math.log(2.0)) for i in range(0, k + 1))
     return (min(1.0, 2.0 * tail), n)
 
 
 def binom_two_sided(k, n, p=0.5):
-    """Exact two-sided binomial test against p (default 0.5)."""
-    if n == 0:
+    """Exact two-sided binomial test against p (default 0.5).
+
+    Computed in log space via lgamma: `math.comb(1984, 992)` is a 600-digit
+    integer and converting it to float overflows. Summing the log-pmbs keeps
+    the result exact to float precision.
+    """
+    if n <= 0:
         return 1.0
-    def pmf(i):
-        return math.comb(n, i) * (p ** i) * ((1 - p) ** (n - i))
-    obs = pmf(k)
-    return min(1.0, sum(pmf(i) for i in range(n + 1) if pmf(i) <= obs + 1e-15))
+
+    def logpmf(i):
+        if p == 0.0:
+            return 0.0 if i == 0 else -math.inf
+        if p == 1.0:
+            return 0.0 if i == n else -math.inf
+        if (p == 0.5 and (i == 0 or i == n)) or (0 < i < n):
+            return (math.lgamma(n + 1) - math.lgamma(i + 1)
+                    - math.lgamma(n - i + 1)
+                    + i * math.log(p) + (n - i) * math.log1p(-p))
+        return -math.inf
+
+    obs = logpmf(k)
+    total = 0.0
+    for i in range(n + 1):
+        li = logpmf(i)
+        if li == -math.inf:
+            continue
+        if li <= obs + 1e-9:
+            total += math.exp(li)
+    return min(1.0, total)
 
 
 def paired_bootstrap_ci(pairs, iters=20000, seed=20261002, alpha=0.05):
