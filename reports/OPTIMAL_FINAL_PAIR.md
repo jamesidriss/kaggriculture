@@ -1,4 +1,17 @@
-# OPTIMAL FINAL PAIR — parity- and signature-safe revision
+# OPTIMAL FINAL PAIR — final revision
+
+**Superseded twice, and both supersessions are load-bearing:**
+
+- v1 was written before the runtime-parity audit and recommended a **patched**
+  artifact whose patch was unnecessary.
+- v2 was written before the signature audit and justified the pair as **two
+  different lineages**. They are one.
+
+Everything below is re-derived from experiments/final_meta_results.csv.
+
+---
+
+# (previous revision, retained for the record)
 
 Third revision. Both earlier versions are void:
 
@@ -136,3 +149,67 @@ revealed that a fitted BT ranking was not identifiable for this league.
 - Costs avoided: rev 1 would have submitted a **patched** artifact carrying an
   unnecessary 30-site edit; rev 2 rested on a league containing two agents that
   never played.
+
+---
+
+# FINAL REVISION (this one governs)
+
+## The decision
+
+| | artifact | SHA256 | licence |
+|---|---|---|---|
+| **PRIMARY** | postmortem_champion/main.py | c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891 | Apache-2.0 |
+| **HEDGE** | postmortem_hedge/main.py | fee70e9daaebeae0737a880f1df8f1c60d0783c59af620136cc0d28ef482bc7 | Apache-2.0 |
+
+Both verbatim public artifacts, no modifications, no seat patch.
+
+## Evidence
+
+PRIMARY vs HEDGE, paired, both seats, 1,000 fresh ladder-derived elite worlds:
+
+| quantity | value |
+|---|---|
+| games | **1,984** |
+| record | **1039-945** |
+| win rate | 0.5237 |
+| **Wilson 95%** | **[0.5017, 0.5456]** |
+| exact binomial p vs 50% | **0.0368** |
+| seat effect | none, McNemar p = 0.901 |
+| mean paired margin | , CI [-, ] |
+
+The PRIMARY is better, by about two points. That is real and economically
+negligible at the same time.
+
+## The hedge is NOT a diversifier — and that is the finding
+
+enchmark/lineage_check.py:
+
+| | PRIMARY (v51) | HEDGE (Farm 2945) |
+|---|---|---|
+| shared unique identifiers | 1,205 | 1,205 |
+| containment | 0.818 | |
+| longest identical token run | **3,352 tokens** | |
+| header credits | identical nine authors | |
+
+**They are the same lineage.** v51 descends from the 2945 Farm. Measured
+identically over 5 seeds, their order volumes agree to three significant
+figures (HIRE 1,327 vs 1,328; BUY_ANIMAL 61 vs 60; BUY_LAND 10 vs 10).
+
+So this pair hedges **seat and world variance, not strategy risk**. The only
+genuinely distinct-lineage public agent obtainable — 16_rc5 (boatlee) — is
+**0-232 to both**, median  against their , and cannot serve as a hedge.
+
+A genuinely diversifying second slot does not exist in the legally reusable
+public set. Stating that is more useful than pretending otherwise.
+
+## What would have been submitted, and what is not claimed
+
+The pair finishes at **-** median on real ladder-derived worlds, the
+band observed for 2,900+ rated agents. Supportable claim: **competitive with
+reproduced 2,800-3,000-level public agents, above every other agent legally
+reproducible.** Not claimed: first place. Our own submissions scored 138.5-348.1
+against a 3,052.1 leader, and the league that produced this recommendation is
+one author's family plus one weak outsider.
+
+Kaggle submissions are closed (HTTP 400, empty body, list unchanged). Nothing
+here was submitted and nothing here can change the result.

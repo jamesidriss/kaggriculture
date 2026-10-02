@@ -148,3 +148,54 @@ non-public notebooks used. Behavioural analysis of **public** replays was
 performed and is reported in `reports/`, but no agent source was reconstructed
 from observed behaviour. Submission gating was never circumvented.
 
+
+
+---
+
+## 7. Final-pass additions (branch inal/meta-resolution)
+
+### Postmortem HEDGE
+
+- **Artifact:** postmortem_hedge/main.py
+- **Agent:** The 2945 Farm v9/3, by thomastschinkel
+- **Source:** https://www.kaggle.com/code/thomastschinkel/the-2945-farm-96-vs-the-top-10-public-bots
+- **Licence:** Apache-2.0, upstream attribution retained in-file
+- **SHA256:** fee70e9daaebeae0737a880f1df8f1c60d0783c59af620136cc0d28ef482bc7
+- **Modifications:** **none**, byte-identical to the notebook cell.
+- **Not a diversifying hedge.** Measured by enchmark/lineage_check.py: the
+  PRIMARY and this artifact share 1,205 identifiers, have containment 0.818,
+  and contain one contiguous identical run of **3,352 tokens**, with an
+  identical nine-author credit list. They are the same lineage.
+
+### Digest convention (changed this pass)
+
+core.autocrlf=true had been rewriting every artifact to CRLF in the working
+tree while all recorded digests described the LF blob, so **no** recorded
+SHA256 matched the file on disk. Fixed by marking every artifact directory
+-text in .gitattributes and normalising 50 files to LF.
+
+**Canonical digest definition from now on: SHA256 over the bytes as committed
+to Git (LF line endings)**, which is what git cat-file returns and what any
+Linux checkout reproduces. Two store keys changed as a result:
+
+| agent | old (CRLF) digest | canonical (LF) digest |
+|---|---|---|
+| v43 recovering-lost-harvests | 919fc1d61050cd96… | 3abe0ca715ba1864… |
+| v44 same-turn-sale-race | 797d9bca309d481e… | e370bd8a9d0f377… |
+
+enchmark/normalize_artifacts.py --check is a release gate that compares every
+tracked artifact against its Git blob, and enchmark/build_catalog.py
+regenerates 
+esearch/FINAL_PUBLIC_AGENT_CATALOG.csv with **recomputed**
+digests — the previous hand-maintained catalog contained placeholder values
+that described nothing.
+
+### Final-week search (NO_GO, recorded for provenance)
+
+Pulled from public Kaggle Code and examined: statma/kaggriculture-herd-safe-sale-window-submit,
+haideptry/the-shepherds-ledger, hanifnoerrofiq/pioneers-of-kaggle-town,
+wzhengbiao/kaggriculture-hybu-submit, yasutakababa/kaggriculture-late-purchase-v16-submit,
+sunyuxiang136/kaggriculture-opening-stock-v8. None yielded a legally reusable,
+self-contained, licensed agent artifact. Where a licence could not be
+determined, no licence is asserted. See 
+eports/RETRACTIONS.md.

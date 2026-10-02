@@ -1,0 +1,36 @@
+{
+  "parent_sha256": "c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891",
+  "parent": "C:\\Users\\James\\kaggriculture\\opponents\\meta\\ahmedberatozer-v51-lean-flock.py",
+  "challengers": [
+    {
+      "tag": "challenger_001",
+      "file": "challenger_001_sell_lead_true_to_false.py",
+      "flag": "sell_lead",
+      "from": "True",
+      "to": "False",
+      "sha256": "2d5d98c93b6fbe93469047c3fe848576488eacbabfd4c30fdfabbf5525df51bb",
+      "path": "challengers/challenger_001_sell_lead_true_to_false.py",
+      "hypothesis": "H1 sale timing, primary lever. sell_lead is the only market layer the agent actually runs. If switching it OFF helps, the agent is leading its own sales into its own competition and the missing piece is a proper market-order model rather than a one-turn lead."
+    },
+    {
+      "tag": "challenger_002",
+      "file": "challenger_002_terminal_liquidation_false_to_true.py",
+      "flag": "terminal_liquidation",
+      "from": "False",
+      "to": "True",
+      "sha256": "f5c254f9598af0a6bb358f7bf41936ef96d12c0b4090a936e600aa7ee20970d0",
+      "path": "challengers/challenger_002_terminal_liquidation_false_to_true.py",
+      "hypothesis": "H1 sale timing, endgame lever. Off in the live config. If switching it ON helps, unsold shed stock is worth more converted at step >= 718, which is precisely where 59% of top-two games are decided."
+    },
+    {
+      "tag": "challenger_003",
+      "file": "challenger_003_clamp_sells_false_to_true.py",
+      "flag": "clamp_sells",
+      "from": "False",
+      "to": "True",
+      "sha256": "259fb772ee0547ed1f2a29b2752b9d1064aed9ff885b028341414e5d8945fcba",
+      "path": "challengers/challenger_003_clamp_sells_false_to_true.py",
+      "hypothesis": "H1 sale sizing. Off in the live config. If clamping helps, the agent is overselling into a thin market and losing price on volume."
+    }
+  ]
+}

@@ -4,7 +4,16 @@ Supersedes the previous version, whose counterfactual was executed while
 Barnyard was not actually playing (see `reports/HARNESS_SIGNATURE_AUDIT.md`).
 Everything below is re-measured on the corrected harness.
 
-## The inversion
+## The inversion> **Correction (final pass).** This report originally rested on a
+> counterfactual executed while Barnyard was believed not to be playing. That
+> belief was wrong (`reports/RETRACTIONS.md` R1): Barnyard always played, and the
+> 0-144 record below is genuine. The counterfactual has been re-run on the
+> canonical harness and the conclusion is unchanged — the patched agent
+> finishes at **$74,991, identical to the dollar across 24 games** — but it is
+> now measured rather than carried forward. Barnyard is also ineligible as a
+> redistributable champion because the author declared no licence.
+
+
 
 Barnyard V7 carries the highest *published* score of any Kaggriculture agent
 (3034.8). Under the current environment it is the weakest serious agent in the

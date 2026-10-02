@@ -29,6 +29,17 @@ bank). sunrise-v5 beat opponents up to ~$6.9k and lost every game above $10k.
 The five submissions and their scores are live on the competition page; the
 ratings above are the official `publicScore` values read at audit time.
 
+## 1b. Reconfirmation on the corrected harness
+
+Because a harness bug previously produced a false 72-win record for this very
+agent, the 0-792 result was re-verified rather than assumed. Sunrise is a
+one-argument agent, and the retracted explanation ("Kaggle requires two
+arguments") was false; what is true is that our own diagnostics invoked agents
+directly. Re-run through the canonical runner with the behavioural playability
+probe: **719 invocations, seat status DONE in both seats, a non-trivial action
+trace, and real market activity.** Sunrise genuinely plays, and genuinely loses.
+See `reports/RETRACTIONS.md` R1.
+
 ## 2. Corrected local record
 
 Real ladder seeds, 12 per pool, both seats, official `Environment.run`,
