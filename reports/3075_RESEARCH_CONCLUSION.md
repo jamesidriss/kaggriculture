@@ -88,9 +88,21 @@ ladder points** over v49, and within **~25** of the 2945 Farm.
 
 ## 5. What is the current champion?
 
-`ahmedberatozer-v51-lean-flock`, Apache-2.0, verbatim, unmodified.
-sha256 `c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891`
-461,739 bytes. Unchanged by this phase.
+**`C001_room_guard`** — `ahmedberatozer-v51-lean-flock` with **exactly one**
+declared change: the agent's own `_SETTINGS` flag `room_guard` flipped
+`False -> True`.
+
+sha256 `a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8`
+461,738 bytes. Apache-2.0 (inherited), NOTICE retained. Parent sha256
+`c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891`, preserved at
+`postmortem_champion/main.py` and `champions/research/C000_v51/`.
+
+The one-line change is verified mechanically, not asserted: the candidate and
+the parent are byte-identical outside the `_SETTINGS` literal. Every other one
+of 461,738 bytes matches.
+
+**This is the first promotion in this project that rests on a large, replicated
+effect rather than a marginal one.**
 
 ## 6. What is the current ShadowRating?
 
@@ -99,93 +111,183 @@ precision, and the instrument that would produce it refuses to.
 
 ## 7. What is the uncertainty?
 
-Two independent sources, both large:
+Three sources, all quantified:
 
-1. **Calibration**: 2 informative observations. The absolute ladder position of
-   the champion is bounded only loosely, by the 2945 Farm notebook figure
-   (self-reported, not a verified ladder score) and by a lower bound from
-   beating the known-rated sunrise series 100%.
-2. **Effect size**: the only discriminating matchup is v51 vs Farm at
-   52.37%, where the mean paired margin is **$28** on banks near $100,000 and
-   **59% of games are decided by under $1,000**. Detecting an improvement
-   smaller than ~2 points requires ~1,000 paired games per candidate.
+1. **Calibration.** 2 informative observations of 41. No point rating is
+   published. The one thing that *can* be stated as a **bound**: an 80.91% win
+   rate over the previous champion sits far past the top of the fitted curve,
+   which saturates at 0.995 for a 200+ point gap. So the new champion is **at
+   least 275 ladder points** above the old one. A bound, not a point estimate.
+
+2. **Effect size on the top matchup.** +3.23 points, measured on 992 paired
+   worlds with Wilson [0.5113, 0.5732] and p = 0.0083. The interval's lower
+   bound clears 50%, so the sign is solid; its width means the magnitude could
+   plausibly be half what is reported.
+
+3. **World coverage.** 1,984 fresh ladder-derived elite seeds across the
+   decisive legs, plus 96 unseen seeds for the independent lineage, plus 96
+   sealed/holdout seeds. Broad, but a single environment era
+   (`kag-1327-2026-09`) and a single meta composition.
 
 ## 8. Direct win rate vs v51?
 
-**v51 IS the champion**, so this is n/a. The nearest thing to a test is the new
-independent lineage: **v51 beats the four strongest `rayk` agents 64-0**, both
-seats, 0 errors.
+**80.91%, and replicated.** Two independent runs, disjoint seeds:
+
+| run | record | n | win rate (decided) | Wilson |
+|---|---|---|---|---|
+| decisive leg 1 | 638-138-216 | 992 | **82.22%** | [0.7937, 0.8475] |
+| promotion leg B | 657-155-180 | 992 | **80.91%** | [0.7807, 0.8347] |
+
+Exact binomial p = 1.4e-77 and McNemar p = 1.4e-77 on discordant worlds. Seat
+split 320 P0 / 318 P1 and 326 P0 / 331 P1 — no seat effect.
+
+The 180-216 exact ties are **inert worlds**, not invalid games: the guard never
+fires on them. See the validity defect in §13.
 
 ## 9. Direct win rate vs Farm?
 
-**1039-945 over 1,984 paired games = 52.37%.**
-Wilson 95% **[0.5017, 0.5456]**, exact binomial **p = 0.0368**.
-No seat effect (McNemar p = 0.901). Mean paired margin $28, bootstrap 95% CI
-[−$63, $118]. Sole decisive constraint in the entire ladder.
+**54.24%** — 537-453-2 of 992, Wilson **[0.5113, 0.5732]**, p = 0.0083.
+
+The number that matters is the *paired* comparison on identical worlds:
+
+| agent | vs 2945 Farm | Wilson |
+|---|---|---|
+| previous champion (v51 verbatim) | 506-486 = **51.01%** | [0.4790, 0.5411] |
+| **C001_room_guard** | 537-453 = **54.24%** | [0.5113, 0.5732] |
+
+**+3.23 points**, and mean cash margin flips from **−$26.9 to +$33.8**.
+
+Both legs pass the pre-declared >52% threshold against each top agent.
+
+Additional evidence:
+
+| gate | record | n | result |
+|---|---|---|---|
+| SEALED FINAL (run once) | 34-14-0 | 48 | **70.83%**, Wilson [0.5682, 0.8176] |
+| HOLDOUT | 30-18-0 | 48 | 62.50%, Wilson [0.4836, 0.7478] |
+| INDEPENDENT LINEAGE (4 MIT agents) | 768-0-0 | 768 | **100.00%**, Wilson [0.9950, 1.0000] |
+
+**0 broken games in every leg**, ~3,800 paired games total.
 
 ## 10. Worst matchup?
 
-**vs `farm_2945_original`, 52.37%.** Everything else is decisive: the four
-independent-lineage agents at 0-64, the rest of the league effectively total.
+**vs `farm_2945_original`, 54.24%.** The previous champion was 51.01% against
+the same opponent on the same worlds, so this is now a genuine edge rather
+than a coin flip. Everything else is decisive: 80.91% vs v51, 100% vs the four
+independent-lineage agents.
 
 ## 11. Worst shop/world regime?
 
-**Not yet characterised.** The top-two split is even across the rating strata we
-can compute (`elite_3000+` 51.4%, `strong_2900_2999` 52.5%), so neither dominates
-a regime and the "complementary hedge" reading is unsupported. A proper
-shop-regime analysis needs the `turns` table populated, which was not completed
-this phase.
+**Not yet characterised.** The change is a *guard*, and its behaviour is
+uniform in the one respect that was measured: 216-180 of 992 games were exact
+ties, and in the rest it wins ~81-82% regardless of seat. But a per-regime
+breakdown needs the `turns` table populated from replays, which was not
+completed this phase. No regime claim is made.
 
 ## 12. Best challenger tested?
 
-Three single-variable settings ablations of the reference's own `_SETTINGS`
-(the layer that actually runs, not the unused `DEFAULT_SETTINGS`):
+**`C001_room_guard`, and it was ACCEPTED.**
 
-| candidate | cash vs starter | verdict |
+How it was found, in order:
+
+1. **Exhaustive grid search over the reference's own layer stack.** Nine boolean
+   layer switches, six of them off in the shipped file. The reachable space is
+   2⁹ = 512, small enough to enumerate, so this was a grid search rather than an
+   evolutionary one — evolution over 512 points would be strictly worse and
+   would add a stochastic failure mode.
+2. **A sampling bug that looked like a result.** The first screen scored
+   **0.0000 on all 64 candidates**. Cause: `combos[:64]` took a *lexicographic
+   prefix* of `itertools.product`, so all 64 shared `hand_align=False`. A prefix
+   of an enumeration is a biased slice, and the uniform-looking 0.0000 hid it
+   completely. Fixed to sample evenly across the index set, with an explicit
+   abort if any single gene is degenerate in the sample.
+3. **Screen result: 57 stacks, none better than the parent.** Best candidate
+   scored 0.5000 over 16 games; the parent scores 0.5237 over 3,968 against the
+   same opponent. So the screen's honest answer is *no improvement*, and 16
+   games cannot resolve a 2-point effect anyway.
+4. **The one surviving hypothesis.** Four candidates survived a 0.40 cut. They
+   differed at random on eight of nine genes — that is what noise selection looks
+   like — but exactly one gene was common to all four: `room_guard=True`, which
+   the parent has **off**, with no evidence ever offered for that choice.
+5. **A proper decisive test.** One gene changed, the edit verified post-hoc to
+   touch nothing outside the settings literal, head-to-head against the parent
+   so the comparison is world-paired, both seats, 992 games per leg, and two
+   disjoint seed halves.
+
+## 13. Why was it accepted?
+
+All five promotion legs passed, with thresholds declared in the log **before**
+the run (`pipeline/promote.py`):
+
+| leg | criterion | result |
 |---|---|---|
-| `sell_lead` True→False | $182,746 | worse than the $182,861 reference |
-| `terminal_liquidation` False→True | $182,861 | **no-op** — identical cash, trace and order count |
-| `clamp_sells` False→True | $182,627 | worse |
+| A artifact | one declared change, byte-verified, unique digest, licence | PASS |
+| B top meta | > 52% vs **each** top agent, unseen worlds | **80.91%** / **54.24%** |
+| C sealed final | ≥ 50%, run once, never tuned on | **70.83%** |
+| D independent | ≥ 45% vs the MIT lineage | **100.00%** (768 games) |
+| E runtime | playable, latency inside the 1 s act timeout | PASS |
 
-## 13. Why accepted / rejected?
+The sealed-final threshold is deliberately weaker and is labelled a
+**regression detector**: 30 seeds cannot resolve a 3-point effect, and claiming
+they could would be the same mistake in a new place. It answers "did this
+collapse on unseen worlds?" — it did not, it scored 70.83%.
 
-**Rejected — none promoted.** Three reasons, all measured:
+### A validity-rule defect found and corrected
 
-1. Two of the three reduce final cash. The reference is at a local optimum on
-   its own levers; the layers it runs are the ones that pay.
-2. `terminal_liquidation` is **inert**: enabling it changes nothing. The
-   end-of-season liquidation hypothesis is NO_GO not because it was tested and
-   failed, but because the mechanism does not fire. Same failure shape as
-   Barnyard's unreachable price table.
-3. The screening sample was far too small to resolve a 2-point effect, so
-   neither promotion nor rejection could be justified on it. No promotion is
-   claimed on that basis.
+`benchmark/tournament.py` marks a game **invalid** whenever both sides finish
+with identical cash, and records the reason as *"exact tie (duplicate-content
+signal)"*. That rule came from this project's worst historical error — fake
+self-play, where two content-identical files were scored against each other.
+
+It is a heuristic about a *different* situation, and here it was wrong in the
+direction that flatters the experiment:
+
+- the two files have **different SHA256 digests**, so this is not self-play;
+- the only change is one boolean in a settings literal;
+- on worlds where that flag never fires, both agents follow identical
+  trajectories and finish with identical cash.
+
+So the rule removed exactly the worlds where the change had **no effect**. Left
+uncorrected it reported "776 valid, 216 invalid, 82.22%" and would have hidden
+that 216 of 992 games were no-ops.
+
+`policy/search/room_guard_verdict.py` reclassifies them as inert worlds, keeps
+every completed game, and reports the win rate both over decided games and as a
+share of all games. **The verdict survives the correction**: 638-138-216 of 992,
+all completed, 0 broken, 0 under-called.
+
+This is a real defect in the canonical runner and it is recorded rather than
+worked around. Fixing it in the runner itself is the correct follow-up, and
+would change the meaning of `valid` for every future experiment.
+
+### What was rejected, and why it is informative
+
+Three earlier single-variable ablations were **rejected**: `sell_lead` off
+($182,746 vs $182,861), `clamp_sells` on ($182,627), and `terminal_liquidation`
+on, which is **inert** — byte-identical cash and trace. Six of the nine layers
+are off in the shipped file and five of them stay off. `room_guard` was the one
+whose off-state turned out to be a mistake.
 
 ## 14. Did imitation learning help?
 
-**Not run, and deliberately so.** The prerequisite is a labelled expert
-dataset with macro-level labels, which requires the `turns` table populated from
-replays. The project brief's own ordering places imitation after the simulator
-and the shadow ladder, and the shadow ladder is not yet calibrated. Starting
-imitation now would produce an unevaluable model.
+**Not run, and deliberately so.** The prerequisite is a labelled expert dataset
+with macro-level labels, which requires the `turns` table populated from replays.
+The brief's own ordering places imitation after the simulator and the shadow
+ladder, and the shadow ladder is not yet calibrated. Starting imitation now would
+produce an unevaluable model.
 
 **NO_GO for this phase, stated rather than faked.**
 
 ## 15. Did evolutionary search help?
 
-**No improvement.** A bug was found and fixed first, which is itself the
-result worth recording:
+**No — and it was the wrong tool, on purpose.** The reachable layer space is
+2⁹ = 512, which is small enough to enumerate completely, so a grid search was
+used instead. Over 512 points an evolutionary search is strictly worse and adds a
+failure mode to a programme that already has too many.
 
-The first search scored **0.0000 on all 64 candidates**. Cause:
-`combos[:64]` took a **lexicographic prefix** of `itertools.product`, so all 64
-had `hand_align=False`. A prefix of an enumeration is a biased slice, and the
-uniform-looking result hid it. Fixed to sample evenly across the index set with
-an explicit abort if any single gene is degenerate — the corrected run shows
-every gene on in 23-30 of 48.
-
-Exhaustive grid search was chosen over evolution because the reachable layer
-space is 2⁹ = 512, small enough to enumerate completely; a stochastic search
-over 512 points would be strictly worse and would add a failure mode.
+What the grid search produced is the more valuable result: it located the one
+gene whose shipped-off state was never justified, and it did so by *not*
+believing its own uniformly-zero first run.
 
 ## 16. Did self-play help?
 
@@ -193,56 +295,64 @@ over 512 points would be strictly worse and would add a failure mode.
 
 ## 17. Is the agent 3075-ready?
 
-**NO.**
-
-The strict definition requires calibrated rating evidence consistent with >3075.
-Three legs fail:
+**NO.** The gate is not softened.
 
 | leg | status |
 |---|---|
-| calibrated rating evidence >3075 | **fails** — calibration inadequate, 2 informative observations |
-| positive vs v51 | n/a (v51 is the champion) |
-| positive vs Farm | **passes, barely** — 52.37%, p=0.0368 |
-| robust vs independent lineages | **passes** — 64-0 vs four MIT-licensed agents |
-| both seats | passes |
-| multiple world regimes | **not established** |
-| sealed final | passes |
-| zero runtime/schema failures | passes — 2,880 calls, 0 violations |
-| exact artifact frozen | passes |
+| calibrated rating evidence >3075 | **FAILS** — calibration inadequate, 2 informative observations of 41 |
+| positive vs v51 | **PASSES** — 80.91%, Wilson [0.7807, 0.8347] |
+| positive vs Farm | **PASSES** — 54.24%, Wilson [0.5113, 0.5732] |
+| robust vs independent lineages | **PASSES** — 100%, 768 games |
+| both seats | PASSES — seat splits 326/331 and 320/318 |
+| multiple world regimes | **NOT ESTABLISHED** |
+| sealed final | **PASSES** — 70.83%, run once |
+| zero runtime/schema failures | PASSES — 0 broken in ~3,800 paired games |
+| exact artifact frozen | PASSES — digest verified against `CURRENT.json` |
 
-The gate is not softened. **NOT YET 3075-READY.**
+One leg fails outright and one is not established. **NOT YET 3075-READY.**
 
 ## 18. What exact evidence is still missing?
 
-1. **A mid-strength opponent with a known public score.** This is the single
-   highest-value missing item. With one such agent the curve stops saturating
-   and ShadowRating becomes computable. Everything else is secondary.
-2. **A stronger independent lineage.** Four agents from one author, all far
-   below the champion, give bounds but no resolution.
-3. **World-regime analysis**, which needs the `turns` table populated.
-4. **A verified fast simulator**, without which search budgets stay at ~50
-   candidates instead of thousands.
+1. **A mid-strength opponent with a known public score.** Still the single
+   highest-value gap, and it is unchanged. It is what would un-censor the
+   calibration curve.
+2. **World-regime analysis**, needing the `turns` table populated.
+3. **A stronger independent lineage.** Four agents from one author, all far
+   below the champion. The 100% figure is inherited from v51, not earned by the
+   change.
+4. **A verified fast simulator.** Absent, so search budgets stay near 100
+   candidates. The other five off-layers in the same 2⁹ space deserve testing at
+   a resolution the official runtime cannot afford.
 
 ## 19. What artifact is submission-ready right now?
 
-`submission_ready/main.py` — byte-identical to `postmortem_champion/main.py`,
-with `NOTICE.md` and `METADATA.txt` alongside. Already licence-clean, runtime-
-validated, and digest-verified. If submissions reopen, it is submitted as-is.
+`submission_ready/main.py` — sha256
+`a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8`,
+byte-identical to `champions/research/C001_room_guard/main.py`, with
+`NOTICE.md` and `METADATA.txt` alongside. Licence-clean, runtime-validated,
+digest-verified. If submissions reopen, it is submitted as-is.
 
 ## 20. Exact SHA256 and Git commit
 
 ```
-PRIMARY  submission_ready/main.py
-         c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891
-         461,739 bytes, Apache-2.0, verbatim, 0 modifications
+CHAMPION  submission_ready/main.py  ==  champions/research/C001_room_guard/main.py
+         a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8
+         461,738 bytes
+         = ahmedberatozer-v51-lean-flock + room_guard:True
+         Apache-2.0, NOTICE retained, EXACTLY ONE declared modification,
+         verified byte-for-byte outside the settings literal
 
-HEDGE    postmortem_hedge/main.py
+PARENT    postmortem_champion/main.py  ==  champions/research/C000_v51/main.py
+         c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891
+         the previous champion, preserved unchanged
+
+HEDGE     postmortem_hedge/main.py
          bfee70e9daaebeae0737a880f1df8f1c60d0783c59af620136cc0d28ef482bc7
          The 2945 Farm v9/3, Apache-2.0, verbatim
-         SAME LINEAGE as the primary - 1,205 shared identifiers,
+         SAME LINEAGE as both of the above - 1,205 shared identifiers,
          containment 0.818, one identical 3,352-token run
 
-GIT      see the final commit recorded in reports/RESEARCH_DASHBOARD.md
+GIT       see reports/RESEARCH_3075_CHECKPOINT.md for the final commit
 ```
 
 ---
@@ -255,27 +365,43 @@ it reframes the target. **A 3075 rating implies winning ~99% of games**: at a
 "reach 3075" is not "be somewhat better than the field"; it is "be effectively
 untouchable".
 
-The champion already wins ~100% of every matchup except the 2945 Farm, and
-loses no matchup to the new independent lineage. That is the right *shape* for
-3075. What is missing is not a strategy but a **measurable ladder position**,
-and that requires a mid-strength reference point the public data does not
-currently provide.
+The promoted agent now has the right *shape* for that: it wins 100% of every
+independent-lineage matchup, ~81% against the previous champion, and is the
+only agent measured that is *significantly* above 50% against the 2945 Farm.
+What is still missing is a measurable ladder position, which needs a
+mid-strength reference point the public data does not currently provide.
 
 ## The research engine that now exists
 
 ```
 data_pipeline/   DuckDB+Parquet lake, idempotent ingestion, quality gate
 simulation/      env snapshot (hashed), differential harness, official backend
-shadow_ladder/   calibration curve, identifiability-gated rating
-policy/search/   exhaustive gene search with degeneracy aborts
-pipeline/        run_research, dashboards, freeze_submission
+shadow_ladder/   calibration curve, identifiability-gated rating, generated report
+policy/search/   exhaustive gene search, decisive single-variable test,
+                 corrected validity classification
+pipeline/        run_research, promote (gated), promote_execute, dashboards,
+                 freeze_submission
+tests/           test_research_gate.py - 111 checks, all passing
 simcomp/         reusable competition framework
-submission_ready/ frozen artifact + metadata
-champions/research/C000_v51/  immutable champion snapshot
+submission_ready/ frozen artifact + metadata + NOTICE
+champions/research/  C000_v51 (preserved) -> C001_room_guard (current)
 ```
 
-The pipeline is idempotent, resumable, and **cannot auto-promote**. A nightly
-run may never change what gets submitted; that is `pipeline/promote.py` and it
-is gated separately.
+The pipeline is idempotent, resumable, and **cannot auto-promote**: promotion is
+a separate script whose thresholds are declared before it runs and whose verdict
+is recorded whether it passes or fails.
+
+## Known defects this phase exposed, not fixed
+
+1. **`benchmark/tournament.py` misclassifies legitimate exact ties as invalid
+   games.** Found and corrected in analysis (§13), but the runner itself is
+   unchanged, so every future experiment inherits the same bias. This is the
+   highest-priority engineering follow-up.
+2. **No fast simulator**, so search resolution is bounded by the official
+   runtime at roughly 100 candidates per phase instead of thousands. The other
+   five off-layers in the same 2⁹ space are untested at the resolution needed
+   to trust a marginal result.
+3. **The `turns` table is empty**, so no feature store, no regime analysis, no
+   imitation data.
 
 Resume after an interruption from `reports/RESEARCH_3075_CHECKPOINT.md`.

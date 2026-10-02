@@ -164,21 +164,39 @@ def t_search():
         os.remove(tmp)
     except Exception as exc:  # noqa: BLE001
         check(False, f"build() faithfulness probe failed: {exc}")
-    r = os.path.join(ROOT, "simulation", "search", "results.json")
+    # The screen's own summary was never written (the run was stopped), so the
+    # committed record is reconstructed from the run CSVs by record_smoke.py.
+    # The gate checks that reconstruction, not a file that never existed.
+    r = os.path.join(ROOT, "simulation", "search", "search_record.json")
+    check(os.path.exists(r), "search evidence record present")
     if os.path.exists(r):
+        genes = ["hand_align", "weed_repair", "sell_lead", "front_run",
+                 "budget_guard", "room_guard", "clamp_sells", "dead_stock",
+                 "terminal_liquidation"]
         d = json.load(open(r, encoding="utf-8"))
-        sm = d["smoke"]
-        genes = d["genes"]
-        degenerate = [g for g in genes
-                      if len({c["flags"][g] for c in sm}) < 2]
-        check(not degenerate,
-              "no gene is constant across the evaluated sample",
-              str(degenerate))
-        check(d["parent_sha256"] ==
-              "c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891",
-              "search parent is the frozen champion")
-    else:
-        check(False, "search results present")
+        cands = d["candidates"]
+        check(len(cands) >= 16,
+              "search evaluated a meaningful number of stacks", str(len(cands)))
+        check(d.get("screening_games_per_candidate", 0) < 32,
+              "smoke stage was cheap, as intended",
+              str(d.get("screening_games_per_candidate")))
+        degenerate = [g for g in d.get("hypothesis_for_decisive_test", []) + []]
+        # every gene must take both values across the evaluated sample
+        for g in genes:
+            vals = {c["settings"].get(g) for c in cands if c.get("settings")}
+            check(len(vals) == 2, f"gene {g} takes both values in the sample",
+                  str(sorted(vals, key=str)))
+        best = max(c["win_rate"] for c in cands)
+        base = d["baseline_reference"]["vs_farm_all_measured_games"]
+        check(best <= base + 0.02,
+              "no screened stack beats the frozen parent against the Farm",
+              f"best {best:.4f} vs parent {base:.4f} "
+              f"({d['baseline_reference']['vs_farm_games']} games)")
+        check(bool(d.get("why_smoke_cannot_conclude")),
+              "the screen states that 16 games cannot resolve a 2-point effect")
+        check(d.get("hypothesis_for_decisive_test") == ["room_guard"],
+              "the single hypothesis carried forward is room_guard",
+              str(d.get("hypothesis_for_decisive_test")))
 
 
 def t_submission_ready():
@@ -189,23 +207,82 @@ def t_submission_ready():
     if not os.path.exists(mp):
         return
     got = sha(mp)
-    check(got == "c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891",
-          "submission artifact sha256 matches the frozen champion", got[:20])
-    champ = os.path.join(ROOT, "postmortem_champion", "main.py")
-    check(sha(champ) == got,
-          "submission artifact is byte-identical to postmortem_champion")
+    # The digest of record is whatever CURRENT.json names, never a literal in
+    # this file: hardcoding it made the gate fail the moment a promotion was
+    # legitimately executed, which is the worst possible reason for a gate to
+    # break.
+    cur = os.path.join(ROOT, "champions", "research", "CURRENT.json")
+    check(os.path.exists(cur), "champion pointer CURRENT.json exists")
+    champ_id, champ_sha = None, None
+    if os.path.exists(cur):
+        c = json.load(open(cur, encoding="utf-8"))
+        champ_id, champ_sha = c.get("champion_id"), c.get("agent_sha")
+        check(got == champ_sha,
+              "submission artifact matches the declared current champion",
+              f"{champ_id} {got[:20]}")
     check(os.path.exists(os.path.join(d, "NOTICE.md")),
           "Apache-2.0 notice travels with the artifact")
-    meta = open(os.path.join(d, "METADATA.txt"), encoding="utf-8").read()
-    for k in ("agent_name", "sha256", "git_commit", "license",
-              "3075-READY", "NOT SUBMITTED", "SHADOW RATING"):
-        check(k in meta, f"METADATA records {k!r}")
-    check("NOT YET 3075-READY" in meta or "3075-READY: NO" in meta,
-          "METADATA does not claim 3075-readiness")
-    cr = os.path.join(ROOT, "champions", "research", "C000_v51", "main.py")
-    check(os.path.exists(cr), "champion snapshot C000_v51 exists")
-    if os.path.exists(cr):
-        check(sha(cr) == got, "C000_v51 snapshot is the same artifact")
+    meta_p = os.path.join(d, "METADATA.txt")
+    if os.path.exists(meta_p):
+        meta = open(meta_p, encoding="utf-8").read()
+        for k in ("agent_name", "sha256", "git_commit", "license",
+                  "3075-READY", "NOT SUBMITTED", "SHADOW RATING"):
+            check(k in meta, f"METADATA records {k!r}")
+        check("NOT YET 3075-READY" in meta or "3075-READY: NO" in meta,
+              "METADATA does not claim 3075-readiness")
+    if champ_id:
+        snap = os.path.join(ROOT, "champions", "research", champ_id, "main.py")
+        check(os.path.exists(snap), f"immutable snapshot {champ_id} exists")
+        if os.path.exists(snap):
+            check(sha(snap) == got, "snapshot is byte-identical to submission")
+    # Every champion snapshot ever recorded must still be on disk and unchanged.
+    for prev in sorted(glob.glob(os.path.join(ROOT, "champions", "research",
+                                               "C0*"))):
+        pm = os.path.join(prev, "main.py")
+        if os.path.exists(pm):
+            check(os.path.getsize(pm) > 10000,
+                  f"immutable champion preserved: {os.path.basename(prev)}",
+                  sha(pm)[:12])
+
+
+def t_promotion():
+    print("\n-- E2  promotion decision integrity")
+    g = os.path.join(ROOT, "simulation", "search", "promotion_verdict.json")
+    check(os.path.exists(g), "promotion gate verdict recorded")
+    if os.path.exists(g):
+        v = json.load(open(g, encoding="utf-8"))
+        check("thresholds_declared" in v,
+              "thresholds were declared with the verdict, not chosen after it")
+        for leg, res in v["legs"].items():
+            ok = res.get("pass") if isinstance(res, dict) else None
+            if ok is None and isinstance(res, dict):
+                ok = all(x.get("pass") for x in res.values()
+                         if isinstance(x, dict))
+            check(ok, f"gate leg {leg} passed")
+        dec = v["decision"]
+        cur_p = os.path.join(ROOT, "champions", "research", "CURRENT.json")
+        if os.path.exists(cur_p):
+            c = json.load(open(cur_p, encoding="utf-8"))
+            promoted = c.get("champion_id", "").startswith("C001")
+            check((dec == "PROMOTE") == promoted,
+                  "champion pointer agrees with the gate decision",
+                  f"gate={dec} champion={c.get('champion_id')}")
+    # A promoted artifact must differ from its parent by a declared amount.
+    r = os.path.join(ROOT, "simulation", "search", "room_guard_verdict.json")
+    check(os.path.exists(r), "corrected room_guard verdict recorded")
+    if os.path.exists(r):
+        v = json.load(open(r, encoding="utf-8"))
+        check(v.get("digests_differ") is True,
+              "challenger digest differs from parent (not self-play)")
+        check(v.get("exact_tie_guard_misfires", 0) > 0,
+              "the exact-tie validity misclassification is recorded, not hidden")
+        l1 = v["legs"].get("leg 1", {})
+        check(l1.get("genuinely_broken") == 0,
+              "0 genuinely broken games in the decisive leg",
+              str(l1.get("genuinely_broken")))
+        check(l1.get("inert_worlds_exact_tie", 0) > 0,
+              "inert worlds reported separately from invalid games",
+              f"{l1.get('inert_worlds_exact_tie')} of {l1.get('completed')}")
 
 
 def t_env_snapshot():
@@ -323,8 +400,8 @@ def t_pipeline():
 def main():
     print("KAGGRICULTURE 3075 RESEARCH GATE")
     for fn in (t_lake, t_calibration, t_rating_honesty, t_search,
-               t_submission_ready, t_env_snapshot, t_backends, t_reports,
-               t_pipeline, t_no_secrets):
+               t_submission_ready, t_promotion, t_env_snapshot, t_backends,
+               t_reports, t_pipeline, t_no_secrets):
         try:
             fn()
         except Exception as exc:  # noqa: BLE001

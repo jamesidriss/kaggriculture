@@ -1,0 +1,61 @@
+RESEARCH CHAMPION C001_room_guard
+=====================================
+name            : v51-lean-flock + room_guard
+parent          : ahmedberatozer-v51-lean-flock
+parent_sha256   : c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891
+sha256          : a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8
+bytes           : 461738
+git_commit      : 57a9ad605424b0d9959579244cd96ca3348cd3d0
+promoted_utc    : 2026-10-02T09:48:29Z
+
+ORIGIN AND LICENCE
+  This is a DERIVED artifact. It is the published Apache-2.0 agent
+  ahmedberatozer-v51-lean-flock with exactly ONE declared change: the live
+  `_SETTINGS` flag `room_guard` flipped False -> True.
+  Verified mechanically: the candidate differs from the parent ONLY inside the
+  `_SETTINGS` literal; every other byte of a 461,738-byte file is identical.
+  Apache-2.0 permits modification; NOTICE and attribution are retained in
+  submission_ready/NOTICE.md. No source is vendored from a private origin.
+
+THE CHANGE
+  `room_guard` is one of nine boolean layer switches in the agent's own
+  configuration. Six were switched off in the shipped file. The off state was
+  never justified by evidence: the published agent carries it off, and this
+  project's search over the reachable 2^9 layer space found that turning it on
+  is worth +3.23 points of win rate against the strongest opponent.
+
+EVIDENCE (paired, both seats, 0 broken games in every leg)
+  vs v51 (parent)            657-155-180 of 992   80.91%  Wilson [0.781, 0.835]
+  vs 2945 Farm               537-453-2   of 992   54.24%  Wilson [0.511, 0.573]
+  vs parent, replication run 638-138-216 of 992   82.22%  Wilson [0.794, 0.848]
+  parent vs 2945 Farm        506-486-0   of 992   51.01%  Wilson [0.479, 0.541]
+      -> the change is worth +3.23 points against the top opponent on identical
+         worlds, and flips mean cash margin from -$26.9 to +$33.8.
+  SEALED FINAL (run once)    34-14-0     of  48   70.83%  Wilson [0.568, 0.818]
+  HOLDOUT                    30-18-0     of  48   62.50%  Wilson [0.484, 0.748]
+  INDEPENDENT LINEAGE        768-0-0     of 768  100.00%  Wilson [0.995, 1.000]
+      four MIT-licensed agents from an unrelated author.
+  INERT WORLDS              216 of 992 (21.8%) ended in an exact tie: the guard
+      never fires on those worlds. Those are findings, not invalid games; see
+      policy/search/room_guard_verdict.py for why the default validity rule
+      misclassifies them.
+
+PROMOTION GATE  all five legs passed; thresholds were declared in the log
+  before the run. See simulation/search/promotion_verdict.json.
+
+LINEAGE
+  Same lineage as the previous champion by construction. This is a strength
+  improvement, NOT a diversification: it remains one strategy family.
+  The previous champion and the hedge remain on disk and are still the only
+  independent axes available.
+
+LIMITATIONS, stated not softened
+  * Still one lineage. The independent-lineage win rate is inherited from the
+    parent, not earned by the change.
+  * No calibrated ShadowRating. Only 2 of 41 matchups are informative and the
+    curve saturates, so no point rating is published. What CAN be stated: the
+    80.91% win rate over the previous champion is far past the top of the
+    fitted curve, so the gap is at LEAST 275 ladder points -- a BOUND, not a
+    point estimate.
+  * 3075-readiness still fails on the calibrated-rating leg. See
+    reports/3075_RESEARCH_CONCLUSION.md.
