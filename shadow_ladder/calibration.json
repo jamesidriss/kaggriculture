@@ -1,0 +1,188 @@
+{
+  "public_games_with_outcome": 88280,
+  "curve_bins": [
+    {
+      "gap_lo": 0.0,
+      "gap_hi": 20.0,
+      "games": 19071,
+      "win_rate": 0.504325939908762
+    },
+    {
+      "gap_lo": 20.0,
+      "gap_hi": 40.0,
+      "games": 17711,
+      "win_rate": 0.5027948732426176
+    },
+    {
+      "gap_lo": 40.0,
+      "gap_hi": 60.0,
+      "games": 15347,
+      "win_rate": 0.5072652635694272
+    },
+    {
+      "gap_lo": 60.0,
+      "gap_hi": 80.0,
+      "games": 11871,
+      "win_rate": 0.506865470474265
+    },
+    {
+      "gap_lo": 80.0,
+      "gap_hi": 100.0,
+      "games": 8259,
+      "win_rate": 0.49545949872865963
+    },
+    {
+      "gap_lo": 100.0,
+      "gap_hi": 120.0,
+      "games": 5309,
+      "win_rate": 0.4948201167828216
+    },
+    {
+      "gap_lo": 120.0,
+      "gap_hi": 140.0,
+      "games": 3148,
+      "win_rate": 0.4974587039390089
+    },
+    {
+      "gap_lo": 140.0,
+      "gap_hi": 160.0,
+      "games": 2002,
+      "win_rate": 0.510989010989011
+    },
+    {
+      "gap_lo": 160.0,
+      "gap_hi": 180.0,
+      "games": 1373,
+      "win_rate": 0.5229424617625638
+    },
+    {
+      "gap_lo": 180.0,
+      "gap_hi": 200.0,
+      "games": 1089,
+      "win_rate": 0.4563820018365473
+    },
+    {
+      "gap_lo": 200.0,
+      "gap_hi": 220.0,
+      "games": 866,
+      "win_rate": 0.49653579676674364
+    },
+    {
+      "gap_lo": 220.0,
+      "gap_hi": 240.0,
+      "games": 671,
+      "win_rate": 0.47093889716840537
+    },
+    {
+      "gap_lo": 240.0,
+      "gap_hi": 260.0,
+      "games": 519,
+      "win_rate": 0.4701348747591522
+    },
+    {
+      "gap_lo": 260.0,
+      "gap_hi": 280.0,
+      "games": 349,
+      "win_rate": 0.5128939828080229
+    },
+    {
+      "gap_lo": 280.0,
+      "gap_hi": 300.0,
+      "games": 213,
+      "win_rate": 0.4835680751173709
+    }
+  ],
+  "known_ratings": {
+    "sunrise_v1": 348.1,
+    "sunrise_v2": 322.0,
+    "sunrise_v3": 316.8,
+    "sunrise_v5": 239.3,
+    "sunrise_v4": 139.0,
+    "farm_2945_original": 2945.0,
+    "barnyard_v7": 3034.8
+  },
+  "rating_source": {
+    "sunrise_v1": "kaggle competitions submissions -c kaggriculture (publicScore)",
+    "sunrise_v2": "kaggle competitions submissions -c kaggriculture (publicScore)",
+    "sunrise_v3": "kaggle competitions submissions -c kaggriculture (publicScore)",
+    "sunrise_v5": "kaggle competitions submissions -c kaggriculture (publicScore)",
+    "sunrise_v4": "kaggle competitions submissions -c kaggriculture (publicScore)",
+    "farm_2945_original": "notebook title (self-reported, not a ladder score)",
+    "barnyard_v7": "notebook title (self-reported, not a ladder score)"
+  },
+  "anchors": [
+    {
+      "pair": "ahmedberatozer-v43-recovering-lost-harvests vs barnyard_v7",
+      "games": 16,
+      "win_rate": 1.0,
+      "implied_gap": 280.0,
+      "anchored_on": "barnyard_v7",
+      "anchored_rating": 3034.8
+    },
+    {
+      "pair": "ahmedberatozer-v44-winning-the-same-turn-sale-race vs barnyard_v7",
+      "games": 16,
+      "win_rate": 1.0,
+      "implied_gap": 280.0,
+      "anchored_on": "barnyard_v7",
+      "anchored_rating": 3034.8
+    },
+    {
+      "pair": "ahmedberatozer-v46-first-turn-microstructure vs barnyard_v7",
+      "games": 16,
+      "win_rate": 1.0,
+      "implied_gap": 280.0,
+      "anchored_on": "barnyard_v7",
+      "anchored_rating": 3034.8
+    },
+    {
+      "pair": "ahmedberatozer-v48-clear-the-queue vs barnyard_v7",
+      "games": 16,
+      "win_rate": 1.0,
+      "implied_gap": 280.0,
+      "anchored_on": "barnyard_v7",
+      "anchored_rating": 3034.8
+    },
+    {
+      "pair": "ahmedberatozer-v49-funded-sale-timing vs barnyard_v7",
+      "games": 16,
+      "win_rate": 1.0,
+      "implied_gap": 280.0,
+      "anchored_on": "barnyard_v7",
+      "anchored_rating": 3034.8
+    },
+    {
+      "pair": "ahmedberatozer-v50-early-yarn-commit vs barnyard_v7",
+      "games": 16,
+      "win_rate": 1.0,
+      "implied_gap": 280.0,
+      "anchored_on": "barnyard_v7",
+      "anchored_rating": 3034.8
+    },
+    {
+      "pair": "barnyard_v7 vs v16_rc5",
+      "games": 16,
+      "win_rate": 0.0,
+      "implied_gap": 0.0,
+      "anchored_on": "barnyard_v7",
+      "anchored_rating": 3034.8
+    },
+    {
+      "pair": "barnyard_v7 vs v38_feed",
+      "games": 16,
+      "win_rate": 0.0,
+      "implied_gap": 0.0,
+      "anchored_on": "barnyard_v7",
+      "anchored_rating": 3034.8
+    },
+    {
+      "pair": "farm_2945_original vs v51_lean_flock",
+      "games": 1984,
+      "win_rate": 0.47631048387096775,
+      "implied_gap": 0.0,
+      "anchored_on": "farm_2945_original",
+      "anchored_rating": 2945.0
+    }
+  ],
+  "rating_semantics_caveat": "Public index scores are the crawler's post-game updatedScore, not the pre-match rating. Using post-game scores adds roughly the rating change of one game to the observed gap, which biases the fitted gap DOWNWARD and therefore biases our absolute ratings UPWARD. The direction is stated because the size is not measurable from the index alone."
+}

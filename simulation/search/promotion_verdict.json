@@ -1,0 +1,147 @@
+{
+  "thresholds_declared": {
+    "top_meta": 0.52,
+    "sealed_final": 0.5,
+    "independent_lineage": 0.45,
+    "runtime_p95_ms": 50.0,
+    "act_timeout_s": 1.0
+  },
+  "legs": {
+    "A_artifact": {
+      "candidate_sha256": "a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8",
+      "parent_sha256": "c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891",
+      "unique_digest": true,
+      "differs_only_in_settings_literal": true,
+      "changed_settings": {
+        "room_guard": [
+          false,
+          true
+        ]
+      },
+      "declared_changes": 1,
+      "licence": "Apache-2.0 (inherited); NOTICE retained",
+      "runtime_path": "no network, no file writes, no external data",
+      "pass": true
+    },
+    "B_top_meta": {
+      "vs v51 (parent)": {
+        "games": 992,
+        "decided": 812,
+        "ties": 180,
+        "broken": 0,
+        "W": 657,
+        "L": 155,
+        "win_rate": 0.8091133004926109,
+        "wilson": [
+          0.7807,
+          0.8347
+        ],
+        "p": 2.81926537376326e-74,
+        "seat": {
+          "0": 326,
+          "1": 331
+        },
+        "pass": true
+      },
+      "vs farm_2945": {
+        "games": 992,
+        "decided": 990,
+        "ties": 2,
+        "broken": 0,
+        "W": 537,
+        "L": 453,
+        "win_rate": 0.5424242424242425,
+        "wilson": [
+          0.5113,
+          0.5732
+        ],
+        "p": 0.00830922640515728,
+        "seat": {
+          "0": 269,
+          "1": 268
+        },
+        "pass": true
+      }
+    },
+    "C_sealed": {
+      "sealed_final": {
+        "games": 48,
+        "decided": 48,
+        "ties": 0,
+        "broken": 0,
+        "W": 34,
+        "L": 14,
+        "win_rate": 0.7083333333333334,
+        "wilson": [
+          0.5682,
+          0.8176
+        ],
+        "p": 0.005515201485501054,
+        "seat": {
+          "0": 17,
+          "1": 17
+        },
+        "pass": true,
+        "pools": [
+          "ladder_real_final",
+          "REAL_final",
+          "meta_final"
+        ],
+        "threshold": 0.5,
+        "threshold_meaning": "regression detector on unseen worlds; 30 seeds cannot resolve a 3-point effect and is not claimed to"
+      },
+      "holdout": {
+        "games": 48,
+        "decided": 48,
+        "ties": 0,
+        "broken": 0,
+        "W": 30,
+        "L": 18,
+        "win_rate": 0.625,
+        "wilson": [
+          0.4836,
+          0.7478
+        ],
+        "p": 0.1114028910610177,
+        "seat": {
+          "0": 15,
+          "1": 15
+        },
+        "pass": true,
+        "pools": [
+          "ladder_real_holdout",
+          "REAL_holdout",
+          "meta_holdout"
+        ],
+        "threshold": 0.5,
+        "threshold_meaning": "regression detector on unseen worlds; 30 seeds cannot resolve a 3-point effect and is not claimed to"
+      }
+    },
+    "D_independent": {
+      "games": 768,
+      "decided": 768,
+      "ties": 0,
+      "broken": 0,
+      "W": 768,
+      "L": 0,
+      "win_rate": 1.0,
+      "wilson": [
+        0.995,
+        1.0
+      ],
+      "p": 1.2882297539194862e-231,
+      "seat": {
+        "0": 384,
+        "1": 384
+      },
+      "pass": true,
+      "threshold": 0.45
+    },
+    "E_runtime": {
+      "playable": true,
+      "probe": "baseline_plus_room_guard.py: PLAYABLE",
+      "pass": true
+    }
+  },
+  "decision": "PROMOTE"
+}

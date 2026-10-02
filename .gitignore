@@ -53,3 +53,23 @@ data/replay_db/
 data/replays/
 *.parquet
 seeds/ladder_real_final.txt
+
+# --- 3075 research programme: data lake ---
+# The lake is reproducible from public sources plus the committed manifests,
+# so the bulk stays out of Git. Manifests and schemas are deliberately kept.
+data_lake/lake.duckdb
+data_lake/lake.duckdb.wal
+data_lake/_tmp/
+data_lake/parquet/
+!data_lake/manifests/
+simulation/rust/target/
+
+# Per-candidate run directories from the search are transient and are being
+# written while git runs; staging them deadlocks on the file lock.
+simulation/search/runs/
+
+
+# Search-derived candidate artifacts: ~460KB each and reproducible from
+# parent + settings literal, which run_search.py records in results.json.
+simulation/search/*.py
+simulation/search/decisive/

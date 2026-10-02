@@ -1,0 +1,48 @@
+role: postmortem_primary
+name: ahmedberatozer-v51-lean-flock
+author: ahmedberatozer
+source: Kaggle dataset destbreso/kaggriculture-donor-agents-20260902, file agents/ahmedberatozer-v51-lean-flock.py
+license: Apache-2.0
+sha256: c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891
+bytes: 461739
+git_commit_at_freeze: c02c867e5e1ac1c3fbb793d330df968a54382306
+agent_signature: agent(observation, configuration)
+environment_version: kaggle-environments 1.32.7
+runtime_path: kaggle_environments.core.Environment.run  (official runner)
+seats: both, every world
+turns_per_game: 719 of 720
+errors: 0
+
+DIRECT TOP MATCHUP (paired, both seats, real ladder-derived worlds)
+  vs farm_2945_original : 1039-945-0 over 1984 paired games  win rate 0.5237  Wilson 95% [0.5017, 0.5456]  exact binomial p=0.0368  seat effect McNemar p=0.901
+
+AGGREGATE RESULT
+  v51 beats the league; see reports/TOP_META_TABLE.md and
+  reports/V51_VS_FARM.md for the full paired evidence.
+
+AGENT IN A LEAGUE WITH (median final cash, 5 games vs starter)
+  median $182,861
+
+RUNTIME
+  median ~0.4 ms, max 40.2 ms per agent() call against a 1000 ms actTimeout.
+  Artifact gate: 2,880 calls, 0 schema violations, no stdout, no stderr.
+
+MODIFICATIONS
+  NONE. Byte-identical to the published public artifact. The file is a copy of
+  the registered digest in opponents/meta/MANIFEST.csv; no line was edited.
+
+NOT_SUBMITTED
+  Kaggle submissions are closed. Verified: POST
+  competitions.CompetitionApiService/CreateSubmission returns HTTP 400 with an
+  empty body and the submission list is unchanged. No repository change can
+  affect the competition result. This artifact is an offline reference, not an
+  official winner.
+
+LINEAGE NOTE
+  SHARED ANCESTRY with the hedge. v51 and the 2945 Farm are the same lineage, not two:
+  - 1,205 shared unique identifiers, containment 0.82
+  - a single contiguous identical run of 3,352 tokens
+  - identical nine-author credit list in both headers
+  Measured by benchmark/lineage_check.py. v51's own
+  header credits thomastschinkel and the rest, i.e. v51
+  descends from the 2945 Farm.

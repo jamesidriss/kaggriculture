@@ -1,0 +1,10 @@
+{
+  "champion_id": "C001_room_guard",
+  "agent_sha": "a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8",
+  "predecessor": {
+    "champion_id": "C000_v51",
+    "agent_sha": "c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891"
+  },
+  "gate": "simulation/search/promotion_verdict.json",
+  "promoted_utc": "2026-10-02T09:48:29Z"
+}

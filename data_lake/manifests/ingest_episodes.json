@@ -1,0 +1,15 @@
+{
+  "agent_keys_present": false,
+  "already_present": 88281,
+  "environment_version": "kaggle-environments 1.32.7",
+  "episodes_total": 88281,
+  "era_id": "kag-1327-2026-09",
+  "index_rows": 88281,
+  "inserted": 0,
+  "non_stock_config": 0,
+  "rating_semantics": "post_crawl (updatedScore at crawl time, POST-game)",
+  "shard_missing": 0,
+  "shards_available": 33,
+  "source": "xishengfeng/kaggriculture-replay-db",
+  "written_utc": "2026-10-02 07:27:09.814332"
+}

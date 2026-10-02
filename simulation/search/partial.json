@@ -1,0 +1,542 @@
+[
+  {
+    "tag": "c726abf41ea_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 8,
+    "L": 8,
+    "T": 0,
+    "win_rate": 0.5,
+    "median_margin": 895
+  },
+  {
+    "tag": "c5a231c6be9_smoke",
+    "games": 12,
+    "invalid": 0,
+    "W": 6,
+    "L": 6,
+    "T": 0,
+    "win_rate": 0.5,
+    "median_margin": -750
+  },
+  {
+    "tag": "c5015cd9762_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 7,
+    "L": 9,
+    "T": 0,
+    "win_rate": 0.4375,
+    "median_margin": 116
+  },
+  {
+    "tag": "c645961538e_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 7,
+    "L": 9,
+    "T": 0,
+    "win_rate": 0.4375,
+    "median_margin": -110
+  },
+  {
+    "tag": "cb14a1fe478_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 7,
+    "L": 9,
+    "T": 0,
+    "win_rate": 0.4375,
+    "median_margin": -199
+  },
+  {
+    "tag": "c37d8661588_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 6,
+    "L": 10,
+    "T": 0,
+    "win_rate": 0.375,
+    "median_margin": 818
+  },
+  {
+    "tag": "c245729fea8_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": 41
+  },
+  {
+    "tag": "c4ee034c581_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": 37
+  },
+  {
+    "tag": "c0d0ed55144_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": -189
+  },
+  {
+    "tag": "c6c6fae0a16_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": -189
+  },
+  {
+    "tag": "cc984074f80_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": -278
+  },
+  {
+    "tag": "c117025d3ce_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": -318
+  },
+  {
+    "tag": "c2a5b25cced_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": -318
+  },
+  {
+    "tag": "cc848b36836_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": -318
+  },
+  {
+    "tag": "c73df92592a_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": -3016
+  },
+  {
+    "tag": "c6cc114dad2_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": -3202
+  },
+  {
+    "tag": "cbde98a0ab7_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": -3202
+  },
+  {
+    "tag": "cc1556053b6_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 5,
+    "L": 11,
+    "T": 0,
+    "win_rate": 0.3125,
+    "median_margin": -3202
+  },
+  {
+    "tag": "cc7b267ec3a_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 4,
+    "L": 12,
+    "T": 0,
+    "win_rate": 0.25,
+    "median_margin": 838
+  },
+  {
+    "tag": "cb0b1afcf17_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 3,
+    "L": 13,
+    "T": 0,
+    "win_rate": 0.1875,
+    "median_margin": 48
+  },
+  {
+    "tag": "c4ce90ef003_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 3,
+    "L": 13,
+    "T": 0,
+    "win_rate": 0.1875,
+    "median_margin": -309
+  },
+  {
+    "tag": "c78d60add71_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 3,
+    "L": 13,
+    "T": 0,
+    "win_rate": 0.1875,
+    "median_margin": -309
+  },
+  {
+    "tag": "c5339dc5091_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 3,
+    "L": 13,
+    "T": 0,
+    "win_rate": 0.1875,
+    "median_margin": -311
+  },
+  {
+    "tag": "c234ee082a6_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 3,
+    "L": 13,
+    "T": 0,
+    "win_rate": 0.1875,
+    "median_margin": -2957
+  },
+  {
+    "tag": "c808de2dfbe_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 3,
+    "L": 13,
+    "T": 0,
+    "win_rate": 0.1875,
+    "median_margin": -3142
+  },
+  {
+    "tag": "cff969f3196_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 3,
+    "L": 13,
+    "T": 0,
+    "win_rate": 0.1875,
+    "median_margin": -3142
+  },
+  {
+    "tag": "c538c163a18_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 3,
+    "L": 13,
+    "T": 0,
+    "win_rate": 0.1875,
+    "median_margin": -3143
+  },
+  {
+    "tag": "c9103d4ca62_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -24362
+  },
+  {
+    "tag": "caf7bfdb9d2_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -24362
+  },
+  {
+    "tag": "cb701569f8c_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -24362
+  },
+  {
+    "tag": "c283ab2005e_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -24470
+  },
+  {
+    "tag": "c973c62d513_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -24470
+  },
+  {
+    "tag": "cfff8783f5b_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -24470
+  },
+  {
+    "tag": "c1c4d54bb31_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -24596
+  },
+  {
+    "tag": "cc7c39f9f94_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -24704
+  },
+  {
+    "tag": "c7f1afd31a9_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -27983
+  },
+  {
+    "tag": "c9e7076f19e_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -28005
+  },
+  {
+    "tag": "ca9d977f75d_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -28005
+  },
+  {
+    "tag": "cf0b9988de3_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -28005
+  },
+  {
+    "tag": "caa76c69256_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30186
+  },
+  {
+    "tag": "cace29555c8_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30186
+  },
+  {
+    "tag": "cb59d246f7f_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30186
+  },
+  {
+    "tag": "c8797da31f3_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30469
+  },
+  {
+    "tag": "c6c28520ef6_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30509
+  },
+  {
+    "tag": "c1181168aba_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30754
+  },
+  {
+    "tag": "c636b2503d5_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30754
+  },
+  {
+    "tag": "c6f9ecd2dc3_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30754
+  },
+  {
+    "tag": "ca3aa63514b_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30761
+  },
+  {
+    "tag": "caf516c2f01_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30790
+  },
+  {
+    "tag": "cb4c7fd2fb9_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30790
+  },
+  {
+    "tag": "cd415beb5b0_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30790
+  },
+  {
+    "tag": "ca720a96d61_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30822
+  },
+  {
+    "tag": "cafd5e4774f_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -30825
+  },
+  {
+    "tag": "c71d68a723d_smoke",
+    "games": 16,
+    "invalid": 0,
+    "W": 0,
+    "L": 16,
+    "T": 0,
+    "win_rate": 0.0,
+    "median_margin": -31901
+  }
+]

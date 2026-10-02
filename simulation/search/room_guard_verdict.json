@@ -1,0 +1,101 @@
+{
+  "parent_sha256": "c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891",
+  "variant_sha256": "a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8",
+  "digests_differ": true,
+  "legs": {
+    "leg 1": {
+      "label": "variant(+room_guard) vs parent",
+      "games_run": 992,
+      "completed": 992,
+      "decided": 776,
+      "inert_worlds_exact_tie": 216,
+      "inert_share": 0.2177,
+      "genuinely_broken": 0,
+      "broken_reasons": [],
+      "W": 638,
+      "L": 138,
+      "T": 216,
+      "win_rate_decided": 0.8221649484536082,
+      "wilson_decided": [
+        0.7937,
+        0.8475
+      ],
+      "win_share_of_all_games": 0.6431,
+      "binom_p_decided": 1.3618716035741726e-77,
+      "median_margin": 12,
+      "mean_margin": 61.7,
+      "worst_margin": -9112,
+      "seat_wins": {
+        "0": 320,
+        "1": 318
+      },
+      "mcnemar_p": 1.3618716035742212e-77,
+      "n_discordant": 776
+    },
+    "leg 2": {
+      "label": "variant(+room_guard) vs farm",
+      "games_run": 992,
+      "completed": 992,
+      "decided": 990,
+      "inert_worlds_exact_tie": 2,
+      "inert_share": 0.002,
+      "genuinely_broken": 0,
+      "broken_reasons": [],
+      "W": 537,
+      "L": 453,
+      "T": 2,
+      "win_rate_decided": 0.5424242424242425,
+      "wilson_decided": [
+        0.5113,
+        0.5732
+      ],
+      "win_share_of_all_games": 0.5413,
+      "binom_p_decided": 0.00830922640515728,
+      "median_margin": 120,
+      "mean_margin": 33.8,
+      "worst_margin": -12678,
+      "seat_wins": {
+        "0": 269,
+        "1": 268
+      },
+      "mcnemar_p": 0.008309226405156814,
+      "n_discordant": 990
+    },
+    "leg 3": {
+      "label": "parent vs farm",
+      "games_run": 992,
+      "completed": 992,
+      "decided": 992,
+      "inert_worlds_exact_tie": 0,
+      "inert_share": 0.0,
+      "genuinely_broken": 0,
+      "broken_reasons": [],
+      "W": 506,
+      "L": 486,
+      "T": 0,
+      "win_rate_decided": 0.5100806451612904,
+      "wilson_decided": [
+        0.479,
+        0.5411
+      ],
+      "win_share_of_all_games": 0.5101,
+      "binom_p_decided": 0.5463634792399265,
+      "median_margin": 29,
+      "mean_margin": -26.9,
+      "worst_margin": -12891,
+      "seat_wins": {
+        "0": 254,
+        "1": 252
+      },
+      "mcnemar_p": 0.546363479239897,
+      "n_discordant": 992
+    }
+  },
+  "verdict": {
+    "leg1": "GAIN (decisively separated from 50%)",
+    "leg2_delta_vs_farm": 0.0323,
+    "leg2": "variant better"
+  },
+  "exact_tie_guard_misfires": 218,
+  "note": "an exact cash tie here means the changed gene never fired on that world; it is a finding about the gene, not a defect in the game"
+}
