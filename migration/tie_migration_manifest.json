@@ -1,0 +1,5180 @@
+{
+  "generated_utc": "2026-10-02T12:45:55Z",
+  "mode": "apply",
+  "rule_removed": "exact cash tie was treated as an invalid game",
+  "rule_now": "content duplication is decided by artifact digest before the match; an exact cash tie between different artifacts is a real game with valid = 1",
+  "files_scanned": 646,
+  "games_restored": 498,
+  "games_still_invalid": 0,
+  "records": [
+    {
+      "file": "experiments/EXPERIMENTS.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "experiments/cal/v51_vs_ahmedberatozer-v43-recovering-lost-harvests_0.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_ahmedberatozer-v43-recovering-lost-harvests_1.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_ahmedberatozer-v43-recovering-lost-harvests_2.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_ahmedberatozer-v43-recovering-lost-harvests_3.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_ahmedberatozer-v49-funded-sale-timing_0.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_ahmedberatozer-v49-funded-sale-timing_1.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_ahmedberatozer-v49-funded-sale-timing_2.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_ahmedberatozer-v49-funded-sale-timing_3.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_v16_rc5_0.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_v16_rc5_1.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_v16_rc5_2.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/cal/v51_vs_v16_rc5_3.csv",
+      "rows": 98,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/challenger_001_sell_lead_true_to_false_vs_ahmedberatozer-v51-lean-flock_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/challenger_001_sell_lead_true_to_false_vs_farm_2945_original_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/challenger_002_terminal_liquidation_false_to_true_vs_ahmedberatozer-v51-lean-flock_2.csv",
+      "rows": 2,
+      "restored_valid": 2,
+      "still_invalid_real_defect": 0,
+      "already_valid": 0,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/chal/challenger_002_terminal_liquidation_false_to_true_vs_ahmedberatozer-v51-lean-flock_2.csv.pre_tie_fix.csv",
+      "original_sha256": "92f804071b9446f15367bbe4ca7316f69e55ab36c449d22c3e1890f8d1fbddd0",
+      "new_sha256": "44294b8613b785dba4b82fe510a8dcf08d7a640dc6c08ed4079ac11e3a3cdf67"
+    },
+    {
+      "file": "experiments/chal/challenger_002_terminal_liquidation_false_to_true_vs_farm_2945_original_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/challenger_003_clamp_sells_false_to_true_vs_ahmedberatozer-v51-lean-flock_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/challenger_003_clamp_sells_false_to_true_vs_farm_2945_original_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/farm_vs_sunrise_0.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/farm_vs_sunrise_1.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/farm_vs_sunrise_2.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/farm_vs_sunrise_3.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/v51_vs_sunrise_0.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/v51_vs_sunrise_1.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/v51_vs_sunrise_2.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/chal/v51_vs_sunrise_3.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/final_meta_results.csv",
+      "rows": 3024,
+      "restored_valid": 32,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2992,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/final_meta_results.csv.pre_tie_fix.csv",
+      "original_sha256": "0916988a67c6ab524541511646f43eb77eaa3a61e898b5b72037ea5913e4f72a",
+      "new_sha256": "bb84614132772f338818ab349f58e3b5d7bcce6574507ac92cc903de3eb3daed"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_broker_bea_0.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_broker_bea_1.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_broker_bea_2.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_broker_bea_3.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_closer_cleo_0.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_closer_cleo_1.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_closer_cleo_2.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_closer_cleo_3.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_ledger_lena_0.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_ledger_lena_1.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_ledger_lena_2.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_ledger_lena_3.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_slotter_silas_0.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_slotter_silas_1.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_slotter_silas_2.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/lin/v51_vs_rayk_slotter_silas_3.csv",
+      "rows": 4,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 4,
+      "action": "none"
+    },
+    {
+      "file": "experiments/probe/farm_vs_v16_rc5_0.csv",
+      "rows": 58,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 58,
+      "action": "none"
+    },
+    {
+      "file": "experiments/probe/farm_vs_v16_rc5_1.csv",
+      "rows": 58,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 58,
+      "action": "none"
+    },
+    {
+      "file": "experiments/probe/farm_vs_v16_rc5_2.csv",
+      "rows": 58,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 58,
+      "action": "none"
+    },
+    {
+      "file": "experiments/probe/farm_vs_v16_rc5_3.csv",
+      "rows": 58,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 58,
+      "action": "none"
+    },
+    {
+      "file": "experiments/probe/v51_vs_v16_rc5_0.csv",
+      "rows": 58,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 58,
+      "action": "none"
+    },
+    {
+      "file": "experiments/probe/v51_vs_v16_rc5_1.csv",
+      "rows": 58,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 58,
+      "action": "none"
+    },
+    {
+      "file": "experiments/probe/v51_vs_v16_rc5_2.csv",
+      "rows": 58,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 58,
+      "action": "none"
+    },
+    {
+      "file": "experiments/probe/v51_vs_v16_rc5_3.csv",
+      "rows": 58,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 58,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/b_farm/r_0.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/b_farm/r_1.csv",
+      "rows": 124,
+      "restored_valid": 2,
+      "still_invalid_real_defect": 0,
+      "already_valid": 122,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/promotion/b_farm/r_1.csv.pre_tie_fix.csv",
+      "original_sha256": "8c15ebcff4f7bd5291c2d36b082fc6927c04cc0ede13f9ff18c316be887e81c4",
+      "new_sha256": "1af4da5eb109874ef0bdc4b39c62afc1158d8dd469b62746c1109bd83f6a17b0"
+    },
+    {
+      "file": "experiments/promotion/b_farm/r_2.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/b_farm/r_3.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/b_farm/r_4.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/b_farm/r_5.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/b_farm/r_6.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/b_farm/r_7.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/b_parent/r_0.csv",
+      "rows": 124,
+      "restored_valid": 26,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/promotion/b_parent/r_0.csv.pre_tie_fix.csv",
+      "original_sha256": "8613c407925df85337c29bb6280b1e8316f61f067541a2f3b0798c66eb116f67",
+      "new_sha256": "04eeaeb5a5ba3e9aa1a695e4e2d0bbe51735040af19319faa2515720e14a14b0"
+    },
+    {
+      "file": "experiments/promotion/b_parent/r_1.csv",
+      "rows": 124,
+      "restored_valid": 24,
+      "still_invalid_real_defect": 0,
+      "already_valid": 100,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/promotion/b_parent/r_1.csv.pre_tie_fix.csv",
+      "original_sha256": "419327d3e4dcda5bb32328f74c5a3fb240641cb42a926b1e14d2dc4a5aaca29f",
+      "new_sha256": "554651267ea1b2cddb3553bd6b336af9b7a03e6fd3ddc36aea133ca37652dc96"
+    },
+    {
+      "file": "experiments/promotion/b_parent/r_2.csv",
+      "rows": 124,
+      "restored_valid": 12,
+      "still_invalid_real_defect": 0,
+      "already_valid": 112,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/promotion/b_parent/r_2.csv.pre_tie_fix.csv",
+      "original_sha256": "cc1a726f0bdc49ea068d1b97907f3ee376a591dbfdf035a85b40f59ffac5ae7f",
+      "new_sha256": "21e6d801608c873345df0be4f76bc38b378af164dce059b2f9cb80ad2cf84c59"
+    },
+    {
+      "file": "experiments/promotion/b_parent/r_3.csv",
+      "rows": 124,
+      "restored_valid": 28,
+      "still_invalid_real_defect": 0,
+      "already_valid": 96,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/promotion/b_parent/r_3.csv.pre_tie_fix.csv",
+      "original_sha256": "549521fadde5adba1fdc734ef5b104c4e1ed139e30aa9cc3bf9071f8d995179f",
+      "new_sha256": "53fc951afc7bb2a56b57dc964df5e259848baf99542d28436d09f439c4181b8e"
+    },
+    {
+      "file": "experiments/promotion/b_parent/r_4.csv",
+      "rows": 124,
+      "restored_valid": 26,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/promotion/b_parent/r_4.csv.pre_tie_fix.csv",
+      "original_sha256": "778c5504adf08a5f4e7752a55daac8aa79a6ebecd03116e59f39864cb2d7abf1",
+      "new_sha256": "238c9988f20f755135484f6e60fd9f26042422b172321ee7978130d06aef35f0"
+    },
+    {
+      "file": "experiments/promotion/b_parent/r_5.csv",
+      "rows": 124,
+      "restored_valid": 24,
+      "still_invalid_real_defect": 0,
+      "already_valid": 100,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/promotion/b_parent/r_5.csv.pre_tie_fix.csv",
+      "original_sha256": "e4c3b8e43556f8334af1a831207ab37545a6ae3bc00e2e45b0e4fc04bfbddf1c",
+      "new_sha256": "d04fafda952463c7e21abf3c186b87122bec3365281ef64feff8e08fda7a8657"
+    },
+    {
+      "file": "experiments/promotion/b_parent/r_6.csv",
+      "rows": 124,
+      "restored_valid": 14,
+      "still_invalid_real_defect": 0,
+      "already_valid": 110,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/promotion/b_parent/r_6.csv.pre_tie_fix.csv",
+      "original_sha256": "5e5fbed5bb1b1e969141f49f694de8cea8f5907940c8b829654455fb04a8fa1a",
+      "new_sha256": "de6294216dc7e97e154ce1d078710ea8d70f1a8351c8ea174f96da0cea24f7d1"
+    },
+    {
+      "file": "experiments/promotion/b_parent/r_7.csv",
+      "rows": 124,
+      "restored_valid": 26,
+      "still_invalid_real_defect": 0,
+      "already_valid": 98,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/promotion/b_parent/r_7.csv.pre_tie_fix.csv",
+      "original_sha256": "aa3f59aba4b0303f8015c4e54a2b8ca0aef4ab9dd407a37d04c9719b181ad75b",
+      "new_sha256": "23c54c1963f4565659f7e1dbb7600215c293a103c744a3997e9f269561f3dd64"
+    },
+    {
+      "file": "experiments/promotion/c_holdout/r_0.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_holdout/r_1.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_holdout/r_2.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_holdout/r_3.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_holdout/r_4.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_holdout/r_5.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_holdout/r_6.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_holdout/r_7.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_sealed_final/r_0.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_sealed_final/r_1.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_sealed_final/r_2.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_sealed_final/r_3.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_sealed_final/r_4.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_sealed_final/r_5.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_sealed_final/r_6.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/c_sealed_final/r_7.csv",
+      "rows": 6,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 6,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_broker_bea/r_0.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_broker_bea/r_1.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_broker_bea/r_2.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_broker_bea/r_3.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_broker_bea/r_4.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_broker_bea/r_5.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_broker_bea/r_6.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_broker_bea/r_7.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_closer_cleo/r_0.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_closer_cleo/r_1.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_closer_cleo/r_2.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_closer_cleo/r_3.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_closer_cleo/r_4.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_closer_cleo/r_5.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_closer_cleo/r_6.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_closer_cleo/r_7.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_ledger_lena/r_0.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_ledger_lena/r_1.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_ledger_lena/r_2.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_ledger_lena/r_3.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_ledger_lena/r_4.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_ledger_lena/r_5.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_ledger_lena/r_6.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_ledger_lena/r_7.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_slotter_silas/r_0.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_slotter_silas/r_1.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_slotter_silas/r_2.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_slotter_silas/r_3.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_slotter_silas/r_4.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_slotter_silas/r_5.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_slotter_silas/r_6.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/promotion/d_rayk_slotter_silas/r_7.csv",
+      "rows": 24,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 24,
+      "action": "none"
+    },
+    {
+      "file": "experiments/public_meta_results.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "experiments/round_robin.csv",
+      "rows": 576,
+      "restored_valid": 32,
+      "still_invalid_real_defect": 0,
+      "already_valid": 544,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/round_robin.csv.pre_tie_fix.csv",
+      "original_sha256": "29b6b7dcf84c2ecd99b7bd0e5f6c1f64aaa5719da295c2c0cdecccb745904349",
+      "new_sha256": "d15b93731e2e8159166306a7ca1446c745a951e7bb7884e80d224f52deecd7d1"
+    },
+    {
+      "file": "experiments/rr/rr_0.csv",
+      "rows": 80,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 80,
+      "action": "none"
+    },
+    {
+      "file": "experiments/rr/rr_1.csv",
+      "rows": 80,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 80,
+      "action": "none"
+    },
+    {
+      "file": "experiments/rr/rr_2.csv",
+      "rows": 80,
+      "restored_valid": 16,
+      "still_invalid_real_defect": 0,
+      "already_valid": 64,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/rr/rr_2.csv.pre_tie_fix.csv",
+      "original_sha256": "5bd2373c7e12f14222ca4c2dccd20ae539faa395e033704831f06d0ac26d307b",
+      "new_sha256": "7aed668cabb5ceb9d82606ec4c1f606e8412cae79b7890af37ef1fbeaba56a33"
+    },
+    {
+      "file": "experiments/rr/rr_3.csv",
+      "rows": 80,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 80,
+      "action": "none"
+    },
+    {
+      "file": "experiments/rr/rr_4.csv",
+      "rows": 64,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 64,
+      "action": "none"
+    },
+    {
+      "file": "experiments/rr/rr_5.csv",
+      "rows": 64,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 64,
+      "action": "none"
+    },
+    {
+      "file": "experiments/rr/rr_6.csv",
+      "rows": 64,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 64,
+      "action": "none"
+    },
+    {
+      "file": "experiments/rr/rr_7.csv",
+      "rows": 64,
+      "restored_valid": 16,
+      "still_invalid_real_defect": 0,
+      "already_valid": 48,
+      "action": "rewritten",
+      "original_preserved_as": "experiments/rr/rr_7.csv.pre_tie_fix.csv",
+      "original_sha256": "1fda78dc5937d2d326ea182c44dc52ec9c0303d8dc2f4b98c170aaed23670305",
+      "new_sha256": "ea2e9926c02fb78dea39496f1f5748ab64cdbcf881b7ef22a3cbfaf8c5615306"
+    },
+    {
+      "file": "experiments/top2/v51_vs_farm_0.csv",
+      "rows": 248,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 248,
+      "action": "none"
+    },
+    {
+      "file": "experiments/top2/v51_vs_farm_1.csv",
+      "rows": 248,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 248,
+      "action": "none"
+    },
+    {
+      "file": "experiments/top2/v51_vs_farm_2.csv",
+      "rows": 248,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 248,
+      "action": "none"
+    },
+    {
+      "file": "experiments/top2/v51_vs_farm_3.csv",
+      "rows": 248,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 248,
+      "action": "none"
+    },
+    {
+      "file": "experiments/top2/v51_vs_farm_4.csv",
+      "rows": 248,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 248,
+      "action": "none"
+    },
+    {
+      "file": "experiments/top2/v51_vs_farm_5.csv",
+      "rows": 248,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 248,
+      "action": "none"
+    },
+    {
+      "file": "experiments/top2/v51_vs_farm_6.csv",
+      "rows": 248,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 248,
+      "action": "none"
+    },
+    {
+      "file": "experiments/top2/v51_vs_farm_7.csv",
+      "rows": 248,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 248,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_0.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_1.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_2.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_3.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_4.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_5.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_6.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_7.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_0.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_1.csv",
+      "rows": 124,
+      "restored_valid": 2,
+      "still_invalid_real_defect": 0,
+      "already_valid": 122,
+      "action": "rewritten",
+      "original_preserved_as": "simulation/search/decisive/vf/r_1.csv.pre_tie_fix.csv",
+      "original_sha256": "b0197cbf1a2dcdf829e05e623a92c17a55c0fdd00ef315d6e24f70c9d9430b90",
+      "new_sha256": "d7af834b666772e4755b8907a1b52ace54fa546012d622321a2ec9cae0718357"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_2.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_3.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_4.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_5.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_6.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_7.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_0.csv",
+      "rows": 124,
+      "restored_valid": 22,
+      "still_invalid_real_defect": 0,
+      "already_valid": 102,
+      "action": "rewritten",
+      "original_preserved_as": "simulation/search/decisive/vh/r_0.csv.pre_tie_fix.csv",
+      "original_sha256": "313c0f53996acfd934ade7a312fc83626b260740a22dd312390ae343530f6530",
+      "new_sha256": "f09b602f1be9f2aeb4eeea56370cbe25884564cd97e654cc7b56a5356aa86ac8"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_1.csv",
+      "rows": 124,
+      "restored_valid": 34,
+      "still_invalid_real_defect": 0,
+      "already_valid": 90,
+      "action": "rewritten",
+      "original_preserved_as": "simulation/search/decisive/vh/r_1.csv.pre_tie_fix.csv",
+      "original_sha256": "28741bfeb71da4a4cd8eb3eddead1b046f23d1f12eb75da278787e5e6d262b9a",
+      "new_sha256": "0f8aea95425ddd6c6ad2b5f5ec139aa5cc28d42e69eae320ae2fef967c6111e3"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_2.csv",
+      "rows": 124,
+      "restored_valid": 30,
+      "still_invalid_real_defect": 0,
+      "already_valid": 94,
+      "action": "rewritten",
+      "original_preserved_as": "simulation/search/decisive/vh/r_2.csv.pre_tie_fix.csv",
+      "original_sha256": "730a332745204533bf9593e34a567c6111d933756f7fe42bb266c2a3617dbed0",
+      "new_sha256": "795bb8a84ca8e02bafcbb8d9f8b96d6e7c3388773649ab5fb42dc4a742d0cf14"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_3.csv",
+      "rows": 124,
+      "restored_valid": 30,
+      "still_invalid_real_defect": 0,
+      "already_valid": 94,
+      "action": "rewritten",
+      "original_preserved_as": "simulation/search/decisive/vh/r_3.csv.pre_tie_fix.csv",
+      "original_sha256": "91609e3307c7dc4140a7d0fce7f7dd2ce2eb0d720961c4f372ff0f3a7d051a18",
+      "new_sha256": "e5757beada20893be92e4a8a35d83aa70767ede7c85fe69178b709eaaa1c8a57"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_4.csv",
+      "rows": 124,
+      "restored_valid": 24,
+      "still_invalid_real_defect": 0,
+      "already_valid": 100,
+      "action": "rewritten",
+      "original_preserved_as": "simulation/search/decisive/vh/r_4.csv.pre_tie_fix.csv",
+      "original_sha256": "14a89e538004c52d57cb9f45dd1fbc7b922722a50ba71f8520db6d0e5e988e27",
+      "new_sha256": "680282667faa9d95881bebca77f061738ecf58ad1bc8effe2ad02ea0d3a0de9e"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_5.csv",
+      "rows": 124,
+      "restored_valid": 22,
+      "still_invalid_real_defect": 0,
+      "already_valid": 102,
+      "action": "rewritten",
+      "original_preserved_as": "simulation/search/decisive/vh/r_5.csv.pre_tie_fix.csv",
+      "original_sha256": "fb6639e3bc79ce99a08288b4960191f127a36be173be14b870bc95791a5eb056",
+      "new_sha256": "d6b056cc8849b0d37e46bdc8aef89782798965b44c676555afe408ecc0f9d4f6"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_6.csv",
+      "rows": 124,
+      "restored_valid": 30,
+      "still_invalid_real_defect": 0,
+      "already_valid": 94,
+      "action": "rewritten",
+      "original_preserved_as": "simulation/search/decisive/vh/r_6.csv.pre_tie_fix.csv",
+      "original_sha256": "f9905433d3f77630bae9034c1dfec0595c9ff133cf3220823aecfb023d055c40",
+      "new_sha256": "de80d426ee9d6c93ca3cbde29d8044c5446988152b11bc6e4e9e296ca17decc9"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_7.csv",
+      "rows": 124,
+      "restored_valid": 24,
+      "still_invalid_real_defect": 0,
+      "already_valid": 100,
+      "action": "rewritten",
+      "original_preserved_as": "simulation/search/decisive/vh/r_7.csv.pre_tie_fix.csv",
+      "original_sha256": "e884f78e64a69fc8f7846b0d384793907da0fd10fed9a6fce616d95b67077923",
+      "new_sha256": "c2596d79a6c040bf3702da513a299c6121611efe4af3371c52d95493e3df3d90"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_0.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_1.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_2.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_3.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_4.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_5.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_6.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/pf/r_7.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_0.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_1.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_2.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_3.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_4.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_5.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_6.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vf/r_7.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_0.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_1.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_2.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_3.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_4.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_5.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_6.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/decisive/vh/r_7.csv",
+      "rows": 124,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 124,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0c152afb20_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0c152afb20_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0c152afb20_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0c152afb20_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0c152afb20_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0c152afb20_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0c152afb20_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0c152afb20_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0d0ed55144_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0d0ed55144_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0d0ed55144_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0d0ed55144_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0d0ed55144_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0d0ed55144_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0d0ed55144_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c0d0ed55144_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c117025d3ce_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c117025d3ce_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c117025d3ce_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c117025d3ce_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c117025d3ce_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c117025d3ce_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c117025d3ce_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c117025d3ce_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1181168aba_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1181168aba_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1181168aba_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1181168aba_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1181168aba_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1181168aba_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1181168aba_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1181168aba_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1c4d54bb31_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1c4d54bb31_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1c4d54bb31_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1c4d54bb31_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1c4d54bb31_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1c4d54bb31_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1c4d54bb31_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1c4d54bb31_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1da99a0f68_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1da99a0f68_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1da99a0f68_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1da99a0f68_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1da99a0f68_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1da99a0f68_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1da99a0f68_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c1da99a0f68_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c234ee082a6_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c234ee082a6_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c234ee082a6_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c234ee082a6_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c234ee082a6_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c234ee082a6_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c234ee082a6_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c234ee082a6_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c245729fea8_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c245729fea8_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c245729fea8_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c245729fea8_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c245729fea8_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c245729fea8_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c245729fea8_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c245729fea8_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c283ab2005e_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c283ab2005e_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c283ab2005e_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c283ab2005e_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c283ab2005e_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c283ab2005e_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c283ab2005e_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c283ab2005e_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c2a5b25cced_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c2a5b25cced_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c2a5b25cced_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c2a5b25cced_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c2a5b25cced_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c2a5b25cced_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c2a5b25cced_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c2a5b25cced_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c37d8661588_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c37d8661588_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c37d8661588_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c37d8661588_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c37d8661588_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c37d8661588_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c37d8661588_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c37d8661588_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c49b0e013cc_smoke/r_0.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c49b0e013cc_smoke/r_1.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c49b0e013cc_smoke/r_2.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c49b0e013cc_smoke/r_3.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c49b0e013cc_smoke/r_4.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c49b0e013cc_smoke/r_5.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c49b0e013cc_smoke/r_6.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c49b0e013cc_smoke/r_7.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c4ce90ef003_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ce90ef003_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ce90ef003_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ce90ef003_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ce90ef003_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ce90ef003_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ce90ef003_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ce90ef003_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ee034c581_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ee034c581_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ee034c581_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ee034c581_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ee034c581_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ee034c581_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ee034c581_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c4ee034c581_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5015cd9762_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5015cd9762_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5015cd9762_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5015cd9762_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5015cd9762_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5015cd9762_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5015cd9762_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5015cd9762_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5339dc5091_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5339dc5091_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5339dc5091_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5339dc5091_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5339dc5091_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5339dc5091_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5339dc5091_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5339dc5091_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c538c163a18_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c538c163a18_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c538c163a18_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c538c163a18_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c538c163a18_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c538c163a18_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c538c163a18_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c538c163a18_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5a231c6be9_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5a231c6be9_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5a231c6be9_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5a231c6be9_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5a231c6be9_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5a231c6be9_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5a231c6be9_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c5a231c6be9_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c636b2503d5_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c636b2503d5_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c636b2503d5_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c636b2503d5_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c636b2503d5_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c636b2503d5_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c636b2503d5_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c636b2503d5_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c645961538e_smoke/r_0.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c645961538e_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c645961538e_smoke/r_2.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c645961538e_smoke/r_3.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c645961538e_smoke/r_4.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c645961538e_smoke/r_5.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c645961538e_smoke/r_6.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c645961538e_smoke/r_7.csv",
+      "skipped": "no result schema"
+    },
+    {
+      "file": "simulation/search/runs/c6c28520ef6_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c28520ef6_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c28520ef6_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c28520ef6_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c28520ef6_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c28520ef6_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c28520ef6_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c28520ef6_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c6fae0a16_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c6fae0a16_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c6fae0a16_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c6fae0a16_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c6fae0a16_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c6fae0a16_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c6fae0a16_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6c6fae0a16_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6cc114dad2_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6cc114dad2_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6cc114dad2_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6cc114dad2_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6cc114dad2_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6cc114dad2_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6cc114dad2_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6cc114dad2_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6f9ecd2dc3_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6f9ecd2dc3_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6f9ecd2dc3_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6f9ecd2dc3_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6f9ecd2dc3_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6f9ecd2dc3_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6f9ecd2dc3_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c6f9ecd2dc3_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c71d68a723d_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c71d68a723d_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c71d68a723d_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c71d68a723d_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c71d68a723d_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c71d68a723d_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c71d68a723d_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c71d68a723d_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c726abf41ea_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c726abf41ea_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c726abf41ea_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c726abf41ea_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c726abf41ea_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c726abf41ea_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c726abf41ea_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c726abf41ea_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c73df92592a_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c73df92592a_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c73df92592a_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c73df92592a_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c73df92592a_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c73df92592a_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c73df92592a_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c73df92592a_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c78d60add71_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c78d60add71_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c78d60add71_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c78d60add71_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c78d60add71_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c78d60add71_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c78d60add71_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c78d60add71_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c7f1afd31a9_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c7f1afd31a9_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c7f1afd31a9_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c7f1afd31a9_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c7f1afd31a9_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c7f1afd31a9_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c7f1afd31a9_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c7f1afd31a9_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c808de2dfbe_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c808de2dfbe_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c808de2dfbe_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c808de2dfbe_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c808de2dfbe_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c808de2dfbe_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c808de2dfbe_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c808de2dfbe_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c8797da31f3_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c8797da31f3_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c8797da31f3_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c8797da31f3_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c8797da31f3_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c8797da31f3_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c8797da31f3_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c8797da31f3_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9103d4ca62_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9103d4ca62_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9103d4ca62_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9103d4ca62_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9103d4ca62_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9103d4ca62_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9103d4ca62_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9103d4ca62_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c973c62d513_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c973c62d513_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c973c62d513_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c973c62d513_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c973c62d513_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c973c62d513_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c973c62d513_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c973c62d513_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9e7076f19e_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9e7076f19e_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9e7076f19e_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9e7076f19e_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9e7076f19e_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9e7076f19e_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9e7076f19e_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/c9e7076f19e_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca3aa63514b_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca3aa63514b_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca3aa63514b_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca3aa63514b_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca3aa63514b_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca3aa63514b_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca3aa63514b_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca3aa63514b_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca720a96d61_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca720a96d61_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca720a96d61_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca720a96d61_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca720a96d61_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca720a96d61_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca720a96d61_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca720a96d61_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca9d977f75d_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca9d977f75d_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca9d977f75d_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca9d977f75d_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca9d977f75d_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca9d977f75d_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca9d977f75d_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/ca9d977f75d_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caa76c69256_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caa76c69256_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caa76c69256_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caa76c69256_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caa76c69256_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caa76c69256_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caa76c69256_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caa76c69256_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cace29555c8_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cace29555c8_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cace29555c8_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cace29555c8_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cace29555c8_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cace29555c8_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cace29555c8_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cace29555c8_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf516c2f01_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf516c2f01_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf516c2f01_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf516c2f01_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf516c2f01_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf516c2f01_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf516c2f01_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf516c2f01_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf56c670b7_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf56c670b7_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf56c670b7_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf56c670b7_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf56c670b7_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf56c670b7_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf56c670b7_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf56c670b7_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf7bfdb9d2_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf7bfdb9d2_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf7bfdb9d2_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf7bfdb9d2_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf7bfdb9d2_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf7bfdb9d2_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf7bfdb9d2_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/caf7bfdb9d2_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cafd5e4774f_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cafd5e4774f_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cafd5e4774f_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cafd5e4774f_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cafd5e4774f_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cafd5e4774f_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cafd5e4774f_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cafd5e4774f_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb0b1afcf17_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb0b1afcf17_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb0b1afcf17_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb0b1afcf17_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb0b1afcf17_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb0b1afcf17_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb0b1afcf17_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb0b1afcf17_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb14a1fe478_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb14a1fe478_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb14a1fe478_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb14a1fe478_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb14a1fe478_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb14a1fe478_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb14a1fe478_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb14a1fe478_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb4c7fd2fb9_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb4c7fd2fb9_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb4c7fd2fb9_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb4c7fd2fb9_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb4c7fd2fb9_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb4c7fd2fb9_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb4c7fd2fb9_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb4c7fd2fb9_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb59d246f7f_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb59d246f7f_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb59d246f7f_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb59d246f7f_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb59d246f7f_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb59d246f7f_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb59d246f7f_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb59d246f7f_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb701569f8c_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb701569f8c_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb701569f8c_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb701569f8c_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb701569f8c_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb701569f8c_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb701569f8c_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cb701569f8c_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cbde98a0ab7_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cbde98a0ab7_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cbde98a0ab7_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cbde98a0ab7_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cbde98a0ab7_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cbde98a0ab7_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cbde98a0ab7_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cbde98a0ab7_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc1556053b6_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc1556053b6_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc1556053b6_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc1556053b6_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc1556053b6_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc1556053b6_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc1556053b6_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc1556053b6_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7b267ec3a_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7b267ec3a_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7b267ec3a_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7b267ec3a_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7b267ec3a_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7b267ec3a_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7b267ec3a_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7b267ec3a_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7c39f9f94_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7c39f9f94_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7c39f9f94_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7c39f9f94_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7c39f9f94_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7c39f9f94_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7c39f9f94_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc7c39f9f94_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc848b36836_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc848b36836_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc848b36836_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc848b36836_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc848b36836_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc848b36836_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc848b36836_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc848b36836_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc984074f80_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc984074f80_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc984074f80_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc984074f80_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc984074f80_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc984074f80_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc984074f80_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cc984074f80_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cd415beb5b0_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cd415beb5b0_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cd415beb5b0_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cd415beb5b0_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cd415beb5b0_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cd415beb5b0_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cd415beb5b0_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cd415beb5b0_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cf0b9988de3_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cf0b9988de3_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cf0b9988de3_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cf0b9988de3_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cf0b9988de3_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cf0b9988de3_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cf0b9988de3_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cf0b9988de3_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cff969f3196_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cff969f3196_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cff969f3196_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cff969f3196_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cff969f3196_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cff969f3196_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cff969f3196_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cff969f3196_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cfff8783f5b_smoke/r_0.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cfff8783f5b_smoke/r_1.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cfff8783f5b_smoke/r_2.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cfff8783f5b_smoke/r_3.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cfff8783f5b_smoke/r_4.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cfff8783f5b_smoke/r_5.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cfff8783f5b_smoke/r_6.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    },
+    {
+      "file": "simulation/search/runs/cfff8783f5b_smoke/r_7.csv",
+      "rows": 2,
+      "restored_valid": 0,
+      "still_invalid_real_defect": 0,
+      "already_valid": 2,
+      "action": "none"
+    }
+  ]
+}

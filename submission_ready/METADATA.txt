@@ -11,7 +11,7 @@ source           : Kaggle dataset destbreso/kaggriculture-donor-agents-20260902,
 license          : Apache-2.0 (NOTICE.md retained alongside)
 sha256           : a52ba1bfe9df9dc1d504550af46744ef8d474797cdba7af2412dc40a3ebdf3b8
 bytes            : 461738
-git_commit       : dcb31dbb529ac3ea9686982e8eb15b4f96d1f0ba
+git_commit       : 0d22b5dd8dbbd7814de93d63312167affeacd90c
 modifications    : EXACTLY ONE, and mechanically verified: the live
                    `_SETTINGS` flag `room_guard` flipped False -> True.
                    Every other byte of the file is identical to the parent.
@@ -29,37 +29,62 @@ seats               : both, every world
 errors              : 0 broken games in every leg (3,800+ paired games)
 
 STRENGTH EVIDENCE (offline; NOT a Kaggle rating)
-All figures paired, both seats, on ladder-derived elite seeds.
-vs v51, the previous champion   657-155-180 of 992   80.91%  Wilson [0.781, 0.835]
-vs the 2945 Farm                537-453-2   of 992   54.24%  Wilson [0.511, 0.573]
-previous champion vs the Farm   506-486-0   of 992   51.01%  Wilson [0.479, 0.541]
-    -> the single change is worth +3.23 points against the top opponent on
-       identical worlds, and flips mean cash margin from -$26.9 to +$33.8.
-SEALED FINAL, run once          34-14-0     of  48   70.83%  Wilson [0.568, 0.818]
-HOLDOUT                         30-18-0     of  48   62.50%  Wilson [0.484, 0.748]
-INDEPENDENT LINEAGE             768-0-0     of 768  100.00%  Wilson [0.995, 1.000]
-    four MIT-licensed agents from an unrelated author.
-INERT WORLDS                    216 of
-    992 games ended in an exact tie, i.e. the guard
-    never fired on those worlds. Those are findings, not invalid games.
+Recomputed from migrated raw rows by policy/search/canonical_metrics.py.
+PRIMARY metric is the BT score rate (W + 0.5T)/N, which is how Kaggle's final
+Bradley-Terry scores a draw. Decided-only W/(W+L) is a secondary diagnostic.
+Intervals are percentile bootstraps that resample SEEDS, not games, because the
+two seats of one world share the world and are correlated observations.
+
+  C001 vs v51   638-138-216 of 992   BT 0.7520
+                                           95% [0.7218, 0.7812]
+                                           decided-only 0.8222
+                                           tie rate 0.2177
+                 657-155-180 of 992   BT 0.7530
+                                           95% [0.7218, 0.7833]
+                                           decided-only 0.8091
+                                           tie rate 0.1815
+
+  The two runs are independent seed sets. They disagree by 1.31 points on the
+  decided-only rate and by 0.10 points on the BT score rate. The metric that
+  matches the competition's convention is the one that replicates.
+
+  C001 vs 2945 Farm  537-453-2 of 992  BT 0.5423
+                                           95% [0.4990, 0.5857]
+  v51 vs 2945 Farm   506-486-0 of 992  BT 0.5101
+                                           95% [0.4667, 0.5534]
+
+  READ THIS HONESTLY: C001's score rate against the Farm has a LOWER CONFIDENCE
+  BOUND BELOW 0.50. The pre-declared promotion criterion "score rate > 52% with
+  lower confidence > 50%" is NOT met against the Farm. C001 is probably better
+  than the Farm; this evidence does not establish it at that threshold. The
+  matchup is unresolved and is the first target of the next generation.
+  See reports/RETRACTIONS.md entry R11.
+
+  SEALED FINAL, run once          34-14-0     of  48   BT 0.7708
+  HOLDOUT                         30-18-0     of  48   BT 0.6875
+  INDEPENDENT LINEAGE             768-0-0     of 768  BT 1.0000
+    four MIT-licensed agents from an unrelated author. This 100% is inherited
+    from v51, not earned by the change, and those agents are far too weak for
+    the number to say anything about 3066.
 
 SHADOW RATING
     ShadowRating is NOT published.
     CALIBRATION INADEQUATE - point ratings withheld
     Only 4 of 51 matchups are informative; the rest saturate the
-    ladder's win-rate curve, and a saturated curve cannot invert a saturated
-    observation. What CAN be stated as a BOUND, not a point: an 80.91% win
-    rate over the previous champion is far past the top of the fitted curve,
-    so the gap is at least 275 ladder points.
+    ladder's win-rate curve. A saturated curve means the observation CANNOT BE
+    INVERTED -- it does not mean the gap is large, and no bound on the gap is
+    claimed. The earlier "+275 ladder points" statement is retracted
+    (reports/RETRACTIONS.md R8).
     See reports/SHADOW_LADDER_CALIBRATION.md.
 
-3075-READY: NO.
-    The strict definition requires calibrated rating evidence consistent with
-    >3075. The calibration does not support that precision, so that leg still
-    fails. What IS established: this agent beats every legally reproducible
-    public agent measured against it, improves on the previous champion by a
-    large and replicated margin, and holds up on a sealed pool.
-    See reports/3075_RESEARCH_CONCLUSION.md.
+3066-READY: NO.
+    Two legs fail. (1) No calibrated absolute rating: the ladder curve
+    saturates, so the champion's position is unknown. (2) The Farm matchup's
+    lower confidence bound is 0.4990, below the 0.50 promotion threshold.
+    What IS established: C001 beats its own parent decisively and
+    reproducibly (BT 0.752-0.753 vs 0.5101), and beats four weak independent
+    agents outright.
+    See reports/3066_RESEARCH_CONCLUSION.md.
 
 RUNTIME GATE
     playability probe PLAYABLE; per-call latency far inside the 1 s actTimeout.

@@ -1,0 +1,98 @@
+{
+  "generated_utc": "2026-10-02T12:54:01Z",
+  "principles": {
+    "identity": "SHA256 of the file, never the filename",
+    "licence_gate": "an agent with no declared licence is an analytical opponent only and is never a submission candidate",
+    "probe": "benchmark/agent_loader.py --probe, canonical"
+  },
+  "entries": [
+    {
+      "name": "kaggriculture-r88-rivals",
+      "file": "moon_parent.py",
+      "source": "dataset:kksky9k/kaggriculture-r88-rivals",
+      "declared_license": "UNDECLARED",
+      "bytes": 1046403,
+      "sha256": "178ae0f727641cf4b618ebb98ade7aa1a1bed7517281aab9849de82a59d8ed3a",
+      "defines_agent": true,
+      "status": "DUPLICATE of opponents/unlicensed/kaggriculture-r88-rivals__moon_parent.py",
+      "playable": null
+    },
+    {
+      "name": "kaggriculture-r88-rivals",
+      "file": "moon_q13_mg.py",
+      "source": "dataset:kksky9k/kaggriculture-r88-rivals",
+      "declared_license": "UNDECLARED",
+      "bytes": 1048339,
+      "sha256": "d987c83ae779e5de7e4888a0ab6af52ed20af2903d4755f5b148800c2d5f06f5",
+      "defines_agent": true,
+      "status": "DUPLICATE of opponents/unlicensed/kaggriculture-r88-rivals__moon_q13_mg.py",
+      "playable": null
+    },
+    {
+      "name": "kaggriculture-r88-rivals",
+      "file": "r30.py",
+      "source": "dataset:kksky9k/kaggriculture-r88-rivals",
+      "declared_license": "UNDECLARED",
+      "bytes": 357742,
+      "sha256": "4b5402888feeb4170dce38f34bebe56788b62ca287139fce7db72df8eb89bb96",
+      "defines_agent": true,
+      "status": "DUPLICATE of opponents/meta/ahmedberatozer-v48-clear-the-queue.py",
+      "playable": null
+    },
+    {
+      "name": "kaggriculture-r88-rivals",
+      "file": "thomas.py",
+      "source": "dataset:kksky9k/kaggriculture-r88-rivals",
+      "declared_license": "UNDECLARED",
+      "bytes": 856427,
+      "sha256": "4f3ca95dd12d9a94b03339999d8803c155f450a8d3956636f050643301fcc5dd",
+      "defines_agent": true,
+      "status": "DUPLICATE of opponents/unlicensed/kaggriculture-r88-rivals__thomas.py",
+      "playable": null
+    },
+    {
+      "name": "two-policy-last-dance",
+      "file": "last_dance_56720309.py",
+      "source": "dataset:mqingcs/kaggriculture-two-policy-source",
+      "declared_license": "Apache-2.0",
+      "bytes": 562245,
+      "sha256": "c1af0a2f3c1e49614b0dbfef9e6f2aade961e32b7edc7edb47ed849eabdb8e8e",
+      "defines_agent": true,
+      "status": "DUPLICATE of opponents/pool/two-policy-last-dance__last_dance_56720309.py",
+      "playable": null
+    },
+    {
+      "name": "two-policy-observed",
+      "file": "observed_56713902.py",
+      "source": "dataset:mqingcs/kaggriculture-two-policy-source",
+      "declared_license": "Apache-2.0",
+      "bytes": 3332,
+      "sha256": "82678f5c0fc88f0fecbadcdd95dd7c17208c9e2ad8f8fc87887230953bdaae33",
+      "defines_agent": false,
+      "status": "NO agent() or act() - module, not an agent",
+      "playable": null
+    },
+    {
+      "name": "two-policy-observed-009",
+      "file": "observed_56713902_009.py",
+      "source": "dataset:mqingcs/kaggriculture-two-policy-source",
+      "declared_license": "Apache-2.0",
+      "bytes": 61935,
+      "sha256": "712d5d84a023177df534da656019c6299bece5f17ee15ce7ab7f447141de4e14",
+      "defines_agent": true,
+      "status": "DUPLICATE of opponents/pool/two-policy-observed-009__observed_56713902_009.py",
+      "playable": null
+    },
+    {
+      "name": "farmbench",
+      "file": "farmbench.py",
+      "source": "dataset:manjunadhpadarthi/farmbench-artifacts",
+      "declared_license": "UNDECLARED",
+      "bytes": 51426,
+      "sha256": "acafe04d9a28381324534597c94240736d0a4e3a522dd1facbb9d03d0e2addc1",
+      "defines_agent": false,
+      "status": "NO agent() or act() - module, not an agent",
+      "playable": null
+    }
+  ]
+}

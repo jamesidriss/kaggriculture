@@ -1,0 +1,71 @@
+{
+  "generated_utc": "2026-10-02T13:17:16Z",
+  "leaderboard": {
+    "source": "kaggle competitions leaderboard -c kaggriculture",
+    "metric": "final Bradley-Terry, draw = 0.5 per side",
+    "teams": 745,
+    "top_score": 3069.5,
+    "bottom_score": 1914.4
+  },
+  "class_rules": {
+    "A": "artifact digest IS the submitted file and the score is official",
+    "B": "official score with a recovered, probed artifact, binding inferred",
+    "C": "official score, artifact unknown - context only",
+    "D": "self-reported title only - context only"
+  },
+  "usable_rule": "A or B with an official score; nothing else calibrates",
+  "n_anchors": 2,
+  "n_usable": 1,
+  "anchors": [
+    {
+      "agent": "farm_2945_original",
+      "lineage_id": "L-OZER-2945",
+      "declared_license": "Apache-2.0",
+      "team_name_claim": "DSM",
+      "binding": "inferred",
+      "evidence": [
+        "The agent's own public notebook is titled 'The 2945 Farm 2945', a self-reported score of 2945 (class D evidence on its own).",
+        "The official final leaderboard has exactly one team named 'DSM' at 2945.4 (rank 3 of 744).",
+        "Two independently derived numbers agree to 0.4 ladder points."
+      ],
+      "why_not_class_A": [
+        "The notebook title is self-reported, not a Kaggle field.",
+        "There is no public API that maps a submission id to a team, so the artifact-to-team link is a strong coincidence, not a proof.",
+        "'DSM' could be an unrelated team that happened to land on 2945.4."
+      ],
+      "anchor_class": "B",
+      "artifact_sha256": "bfee70e9daaebeae0737a880f1df8f1c60d0783c59af620136cc0d28ef482bc7",
+      "artifact_path": "postmortem_hedge/main.py",
+      "bytes": 856428,
+      "official_score": 2945.4,
+      "official_rank": 3,
+      "official_team": "DSM",
+      "score_verified_official": true,
+      "score": 2945.4,
+      "usable_for_calibration": true
+    },
+    {
+      "agent": "ahmedberatozer-v51-lean-flock",
+      "lineage_id": "L-OZER-2945",
+      "declared_license": "Apache-2.0",
+      "team_name_claim": null,
+      "binding": "none",
+      "evidence": [
+        "Verbatim copy of a published public artifact from an Apache-2.0 donor dataset, so the artifact is exactly what its author wrote."
+      ],
+      "why_not_class_A": [
+        "The author is not known to have submitted this exact file. The notebook family reports 'Best Score' figures for specific versions and we cannot prove which version was submitted.",
+        "Attaching a notebook's best score to a different version is exactly the error this class exists to prevent."
+      ],
+      "anchor_class": "D",
+      "artifact_sha256": "c1e3590d02e42d16091c5377e87a3db16496e5a462d558dc2925887f835f9891",
+      "artifact_path": "postmortem_champion/main.py",
+      "bytes": 461739,
+      "official_score": null,
+      "official_score_reason": "no team-name binding proposed, or the proposed name is not on the leaderboard",
+      "score_verified_official": false,
+      "score": null,
+      "usable_for_calibration": false
+    }
+  ]
+}

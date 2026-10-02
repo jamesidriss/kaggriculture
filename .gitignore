@@ -73,3 +73,14 @@ simulation/search/runs/
 # parent + settings literal, which run_search.py records in results.json.
 simulation/search/*.py
 simulation/search/decisive/
+
+# Preserved originals from the tie migration. Never aggregated as results.
+*.pre_tie_fix.csv
+
+# Match cache: ~5500 one-file-per-match entries, all reproducible from
+# (env, digest pair, seed, seat). Enormous, derived, and worthless in history.
+benchmark/match_cache/
+
+# Per-candidate search artifacts (512 x 460KB), reproducible from
+# parent + settings literal recorded in search_state.json.
+simulation/search3066/candidates/

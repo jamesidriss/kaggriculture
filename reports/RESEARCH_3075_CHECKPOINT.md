@@ -64,9 +64,14 @@ final, runtime, frozen artifact. **Fails** the calibrated-rating leg (2
 informative observations of 41; the ladder curve saturates, so no point rating
 can be published) and world-regime coverage is not established.
 
-The strongest defensible quantitative claim: 80.91% over the previous champion
-is past the top of the fitted ladder curve, so the gap is **at least 275 ladder
-points**. A bound, not a point estimate.
+The strongest defensible quantitative claim: 80.91% decided-only over the
+previous champion (BT score rate 75.30%) is past the top of the fitted ladder
+curve. **RETRACTED** — see `reports/RETRACTIONS.md` R8. A saturated curve means
+the observation CANNOT BE INVERTED; it does not imply a gap of 275 or more, and
+the earlier "at least 275 ladder points" statement here was wrong.
+
+Correct position: **NO RELIABLE ABSOLUTE SHADOW RATING, and no lower bound on
+the gap is available.**
 
 ## Next commands
 ```

@@ -1,0 +1,91 @@
+{
+  "generated_utc": "2026-10-02T15:33:31Z",
+  "source": "own matches, C001 vs 2945 Farm, official engine, GEN3066_dev seeds",
+  "turn_rows": 8640,
+  "episodes": 6,
+  "quality": {
+    "duplicate_step_player": 0,
+    "steps_over_720": 0,
+    "negative_money": 0,
+    "both_players_every_episode": true,
+    "shared_market_mismatches": 0,
+    "constant_numeric_fields": [
+      "episode_id",
+      "n_tile_slots",
+      "crop_tomato",
+      "n_goose"
+    ]
+  },
+  "feature_policy": {
+    "known_at_decision_time": [
+      "known_first_shops",
+      "known_n_first_shops"
+    ],
+    "descriptive_only": [
+      "desc_all_shops",
+      "desc_n_shops",
+      "desc_min_market_inventory",
+      "desc_market_dry_step",
+      "desc_final_money"
+    ],
+    "rule": "descriptive_only features may group worlds offline and may NOT be used as policy inputs"
+  },
+  "regimes": [
+    {
+      "regime": 0,
+      "n_worlds": 1,
+      "centroid_scaled": [
+        0.0,
+        1.964,
+        -0.614
+      ],
+      "mean_final_day": 29.0,
+      "mean_n_shops": 7.0,
+      "mean_min_market_inventory": 89742.0
+    },
+    {
+      "regime": 1,
+      "n_worlds": 1,
+      "centroid_scaled": [
+        0.0,
+        -0.655,
+        -1.847
+      ],
+      "mean_final_day": 29.0,
+      "mean_n_shops": 5.0,
+      "mean_min_market_inventory": 89668.0
+    },
+    {
+      "regime": 2,
+      "n_worlds": 1,
+      "centroid_scaled": [
+        0.0,
+        0.655,
+        1.286
+      ],
+      "mean_final_day": 29.0,
+      "mean_n_shops": 6.0,
+      "mean_min_market_inventory": 89856.0
+    },
+    {
+      "regime": 3,
+      "n_worlds": 3,
+      "centroid_scaled": [
+        0.0,
+        -0.655,
+        0.392
+      ],
+      "mean_final_day": 29.0,
+      "mean_n_shops": 5.0,
+      "mean_min_market_inventory": 89802.3
+    }
+  ],
+  "episode_to_regime": {
+    "1589371": 0,
+    "2527947": 2,
+    "2530515": 3,
+    "2684125": 3,
+    "2704029": 3,
+    "3468142": 1
+  }
+}

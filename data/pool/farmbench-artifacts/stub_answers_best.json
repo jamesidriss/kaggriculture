@@ -1,0 +1,81 @@
+{
+ "melon_dump": {
+  "sell_now": 72
+ },
+ "melon_race_timing": {
+  "harvest_day": 9
+ },
+ "wool_lot": {
+  "day27": 0,
+  "day28": 0,
+  "day29": 30
+ },
+ "milk_front_run": {
+  "units_per_hour": [
+   20,
+   4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "crop_choice": {
+  "crop": "STRAWBERRY"
+ },
+ "hire_math": {
+  "hire_more": 1,
+  "extra_cost": 8
+ },
+ "feed_or_lose": {
+  "feed": [
+   "A",
+   "B",
+   "C"
+  ]
+ },
+ "fertilizer_melon": {
+  "units_with_fertilizer": 6,
+  "units_without_fertilizer": 6,
+  "age_first_full_with_fertilizer": 8
+ },
+ "opening": {
+  "option": "goose_farm"
+ },
+ "se_quadrant": {
+  "option": "never"
+ },
+ "sheep_yarn": {
+  "value": 8
+ },
+ "sheep_no_yarn": {
+  "value": 0
+ },
+ "max_hands": {
+  "value": 12
+ },
+ "terminal_tomato": {
+  "value": 18
+ },
+ "terminal_carrot": {
+  "value": 24
+ }
+}

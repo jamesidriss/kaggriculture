@@ -1,0 +1,21 @@
+{
+  "curve_top_gap": 250.0,
+  "saturation": 0.985,
+  "thresholds": {
+    "min_anchors": 5,
+    "min_span": 300.0,
+    "min_loo_mae": 60.0,
+    "min_loo_spearman": 0.7
+  },
+  "n_usable_anchors": 1,
+  "n_constraints": 0,
+  "n_identifiable": 0,
+  "n_unidentifiable": 0,
+  "relative": {},
+  "cross_validation": {
+    "performed": false,
+    "reason": "only 1 anchors"
+  },
+  "published": false,
+  "rating": null
+}

@@ -1,0 +1,202 @@
+JFJH-V21q: JFJH-V19 + sale lead + day-28 feed completion, 2026-09-25.
+Status: prepared package; upload only on explicit user request.
+
+License: Apache License, Version 2.0; see LICENSE.txt.
+The full inherited source, license, original attribution notices and subsequent
+modification notices are retained in main.py, including any compressed embedded
+policy sources. This NOTICE supplements those embedded notices and does not
+replace or remove them.
+
+Original JFJH intake: prvsiyan, Kaggriculture Frontier / The Soil Remembers Rain.
+https://www.kaggle.com/code/prvsiyan/kaggriculture-frontier-the-soil-remembers-rain
+Inherited main.py attributes public contributions to thomastschinkel,
+yhay81/Yusuke Hayashi, destbreso, aurax7, tetsutani, prvsiyan,
+Dmitrii Gluzdov, Ahmed Berat Ozer, Steven Lee Hans, Seyit Kaan Gunes,
+flexonafft and Kaggle/kaggle-environments contributors. Consult main.py for the
+complete embedded attribution and modification history; no author endorsement
+is implied.
+
+Frozen parent: JFJH R7 capital recovery, SHA256
+5d6da5e7ee3a47ca6d6f7669a3bb50856ba3ae80c71c2f84a6997f4e6ae04ce6
+(built on JFJH V10, SHA256 b699f63b27867c033a978140db6d27cb2489e3ed0195298e36b6a61c9fafa70a).
+R7 additions: redundant fertilizer guard; event-bound fertilizer input
+commitments; bounded early capital/service recovery.
+
+2026-09-25 JFJH-V18 modification (marked "JFJH-V18" in main.py): sale-timing
+layers ported from the public notebook flexonafft/kaggriculture-multi-route-farming-agent
+(version 94, Apache-2.0, https://www.kaggle.com/code/flexonafft/kaggriculture-multi-route-farming-agent,
+main.py SHA256 127ed3e62988c0474d386db6527ae8ca9de9bb1fe7004128557ddef67126c652):
+ready-stock sale advancing, terminal liquidation, evening/dawn/midday chunked
+lead-sells, rival-cadence lead-sell, same-item merge and queue hole closure,
+inserted at the V10 parent boundary before its own-sale ledger reconcile, with
+the other own-sale ledgers synchronised to the emitted orders.
+2026-09-25 JFJH-V19 modification (marked "JFJH-V19" in main.py): wheat buy-first
+(large BUY_PRODUCT WHEAT orders move to the queue front when cash covers every
+cost-bearing order) and a cash-safe port of the CXD best-response SELL ordering
+layer from the same public Flexon94 notebook (version 94, Apache-2.0).
+Frozen R7F parent SHA256 8f526fc1750772201b89a01c22903e036e7504842830f8ac1937008f97afe82e.
+Production entry: capital_recovery_submission_entry.
+
+2026-09-25 JFJH-V21 modifications (all own code; marked "JFJH-V21h", "JFJH-V21m",
+"JFJH-V21q" in main.py; built by jfjh/research/v21_goldpush_20260925/build_v21.py
+from the frozen V19 parent SHA256
+3439288dfeb66e6dbbb30d1d1f745262a0ada1953e7e9e5b52df748478cdfd18):
+ready-stock sale advance look-ahead 3->4 and chunked lead-sell windows 8->10
+(parameters of the V18 Flexon94-derived layers); six-sheep crew order (feed, care,
+harvest, then wool delivery, fertilizer rounds last); day-28 feed completion
+(off-tape crew pickups exempt from the day-28 wheat trim, CARE/PASS->FEED on
+productive animals worth feeding, day-28 crew skips animals not worth feeding,
+tape units carry wheat for productive animals with pending care bonus).
+Production entry: capital_recovery_submission_entry.
+
+Embedded deterministic crop/unit/decay semantics derive from
+kaggle-environments 1.32.7, kaggriculture.py SHA256
+bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e.
+The runtime artifact is self-contained and makes no network or file requests.
+
+Local results (two 128-game paired confirmations, both INCONCLUSIVE under the
+WIN rule; online-replay counterfactuals) do not establish a Kaggle rating,
+medal, or independent confirmation.
+
+2026-09-26/27 JFJH-V22 modifications (built by
+jfjh/research/v22_structural_20260925/build_v22.py; marked "JFJH-V22S",
+"JFJH-V22W", "JFJH-V22Y", "JFJH-V22K", "JFJH-V22D" in main.py):
+own code: tape days 28/29 re-planned on fewer hands; ready-stock sale advance
+look-ahead 4->5; weed displacement fix; second strawberry wave sized by the
+open strawberry shops (idea from watching public ladder replays; own
+implementation on our tape).
+JFJH-V22K: four module-level market constants set to the values re-measured in
+the public notebook "Your Market List Is an Order Book" by renji_starfall
+(https://www.kaggle.com/code/degnonguidi/best-agent-ranking, Apache-2.0):
+_V92_P_EVERY 2, V9_RACE_DEFAULT 44, _OR2_SLOT_MARGIN 8.0, _CA_MARGIN -15.0.
+JFJH-V22D: that notebook's "counter D" layer (exact best-response ordering of
+the final market list; it reuses the V44y/V48 per-unit lockstep evaluator by
+Ahmed Berat Ozer), copied verbatim from the notebook's main.py (SHA256
+a16e0e9b40c489972630a0b9d04f30e9c1cab03159fa78676db74277d84d82ab) and appended
+as the outermost layer, with an added attribution header; its code is unchanged.
+Production entry: _cxd_agent (last callable).
+Local evidence for that version (agent.md section 13 S2, 128 games vs x4swy): PASS_LOCAL_WIN;
+this does not establish a Kaggle rating, medal, or independent confirmation.
+
+2026-09-28 JFJH modifications on top of x4swykd (built by
+jfjh/research/v22_structural_20260925/build_v22.py target "x4kdrtw"; marked
+"JFJH-XRL1", "JFJH-V22T" and "JFJH-WCT" in main.py), all inserted before the
+counter D layer, which stays the outermost layer:
+JFJH-XRL1 (own code): race-aware release of ready stock at the day start when a
+rival has been seen selling its day-start stock early on days we held (rival
+stock estimated from public tiles and market-inventory changes only).
+JFJH-V22T: the "counter T-B" layer (the V219 tomato project's step-432
+qualification decided by the projected revenue of its 80 units instead of a
+shop count) from the same public notebook by renji_starfall / shiiin9
+(https://www.kaggle.com/code/degnonguidi/best-agent-ranking, Apache-2.0),
+copied verbatim with an added attribution header; its code is unchanged.
+JFJH-WCT (own code): a wheat round trip on the town's draw turns (buy on a draw
+turn within free shed room and spare cash, sell the next turn; the parent layers
+never see the carried units).
+Production entry: _cxd_agent (last callable).
+Local evidence (agent.md section 13 S2, 128 games vs x4swykd): PASS_LOCAL_WIN +
+JOINT_IMPROVEMENT; this does not establish a Kaggle rating, medal, or
+independent confirmation.
+
+2026-09-28 JFJH-KR7 modifications on top of x4kdrtw (built by
+jfjh/research/v22_structural_20260925/build_v22.py target "x4kr7"), two
+constants only:
+- In the JFJH-V22T copy of renji_starfall / shiiin9's "counter T-B" layer
+  (Apache-2.0), _CXTB_MIN_REVENUE was changed from 9000 to 7000 (the tomato
+  project now opens when its projected revenue clears 7000). This is a
+  modification of the third-party code; the rest of that layer is unchanged.
+- In the own JFJH-WCT layer, _WCT_RESERVE was changed from 1500.0 to 0.0.
+Production entry: _cxd_agent (last callable).
+Local evidence (agent.md section 13 S2, 128 games vs x4kdrtw): PASS_LOCAL_WIN +
+JOINT_IMPROVEMENT; this does not establish a Kaggle rating, medal, or
+independent confirmation.
+
+2026-09-28 JFJH-EOD modification on top of x4kr7 (built by
+jfjh/research/v22_structural_20260925/build_v22b.py target "x4kr7e"), one own
+layer inserted before the counter D layer (which stays the outermost layer):
+JFJH-EOD (own code): day-end shed guard. At hour 23 the engine pours every
+unit's cargo into the shed and destroys what does not fit; the layer trims that
+turn's BUY_PRODUCT orders (fertilizer first, then wheat) by the projected
+overflow and re-buys the trimmed units at hours 0-3 of the next day once there
+is room. No third-party code is added.
+Production entry: _cxd_agent (last callable).
+Local evidence (agent.md section 13): S1 on EOD-trigger worlds vs x4kr7 gave
+MECHANISM_IMPROVED (net margin +552 [+372, +753], own cash +0.22% [+0.06,
++0.39], no win flips because the baseline already won every trigger world); it
+did not meet the S2 entry rule and is not a formal promotion. This does not
+establish a Kaggle rating, medal, or independent confirmation.
+
+2026-09-29 JFJH-WCTG modification on top of x4kr7e (built by
+jfjh/research/v22_structural_20260925/build_v22d.py target "x4kr7g" with
+x_wctg_patch.py; own code): a guard in the own JFJH-WCT wheat-carry layer. It
+reads the rival's net wheat trade from the public market inventory and, after
+six turns on which the rival bought wheat just before a town draw and sold it
+on the draw turn, stops opening new carry lots for the rest of the game.
+Production entry: _cxd_agent (last callable).
+Local evidence: ladder tape counterfactuals (opponents replayed, shops locked)
+and a synthetic opponent; mechanism-level only (agent.md section 13 S1 did not
+reach the S2 entry because no pool opponent triggers the guard). This does not
+establish a Kaggle rating, medal, or independent confirmation.
+
+2026-09-29 JFJH-WCTC modification on top of the JFJH-WCTG version (built by
+jfjh/research/v22_structural_20260925/build_v22d.py target "x4kr7c" with
+x_wctg_patch.py and x_wctc_patch.py; own code): sizing in the own JFJH-WCT
+wheat-carry layer. When the public market inventory shows the rival carrying
+wheat through the same town draws (buying on the draw turn and selling the next
+turn) at least twice, each new lot is sized as the best response to the
+rival's recent lot under a unit-by-unit simulation of the engine's same-snapshot
+market clearing, and the lot is skipped if even the best size does not gain.
+Production entry: _cxd_agent (last callable).
+Local evidence (agent.md section 13 S2, 128 games vs x4kr7e): PASS_LOCAL_WIN +
+JOINT_IMPROVEMENT; all flips came from a synthetic evaluation-only opponent and
+our own lineage (mirrors); ladder tape counterfactuals 268 games +15/-0. This
+does not establish a Kaggle rating, medal, or independent confirmation.
+
+2026-09-29 JFJH-D0C modification on top of the JFJH-WCTC version (built by
+jfjh/research/v22_structural_20260925/build_v22g.py target "x4kr7c0" with
+x_d0c_block.py; own code): day-0 cash floor. On day 0 only, on turns whose
+market holds nothing but seed purchases, seed quantities are trimmed so that at
+least $1 remains, so that the day-1 hires cannot all fail and leave the opening
+animals unfed. Production entry: _d0c_agent (last callable).
+Local evidence: behaviour identical to the JFJH-WCTC version on all 64 conditions
+of its agent.md section 13 S2 (so that S2 result applies unchanged); ladder tape
+counterfactuals (opponents replayed, shops locked): 268 current games change only
+in the 3 games where day-0 cash reached $0 (all three losses become wins), older
+224 tapes: one more such game fixed and two games -$10/-$2. This does not
+establish a Kaggle rating, medal, or independent confirmation.
+
+2026-09-30 JFJH-WCTV modification on top of the JFJH-D0C version (built by
+jfjh/research/v22_structural_20260925/build_v22d.py target "x4kr7c0v" with
+x_wctg_patch.py, x_wctc_patch.py, x_wctv_patch.py and x_d0c_block.py; own
+code): reverse-carry stand-down in the own JFJH-WCT wheat-carry layer. A lot
+turn on which the public market inventory shows the rival net-selling at least
+15 wheat on the draw turn and net-buying at least 15 on the next turn counts
+once; after 4 such lots the carry opens no more lots in that game.
+Production entry: _d0c_agent (last callable).
+Local evidence (agent.md section 13 S2, 128 games vs the JFJH-D0C version):
+not passed under the pre-registered WIN rule (no flips); margin +$408
+[+156,+683], own cash +0.17% [+0.07,+0.29], all of it against a synthetic
+evaluation-only reverse-carry opponent, every other condition identical;
+ladder tape counterfactuals 268 current games +2/-0, 216 older games identical.
+Mechanism-level evidence only. This does not establish a Kaggle rating, medal,
+or independent confirmation.
+
+2026-09-30 JFJH-XRL15 modification on top of the JFJH-WCTV version (built by
+jfjh/research/v22_structural_20260925/build_v22d.py target "x4kr7c0vx"; the
+third-party-derived XRL layer's own constant changed): the early-release layer
+(XRL) now also acts while the quote is up to 1.5x the base price (was: at or
+below base), so that when a farm-identical rival is seen dumping premium goods
+at hour 1, our ready stock is released at hour 0 in that price band too.
+Production entry: _d0c_agent (last callable).
+Local evidence: agent.md section 13 S0 (16 games) identical to the baseline;
+a synthetic hour-1 dumping opponent: margin +$236 per game, no flips (the
+baseline already wins); ladder tape counterfactuals (opponents replayed, shops
+locked) of the combined JFJH-WCTV + JFJH-XRL15 version against the JFJH-D0C
+version: 546 games +12/-1, +$79 per game. Mechanism-level evidence only. This
+does not establish a Kaggle rating, medal, or independent confirmation.
+
+2026-09-30 JFJH-V33 opening10 (own code): the standard step-0 WHEAT BUY20/SELL15 round trip is reduced to BUY10/SELL5. Net grain five and one wheat seed remain unchanged; final action and first own-flow recording are synchronized. Other parent behavior is unchanged. Entry opening_volume_entry. Local scope-limited evidence is not a rating, medal or universal-win guarantee.
+
+2026-10-01 JFJH-V34 delayed guard (own code): V33 opening10 plus recognition of visible rival wheat net purchases before a town draw followed by sales one turn after the draw. Six qualifying observations use the existing predator guard to stop new carry lots, while outstanding lots settle normally. Original production and existing guard thresholds are unchanged. No new third-party strategy code was copied. Latest public lynn agent is an evaluation opponent only. Local scope-limited results do not establish a medal or ladder rating.
+
+2026-10-01 V40 risk_probation (own code): execution-cost lower-bound detection of zero-net wheat pressure; separately owned and ordered-settled counter inventory; phase-aware responses to confirmed prebuyers. Additionally, conservatively certified realized carry loss and a separately reported current-quote model risk can start a bounded one-game-day defense; outstanding lots settle before normal trading resumes, while six cumulative anomalies retain permanent defense. A confirmed reverse buyer can be met with inventory-neutral same-turn wheat orders after the inherited queue, with a two-certified-loss stop. These additions were informed by public replay analysis; no new third-party strategy implementation was copied. Public agents and synthetic stress policies are evaluation-only and are not bundled. Local results have limited opponent coverage and imply no guaranteed rating, medal, or universal win rate.

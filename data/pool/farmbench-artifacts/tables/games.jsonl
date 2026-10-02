@@ -1,0 +1,472 @@
+{"task": "sheep_yarn", "arm": "sheep_0", "seed": 9301, "first": true, "me": 87764.0, "them": 138632.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9300, "first": true, "me": 86227.0, "them": 77653.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_0", "seed": 9300, "first": true, "me": 87538.0, "them": 85161.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9300, "first": true, "me": 51776.0, "them": 103828.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9300, "first": true, "me": 30537.0, "them": 112906.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9300, "first": true, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "off", "seed": 9300, "first": true, "me": 71200.0, "them": 81724.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "off", "seed": 9300, "first": true, "me": 87816.0, "them": 82159.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9300, "first": true, "me": 82263.0, "them": 84466.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9300, "first": false, "me": 82469.0, "them": 83846.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9301, "first": true, "me": 82030.0, "them": 107283.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9303, "first": true, "me": 64626.0, "them": 82650.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9301, "first": false, "me": 81480.0, "them": 104512.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9303, "first": false, "me": 63475.0, "them": 82896.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9305, "first": true, "me": 47567.0, "them": 54767.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9305, "first": false, "me": 47538.0, "them": 55390.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9310, "first": true, "me": 53440.0, "them": 82915.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9310, "first": false, "me": 53440.0, "them": 82915.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9316, "first": true, "me": 59043.0, "them": 82463.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "meta_a", "seed": 9316, "first": false, "me": 58501.0, "them": 83058.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9300, "first": false, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9300, "first": true, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9301, "first": true, "me": 80133.0, "them": 109091.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9303, "first": true, "me": 75169.0, "them": 80233.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9301, "first": false, "me": 79878.0, "them": 106744.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9303, "first": false, "me": 75082.0, "them": 80162.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9305, "first": false, "me": 51345.0, "them": 56611.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9305, "first": true, "me": 50243.0, "them": 56239.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9310, "first": true, "me": 56510.0, "them": 84893.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9310, "first": false, "me": 56510.0, "them": 84893.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9316, "first": true, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "default", "seed": 9316, "first": false, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9300, "first": true, "me": 83855.0, "them": 111591.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9300, "first": false, "me": 83855.0, "them": 111591.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9301, "first": true, "me": 76320.0, "them": 136869.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9301, "first": false, "me": 79510.0, "them": 136767.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9303, "first": true, "me": 57774.0, "them": 97103.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9303, "first": false, "me": 57774.0, "them": 97103.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9305, "first": true, "me": 36803.0, "them": 73302.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9305, "first": false, "me": 35342.0, "them": 74085.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9310, "first": true, "me": 56280.0, "them": 113888.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9310, "first": false, "me": 57686.0, "them": 113312.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9316, "first": true, "me": 58864.0, "them": 113879.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "melon_max", "seed": 9316, "first": false, "me": 58864.0, "them": 113879.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9300, "first": true, "me": 93297.0, "them": 85263.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9300, "first": false, "me": 93297.0, "them": 85263.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9301, "first": true, "me": 85752.0, "them": 117777.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9301, "first": false, "me": 85665.0, "them": 117821.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9303, "first": true, "me": 72746.0, "them": 80651.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9303, "first": false, "me": 74341.0, "them": 80371.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9305, "first": true, "me": 52856.0, "them": 55945.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9305, "first": false, "me": 52290.0, "them": 56602.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9310, "first": true, "me": 63140.0, "them": 85775.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9310, "first": false, "me": 63140.0, "them": 85775.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9316, "first": true, "me": 66253.0, "them": 89309.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "goose_farm", "seed": 9316, "first": false, "me": 66253.0, "them": 89309.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9300, "first": false, "me": 87674.0, "them": 79294.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9301, "first": true, "me": 86920.0, "them": 104375.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9301, "first": false, "me": 86920.0, "them": 104375.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9303, "first": true, "me": 63928.0, "them": 72048.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9303, "first": false, "me": 66539.0, "them": 70459.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9305, "first": true, "me": 47183.0, "them": 52073.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9305, "first": false, "me": 46194.0, "them": 52482.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9310, "first": true, "me": 56900.0, "them": 81054.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9310, "first": false, "me": 56900.0, "them": 81054.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9316, "first": true, "me": 63583.0, "them": 85235.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cautious", "seed": 9316, "first": false, "me": 63583.0, "them": 85235.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9300, "first": true, "me": 76725.0, "them": 99044.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9300, "first": false, "me": 71217.0, "them": 99027.0, "status": ["DONE", "DONE"], "secs": 3.3, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9301, "first": true, "me": 74009.0, "them": 136426.0, "status": ["DONE", "DONE"], "secs": 3.3, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9301, "first": false, "me": 73791.0, "them": 129314.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9303, "first": true, "me": 58895.0, "them": 85346.0, "status": ["DONE", "DONE"], "secs": 3.0, "quads": ["NW", "NE"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9303, "first": false, "me": 58895.0, "them": 85346.0, "status": ["DONE", "DONE"], "secs": 2.9, "quads": ["NW", "NE"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9305, "first": true, "me": 27160.0, "them": 64358.0, "status": ["DONE", "DONE"], "secs": 2.9, "quads": ["NW", "NE"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9305, "first": false, "me": 27143.0, "them": 64804.0, "status": ["DONE", "DONE"], "secs": 2.9, "quads": ["NW", "NE"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9310, "first": true, "me": 48545.0, "them": 106825.0, "status": ["DONE", "DONE"], "secs": 3.0, "quads": ["NW", "NE"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9310, "first": false, "me": 48545.0, "them": 106825.0, "status": ["DONE", "DONE"], "secs": 3.0, "quads": ["NW", "NE"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9316, "first": true, "me": 51861.0, "them": 104958.0, "status": ["DONE", "DONE"], "secs": 3.1, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "strawberry_rush", "seed": 9316, "first": false, "me": 51615.0, "them": 104820.0, "status": ["DONE", "DONE"], "secs": 3.0, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9300, "first": true, "me": 85531.0, "them": 97000.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9300, "first": false, "me": 82696.0, "them": 97267.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9301, "first": true, "me": 92444.0, "them": 120472.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9301, "first": false, "me": 92444.0, "them": 120472.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9303, "first": true, "me": 69541.0, "them": 84516.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9303, "first": false, "me": 67031.0, "them": 84567.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9305, "first": true, "me": 47508.0, "them": 58350.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9305, "first": false, "me": 47464.0, "them": 58481.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9310, "first": true, "me": 60965.0, "them": 93104.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9310, "first": false, "me": 61757.0, "them": 93110.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9316, "first": true, "me": 67745.0, "them": 93624.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "land_first", "seed": 9316, "first": false, "me": 67745.0, "them": 93624.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9300, "first": true, "me": 79321.0, "them": 82965.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9300, "first": false, "me": 79321.0, "them": 82965.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9301, "first": true, "me": 67326.0, "them": 101477.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9301, "first": false, "me": 67805.0, "them": 102429.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9303, "first": true, "me": 55314.0, "them": 78509.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9303, "first": false, "me": 54548.0, "them": 78792.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9305, "first": true, "me": 37262.0, "them": 53955.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9305, "first": false, "me": 37220.0, "them": 54677.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9310, "first": true, "me": 52287.0, "them": 75787.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9310, "first": false, "me": 52287.0, "them": 75787.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9316, "first": true, "me": 54738.0, "them": 72776.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "opening", "arm": "cows_only", "seed": 9316, "first": false, "me": 54738.0, "them": 72776.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_0", "seed": 9301, "first": false, "me": 86604.0, "them": 137834.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_0", "seed": 9308, "first": true, "me": 111015.0, "them": 158607.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_0", "seed": 9308, "first": false, "me": 110569.0, "them": 158851.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_0", "seed": 9309, "first": true, "me": 58209.0, "them": 118886.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_0", "seed": 9309, "first": false, "me": 57536.0, "them": 119939.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_0", "seed": 9312, "first": true, "me": 43493.0, "them": 108025.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_0", "seed": 9312, "first": false, "me": 42610.0, "them": 107103.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_2", "seed": 9301, "first": true, "me": 90805.0, "them": 139576.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_2", "seed": 9301, "first": false, "me": 90589.0, "them": 140786.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_2", "seed": 9308, "first": true, "me": 119639.0, "them": 159400.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_2", "seed": 9308, "first": false, "me": 119345.0, "them": 160360.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_2", "seed": 9309, "first": true, "me": 68042.0, "them": 118255.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_2", "seed": 9309, "first": false, "me": 68863.0, "them": 121986.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_2", "seed": 9312, "first": true, "me": 55308.0, "them": 108085.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_2", "seed": 9312, "first": false, "me": 55212.0, "them": 106628.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_4", "seed": 9301, "first": true, "me": 102060.0, "them": 134447.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_4", "seed": 9301, "first": false, "me": 101211.0, "them": 134708.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_4", "seed": 9308, "first": true, "me": 127250.0, "them": 160112.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_4", "seed": 9308, "first": false, "me": 127598.0, "them": 160617.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_4", "seed": 9309, "first": true, "me": 74908.0, "them": 120962.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_4", "seed": 9309, "first": false, "me": 74490.0, "them": 119931.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_4", "seed": 9312, "first": true, "me": 63791.0, "them": 107121.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_4", "seed": 9312, "first": false, "me": 63618.0, "them": 105929.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_6", "seed": 9301, "first": true, "me": 99836.0, "them": 125916.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_6", "seed": 9301, "first": false, "me": 100865.0, "them": 124711.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_6", "seed": 9308, "first": true, "me": 129724.0, "them": 155928.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_6", "seed": 9308, "first": false, "me": 129701.0, "them": 156488.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_6", "seed": 9309, "first": true, "me": 80680.0, "them": 121100.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_6", "seed": 9309, "first": false, "me": 80035.0, "them": 121069.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_6", "seed": 9312, "first": true, "me": 70022.0, "them": 108528.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_6", "seed": 9312, "first": false, "me": 70209.0, "them": 106439.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_8", "seed": 9301, "first": true, "me": 97788.0, "them": 116832.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_8", "seed": 9301, "first": false, "me": 99204.0, "them": 117401.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_8", "seed": 9308, "first": true, "me": 126405.0, "them": 144507.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_8", "seed": 9308, "first": false, "me": 126648.0, "them": 145964.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_8", "seed": 9309, "first": true, "me": 84627.0, "them": 119698.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_8", "seed": 9309, "first": false, "me": 84340.0, "them": 121088.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_8", "seed": 9312, "first": true, "me": 77139.0, "them": 107723.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_yarn", "arm": "sheep_8", "seed": 9312, "first": false, "me": 78394.0, "them": 106379.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_0", "seed": 9300, "first": false, "me": 87538.0, "them": 85161.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_0", "seed": 9304, "first": true, "me": 132898.0, "them": 143029.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_0", "seed": 9304, "first": false, "me": 132898.0, "them": 143029.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_0", "seed": 9305, "first": true, "me": 45065.0, "them": 57574.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_0", "seed": 9305, "first": false, "me": 46544.0, "them": 58213.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_0", "seed": 9307, "first": true, "me": 114868.0, "them": 117431.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_0", "seed": 9307, "first": false, "me": 114868.0, "them": 117431.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_2", "seed": 9300, "first": true, "me": 81415.0, "them": 81933.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_2", "seed": 9300, "first": false, "me": 81415.0, "them": 81933.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_2", "seed": 9304, "first": true, "me": 128625.0, "them": 143199.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_2", "seed": 9304, "first": false, "me": 128625.0, "them": 143199.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_2", "seed": 9305, "first": true, "me": 45553.0, "them": 55572.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_2", "seed": 9305, "first": false, "me": 45841.0, "them": 56285.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_2", "seed": 9307, "first": true, "me": 108761.0, "them": 117793.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_2", "seed": 9307, "first": false, "me": 108761.0, "them": 117793.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_4", "seed": 9300, "first": true, "me": 82840.0, "them": 81196.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_4", "seed": 9300, "first": false, "me": 82840.0, "them": 81196.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_4", "seed": 9304, "first": true, "me": 127548.0, "them": 141782.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_4", "seed": 9304, "first": false, "me": 127548.0, "them": 141782.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_4", "seed": 9305, "first": true, "me": 44053.0, "them": 55258.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_4", "seed": 9305, "first": false, "me": 44015.0, "them": 55884.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_4", "seed": 9307, "first": true, "me": 111363.0, "them": 117161.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_4", "seed": 9307, "first": false, "me": 111363.0, "them": 117161.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_6", "seed": 9300, "first": true, "me": 78049.0, "them": 81444.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_6", "seed": 9300, "first": false, "me": 78049.0, "them": 81444.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_6", "seed": 9304, "first": true, "me": 123214.0, "them": 141693.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_6", "seed": 9304, "first": false, "me": 123214.0, "them": 141693.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_6", "seed": 9305, "first": true, "me": 37930.0, "them": 55888.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_6", "seed": 9305, "first": false, "me": 37622.0, "them": 56568.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_6", "seed": 9307, "first": true, "me": 107489.0, "them": 117617.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_6", "seed": 9307, "first": false, "me": 107489.0, "them": 117617.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_8", "seed": 9300, "first": true, "me": 77074.0, "them": 81756.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_8", "seed": 9300, "first": false, "me": 77074.0, "them": 81756.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_8", "seed": 9304, "first": true, "me": 120789.0, "them": 142267.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_8", "seed": 9304, "first": false, "me": 120789.0, "them": 142267.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_8", "seed": 9305, "first": true, "me": 37739.0, "them": 55801.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_8", "seed": 9305, "first": false, "me": 38358.0, "them": 56656.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_8", "seed": 9307, "first": true, "me": 102002.0, "them": 116533.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "sheep_no_yarn", "arm": "sheep_8", "seed": 9307, "first": false, "me": 102002.0, "them": 116533.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9300, "first": false, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9301, "first": true, "me": 80133.0, "them": 109091.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9301, "first": false, "me": 79878.0, "them": 106744.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9303, "first": true, "me": 75169.0, "them": 80233.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9303, "first": false, "me": 75082.0, "them": 80162.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9305, "first": true, "me": 50243.0, "them": 56239.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9305, "first": false, "me": 51345.0, "them": 56611.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9310, "first": true, "me": 56510.0, "them": 84893.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9310, "first": false, "me": 56510.0, "them": 84893.0, "status": ["DONE", "DONE"], "secs": 4.4, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9316, "first": true, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 4.5, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "never", "seed": 9316, "first": false, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 4.6, "quads": ["NW", "NE", "SW"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9300, "first": true, "me": 87987.0, "them": 81809.0, "status": ["DONE", "DONE"], "secs": 4.6, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9300, "first": false, "me": 87226.0, "them": 81652.0, "status": ["DONE", "DONE"], "secs": 4.7, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9301, "first": true, "me": 78999.0, "them": 108473.0, "status": ["DONE", "DONE"], "secs": 5.0, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9301, "first": false, "me": 81964.0, "them": 110150.0, "status": ["DONE", "DONE"], "secs": 4.9, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9303, "first": true, "me": 70211.0, "them": 76882.0, "status": ["DONE", "DONE"], "secs": 4.7, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9303, "first": false, "me": 70396.0, "them": 76858.0, "status": ["DONE", "DONE"], "secs": 4.8, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9305, "first": true, "me": 49760.0, "them": 56184.0, "status": ["DONE", "DONE"], "secs": 5.1, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9305, "first": false, "me": 50413.0, "them": 55901.0, "status": ["DONE", "DONE"], "secs": 5.3, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9310, "first": true, "me": 54660.0, "them": 87049.0, "status": ["DONE", "DONE"], "secs": 5.6, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9310, "first": false, "me": 55989.0, "them": 84128.0, "status": ["DONE", "DONE"], "secs": 5.1, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9316, "first": true, "me": 59036.0, "them": 85447.0, "status": ["DONE", "DONE"], "secs": 5.1, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day12", "seed": 9316, "first": false, "me": 59036.0, "them": 85447.0, "status": ["DONE", "DONE"], "secs": 4.5, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9300, "first": true, "me": 88353.0, "them": 82666.0, "status": ["DONE", "DONE"], "secs": 4.1, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9300, "first": false, "me": 88353.0, "them": 82666.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9301, "first": true, "me": 77764.0, "them": 111455.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9301, "first": false, "me": 81521.0, "them": 108793.0, "status": ["DONE", "DONE"], "secs": 4.3, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9303, "first": true, "me": 72185.0, "them": 80845.0, "status": ["DONE", "DONE"], "secs": 4.1, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9303, "first": false, "me": 72155.0, "them": 81142.0, "status": ["DONE", "DONE"], "secs": 4.1, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9305, "first": true, "me": 49107.0, "them": 56085.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9305, "first": false, "me": 48338.0, "them": 56781.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9310, "first": true, "me": 54121.0, "them": 84920.0, "status": ["DONE", "DONE"], "secs": 4.1, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9310, "first": false, "me": 52831.0, "them": 85899.0, "status": ["DONE", "DONE"], "secs": 4.2, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9316, "first": true, "me": 57585.0, "them": 86103.0, "status": ["DONE", "DONE"], "secs": 4.3, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day16", "seed": 9316, "first": false, "me": 57585.0, "them": 86103.0, "status": ["DONE", "DONE"], "secs": 4.3, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9300, "first": true, "me": 85293.0, "them": 82798.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9300, "first": false, "me": 85293.0, "them": 82798.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9301, "first": true, "me": 78226.0, "them": 108692.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9301, "first": false, "me": 77441.0, "them": 105733.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9303, "first": true, "me": 73394.0, "them": 79935.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9303, "first": false, "me": 73394.0, "them": 79935.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9305, "first": true, "me": 49363.0, "them": 55850.0, "status": ["DONE", "DONE"], "secs": 3.8, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9305, "first": false, "me": 48585.0, "them": 56391.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9310, "first": true, "me": 52797.0, "them": 84651.0, "status": ["DONE", "DONE"], "secs": 3.8, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9310, "first": false, "me": 52797.0, "them": 84651.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9316, "first": true, "me": 57909.0, "them": 84330.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "se_quadrant", "arm": "buy_day20", "seed": 9316, "first": false, "me": 59200.0, "them": 84387.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW", "SE"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9300, "first": true, "me": 88871.0, "them": 83329.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9300, "first": false, "me": 88871.0, "them": 83329.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9301, "first": true, "me": 82672.0, "them": 104864.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9301, "first": false, "me": 78799.0, "them": 106173.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9303, "first": true, "me": 69417.0, "them": 81655.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9303, "first": false, "me": 69417.0, "them": 81655.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9305, "first": true, "me": 49318.0, "them": 56840.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9305, "first": false, "me": 48382.0, "them": 57571.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9310, "first": true, "me": 58527.0, "them": 80159.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9310, "first": false, "me": 58269.0, "them": 80296.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9316, "first": true, "me": 61991.0, "them": 80549.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day2", "seed": 9316, "first": false, "me": 61991.0, "them": 80549.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9300, "first": true, "me": 88871.0, "them": 83329.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9300, "first": false, "me": 88871.0, "them": 83329.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9301, "first": true, "me": 82672.0, "them": 104864.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9301, "first": false, "me": 78799.0, "them": 106173.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9303, "first": true, "me": 69417.0, "them": 81655.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9303, "first": false, "me": 69417.0, "them": 81655.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9305, "first": true, "me": 49318.0, "them": 56840.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9305, "first": false, "me": 48382.0, "them": 57571.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9310, "first": true, "me": 58527.0, "them": 80159.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9310, "first": false, "me": 58269.0, "them": 80296.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9316, "first": true, "me": 61991.0, "them": 80549.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day4", "seed": 9316, "first": false, "me": 61991.0, "them": 80549.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9300, "first": true, "me": 87294.0, "them": 83998.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9300, "first": false, "me": 87294.0, "them": 83998.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9301, "first": true, "me": 80942.0, "them": 111036.0, "status": ["DONE", "DONE"], "secs": 3.8, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9301, "first": false, "me": 81649.0, "them": 112211.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9303, "first": true, "me": 72322.0, "them": 81333.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9303, "first": false, "me": 72322.0, "them": 81333.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9305, "first": true, "me": 48278.0, "them": 57455.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9305, "first": false, "me": 49331.0, "them": 57626.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9310, "first": true, "me": 59013.0, "them": 82070.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9310, "first": false, "me": 59013.0, "them": 82070.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9316, "first": true, "me": 61991.0, "them": 80549.0, "status": ["DONE", "DONE"], "secs": 3.8, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day6", "seed": 9316, "first": false, "me": 61991.0, "them": 80549.0, "status": ["DONE", "DONE"], "secs": 3.8, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9300, "first": true, "me": 87537.0, "them": 86106.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9300, "first": false, "me": 87537.0, "them": 86106.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9301, "first": true, "me": 78839.0, "them": 107925.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9301, "first": false, "me": 80623.0, "them": 110158.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9303, "first": true, "me": 70996.0, "them": 82660.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9303, "first": false, "me": 70996.0, "them": 82660.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9305, "first": true, "me": 49772.0, "them": 58338.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9305, "first": false, "me": 48239.0, "them": 59060.0, "status": ["DONE", "DONE"], "secs": 3.8, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9310, "first": true, "me": 55583.0, "them": 84651.0, "status": ["DONE", "DONE"], "secs": 4.3, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9310, "first": false, "me": 55583.0, "them": 84651.0, "status": ["DONE", "DONE"], "secs": 4.3, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9316, "first": true, "me": 60117.0, "them": 84071.0, "status": ["DONE", "DONE"], "secs": 4.3, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day8", "seed": 9316, "first": false, "me": 60117.0, "them": 84071.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9300, "first": true, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9300, "first": false, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9301, "first": true, "me": 80133.0, "them": 109091.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9301, "first": false, "me": 79878.0, "them": 106744.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9303, "first": true, "me": 75169.0, "them": 80233.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9303, "first": false, "me": 75082.0, "them": 80162.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9305, "first": true, "me": 50243.0, "them": 56239.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9305, "first": false, "me": 51345.0, "them": 56611.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9310, "first": true, "me": 56510.0, "them": 84893.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9310, "first": false, "me": 56510.0, "them": 84893.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9316, "first": true, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "day10", "seed": 9316, "first": false, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9300, "first": false, "me": 51776.0, "them": 103828.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9301, "first": true, "me": 76281.0, "them": 151319.0, "status": ["DONE", "DONE"], "secs": 2.7, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9301, "first": false, "me": 76281.0, "them": 151319.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9303, "first": true, "me": 43599.0, "them": 89148.0, "status": ["DONE", "DONE"], "secs": 2.7, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9303, "first": false, "me": 43599.0, "them": 89148.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9305, "first": true, "me": 34539.0, "them": 62709.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9305, "first": false, "me": 34541.0, "them": 63395.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9310, "first": true, "me": 48753.0, "them": 98884.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9310, "first": false, "me": 48753.0, "them": 98884.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9316, "first": true, "me": 47781.0, "them": 100286.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "never", "seed": 9316, "first": false, "me": 47781.0, "them": 100286.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9300, "first": true, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9300, "first": false, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9301, "first": true, "me": 80133.0, "them": 109091.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9301, "first": false, "me": 79878.0, "them": 106744.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9303, "first": true, "me": 75169.0, "them": 80233.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9303, "first": false, "me": 75082.0, "them": 80162.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9305, "first": true, "me": 50243.0, "them": 56239.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9305, "first": false, "me": 51345.0, "them": 56611.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9310, "first": true, "me": 56510.0, "them": 84893.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9310, "first": false, "me": 56510.0, "them": 84893.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9316, "first": true, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "land_ne_timing", "arm": "default", "seed": 9316, "first": false, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9300, "first": false, "me": 31650.0, "them": 112804.0, "status": ["DONE", "DONE"], "secs": 2.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9301, "first": true, "me": 54471.0, "them": 166678.0, "status": ["DONE", "DONE"], "secs": 2.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9301, "first": false, "me": 54474.0, "them": 166676.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9303, "first": true, "me": 29307.0, "them": 108861.0, "status": ["DONE", "DONE"], "secs": 2.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9303, "first": false, "me": 31664.0, "them": 109244.0, "status": ["DONE", "DONE"], "secs": 2.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9305, "first": true, "me": 20676.0, "them": 82630.0, "status": ["DONE", "DONE"], "secs": 2.8, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9305, "first": false, "me": 21127.0, "them": 82827.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9310, "first": true, "me": 30963.0, "them": 118777.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9310, "first": false, "me": 30963.0, "them": 118777.0, "status": ["DONE", "DONE"], "secs": 2.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9316, "first": true, "me": 33320.0, "them": 124257.0, "status": ["DONE", "DONE"], "secs": 2.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_2", "seed": 9316, "first": false, "me": 33320.0, "them": 124257.0, "status": ["DONE", "DONE"], "secs": 2.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9300, "first": true, "me": 62956.0, "them": 109858.0, "status": ["DONE", "DONE"], "secs": 3.2, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9300, "first": false, "me": 65917.0, "them": 109830.0, "status": ["DONE", "DONE"], "secs": 3.1, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9301, "first": true, "me": 60799.0, "them": 146965.0, "status": ["DONE", "DONE"], "secs": 2.9, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9301, "first": false, "me": 55022.0, "them": 147277.0, "status": ["DONE", "DONE"], "secs": 2.9, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9303, "first": true, "me": 42680.0, "them": 99984.0, "status": ["DONE", "DONE"], "secs": 2.9, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9303, "first": false, "me": 42680.0, "them": 99984.0, "status": ["DONE", "DONE"], "secs": 2.9, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9305, "first": true, "me": 26472.0, "them": 74564.0, "status": ["DONE", "DONE"], "secs": 3.0, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9305, "first": false, "me": 26523.0, "them": 75535.0, "status": ["DONE", "DONE"], "secs": 2.9, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9310, "first": true, "me": 42987.0, "them": 107180.0, "status": ["DONE", "DONE"], "secs": 3.0, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9310, "first": false, "me": 43473.0, "them": 106851.0, "status": ["DONE", "DONE"], "secs": 2.9, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9316, "first": true, "me": 34800.0, "them": 110484.0, "status": ["DONE", "DONE"], "secs": 2.9, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_4", "seed": 9316, "first": false, "me": 34789.0, "them": 110472.0, "status": ["DONE", "DONE"], "secs": 3.0, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9300, "first": true, "me": 84008.0, "them": 103592.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9300, "first": false, "me": 84744.0, "them": 104187.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9301, "first": true, "me": 77732.0, "them": 138596.0, "status": ["DONE", "DONE"], "secs": 3.3, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9301, "first": false, "me": 80924.0, "them": 141072.0, "status": ["DONE", "DONE"], "secs": 3.3, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9303, "first": true, "me": 53183.0, "them": 92738.0, "status": ["DONE", "DONE"], "secs": 3.3, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9303, "first": false, "me": 56272.0, "them": 94182.0, "status": ["DONE", "DONE"], "secs": 3.3, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9305, "first": true, "me": 37768.0, "them": 68730.0, "status": ["DONE", "DONE"], "secs": 3.3, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9305, "first": false, "me": 37767.0, "them": 69375.0, "status": ["DONE", "DONE"], "secs": 3.2, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9310, "first": true, "me": 50437.0, "them": 98109.0, "status": ["DONE", "DONE"], "secs": 3.3, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9310, "first": false, "me": 49307.0, "them": 98759.0, "status": ["DONE", "DONE"], "secs": 3.3, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9316, "first": true, "me": 46345.0, "them": 96540.0, "status": ["DONE", "DONE"], "secs": 3.2, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_6", "seed": 9316, "first": false, "me": 46101.0, "them": 96564.0, "status": ["DONE", "DONE"], "secs": 3.2, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9300, "first": true, "me": 84767.0, "them": 93348.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9300, "first": false, "me": 88409.0, "them": 94630.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9301, "first": true, "me": 83830.0, "them": 125890.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9301, "first": false, "me": 83534.0, "them": 127971.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9303, "first": true, "me": 65652.0, "them": 87285.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9303, "first": false, "me": 65307.0, "them": 86881.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9305, "first": true, "me": 44347.0, "them": 62089.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9305, "first": false, "me": 44459.0, "them": 62623.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9310, "first": true, "me": 52392.0, "them": 89677.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9310, "first": false, "me": 53081.0, "them": 88069.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9316, "first": true, "me": 55213.0, "them": 93357.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_8", "seed": 9316, "first": false, "me": 55213.0, "them": 93357.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9300, "first": true, "me": 90078.0, "them": 85073.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9300, "first": false, "me": 90078.0, "them": 85073.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9301, "first": true, "me": 78020.0, "them": 108893.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9301, "first": false, "me": 78520.0, "them": 109380.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9303, "first": true, "me": 69876.0, "them": 80889.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9303, "first": false, "me": 69876.0, "them": 80889.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9305, "first": true, "me": 50177.0, "them": 56671.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9305, "first": false, "me": 51687.0, "them": 57390.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9310, "first": true, "me": 58190.0, "them": 83919.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9310, "first": false, "me": 58190.0, "them": 83919.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9316, "first": true, "me": 60498.0, "them": 84234.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_10", "seed": 9316, "first": false, "me": 60498.0, "them": 84234.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9300, "first": true, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9300, "first": false, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9301, "first": true, "me": 80133.0, "them": 109091.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9301, "first": false, "me": 79878.0, "them": 106744.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9303, "first": true, "me": 75169.0, "them": 80233.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9303, "first": false, "me": 75082.0, "them": 80162.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9305, "first": true, "me": 50243.0, "them": 56239.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9305, "first": false, "me": 51345.0, "them": 56611.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9310, "first": true, "me": 56510.0, "them": 84893.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9310, "first": false, "me": 56510.0, "them": 84893.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9316, "first": true, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_12", "seed": 9316, "first": false, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9300, "first": true, "me": 80998.0, "them": 80545.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9300, "first": false, "me": 80998.0, "them": 80545.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9301, "first": true, "me": 73051.0, "them": 105045.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9301, "first": false, "me": 73575.0, "them": 105671.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9303, "first": true, "me": 69262.0, "them": 79606.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9303, "first": false, "me": 69262.0, "them": 79606.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9305, "first": true, "me": 44225.0, "them": 55566.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9305, "first": false, "me": 44790.0, "them": 56113.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9310, "first": true, "me": 50073.0, "them": 87177.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9310, "first": false, "me": 50073.0, "them": 87177.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9316, "first": true, "me": 53680.0, "them": 84412.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "max_hands", "arm": "hands_14", "seed": 9316, "first": false, "me": 53680.0, "them": 84412.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day16", "seed": 9300, "first": true, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day16", "seed": 9300, "first": false, "me": 88870.0, "them": 81313.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day16", "seed": 9310, "first": true, "me": 57489.0, "them": 85117.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day16", "seed": 9310, "first": false, "me": 57489.0, "them": 85117.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day16", "seed": 9316, "first": true, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day16", "seed": 9316, "first": false, "me": 59597.0, "them": 85284.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day16", "seed": 9318, "first": true, "me": 60867.0, "them": 72703.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day16", "seed": 9318, "first": false, "me": 58544.0, "them": 72946.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day18", "seed": 9300, "first": true, "me": 91312.0, "them": 80999.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day18", "seed": 9300, "first": false, "me": 91312.0, "them": 80999.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day18", "seed": 9310, "first": true, "me": 56307.0, "them": 85229.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day18", "seed": 9310, "first": false, "me": 56307.0, "them": 85229.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day18", "seed": 9316, "first": true, "me": 59003.0, "them": 84609.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day18", "seed": 9316, "first": false, "me": 59003.0, "them": 84609.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day18", "seed": 9318, "first": true, "me": 60220.0, "them": 73417.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day18", "seed": 9318, "first": false, "me": 59891.0, "them": 73219.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day20", "seed": 9300, "first": true, "me": 69425.0, "them": 81665.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day20", "seed": 9300, "first": false, "me": 69425.0, "them": 81665.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day20", "seed": 9310, "first": true, "me": 56095.0, "them": 88098.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day20", "seed": 9310, "first": false, "me": 56095.0, "them": 88098.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day20", "seed": 9316, "first": true, "me": 56936.0, "them": 84271.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day20", "seed": 9316, "first": false, "me": 56936.0, "them": 84271.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day20", "seed": 9318, "first": true, "me": 57175.0, "them": 73461.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day20", "seed": 9318, "first": false, "me": 56710.0, "them": 73285.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day22", "seed": 9300, "first": true, "me": 69425.0, "them": 81665.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day22", "seed": 9300, "first": false, "me": 69425.0, "them": 81665.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day22", "seed": 9310, "first": true, "me": 54710.0, "them": 86883.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day22", "seed": 9310, "first": false, "me": 54710.0, "them": 86883.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day22", "seed": 9316, "first": true, "me": 56936.0, "them": 84271.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day22", "seed": 9316, "first": false, "me": 56936.0, "them": 84271.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day22", "seed": 9318, "first": true, "me": 56999.0, "them": 73609.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "plant_day22", "seed": 9318, "first": false, "me": 54451.0, "them": 73470.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "off", "seed": 9300, "first": false, "me": 71200.0, "them": 81724.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "off", "seed": 9310, "first": true, "me": 56165.0, "them": 86835.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "off", "seed": 9310, "first": false, "me": 56165.0, "them": 86835.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "off", "seed": 9316, "first": true, "me": 59516.0, "them": 84194.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "off", "seed": 9316, "first": false, "me": 59516.0, "them": 84194.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "off", "seed": 9318, "first": true, "me": 58993.0, "them": 73713.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_tomato", "arm": "off", "seed": 9318, "first": false, "me": 57048.0, "them": 73344.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day24", "seed": 9300, "first": true, "me": 88592.0, "them": 81801.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day24", "seed": 9300, "first": false, "me": 88592.0, "them": 81801.0, "status": ["DONE", "DONE"], "secs": 3.4, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day24", "seed": 9301, "first": true, "me": 79451.0, "them": 109079.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day24", "seed": 9301, "first": false, "me": 79772.0, "them": 106746.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day24", "seed": 9302, "first": true, "me": 79246.0, "them": 105988.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day24", "seed": 9302, "first": false, "me": 79875.0, "them": 104463.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day24", "seed": 9305, "first": true, "me": 51824.0, "them": 56350.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day24", "seed": 9305, "first": false, "me": 52725.0, "them": 56224.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day25", "seed": 9300, "first": true, "me": 88558.0, "them": 81829.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day25", "seed": 9300, "first": false, "me": 88558.0, "them": 81829.0, "status": ["DONE", "DONE"], "secs": 3.8, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day25", "seed": 9301, "first": true, "me": 79546.0, "them": 109080.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day25", "seed": 9301, "first": false, "me": 79763.0, "them": 106713.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day25", "seed": 9302, "first": true, "me": 79168.0, "them": 106195.0, "status": ["DONE", "DONE"], "secs": 3.8, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day25", "seed": 9302, "first": false, "me": 77198.0, "them": 104887.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day25", "seed": 9305, "first": true, "me": 52614.0, "them": 56485.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day25", "seed": 9305, "first": false, "me": 53379.0, "them": 56393.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day26", "seed": 9300, "first": true, "me": 88364.0, "them": 81901.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day26", "seed": 9300, "first": false, "me": 88364.0, "them": 81901.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day26", "seed": 9301, "first": true, "me": 79099.0, "them": 109155.0, "status": ["DONE", "DONE"], "secs": 3.8, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day26", "seed": 9301, "first": false, "me": 79180.0, "them": 106403.0, "status": ["DONE", "DONE"], "secs": 3.8, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day26", "seed": 9302, "first": true, "me": 78477.0, "them": 106119.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day26", "seed": 9302, "first": false, "me": 78526.0, "them": 105128.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day26", "seed": 9305, "first": true, "me": 49653.0, "them": 56898.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day26", "seed": 9305, "first": false, "me": 50747.0, "them": 56768.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day27", "seed": 9300, "first": true, "me": 86907.0, "them": 82101.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day27", "seed": 9300, "first": false, "me": 86907.0, "them": 82101.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day27", "seed": 9301, "first": true, "me": 79333.0, "them": 109091.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day27", "seed": 9302, "first": true, "me": 79263.0, "them": 106197.0, "status": ["DONE", "DONE"], "secs": 3.5, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day27", "seed": 9301, "first": false, "me": 79078.0, "them": 106744.0, "status": ["DONE", "DONE"], "secs": 3.6, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day27", "seed": 9302, "first": false, "me": 78820.0, "them": 105381.0, "status": ["DONE", "DONE"], "secs": 3.7, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day27", "seed": 9305, "first": true, "me": 47884.0, "them": 57234.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "plant_day27", "seed": 9305, "first": false, "me": 48534.0, "them": 57052.0, "status": ["DONE", "DONE"], "secs": 4.0, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "off", "seed": 9300, "first": false, "me": 87816.0, "them": 82159.0, "status": ["DONE", "DONE"], "secs": 4.2, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "off", "seed": 9301, "first": true, "me": 80133.0, "them": 109091.0, "status": ["DONE", "DONE"], "secs": 4.3, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "off", "seed": 9301, "first": false, "me": 79878.0, "them": 106744.0, "status": ["DONE", "DONE"], "secs": 4.4, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "off", "seed": 9302, "first": true, "me": 80063.0, "them": 106197.0, "status": ["DONE", "DONE"], "secs": 4.4, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "off", "seed": 9302, "first": false, "me": 79620.0, "them": 105381.0, "status": ["DONE", "DONE"], "secs": 4.3, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "off", "seed": 9305, "first": true, "me": 48966.0, "them": 57234.0, "status": ["DONE", "DONE"], "secs": 4.3, "quads": ["NW", "NE", "SW"]}
+{"task": "terminal_carrot", "arm": "off", "seed": 9305, "first": false, "me": 49922.0, "them": 57062.0, "status": ["DONE", "DONE"], "secs": 3.9, "quads": ["NW", "NE", "SW"]}

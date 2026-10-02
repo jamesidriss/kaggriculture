@@ -55,20 +55,168 @@ def wilson(wins, n, z=Z95):
 
 
 def win_interval(wins, losses, ties=0):
-    """Wilson interval for a W/L/T record, ties excluded.
+    """Canonical match metrics for a W/L/T record.
 
-    Returns a dict carrying the record, the rate and the interval, computed from
-    ONE set of counts so they cannot disagree.
+    THREE DISTINCT NUMBERS, never conflated. Confusing them is how a 18%-tie
+    matchup came to be reported as an 80.9% "win rate":
+
+      bt_score_rate  = (W + 0.5*T) / N      PRIMARY
+          This is the competitive metric. Kaggle's final evaluation is a
+          Bradley-Terry fit over episodes in which a draw scores 0.5 for each
+          side, so the per-game score IS (1, 0.5, 0) and its sample mean is the
+          number that belongs in a BT model. It is reported everywhere from now
+          on and it is the promotion metric.
+
+      decided_win_rate = W / (W+L)          SECONDARY DIAGNOSTIC
+          Conditional on the game producing a winner. Useful for reading
+          "when this matchup is decided, how often do I win", and it is the
+          right denominator for McNemar and for a decided-only Wilson interval.
+          It is NOT the match score and must never be labelled as one.
+
+      tie_rate = T / N                      DIAGNOSTIC
+          How often the matchup produced no winner at all. A high tie rate is
+          itself a finding: it says the two policies behave identically on those
+          worlds, which is information about mechanism rather than noise.
+
+    The Wilson interval returned here is on the DECIDED-only rate, because a
+    binomial interval is not the right uncertainty statement for a mean of
+    per-game scores that can take the value 0.5. Use
+    `bootstrap_score_interval` for the primary metric's uncertainty.
     """
+    n = wins + losses + ties
     decided = wins + losses
     lo, hi = wilson(wins, decided)
     return {
         "W": wins, "L": losses, "T": ties,
-        "games": wins + losses + ties,
+        "games": n,
         "decided": decided,
+        "bt_score_rate": ((wins + 0.5 * ties) / n) if n else 0.0,
         "win_rate": (wins / decided) if decided else 0.0,
+        "decided_win_rate": (wins / decided) if decided else 0.0,
+        "tie_rate": (ties / n) if n else 0.0,
+        # Named explicitly so no caller can mistake which one it is quoting.
+        "wilson_decided_lo": lo, "wilson_decided_hi": hi,
         "wilson_lo": lo, "wilson_hi": hi,
     }
+
+
+def bt_score_rate(wins, losses, ties=0):
+    """(W + 0.5*T) / (W + L + T). The primary competitive metric.
+
+    Kaggle's final Bradley-Terry evaluation scores a draw as half a win for
+    each side, so a per-game score of (1, 0.5, 0) is the correct observation
+    and its mean is the BT score rate.
+    """
+    n = wins + losses + ties
+    return ((wins + 0.5 * ties) / n) if n else 0.0
+
+
+def wilson_decided(wins, losses):
+    """Wilson interval on the decided-only rate. Secondary diagnostic only."""
+    return wilson(wins, wins + losses)
+
+
+def bootstrap_score_interval(game_scores, iters=20000, seed=20261002,
+                             alpha=0.05):
+    """Percentile bootstrap CI for the mean of per-game scores.
+
+    `game_scores` is a sequence of per-game values in [0, 1] -- 1 win,
+    0.5 tie, 0 loss. The mean is the BT score rate, and the bootstrap is the
+    right uncertainty statement for it: the observations are bounded, discrete
+    and the distribution is not binomial, so a normal-approximation interval on
+    the mean would be wrong.
+
+    Uses the BCa-free percentile method, which is adequate at these sample
+    sizes and has no tuning constant to overfit.
+    """
+    import random
+    xs = list(game_scores)
+    n = len(xs)
+    if n == 0:
+        return (0.0, 0.0, 0.0, 0)
+    rng = random.Random(seed)
+    mean = sum(xs) / n
+    if n == 1:
+        return (mean, mean, mean, 1)
+    means = []
+    for _ in range(iters):
+        s = 0.0
+        for _ in range(n):
+            s += xs[rng.randrange(n)]
+        means.append(s / n)
+    means.sort()
+    lo_i = int((alpha / 2) * iters)
+    hi_i = min(iters - 1, int((1 - alpha / 2) * iters))
+    return (mean, means[lo_i], means[hi_i], n)
+
+
+def paired_seed_bootstrap(per_seed_scores, iters=20000, seed=20261002,
+                          alpha=0.05):
+    """Bootstrap the BT score rate resampling SEEDS, not individual games.
+
+    In a paired both-seat experiment the two games from one world share the
+    world and therefore share the opponent's behaviour and the market state.
+    They are correlated observations, and resampling them independently
+    understates the interval. The correct resampling unit is the seed.
+
+    `per_seed_scores` maps seed -> list of per-game scores for that seed
+    (normally two: one per seat). Returns (mean, lo, hi, n_seeds).
+    """
+    keys = list(per_seed_scores)
+    if not keys:
+        return (0.0, 0.0, 0.0, 0)
+    rng = random.Random(seed)
+    k = len(keys)
+    flat_mean = (sum(sum(v) for v in per_seed_scores.values())
+                 / max(1, sum(len(v) for v in per_seed_scores.values())))
+    if k == 1:
+        return (flat_mean, flat_mean, flat_mean, 1)
+    means = []
+    for _ in range(iters):
+        s = 0.0
+        c = 0
+        for _ in range(k):
+            v = per_seed_scores[keys[rng.randrange(k)]]
+            s += sum(v)
+            c += len(v)
+        means.append(s / c)
+    means.sort()
+    lo_i = int((alpha / 2) * iters)
+    hi_i = min(iters - 1, int((1 - alpha / 2) * iters))
+    return (flat_mean, means[lo_i], means[hi_i], k)
+
+
+def lineage_balanced_score(matchups):
+    """Aggregate a candidate's score with each LINEAGE weighted equally.
+
+    `matchups` is a list of dicts with keys: `lineage_id`, `W`, `L`, `T`.
+
+    Why this exists: the league is lineage-concentrated. Nine of the twelve
+    known artifacts are variants from one author, so an unweighted mean over
+    matchups lets a single lineage decide the fitness function, and a
+    candidate can look strong by being good against its own relatives. Equal
+    weight per lineage removes that: variants are averaged WITHIN a lineage
+    first, then the lineages are averaged, so adding a seventh variant of an
+    already-represented strategy changes nothing.
+
+    Also returns the worst lineage, because a mean hides a collapse.
+    """
+    per = {}
+    for m in matchups:
+        li = m["lineage_id"]
+        n = m["W"] + m["L"] + m["T"]
+        if n == 0:
+            continue
+        per.setdefault(li, []).append(
+            (m["W"] + 0.5 * m["T"]) / n)
+    if not per:
+        return {"score": 0.0, "worst_lineage": None, "worst_score": 0.0,
+                "n_lineages": 0, "per_lineage": {}}
+    lin = {k: sum(v) / len(v) for k, v in per.items()}
+    worst = min(lin, key=lambda k: lin[k])
+    return {"score": sum(lin.values()) / len(lin),
+            "worst_lineage": worst, "worst_score": lin[worst],
+            "n_lineages": len(lin), "per_lineage": lin}
 
 
 def mcnemar_exact(b, c):

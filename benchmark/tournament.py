@@ -138,6 +138,13 @@ def play(cand_path, opp_path, seed, cand_seat, env_name="kaggriculture",
     cc = int(f[cand_seat].observation.farms[cand_seat]["money"])
     oc = int(f[1 - cand_seat].observation.farms[1 - cand_seat]["money"])
     return {
+        # `seed` and `seat` are echoed so a row is self-describing. The parallel
+        # runner's cache key is (env, a_sha, b_sha, seed, seat), and it can only
+        # write a cache entry for a row that knows which match it came from.
+        # Inferring them from job order would be unsafe under unordered
+        # completion, which is exactly how a parallel runner silently corrupts
+        # a dataset.
+        "seed": int(seed), "seat": int(cand_seat),
         "candidate_cash": cc, "opponent_cash": oc,
         "win": int(cc > oc), "loss": int(cc < oc), "tie": int(cc == oc),
         "candidate_status": f[cand_seat].status,
@@ -151,7 +158,30 @@ def play(cand_path, opp_path, seed, cand_seat, env_name="kaggriculture",
 
 
 def validate_game(r, cand_name, opp_name):
-    """A game is competitive only if both sides demonstrably played."""
+    """A game is competitive only if both sides demonstrably played.
+
+    IMPORTANT, corrected 2026-10-02
+    -------------------------------
+    This function used to reject any game where both sides finished with the
+    same cash, recording it as "exact tie (duplicate-content signal)". That was
+    wrong, and wrong in the direction that flatters an experiment.
+
+    The rule was a heuristic about content duplication. It was applied to the
+    OUTCOME instead. Two different artifacts can finish a season level, and in
+    the measured case they did so on 216 of 992 worlds -- because the single
+    changed gene never fired and both agents followed identical trajectories.
+    Discarding those games removed exactly the worlds where the change had no
+    effect, and reported the remaining rate as 82.22% when the honest figure
+    over all games was 64.31%.
+
+    Content duplication is detectable exactly, from the artifact digest, and is
+    checked BEFORE the match in `main()`:
+
+        if a_sha == b_sha or a_nrm == b_nrm: ABORT
+
+    So the outcome carries no information about duplication, and an exact cash
+    tie between two different artifacts is a REAL GAME with `valid = 1`.
+    """
     reasons = []
     for side in ("candidate", "opponent"):
         if r[f"{side}_calls"] == 0:
@@ -162,8 +192,7 @@ def validate_game(r, cand_name, opp_name):
         reasons.append(f"candidate called {r['candidate_calls']}x")
     if r["opponent_calls"] < EXPECTED_TURNS - 5:
         reasons.append(f"opponent called {r['opponent_calls']}x")
-    if r["tie"]:
-        reasons.append("exact tie (duplicate-content signal)")
+    # Deliberately absent: any test derived from r["tie"] or cash equality.
     return reasons
 
 
