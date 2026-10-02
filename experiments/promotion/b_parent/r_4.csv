@@ -1,0 +1,1 @@
+run_id,timestamp,environment_version,candidate_name,candidate_sha,opponent_name,opponent_sha,seed,seat,candidate_cash,opponent_cash,win,loss,tie,candidate_status,opponent_status,candidate_calls,opponent_calls,candidate_runtime_max,opponent_runtime_max,valid,invalid_reason,candidate_actions,opponent_actions
